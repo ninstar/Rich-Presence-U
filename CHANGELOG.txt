@@ -1,0 +1,80 @@
+[0.5.2] ------------------------
+
+- Rewritten source code
+- Details are saved individually for each title
+- Support for up to 4 clients per platform (596 titles)
+- Support for custom network redirection
+- Minor visual changes
+- New icon
+
+[0.5.1] ------------------------
+
+- Changed the dynamic redirection to the application's repository for less access restrictions
+- Fixed timestamp preservation when changing platforms
+- Fixed fatal error when pressing ENTER in the title's search bar
+- Better background color for Switch and 3DS mode
+
+[0.5.0] ------------------------
+
+- Support for Nintendo 3DS: 113 titles
+- Added 26 new Nintendo Switch titles
+- Higher quality icons for Wii U titles
+- Dynamic updater for game tiltes
+- Automatic notifications about new updates
+- Revamped UI
+- Updated title 123 (Wii U)
+- Updated title 029 (Switch)
+
+[0.4.3] ------------------------
+
+- Added Switch title: 'Animal Crossing: New Horizons'
+- Added preset_details.ini: "Single player", "Multiplayer" and "Online" status can be changed through this file. Titles (Games) that have preset details will override this file
+- Changed some prefixes for titles with preset details 
+- Fixed title 062 (Wii U mode)
+- New icon for Windows 10
+- Minor visual changes
+
+[0.4.2] ------------------------
+
+- Now you can pause the Rich Presence sate without closing the app
+- Switching between Wii U / Switch will no longer turn off the previous state until you update it
+- Minor aesthetic changes
+
+[0.4.1] ------------------------
+
+- Changed "HOME Menu" to "Custom Title" (Wii U / Switch)
+- Typos in NES/SNES titles (Switch)
+- Changed text formatting
+- Increased character limit for custom details from 32 to 64
+- No character limit for game titles
+- Added info section
+
+[0.4.0] ------------------------
+
+- Nintendo Switch mode
+- 90 Switch titles (thanks to Majesty for providing the thumbnails)
+- Separated settings for Wii U and Switch mode
+- 'titles.ini' moved to their respective subfolders
+
+[0.3.0] ------------------------
+
+- Resampled Icons (client only)
+- Accurate titles, including special characters
+- 70+ new titles
+
+[0.2.1] ------------------------
+
+- Client ID fix
+- Array length fix
+
+[0.2.0] ------------------------
+
+- Elapsed time preservation, it will no longer reset when you change state, only if the current game is changed
+- Clipboard functions: CTRL + C, CTRL + V
+- 'Delete' key can remove custom status and NNID
+- Custom game titles and pre-set status (titles.ini)
+- Minor aesthetic changes
+
+[0.1.0] ------------------------
+
+- Initial beta release

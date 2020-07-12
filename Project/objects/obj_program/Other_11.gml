@@ -28,7 +28,7 @@ if(RPC_IsON){
 	}
 	else{
 
-		show_message("The client is not available, close the application and try again later.");
+		show_message_async(ErrorClient);
 		exit;
 	}
 }

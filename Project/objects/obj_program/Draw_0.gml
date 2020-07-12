@@ -133,7 +133,7 @@ if(TYPING_Title)
 	var _TextScale = 1;
 	if(string_width(keyboard_string) > 500)
 		_TextScale = 500 / string_width(keyboard_string);
-	draw_text_transformed( 21+8, 52+10, keyboard_string + GUI_TextBlink, _TextScale, 1, 0);
+	draw_text_transformed(21+8, 52+10, keyboard_string + GUI_TextBlink, _TextScale, 1, 0);
 		
 	// Buscar por títulos
 	_QUEUE_TotalFound = 0;
@@ -161,7 +161,7 @@ if(TYPING_Title)
 	if(_QUEUE_TotalFound > 0){
 		
 		//Fundo
-		draw_rectangle(21,98,21+512,98+(20*_QUEUE_TotalFound),0);
+		draw_rectangle(21, 98, 21+512, 98+(20*_QUEUE_TotalFound), false);
 	
 		// [ATALHO] Selecionar o primeiro título da busca
 		if(keyboard_check_pressed(vk_enter))
@@ -184,7 +184,7 @@ if(TYPING_Title)
 			draw_set_color(c_white);
 		
 			// Seletor
-			if(point_in_rectangle(mouse_x, mouse_y, 21, 98+(20*_q), 21+512, 98+(20*_q)+20)){
+			if(point_in_rectangle(mouse_x, mouse_y, 21, 98+(20*_q), 21+512, 98+(20*_q)+19)){
 			
 				// Fundo
 				draw_set_color(c_lime);
@@ -224,11 +224,20 @@ if(TYPING_Title)
 		PREVIOUS_ClientID = CURRENT_ClientID;
 		CURRENT_ClientID = PLATFORM_ClientID[floor(global.RPC_TitleSelected / 149)];
 
-		// Baixar icone do título selecionado
-		GUI_LoadingIcon_Show = true;
+		// Icone
 		if(sprite_exists(GUI_TitleIcon))
 			sprite_delete(GUI_TitleIcon);
-		GUI_TitleIcon = sprite_add(global.NET_Redirect[global.RPC_Platform] + "/" + string_add_zeros(global.RPC_TitleSelected, 3)+".png", 1, false, true, 0, 0);
+	
+		// Checar se icone já existe icone no cache
+		var _CacheIcon = SaveDir+ "cache\\" + scr_GetPlatform(global.RPC_Platform) + "\\" + string_add_zeros(global.RPC_TitleSelected, 3)+".png";
+		if(file_exists(_CacheIcon))
+			GUI_TitleIcon = sprite_add(_CacheIcon, 1, false, true, 0, 0);
+		else{
+	
+			// Baixar icone do título selecionado
+			GUI_LoadingIcon_Show = true;
+			GUI_TitleIcon = sprite_add(global.NET_Redirect[global.RPC_Platform] + "/" + string_add_zeros(global.RPC_TitleSelected, 3)+".png", 1, false, true, 0, 0);
+		}
 		
 		// Gerar novo timestamp
 		RPC_Timestamp_GetNew = true;

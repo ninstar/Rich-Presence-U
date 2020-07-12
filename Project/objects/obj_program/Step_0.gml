@@ -1,4 +1,25 @@
 /// @description Interação
+if(!GPU_Sleep){
+	
+	// Não-renderizar
+	if(!window_has_focus()){
+		
+		draw_enable_drawevent(GPU_Sleep);
+		GPU_Sleep = true;
+	}
+}
+else{
+
+	// Renderizar
+	if(window_has_focus()){
+		
+		draw_enable_drawevent(GPU_Sleep);
+		GPU_Sleep = false;
+	}
+	else
+		exit;
+}
+
 #region Animações
 
 // Cor de fundo

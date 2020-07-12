@@ -26,7 +26,7 @@ This application allows you to display **Wii U**, **Nintendo Switch** and **Nint
 - [x] Rich Presence U ``[Windows, 32/64-bit]``
 - [x] Changelog
 
-> [**DOWNLOAD**](https://github.com/MarioSilvaGH/Rich-Presence-U/releases/tag/0.5.2) - Version: ``0.5.2``
+> [**DOWNLOAD**](https://github.com/MarioSilvaGH/Rich-Presence-U/releases/tag/0.5) - Version: ``0.5.3``
 
 ### Links
 

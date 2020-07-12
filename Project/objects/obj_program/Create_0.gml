@@ -17,6 +17,9 @@ scr_UserConfig(false, true);
 #endregion
 #region Interface
 
+// Renderização
+GPU_Sleep = false;
+
 // Exibição e animações
 GUI_TitleIcon = sprite_duplicate(spr_titleicon);
 GUI_About_Show = false;

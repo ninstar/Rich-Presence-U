@@ -1,3 +1,10 @@
+[0.5.3] ------------------------
+
+- Optimizations in GPU usage
+- Icons are cached when changing titles
+- Fixed cursor hovering two options when using drop menu to select a title
+- Fluent Design-inspired icon
+
 [0.5.2] ------------------------
 
 - Rewritten source code

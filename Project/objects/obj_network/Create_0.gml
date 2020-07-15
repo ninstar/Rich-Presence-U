@@ -1,10 +1,11 @@
 /// @description Checar rede
+scr_InitConfig();
 var _Repo = "https://github.com/MarioSilvaGH/Rich-Presence-U/raw/master/";
 
 // Fechar caso esteja desconectado da internet...
 if!(os_is_network_connected()){
 	
-	show_message("You must be connected to the internet in order to use this application.");
+	show_message(global.DLG_Connection);
 	game_end();
 }
 else{

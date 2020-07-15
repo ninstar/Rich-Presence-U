@@ -1,28 +1,25 @@
 /// @description GUI
-draw_set_font(fnt_default);
+
 var _BGc = merge_color(GUI_Color_Platform[GUI_Color_Begin], GUI_Color_Platform[GUI_Color_End], GUI_Color_Anim);
-draw_sprite_stretched_ext(spr_background, 0, -64, -64, 720+64, 280+64, _BGc, 1);
+draw_sprite_stretched_ext(spr_Background, 0, -64, -64, 720+64, 280+64, _BGc, 1);
 
-#region Layout principal
+draw_set_font(fnt_Default);
 
-// Base
-draw_sprite(spr_layout, global.RPC_Platform, 0, 0);
+#region Layout
 
-// Atualização
-if(global.NET_Update_Version > Version)
-	draw_sprite(spr_appupdate, 0, 303, 19);
+// Title
+draw_text(21, 52-24, global.DLG_FIELD_Title);
+draw_sprite(spr_Content_Field, 0, 21, 52);
 
-// Detalhes
-var _Custom = false;
-var _CustomLocked = false;
+// Details
+draw_text(21, 129-24, global.DLG_FIELD_Details);
+draw_sprite(spr_Content_Field, 0, 21, 129);
+var _CustomDetails = 0;
 if(global.RPC_DetailsMode == eDetails.Custom)
-||(PLATFORM_DetailsPreset[global.RPC_TitleSelected] != "%DEFAULT%"){
-	
-	_Custom = true;
-	
-	// Apenas customizado
-	if(PLATFORM_DetailsPreset[global.RPC_TitleSelected] != "%DEFAULT%")
-		_CustomLocked = true;
+	_CustomDetails = 1;
+draw_sprite(spr_CustomDetails, _CustomDetails, 499, 136);
+
+if(_CustomDetails){
 
 	var _Text = global.RPC_DetailsString;
 	if(TYPING_Details)
@@ -34,42 +31,59 @@ if(global.RPC_DetailsMode == eDetails.Custom)
 	
 		// Ajustar largura do texto
 		var _TextScale = 1; 
-		if(string_width(global.RPC_DetailsString) > 410)
-			_TextScale = 410 / string_width(global.RPC_DetailsString);
-	
-		// Texto
-		draw_text_transformed(21+8, 129+10, _Text, _TextScale, 1, 0);
+		if(string_width(global.RPC_DetailsString) > 464)
+			_TextScale = 464 / string_width(global.RPC_DetailsString);
+		draw_text_transformed(29, 139, _Text, _TextScale, 1, 0);
 	}
 	else{
 
-		draw_set_alpha(0.5);
-		draw_text(21+8, 129+10, "Type a custom status here.");	
+		var _TypeDetails = global.DLG_TIP_Details;
+		if(CURRENT_TitleString == "%CUSTOM%")
+			_TypeDetails = global.DLG_TIP_DetailsTitle;
+	
+		draw_set_alpha(.5);
+		draw_text(29, 139, _TypeDetails);
 		draw_set_alpha(1);
 	}
 }
-
-draw_sprite(spr_details, _Custom, 21, 129);
-
-var _Online = -16;
-if(_Custom)
-	_Online = 510;
 else{
 	
-	// Detalhes predefinido (1P/2P)
-	var _Preset = 152;
+	// Predefinidos
+	var _1P = false;
+	var _2P = false;
+	var _ON = false;
 	if(global.RPC_DetailsMode == eDetails.Multi)
-		_Preset = 299;
-
-	draw_sprite(spr_details_option, 0, _Preset, 144);
-	
-	// Online (OFF/ON)
+		_2P = true;
+	else
+		_1P = true;
 	if(global.RPC_DetailsOnline)
-		_Online = 401;
+		_ON = true;
+
+	draw_sprite(spr_Content_Option, 2+_1P, 31, 143);
+	draw_sprite(spr_Content_Option, 2+_2P, 184, 143);
+	draw_sprite(spr_Content_Option, _ON, 337, 143);
+
+	// Ajustar largura dos textos	
+	var _1P_Scale = 1;
+	if(string_width(PRESET_Details_1P) > 128)
+		_1P_Scale = 128 / string_width(PRESET_Details_1P);
+	var _2P_Scale = 1;
+	if(string_width(PRESET_Details_2P) > 128)
+		_2P_Scale = 128 / string_width(PRESET_Details_2P);
+	var _ON_Scale = 1;
+	if(string_width(PRESET_Details_ON) > 128)
+		_ON_Scale = 128 / string_width(PRESET_Details_ON);
+
+	draw_text_transformed(51, 139, PRESET_Details_1P, _1P_Scale, 1, 0);
+	draw_text_transformed(204, 139, PRESET_Details_2P, _2P_Scale, 1, 0);
+	draw_text_transformed(357, 139, PRESET_Details_ON, _ON_Scale, 1, 0);
 }
 
-draw_sprite(spr_details_option, 1+_CustomLocked, _Online, 143);
-
 // Friend Code
+draw_text(21, 206-24, global.DLG_FIELD_FriendCode);
+draw_sprite(spr_Content_Field, 1, 21, 206);
+draw_sprite(spr_FriendCode, global.RPC_Platform, 348, 214);
+
 var _FC = scr_GetFriendCode(global.RPC_Platform, global.RPC_FriendCode);
 if(TYPING_FriendCode)
 &&(global.RPC_Platform == ePlatform.WiiU)
@@ -78,40 +92,69 @@ if(TYPING_FriendCode)
 
 if(global.RPC_FriendCode != "")
 ||(TYPING_FriendCode)
-	draw_text(21+8, 206+10, _FC);
+	draw_text(29, 216, _FC);
 else{
 
-	//Não definido
-	draw_set_alpha(0.5);
-	draw_text(21+8, 206+10, "Type your ID here.");	
+	// Não definido
+	draw_set_alpha(.5);
+	draw_text(29, 216, global.DLG_TIP_FriendCode);	
 	draw_set_alpha(1);
 }
 
 // Elapsed Time
-draw_sprite(spr_elapsedtime, global.RPC_ElapsedTime, 423, 207);
+draw_set_halign(fa_middle);
+draw_text(458, 207-26, global.DLG_FIELD_ElapsedTime);
+draw_set_halign(fa_left);
+draw_sprite(spr_ElapsedTime_Field, 0, 423, 207);
+draw_sprite(spr_ElapsedTime_Option, global.RPC_ElapsedTime, 429 + (32*GUI_Slide_ElapsedTime), 213);
 
-// Estado atualizado
+// Rich Presence
+draw_sprite(spr_RichPresence_Option, 0, 546, 190);
+draw_sprite(spr_RichPresence_State, RPC_IsON, 582 + (16*GUI_Slide_State), 242);
 var _UpState = false;
 if(os_is_network_connected())
 &&(RPC_IsON)
 	_UpState = true;
+draw_sprite(spr_RichPresence_Option, 1, 628, 190);
+draw_sprite_ext(spr_RichPresence_State, 2 + _UpState, 681, 243, 1, 1, 0, c_white, GUI_StatusUpdated / (60*1));
 
-draw_sprite(spr_rpcon, RPC_IsON, 546, 186);
-draw_sprite_ext(spr_rpcupdated, _UpState, 546, 186, 1, 1, 0, c_white, GUI_StatusUpdated/(60*1));
+// Outros
+draw_sprite(spr_About_Option, 0, 446, 19);
+draw_sprite(spr_Platform_Small, global.RPC_Platform, 480, 20);
 
-// Icone do título
+// Atualização
+if(global.NET_Update_Version > Version){
+	
+	draw_sprite(spr_UpdateNotification, 0, 242, 19);
+	
+	// Ajustar largura do texto				
+	var _TextString = string_upper(global.DLG_FIELD_UpdateNotification);
+	var _TextScale = .8;	
+	if(string_width(_TextString) > 170)
+		_TextScale = ( 170 / string_width(_TextString) ) * .95;
+	
+	draw_set_color($00D63E);
+	draw_set_halign(fa_middle);
+	draw_text_transformed(242+3 + (170/2), 22, _TextString, _TextScale, .8, 0);
+	draw_set_color(c_white);
+	draw_set_halign(fa_left);
+}
+
+// Icone
+draw_sprite(spr_TitleIcon_Field, 0, 545, 20);
 if(GUI_LoadingIcon_Show){
 
 	// Loading...
 	GUI_LoadingIcon_Anim -= 8;
-	draw_sprite_ext(spr_titleicon_anim, 0, 553+(139/2), 27+(139/2), 1, 1, GUI_LoadingIcon_Anim, _BGc, 1);
+	draw_sprite_ext(spr_TitleIcon_Loading, 0, 545 + (154/2), 20 + (154/2), 1, 1, GUI_LoadingIcon_Anim, _BGc, 1);
 }
 else{
 	
+	// Preview
 	if(sprite_exists(GUI_TitleIcon))
-		draw_sprite_stretched(GUI_TitleIcon, 0, 553, 27, 139, 139);
+		draw_sprite_stretched(GUI_TitleIcon, 0, 545+8, 20+8, 138, 138);
 }
-		
+
 #endregion
 #region Lista de títulos
 
@@ -124,8 +167,8 @@ if(TYPING_Title)
 	// Nenhum título digitado
 	if(keyboard_string == ""){
 		
-		draw_set_alpha(0.5)
-		draw_text(21+16, 52+10, "Keep typing to find a title.");
+		draw_set_alpha(.5)
+		draw_text(21+16, 52+10, global.DLG_TIP_Title);
 		draw_set_alpha(1);
 	}
 	
@@ -133,7 +176,7 @@ if(TYPING_Title)
 	var _TextScale = 1;
 	if(string_width(keyboard_string) > 500)
 		_TextScale = 500 / string_width(keyboard_string);
-	draw_text_transformed(21+8, 52+10, keyboard_string + GUI_TextBlink, _TextScale, 1, 0);
+	draw_text_transformed(29, 62, keyboard_string + GUI_TextBlink, _TextScale, 1, 0);
 		
 	// Buscar por títulos
 	_QUEUE_TotalFound = 0;
@@ -172,7 +215,7 @@ if(TYPING_Title)
 
 			var _Text = _QUEUE_TitleString[_q];
 			if(_QUEUE_TitleString[_q] == "%CUSTOM%")
-				_Text = "[Custom Title]";
+				_Text = "["+global.DLG_CustomTitle+"]";
 		
 			// Ajustar largura do texto				
 			var _TextScale = 1;	
@@ -188,7 +231,7 @@ if(TYPING_Title)
 			
 				// Fundo
 				draw_set_color(c_lime);
-				draw_set_alpha(0.3);
+				draw_set_alpha(.3);
 				draw_rectangle(21, 98+(20*_q), 21+512, 98+(20*_q)+20, false);
 				draw_set_color(c_white);
 				draw_set_alpha(1);
@@ -258,7 +301,7 @@ else{
 	
 	var _Title = CURRENT_TitleString;
 	if(CURRENT_TitleString == "%CUSTOM%")
-		_Title = "[Custom Title] Use 'Details' bar.";
+		_Title = "["+global.DLG_CustomTitle+"] "+global.DLG_UseDetails;
 	
 	// Ajustar largura do texto
 	var _TextScale = 1;
@@ -268,8 +311,34 @@ else{
 }
 
 #endregion
+#region Janelas
 
-// Janelas
-draw_sprite_stretched_ext(spr_background, 0, -64, -64, 720+64, 280+64, _BGc, 1*(GUI_About_Anim+GUI_Platforms_Anim));
-draw_sprite(spr_about, 0, 0, 280+(-280*GUI_About_Anim));
-draw_sprite(spr_platforms, 0, 0, 280+(-280*GUI_Platforms_Anim));
+if(GUI_About_Anim > 0)
+||(GUI_Platforms_Anim > 0){
+
+	// Foreground
+	draw_sprite_stretched_ext(spr_Background, 0, -64, -64, 720+64, 280+64, _BGc, 1*(GUI_About_Anim+GUI_Platforms_Anim));
+
+	// Sobre
+	if(GUI_About_Anim > 0){
+		
+		draw_sprite(spr_About_Information, 0, 0, (300 - (300*GUI_About_Anim) ));
+	
+		draw_set_halign(fa_right);
+		draw_text_transformed(489, 72 + (300 - (300*GUI_About_Anim) ), VersionString, .9, .9, 0);
+		
+		draw_set_halign(fa_middle);
+		draw_text(720/2, 228 + (300 - (300*GUI_About_Anim) ), "• "+global.DLG_About+" •");
+		
+		draw_set_halign(fa_left);
+	}
+	// Plataformas
+	if(GUI_Platforms_Anim > 0){
+	
+		draw_sprite(spr_Platform_Big, 3, 119, 76 + (300 - (300*GUI_Platforms_Anim) ));
+		draw_sprite(spr_Platform_Big, 1, 296, 76 + (400 - (400*GUI_Platforms_Anim) ));
+		draw_sprite(spr_Platform_Big, 2, 473, 76 + (500 - (500*GUI_Platforms_Anim) ));
+	}
+}
+
+#endregion

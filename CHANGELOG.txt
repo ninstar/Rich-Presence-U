@@ -1,3 +1,10 @@
+[0.5.4] ------------------------
+
+- Revamped interface
+- Fixed and increased the support for multiple clients (up to 1480 tiles)
+- Support for additional special characters
+- Support for translations
+
 [0.5.3] ------------------------
 
 - Optimizations in GPU usage

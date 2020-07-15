@@ -21,13 +21,15 @@ scr_UserConfig(false, true);
 GPU_Sleep = false;
 
 // Exibição e animações
-GUI_TitleIcon = sprite_duplicate(spr_titleicon);
+GUI_TitleIcon = sprite_duplicate(spr_TitleIcon_Sample);
 GUI_About_Show = false;
 GUI_About_Anim = 0;
 GUI_Platforms_Show = false;
 GUI_Platforms_Anim = 0;
 GUI_LoadingIcon_Show = false;
 GUI_LoadingIcon_Anim = 0;
+GUI_Slide_ElapsedTime =  global.RPC_ElapsedTime;
+GUI_Slide_State = 1;
 GUI_StatusUpdated = 0;
 GUI_TextBlink = "|";
 alarm[0] = 15;

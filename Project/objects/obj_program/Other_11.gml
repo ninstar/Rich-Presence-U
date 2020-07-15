@@ -28,7 +28,7 @@ if(RPC_IsON){
 	}
 	else{
 
-		show_message_async(ErrorClient);
+		show_message_async(global.DLG_ClientError);
 		exit;
 	}
 }
@@ -38,7 +38,7 @@ else
 #endregion
 
 // Usar detalhes como título
-if(PLATFORM_DetailsPreset[global.RPC_TitleSelected] == "%TITLE%"){
+if(PLATFORM_Title[global.RPC_TitleSelected] == "%CUSTOM%"){
 		
 	//Apenas incluir descrição customizada como título (se existir)
 	var _Title = "";
@@ -53,27 +53,19 @@ else{
 	
 	// Detalhes customizado / predefinido
 	var _Details = "";
-	if(PLATFORM_DetailsPreset[global.RPC_TitleSelected] != "%DEFAULT%"){
-	
-		// Usar detalhes predefinido do título se existir detalhe customizado
-		if(global.RPC_DetailsString != "")
-			_Details = PLATFORM_DetailsPreset[global.RPC_TitleSelected]+global.RPC_DetailsString;
-	}
-	else{
 		
-		// + (Online)
-		var _Online = "";
-		if(global.RPC_DetailsOnline == true)
-			_Online = PRESET_Details_ON;
+	// + (Online)
+	var _Online = "";
+	if(global.RPC_DetailsOnline == true)
+		_Online = PRESET_Details_ON;
 	
-		// Detalhes ( 1P / 2P / Custom )
-		if(global.RPC_DetailsMode == eDetails.Single)
-			_Details = PRESET_Details_1P+_Online;
-		else if(global.RPC_DetailsMode == eDetails.Multi)
-			_Details = PRESET_Details_2P+_Online;
-		else
-			_Details = global.RPC_DetailsString;
-	}
+	// Detalhes ( 1P / 2P / Custom )
+	if(global.RPC_DetailsMode == eDetails.Single)
+		_Details = PRESET_Details_1P + _Online;
+	else if(global.RPC_DetailsMode == eDetails.Multi)
+		_Details = PRESET_Details_2P + _Online;
+	else
+		_Details = global.RPC_DetailsString;
 	
 	// RPC
 	discord_set_details(PLATFORM_Title[global.RPC_TitleSelected]);

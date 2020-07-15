@@ -3,16 +3,16 @@
 
 ini_open(SaveDir + scr_GetPlatform(global.RPC_Platform)+".ini");
 
-// Até 4 (0~3) clientes, 149 (0~148) títulos cada
+// Até 10 (0~9) clientes, 149 (0~148) títulos cada
 PLATFORM_TotalTitles = 0;
-for(var _c = 0; _c < 3+1; _c++){
+var _Offset = 0;
+for(var _c = 0; _c < 9+1; _c++){
 
 	// Clients
 	PLATFORM_ClientID[_c] = ini_read_string("CLIENT_"+string(_c), "ID", "");
 
 	// Títulos
-	var _FindFor = 148;
-	for(var _t = 0; _t < _FindFor+1; _t++){
+	for(var _t = _Offset; _t < _Offset + (148+1); _t++){
 	
 		// Se não encontrar título nesse slot... Parar loop
 		if(ini_read_string("CLIENT_"+string(_c), "T_"+string_add_zeros(_t,3), "") == "")
@@ -21,20 +21,14 @@ for(var _c = 0; _c < 3+1; _c++){
 		
 			// Adicionar título encontrado a lista
 			PLATFORM_Title[_t] = ini_read_string("CLIENT_"+string(_c), "T_"+string_add_zeros(_t,3), "");
-			PLATFORM_DetailsPreset[_t] = ini_read_string("CLIENT_"+string(_c), "D_"+string_add_zeros(_t,3), "%DEFAULT%");
 
 			// Incrementar total
 			PLATFORM_TotalTitles++;
-			
-			// Ir para próximo client e buscar mais 149 títulos...
-			if(_t == _FindFor)
-			&&(_c < 4){
-				
-				_FindFor += 148;
-				_c++;
-			}
 		}
 	}
+	
+	// Buscar mais 149 títulos...
+	_Offset = _t;
 }
 
 ini_close();
@@ -44,7 +38,7 @@ ini_close();
 // Fechar em caso de falha
 if(PLATFORM_TotalTitles <= 0){
 	
-	show_message(ErrorClient);
+	show_message(global.DLG_ClientError);
 	game_end();
 	exit;
 }

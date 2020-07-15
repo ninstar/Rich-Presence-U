@@ -23,19 +23,23 @@ else{
 #region Animações
 
 // Cor de fundo
-GUI_Color_Anim += ( 1-GUI_Color_Anim ) / 8;
+GUI_Color_Anim += ( 1-GUI_Color_Anim ) / 6;
 
 // Sobre
 if(GUI_About_Show)
-	GUI_About_Anim += ( 1-GUI_About_Anim ) / 8;
+	GUI_About_Anim += ( 1-GUI_About_Anim ) / 6;
 else
-	GUI_About_Anim -= 0.05 * (GUI_About_Anim > 0);
+	GUI_About_Anim -= .1 * (GUI_About_Anim > 0);
 
 // Plataformas
 if(GUI_Platforms_Show)
-	GUI_Platforms_Anim += ( 1-GUI_Platforms_Anim ) / 8;
+	GUI_Platforms_Anim += ( 1-GUI_Platforms_Anim ) / 6;
 else
-	GUI_Platforms_Anim -= 0.05 * (GUI_Platforms_Anim > 0);
+	GUI_Platforms_Anim -= .1 * (GUI_Platforms_Anim > 0);
+
+// Slides
+GUI_Slide_ElapsedTime += ( global.RPC_ElapsedTime-GUI_Slide_ElapsedTime ) / 4;
+GUI_Slide_State += ( RPC_IsON-GUI_Slide_State ) / 4;
 
 // Estado atualizado
 GUI_StatusUpdated -= (GUI_StatusUpdated > 0);
@@ -132,7 +136,7 @@ if(keyboard_check_pressed(vk_escape))
 	game_end();
 	
 #endregion
-#region Cursor
+#region Opções (Cursor)
 
 if(mouse_check_button_released(mb_any))
 &&(!TYPING_Title){
@@ -142,7 +146,7 @@ if(mouse_check_button_released(mb_any))
 	TYPING_FriendCode = false;
 
 	// Atualização do Rich Presence U
-	if(point_in_rectangle(mouse_x, mouse_y, 303, 19, 303+132, 19+23))
+	if(point_in_rectangle(mouse_x, mouse_y, 242, 19, 242+192, 19+23))
 	&&(global.NET_Update_Version > Version)
 		url_open(global.NET_Update_Download);
 
@@ -167,16 +171,8 @@ if(mouse_check_button_released(mb_any))
 	}
 
 	// Detalhes
-	if(global.RPC_DetailsMode != 2)
-	&&(PLATFORM_DetailsPreset[global.RPC_TitleSelected] == "%DEFAULT%"){
+	if(global.RPC_DetailsMode == eDetails.Custom){
 
-		// Predefinidos
-		if(point_in_rectangle(mouse_x, mouse_y, 27, 132, 27+145, 132+38))	global.RPC_DetailsMode = eDetails.Single;
-		if(point_in_rectangle(mouse_x, mouse_y, 180, 132, 180+145, 132+38))	global.RPC_DetailsMode = eDetails.Multi;
-		if(point_in_rectangle(mouse_x, mouse_y, 331, 132, 331+95, 132+38))	global.RPC_DetailsOnline = !global.RPC_DetailsOnline;
-	}
-	else{
-	
 		// Customizado
 		if(point_in_rectangle(mouse_x, mouse_y, 27, 132, 331+95, 132+38)){
 		
@@ -189,10 +185,16 @@ if(mouse_check_button_released(mb_any))
 			keyboard_string = global.RPC_DetailsString;
 		}
 	}
-
+	else{
+		
+		// Predefinidos
+		if(point_in_rectangle(mouse_x, mouse_y, 31, 143, 31+147, 143+18))	global.RPC_DetailsMode = eDetails.Single;
+		if(point_in_rectangle(mouse_x, mouse_y, 184, 143, 184+147, 143+18))	global.RPC_DetailsMode = eDetails.Multi;
+		if(point_in_rectangle(mouse_x, mouse_y, 337, 143, 337+147, 143+18))	global.RPC_DetailsOnline = !global.RPC_DetailsOnline;
+	}
+		
 	// Detalhes customizado (OFF/ON)
-	if(point_in_rectangle(mouse_x, mouse_y, 434, 132, 434+95, 132+38))
-	&&(PLATFORM_DetailsPreset[global.RPC_TitleSelected] == "%DEFAULT%"){
+	if(point_in_rectangle(mouse_x, mouse_y, 499, 136, 499+27, 136+30)){
 
 		if(global.RPC_DetailsMode != eDetails.Custom)
 			global.RPC_DetailsMode = eDetails.Custom;

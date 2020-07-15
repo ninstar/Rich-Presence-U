@@ -1,4 +1,4 @@
-/// @description Blink
+/// @description Cursor blink
 if(GUI_TextBlink == "|")
 	GUI_TextBlink = " ";
 else

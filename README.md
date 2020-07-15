@@ -11,7 +11,7 @@
 
 <p align="center"><img alt="Logo" src="https://github.com/MarioSilvaGH/Rich-Presence-U/raw/master/Assets/logo_monod.png" width="90%"></p>
 
-This application allows you to display **Wii U**, **Nintendo Switch** and **Nintendo 3DS** games with a custom or predefined description on your *Discord* profile. There are over 300 titles across all three platforms.
+This application allows you to display **Wii U**, **Nintendo Switch** and **Nintendo 3DS** games with a custom or predefined description on your *Discord* profile. There are over 400 titles across all three platforms.
 
 <img alt="Setting up the status" src="https://github.com/MarioSilvaGH/Rich-Presence-U/raw/master/Assets/demo_modes.gif" width="100%">
 

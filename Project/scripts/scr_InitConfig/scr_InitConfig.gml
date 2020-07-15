@@ -1,5 +1,5 @@
-#macro Version 52
-#macro VersionString "0.5.2"
+#macro Version 53
+#macro VersionString "0.5.3"
 #macro SaveDir game_save_id
 #macro ErrorClient "The client is not available, close the application and try again later."
 

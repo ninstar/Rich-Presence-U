@@ -2,11 +2,13 @@
 #macro VersionString "0.5.4"
 #macro SaveDir game_save_id
 
-#region Dialogos
+#region Traduções
 
-// Português
-if(os_get_language() == "pt"){
+switch(os_get_language()){
+	
+	case("pt"):
 
+	// [PT] Português
 	global.DLG_FIELD_Title = "Título";
 	global.DLG_FIELD_Details = "Detalhes";
 	global.DLG_FIELD_FriendCode = "Friend Code";
@@ -25,9 +27,34 @@ if(os_get_language() == "pt"){
 	global.DLG_Connection = "Você deve estar conectado à Internet para usar este aplicativo.";
 	global.DLG_Update = "Uma nova atualização está disponível, ela necessária para que o aplicativo continue funcionando. Você será redirecionado para a página de download ao pressionar 'Sim'.";
 	global.DLG_ClientError = "O client não está disponível, feche o aplicativo e tente novamente mais tarde.";
-}
-else{
-	
+
+	break;
+	case("es"):
+
+	// [ES] Español
+	global.DLG_FIELD_Title = "Título";
+	global.DLG_FIELD_Details = "Detalles";
+	global.DLG_FIELD_FriendCode = "Friend Code";
+	global.DLG_FIELD_ElapsedTime = "Tiempo Transcurrido";
+	global.DLG_FIELD_UpdateNotification = "Actualización Disponible";
+
+	global.DLG_TIP_Title = "Continúe ingresando para encontrar un título.";
+	global.DLG_TIP_Details = "Ingrese su estado personalizado aquí.";
+	global.DLG_TIP_DetailsTitle = "Ingrese su título personalizado aquí.";
+	global.DLG_TIP_FriendCode = "Ingrese su identificación aquí.";
+
+	global.DLG_CustomTitle = "Título Personalizado";
+	global.DLG_UseDetails = "Utiliza la barra de detalles.";
+
+	global.DLG_About = "Oprima en el logo para más información.";
+	global.DLG_Connection = "Debe estar conectado al internet para utilizar esta aplicación.";
+	global.DLG_Update =  "Una actualización nueva esta disponible, esta actualización es necesaria para que la aplicación continúe funcionando. Al oprimir 'Si' usted será redirigido a la página de descarga.";
+	global.DLG_ClientError = "El cliente no está disponible, cierra la aplicación e intente nuevamente más tarde.";
+
+	break;
+	defautl:
+
+	// [??] English
 	global.DLG_FIELD_Title = "Title";
 	global.DLG_FIELD_Details = "Details";
 	global.DLG_FIELD_FriendCode = "Friend Code";
@@ -46,6 +73,8 @@ else{
 	global.DLG_Connection = "You must be connected to the internet in order to use this application.";
 	global.DLG_Update = "A new update is available, this update is necessary for the application to continue working. By pressing 'Yes' you will be redirected to the download page.";
 	global.DLG_ClientError = "The client is not available, close the application and try again later.";
+
+	break;
 }
 
 #endregion

@@ -1,3 +1,11 @@
+[0.6.0] ------------------------
+
+- Complete UI redesign and UX improvements (Dark theme, resizable window and more)
+- Better icon caching
+- Window position and size are restored upon startup
+- Support for additional predefined details
+- Built-in Spanish translation
+
 [0.5.4] ------------------------
 
 - Revamped interface

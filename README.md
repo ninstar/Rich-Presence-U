@@ -26,7 +26,7 @@ This application allows you to display **Wii U**, **Nintendo Switch** and **Nint
 - [x] Rich Presence U ``[Windows, 32/64-bit]``
 - [x] Changelog
 
-> [**DOWNLOAD**](https://github.com/MarioSilvaGH/Rich-Presence-U/releases/tag/0.5) - Version: ``0.5.4``
+> [**DOWNLOAD**](https://github.com/MarioSilvaGH/Rich-Presence-U/releases/tag/0.6) - Version: ``0.6.0``
 
 ### Links
 
@@ -38,10 +38,11 @@ This application allows you to display **Wii U**, **Nintendo Switch** and **Nint
 
 ### Customizing the predefined details
 
-In addition to being able to manually enter your own custom details directly into the main interface, you can also modify the content on which the predefined details (*Single Player, Multiplayer, Online*) will display by editing the ``PRESET.cfg``.
+You can change the content of predefined details (*Single Player, Multiplayer,* etc.) by editing the ``DETAILS.cfg``.
 
 ### Client redirection
-If you have a repository with modified icons or titles and you want to use them with Rich Presence U, you can create a new file named ``NETWORK.cfg`` with the following content:
+
+If you have a repository with your own icons and you want to use them with Rich Presence U, you can create a new file named ``NETWORK.cfg`` with the following content:
 
 ```ini
 [URLS]

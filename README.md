@@ -9,11 +9,11 @@
 [link-discord]: https://discord.gg/wZGW8DZ
 [link-patreon]: https://www.patreon.com/ningamer
 
-<p align="center"><img alt="Logo" src="https://github.com/MarioSilvaGH/Rich-Presence-U/raw/master/Assets/logo_monod.png" width="90%"></p>
+<p align="center"><img alt="Logo" src="https://i.imgur.com/W4dCN2X.png" width="90%"></p>
 
 This application allows you to display **Wii U**, **Nintendo Switch** and **Nintendo 3DS** games with a custom or predefined description on your *Discord* profile. There are over 400 titles across all three platforms.
 
-<img alt="Setting up the status" src="https://github.com/MarioSilvaGH/Rich-Presence-U/raw/master/Assets/demo_modes.gif" width="100%">
+<img alt="Setting up the status" src="https://i.imgur.com/XnlTO8v.gif" width="100%">
 
 > **Note:** This application does not use nor support any console modifications by default, it needs manual setup in order to display your games.
 

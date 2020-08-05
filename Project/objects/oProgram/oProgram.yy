@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "RPC_U",
-    "path": "RPC_U.yyp",
+    "name": "Code",
+    "path": "folders/Code.yy",
   },
   "resourceVersion": "1.0",
   "name": "oProgram",

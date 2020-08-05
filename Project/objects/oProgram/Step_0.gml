@@ -248,7 +248,7 @@ if(GUI_Sleep == 0){
 	// Shortcuts
 	
 	// [ENTER] Apply RPC
-	if(keyboard_check_released(vk_enter))
+	if(keyboard_check_pressed(vk_enter))
 	&&(GUI_ApplyRPC_Anim == 0){
 	
 		// 2 seconds animation

@@ -2,7 +2,7 @@
 
 // Preset details
 DROPLIST_Details[0] = "";
-ini_open(program_directory+"\\DETAILS.cfg");
+ini_open(DirApp+"DETAILS.cfg");
 for(var _P = 0; _P < 9; ++_P){
 
 	var _P_Entry = ini_read_string("DETAILS", string(_P+1), "");

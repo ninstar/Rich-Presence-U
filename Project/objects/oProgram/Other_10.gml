@@ -1,7 +1,7 @@
 /// @description Load platform
 #region List
 
-ini_open(SaveDir + scr_GetPlatform(global.RPC_Platform)+".ini");
+ini_open(DirSave + scr_GetPlatform(global.RPC_Platform)+".ini");
 
 // Up to 10 clients, 149 titles each
 PLATFORM_TotalTitles = 0;
@@ -53,7 +53,7 @@ if(sprite_exists(GUI_TitleIcon))
 	sprite_delete(GUI_TitleIcon);
 	
 // Check if there is already an icon for the new title in the cache
-var _CacheIcon = SaveDir+ "cache\\" + scr_GetPlatform(global.RPC_Platform) + "\\" + string_add_zeros(global.RPC_TitleSelected, 3)+".png";
+var _CacheIcon = DirSave+ "cache\\" + scr_GetPlatform(global.RPC_Platform) + "\\" + string_add_zeros(global.RPC_TitleSelected, 3)+".png";
 if(file_exists(_CacheIcon))
 	GUI_TitleIcon = sprite_add(_CacheIcon, 1, false, true, 0, 0);
 else{

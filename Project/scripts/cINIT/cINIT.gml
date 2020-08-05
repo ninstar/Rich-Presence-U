@@ -1,6 +1,7 @@
-#macro Version 60
-#macro VersionString "0.6.0"
-#macro SaveDir game_save_id
+#macro Version 61
+#macro VersionString "0.6.1"
+#macro DirSave game_save_id
+#macro DirApp working_directory+"\\"
 
 enum ePlatform {
 
@@ -54,7 +55,7 @@ enum eField {
 		global.DLG_FIELD_ElapsedTime = "Tempo Decorrido";
 		global.DLG_FIELD_HideRPC = "Ocultar Status";
 		
-		global.DLG_TIP_Empty = "Vázio";
+		global.DLG_TIP_Empty = "Vazio";
 		global.DLG_TIP_Search = "Busca";
 		
 		global.DLG_Connection = "Você deve estar conectado à Internet para usar este aplicativo.";
@@ -109,7 +110,7 @@ enum eField {
 /// @param local_override
 function scr_NetConfig(argument0){
 
-	ini_open(SaveDir+"NETWORK.cfg");
+	ini_open(DirSave+"NETWORK.cfg");
 
 	global.NET_URL_About = ini_read_string("URLS", "about", "hpps://");
 	global.NET_Update_Version = ini_read_real("UPDATE", "version", Version);
@@ -121,11 +122,11 @@ function scr_NetConfig(argument0){
 	
 	ini_close();
 
-	// Custom about link
+	// Custom
 	if(argument0)
-	&&(file_exists(program_directory+"\\NETWORK.cfg")){
+	&&(file_exists(DirApp+"NETWORK.cfg")){
 	    
-		ini_open(program_directory+"\\NETWORK.cfg");
+		ini_open(DirApp+"NETWORK.cfg");
 	
 		global.NET_Redirect[ePlatform.WiiU] = ini_read_string("REDIRECT", "wiiu", "hpps://");
 		global.NET_Redirect[ePlatform.NintendoSwitch] = ini_read_string("REDIRECT", "switch", "hpps://");
@@ -145,7 +146,7 @@ function scr_UserConfig(argument0, argument1){
 	if(argument0){
 
 		// Save
-		ini_open(SaveDir+"USER.ini")
+		ini_open(DirSave+"USER.ini")
 		
 		ini_write_real("RPC_"+_Platform, "TitleID", global.RPC_TitleSelected);
 		ini_write_string("RPC_"+_Platform, "FriendCode", global.RPC_FriendCode);
@@ -160,7 +161,7 @@ function scr_UserConfig(argument0, argument1){
 	else{
 
 		// Load
-		ini_open(SaveDir+"USER.ini");
+		ini_open(DirSave+"USER.ini");
 		
 		global.RPC_TitleSelected = ini_read_real("RPC_"+_Platform, "TitleID", 0);
 		global.RPC_FriendCode = ini_read_string("RPC_"+_Platform, "FriendCode", "");

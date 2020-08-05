@@ -16,8 +16,8 @@ if(instance_exists(oProgram)){
 }
 
 // Colors
-var _cBGR = merge_color($111111, $EEEEEE, !global.GUI_Theme);
-var _cTXT = merge_color($111111, $EEEEEE, global.GUI_Theme);
+var _cBGR = merge_color($36312f, $f2f3f5, !global.GUI_Theme);
+var _cTXT = merge_color($36312f, $f2f3f5, global.GUI_Theme);
 
 #endregion
 

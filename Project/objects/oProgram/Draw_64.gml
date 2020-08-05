@@ -18,9 +18,10 @@ var _CursorX = device_mouse_x_to_gui(0);
 var _CursorY = device_mouse_y_to_gui(0);
 
 // Colors
-var _cBGR = merge_color($111111, $EEEEEE, 1-GUI_Theme_Anim);
-var _cTXT = merge_color($111111, $EEEEEE, GUI_Theme_Anim);
-var _cPFM = merge_color(GUI_Color_Platform[GUI_Color_Begin], GUI_Color_Platform[GUI_Color_End], GUI_Color_Anim);
+Color_Background = merge_color($36312f, $f2f3f5, 1-GUI_Theme_Anim);
+Color_Field = merge_color($252220, $ffffff, 1-GUI_Theme_Anim);
+Color_Text = merge_color($36312f, $f2f3f5, GUI_Theme_Anim);
+Color_Platform = merge_color(GUI_Color_Platform[GUI_Color_Begin], GUI_Color_Platform[GUI_Color_End], GUI_Color_Anim);
 
 // Default font
 draw_set_font(fSegoeUI);
@@ -45,29 +46,28 @@ var _draw_droplist = function(x, y, wfield, slots, array){
 	var _Hover = -1;
 
 	// Fill
-	draw_set_color(merge_color($222222, $FFFFFF, !global.GUI_Theme));
-	draw_rectangle(x + 1, y, wfield - 2, y + ((19+2)*slots), false);
-
-	// Outline
-	draw_set_color(merge_color($222222, $FFFFFF, global.GUI_Theme));
-	draw_rectangle(x + 1, y, wfield - 2, y + ((19+2)*slots), true);
+	draw_set_color(Color_Field);
+	draw_roundrect_ext(x, y, wfield, y + ((19+2)*slots), 3, 3, false);
 
 	// Items
 	for(var _i = 0; _i < slots; ++_i){
 
+		// Line
+		draw_set_color(Color_Background);
+		if(_i > 0)
+			draw_line(x + 4, y + ((19+2)*_i), wfield - 4, y + ((19+2)*_i));
+	
 		// Hover
 		if(point_in_rectangle(device_mouse_x_to_gui(0), device_mouse_y_to_gui(0), x + 1, y + ((19+2)*_i), wfield - 2, (y-1) + ((19+2)*(_i+1)))){
 	
 			_Hover = _i;
-			draw_set_alpha(.15);
-			draw_rectangle(x + 3, (y+2) + ((19+2)*_i), wfield - 4, (y-2) + ((19+2)*(_i+1)), false);
-			draw_set_alpha(1);
+			draw_set_color(Color_Platform);
+			draw_roundrect_ext(x + 2, (y+2) + ((19+2)*_i), wfield - 2, (y-2) + ((19+2)*(_i+1)), 3, 3, false);
+			draw_set_color($ffffff);
 		}
-		
-		// Line
-		if(_i > 0)
-			draw_line(x + 6, y + ((19+2)*_i), wfield - 8, y + ((19+2)*_i));
-	
+		else
+			draw_set_color(Color_Text);
+
 		// Text string
 		var _T = array_get(array, _i);
 		if(array_get(array, _i) == "%CUSTOM%")
@@ -77,13 +77,16 @@ var _draw_droplist = function(x, y, wfield, slots, array){
 		var _S = 1;
 		if((string_width(_T) * (14/32)) > (wfield-28))
 			_S =  (wfield-28) / (string_width(_T) * (14/32));
-	
-		draw_text_transformed(x + 5, y + ((19+2)*_i), _T, _S * (14/32), 14/32, 0);
+		
+		draw_text_transformed(x + 5, y+1 + ((19+2)*_i), _T, _S * (14/32), 14/32, 0);
 	}
 	
 	// Selection
 	if(_Hover > -1){
 
+		// Wait 5 frames for next interaction
+		GUI_Sleep = 5;
+		
 		// Change cursor pointer
 		if(window_get_cursor() != cr_handpoint)
 			window_set_cursor(cr_handpoint);
@@ -105,23 +108,45 @@ var _draw_droplist = function(x, y, wfield, slots, array){
 /// @func	_draw_input_field
 var _draw_input_field = function(x, y, wfield, icon, title){
 
+	var _PreviousColor = draw_get_color();
 	var _DownScale14 = 14 / 32;
-	draw_text_transformed(x, y, icon, _DownScale14, _DownScale14, 0);					// Icon
-	draw_text_transformed(x + 20, y -1, title, _DownScale14, _DownScale14, 0);			// Title
-	draw_rectangle(x + 1, y + (19+1), wfield-2, y + (19+24-2), true);					// Field
+	
+	// Icon and title
+	draw_set_alpha(.75);
+	draw_text_transformed(x, y, icon, _DownScale14, _DownScale14, 0);
+	draw_text_transformed(x + 20, y -1, title, _DownScale14, _DownScale14, 0);
+	draw_set_alpha(1);
+	
+	// Field
+	draw_set_color(Color_Field);
+	draw_roundrect_ext(x, y+19, wfield, y + (19+23), 3, 3, false);		
+	draw_set_color(_PreviousColor);
 }
 
 // @func	_draw_selection_field
 var _draw_selection_field = function(x, y, state, icon, title){
 
-	var _CheckBox = "";
-	if(state)
-			_CheckBox = "";
-	
 	var _DownScale14 = 14 / 32;
 	var _DownScale16 = 16 / 32;
-	draw_text_transformed(x, y, _CheckBox+" "+icon, _DownScale16, _DownScale16, 0);
+
+	// Icon
+	draw_set_alpha(.75);
+	draw_text_transformed(x, y, " "+icon, _DownScale16, _DownScale16, 0);
+	draw_set_alpha(1);
+	
+	// Title
 	draw_text_transformed(x + 42, y - 1, title, _DownScale14, _DownScale14, 0);
+	
+	// Check
+	if(state){
+		
+		var _PreviousColor = draw_get_color();
+		draw_set_color(Color_Platform);
+		draw_text_transformed(x, y, "", _DownScale16, _DownScale16, 0);
+		draw_set_color($ffffff);
+		draw_text_transformed(x, y, "", _DownScale16, _DownScale16, 0);
+		draw_set_color(_PreviousColor);
+	}
 }
 
 #endregion
@@ -130,8 +155,8 @@ var _draw_selection_field = function(x, y, state, icon, title){
 #region Layout
 
 // Background
-draw_sprite_stretched_ext(sBackground, 0, _X-24, _Y-24, _W+(24*2), _H+(24*2), _cBGR, 1);
-draw_sprite_stretched_ext(sBackground, 0, _X-24, _Y-16, _W+(24*2), 48, _cPFM, 1);
+draw_sprite_stretched_ext(sBackground, 0, _X-24, _Y-24, _W+(24*2), _H+(24*2), Color_Background, 1);
+draw_sprite_stretched_ext(sBackground, 0, _X-24, _Y-16, _W+(24*2), 48, Color_Platform, 1);
 
 // Overlay
 if(CURRENT_TitleString == "%CUSTOM%")
@@ -143,11 +168,13 @@ var _Update = "";
 if(global.NET_Update_Version > Version)
 	_Update = "";
 
-draw_set_color(c_white);
-draw_text_transformed(_X, _Y, "  "+_Update, (18/32), (18/32), 0);							// Toolbox
-draw_sprite_ext(sPlatforms, global.RPC_Platform, _W-110, _Y, 1, 1, 0, c_white, 1);				// Platform Logo
+// Platform
+draw_sprite_ext(sPlatforms, 0, _W-110, _Y, 1, 1, 0, $000000, .10);
+draw_sprite_ext(sPlatforms, 1+global.RPC_Platform, _W-110, _Y, 1, 1, 0, $ffffff, 1);
 
-draw_set_color(_cTXT);
+draw_set_color($ffffff);
+draw_text_transformed(_X, _Y, "  "+_Update, (18/32), (18/32), 0);							// Toolbox
+draw_set_color(Color_Text);
 _draw_input_field(_X, _Y+36, _W, "", global.DLG_FIELD_Title);									// Title
 _draw_input_field(_X, _Y+83, _W, "", _Text);													// Details
 _draw_input_field(_X, _Y+130, _W, "", "ID / "+global.DLG_FIELD_FriendCode);					// Friend Code
@@ -155,41 +182,52 @@ _draw_selection_field(_X, _H-44, global.RPC_ElapsedTime, "", global.DLG_FIELD
 _draw_selection_field(_X, _H-18, !RPC_IsON, "", global.DLG_FIELD_HideRPC);					// Hide RPC
 
 // Title icon
-draw_rectangle(_W-50, _Y+1, _W-1, _Y+50, false);
 if(GUI_LoadingIcon_Show){
 
 	// Loading...
-	draw_set_color(_cBGR);
+	draw_rectangle(_W-50, _Y+1, _W-1, _Y+50, false);
+	draw_set_color(Color_Background);
 	draw_text_transformed(_W-40, _Y+8, "", 1, 1, 0);
-	draw_set_color(_cTXT);
 }
 else{
 	
 	// Preview
-	if(sprite_exists(GUI_TitleIcon))
-		draw_sprite_stretched(GUI_TitleIcon, 0, _W-49, _Y+2, 48, 48);
+	if(sprite_exists(GUI_TitleIcon)){
+		
+		// Box
+		draw_set_color($000000);
+		draw_set_alpha(.10);
+		draw_rectangle(_W-51, _Y, _W, _Y+51, false);
+		draw_set_alpha(1);
+		
+		// Bitmap
+		draw_sprite_stretched_ext(GUI_TitleIcon, 0, _W-49, _Y+2, 48, 48, $ffffff, 1);
+		for(var _L = -1; _L < 2; ++_L)
+			draw_sprite_stretched_ext(GUI_TitleIcon, 0, (_W-49)+_L, (_Y+2)+_L, 48, 48, $ffffff, .05);
+	}
 }
+draw_set_color(Color_Text);
 
 // Apply RPC
-draw_rectangle(_W-46, _H-46, _W-1, _H-1, false);
-draw_set_color(_cBGR);
+draw_roundrect_ext(_W-46, _H-46, _W-1, _H-1, 3, 3, false);
+draw_set_color(Color_Background);
 draw_text_transformed(_W-38, _H-38, "", 1, 1, 0);
-draw_set_color(_cTXT);
+draw_set_color(Color_Text);
 
 var _Network = "";
 if(os_is_network_connected(false))
 	_Network = "";
 
 draw_set_alpha(GUI_ApplyRPC_Anim / (60*1));
-draw_rectangle(_W-46, _H-46, _W-1, _H-1, false);
-draw_set_color(_cBGR);
+draw_roundrect_ext(_W-46, _H-46, _W-1, _H-1, 3, 3, false);
+draw_set_color(Color_Background);
 draw_text_transformed(_W-39, _H-40, _Network, 1, 1, 0);
-draw_set_color(_cTXT);
+draw_set_color(Color_Text);
 draw_set_alpha(1);
 
 // Friend Code
-draw_sprite_ext(sFriendCode, 0, _W - 19, _Y + 153, 1, 1, 0, _cTXT, 1);
-draw_sprite_ext(sFriendCode, 1+global.RPC_Platform, _W - 19, _Y + 153, 1, 1, 0, c_white, 1);
+draw_sprite_ext(sFriendCode, 0, _W - 19, _Y + 153, 1, 1, 0, $ffffff, 1);
+draw_sprite_ext(sFriendCode, 1+global.RPC_Platform, _W - 19, _Y + 153, 1, 1, 0, $ffffff, 1);
 
 _Text = global.DLG_TIP_Empty;
 
@@ -229,7 +267,7 @@ if(FIELD_DropList == eField.Details){
 	// Drop list
 	var _DropList_Index = _draw_droplist(_X, _Y+128, _W, clamp(ceil((_H-(_Y+128)) / (19+2)), 0, array_length(DROPLIST_Details)), DROPLIST_Details);
 	if(_DropList_Index > -1)
-		global.RPC_DetailsString = DROPLIST_Details[_DropList_Index];
+		global.RPC_DetailsString = DROPLIST_Details[_DropList_Index]+" ";
 }
 
 // Title
@@ -286,7 +324,7 @@ if(FIELD_Type == eField.Title)
 
 		// Save previous title details
 		var _Platform = string_upper( scr_GetPlatform(global.RPC_Platform) );
-		ini_open(SaveDir+"USER.ini")
+		ini_open(DirSave+"USER.ini")
 		ini_write_real("RPC_"+_Platform, string_add_zeros(global.RPC_TitleSelected, 3)+"_M", global.RPC_DetailsMode);
 		ini_write_real("RPC_"+_Platform, string_add_zeros(global.RPC_TitleSelected, 3)+"_O", global.RPC_DetailsOnline);
 		ini_write_string("RPC_"+_Platform, string_add_zeros(global.RPC_TitleSelected, 3)+"_C", global.RPC_DetailsString);
@@ -310,7 +348,7 @@ if(FIELD_Type == eField.Title)
 			sprite_delete(GUI_TitleIcon);
 	
 		// Check if there is already an icon for the new title in the cache
-		var _CacheIcon = SaveDir+ "cache\\" + scr_GetPlatform(global.RPC_Platform) + "\\" + string_add_zeros(global.RPC_TitleSelected, 3)+".png";
+		var _CacheIcon = DirSave+ "cache\\" + scr_GetPlatform(global.RPC_Platform) + "\\" + string_add_zeros(global.RPC_TitleSelected, 3)+".png";
 		if(file_exists(_CacheIcon))
 			GUI_TitleIcon = sprite_add(_CacheIcon, 1, false, true, 0, 0);
 		else{
@@ -349,13 +387,13 @@ if(GUI_About_Anim > 0)
 	if(GUI_About_Anim > 0){
 		
 		// Foreground
-		draw_sprite_stretched_ext(sBackground, 0, _X-24, _Y-24, _W+(24*2), _H+(24*2), _cBGR, GUI_About_Anim);
+		draw_sprite_stretched_ext(sBackground, 0, _X-24, _Y-24, _W+(24*2), _H+(24*2), Color_Background, GUI_About_Anim);
 		
 		// Display
 		draw_text_transformed(_X  - ( 32 * (1-GUI_About_Anim) ), _Y, "", (18/32), (18/32), 0);
-		draw_sprite_ext(sLogo, 0, ((_W+16)/2), 52 - (96 * (1-GUI_About_Anim)), 1, 1, 0, _cTXT, 1);
-		draw_sprite_ext(sCredits, 0, ((_W+16)/2), ( ((_H+16)/2) + 22 ) + (_H * (1-GUI_About_Anim)), 1, 1, 0, _cTXT, 1);
-		draw_sprite_ext(sLinks, 0, _X - ( 128 * (1-GUI_About_Anim) ), _H, 1, 1, 0, _cTXT, 1);
+		draw_sprite_ext(sLogo, 0, ((_W+16)/2), 52 - (96 * (1-GUI_About_Anim)), 1, 1, 0, Color_Text, 1);
+		draw_sprite_ext(sCredits, 0, ((_W+16)/2), ( ((_H+16)/2) + 22 ) + (_H * (1-GUI_About_Anim)), 1, 1, 0, Color_Text, 1);
+		draw_sprite_ext(sLinks, 0, _X - ( 128 * (1-GUI_About_Anim) ), _H, 1, 1, 0, Color_Text, 1);
 		draw_set_halign(fa_right);
 		draw_text_transformed(_W + ( 64 * (1-GUI_About_Anim) ), _H - 14, VersionString, (14/32), (14/32), 0);
 		draw_set_halign(fa_left);
@@ -411,12 +449,12 @@ if(GUI_About_Anim > 0)
 	if(GUI_Platforms_Anim > 0){
 	
 		// Foreground
-		draw_sprite_stretched_ext(sBackground, 0, _X-24, _Y-24, _W+(24*2), _H+(24*2), _cPFM, GUI_Platforms_Anim);
+		draw_sprite_stretched_ext(sBackground, 0, _X-24, _Y-24, _W+(24*2), _H+(24*2), Color_Platform, GUI_Platforms_Anim);
 		
 		// Display
-		draw_sprite_ext(sPlatformsOption, 0, ((_W+16)/2) - (64+8), ((_H+16)/2) + (_H * (1-GUI_Platforms_Anim)), 1, 1, 0, c_white, 1);			// Wii U
-		draw_sprite_ext(sPlatformsOption, 1, ((_W+16)/2), ((_H+16)/2) + ((_H+200) * (1-GUI_Platforms_Anim)), 1, 1, 0, c_white, 1);				// Nintendo Switch
-		draw_sprite_ext(sPlatformsOption, 2, ((_W+16)/2) + (64+8), ((_H+16)/2) + ((_H+400) * (1-GUI_Platforms_Anim)), 1, 1, 0, c_white, 1);		// Nintendo 3DS
+		draw_sprite_ext(sPlatformsOption, 0, ((_W+16)/2) - (64+8), ((_H+16)/2) + (_H * (1-GUI_Platforms_Anim)), 1, 1, 0, $ffffff, 1);			// Wii U
+		draw_sprite_ext(sPlatformsOption, 1, ((_W+16)/2), ((_H+16)/2) + ((_H+200) * (1-GUI_Platforms_Anim)), 1, 1, 0, $ffffff, 1);				// Nintendo Switch
+		draw_sprite_ext(sPlatformsOption, 2, ((_W+16)/2) + (64+8), ((_H+16)/2) + ((_H+400) * (1-GUI_Platforms_Anim)), 1, 1, 0, $ffffff, 1);		// Nintendo 3DS
 	
 		// Options
 		var _Hover = -1;
@@ -426,21 +464,24 @@ if(GUI_About_Anim > 0)
 		if(point_in_rectangle(_CursorX, _CursorY, ((_W+16)/2) - ((64+8)+32), ((_H+16)/2) - 32, ((_W+16)/2) - ((64+8)-32), ((_H+16)/2) + 32))	_Hover = 0; // Wii U
 		if(point_in_rectangle(_CursorX, _CursorY, ((_W+16)/2) - 32, ((_H+16)/2) - 32, ((_W+16)/2) + 32, ((_H+16)/2) + 32))	_Hover = 1;						// Nintendo Switch
 		if(point_in_rectangle(_CursorX, _CursorY, ((_W+16)/2) + ((64+8)-32), ((_H+16)/2) - 32, ((_W+16)/2) + ((64+8)+32), ((_H+16)/2) + 32))	_Hover = 2; // Nintendo 3DS
+		
+		// Select
 		if(_Hover > -1)
 		&&(_Press){
 			
+			// New platform
 			if(_Hover != global.RPC_Platform){
 				
 				// Color transition
 				GUI_Color_Anim = 0;
 				GUI_Color_Begin = global.RPC_Platform;
-				GUI_Color_End = _Hover;
 			
 				// Save platform changes
 				scr_UserConfig(true, false);
 		
 				// New platform
 				global.RPC_Platform = _Hover;
+				GUI_Color_End = _Hover;
 		
 				// Load new platform changes
 				scr_UserConfig(false, false);

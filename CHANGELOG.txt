@@ -1,3 +1,9 @@
+[0.6.1] ------------------------
+
+- Faster boot-up
+- Better colors
+- Replaced rectangles with roundrects
+
 [0.6.0] ------------------------
 
 - Complete UI redesign and UX improvements (Dark theme, resizable window and more)

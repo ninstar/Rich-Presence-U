@@ -5,15 +5,15 @@
     {"id":{"name":"sPlatforms","path":"sprites/sPlatforms/sPlatforms.yy",},"order":2,},
     {"id":{"name":"sPlatformsOption","path":"sprites/sPlatformsOption/sPlatformsOption.yy",},"order":3,},
     {"id":{"name":"sLinks","path":"sprites/sLinks/sLinks.yy",},"order":6,},
-    {"id":{"name":"cINIT","path":"scripts/cINIT/cINIT.yy",},"order":5,},
+    {"id":{"name":"cINIT","path":"scripts/cINIT/cINIT.yy",},"order":0,},
     {"id":{"name":"oNetwork","path":"objects/oNetwork/oNetwork.yy",},"order":2,},
     {"id":{"name":"fSegoeUI","path":"fonts/fSegoeUI/fSegoeUI.yy",},"order":8,},
     {"id":{"name":"sBackground","path":"sprites/sBackground/sBackground.yy",},"order":0,},
     {"id":{"name":"sCredits","path":"sprites/sCredits/sCredits.yy",},"order":5,},
     {"id":{"name":"oProgram","path":"objects/oProgram/oProgram.yy",},"order":1,},
     {"id":{"name":"sFriendCode","path":"sprites/sFriendCode/sFriendCode.yy",},"order":1,},
-    {"id":{"name":"rSandbox","path":"rooms/rSandbox/rSandbox.yy",},"order":3,},
-    {"id":{"name":"eRPC","path":"extensions/eRPC/eRPC.yy",},"order":4,},
+    {"id":{"name":"rSandbox","path":"rooms/rSandbox/rSandbox.yy",},"order":2,},
+    {"id":{"name":"eRPC","path":"extensions/eRPC/eRPC.yy",},"order":3,},
   ],
   "Options": [
     {"name":"Windows","path":"options/windows/options_windows.yy",},
@@ -33,6 +33,7 @@
   ],
   "Folders": [
     {"folderPath":"folders/Bitmaps.yy","order":0,"resourceVersion":"1.0","name":"Bitmaps","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Code.yy","order":1,"resourceVersion":"1.0","name":"Code","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":461609314234257646,"resourceVersion":"1.0","name":"audiogroup_default","resourceType":"GMAudioGroup",},

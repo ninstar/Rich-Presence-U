@@ -3,11 +3,11 @@
 [badge-size]: https://img.shields.io/github/repo-size/MarioSilvaGH/Rich-Presence-U?color=black&label=Size&logo=github&logoColor=white&style=flat-square
 [badge-blog]: https://img.shields.io/static/v1?color=E87700&label=Blog&logo=blogger&logoColor=white&message=Nin%E2%98%85Blog&style=flat-square
 [badge-discord]: https://img.shields.io/discord/574569573458771968?color=7289da&label=Discord&logo=discord&logoColor=white&style=flat-square
-[badge-patreon]: https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.herokuapp.com%2FNingamer&label=Patreon&logoColor=white&style=flat-square
+[badge-patreon]: https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.herokuapp.com%2Fninstar&label=Patreon&logoColor=white&style=flat-square
 
 [link-blog]: https://ninstars.blogspot.com/p/rich-presence-u.html
-[link-discord]: https://discord.gg/wZGW8DZ
-[link-patreon]: https://www.patreon.com/ningamer
+[link-discord]: https://invite.gg/ninstar
+[link-patreon]: https://www.patreon.com/ninstar
 
 <p align="center"><img alt="Logo" src="https://i.imgur.com/W4dCN2X.png" width="90%"></p>
 

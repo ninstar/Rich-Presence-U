@@ -6,7 +6,7 @@ if(ds_map_find_value(async_load,"id") == DOWNLOAD_File){
 
 		// Load new metadatas
 		if(DOWNLOAD_Platform == -1)
-			scr_NetConfig(true);
+			sNetConfig(true);
 		
         // Start downloading next platform...
 		DOWNLOAD_Platform++;

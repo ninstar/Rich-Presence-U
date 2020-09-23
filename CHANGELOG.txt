@@ -1,3 +1,13 @@
+[0.6.2] ------------------------
+
+- Cut, copy and paste droplist (right click)
+- Icons can be expanded when selected
+- Autocleaner for cached icons
+- Fixed the status not showing up at first launch
+- Fixed invisible window when restoring the size
+- Fixed drop lists
+- Fixed copy/paste formating
+
 [0.6.1] ------------------------
 
 - Faster boot-up

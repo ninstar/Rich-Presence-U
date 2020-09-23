@@ -1,4 +1,4 @@
-/// @description Checar rede
+/// @description Check network
 
 // Interface
 GUI_Alpha = 1;
@@ -17,31 +17,59 @@ var _WinX = ini_read_real("RPC_GLOBAL","WinX", window_get_x());
 var _WinY = ini_read_real("RPC_GLOBAL","WinY", window_get_y());
 var _WinW = ini_read_real("RPC_GLOBAL","WinW", 256);
 var _WinH = ini_read_real("RPC_GLOBAL","WinH", 256);
-window_set_position(_WinX, _WinY);
-window_set_size(_WinW, _WinH);
+
 ini_close();
-scr_UserConfig(false, true);
+sUserConfig(false, true);
 
 // Network settings
-var _Repo = "https://github.com/MarioSilvaGH/Rich-Presence-U/raw/master/";
+var _Checkup = 1;
 
 // Close if it is disconnected from the internet...
 if!(os_is_network_connected(true)){
 	
-	show_message(global.DLG_Connection);
+	_Checkup = 0;
+	show_message(global.OutputMessage[? "Error_Connection"]);
 	game_end();
 }
-else{
+
+// Close if components are missing...
+if(global.Repository == "")
+||(!file_exists(DirApp+"discord-rpc.dll"))
+||(!file_exists(DirApp+"wrapper.dll")){
+
+	_Checkup = 0;
+	show_message(global.OutputMessage[? "Error_Application"]);
+	game_end();
+}
+
+if(_Checkup){
 
 	DOWNLOAD_File = noone;
 	DOWNLOAD_Platform = -1;
 	
 	// Load previously downloaded metadata
-	scr_NetConfig(true);
+	sNetConfig(true);
 
-	// Download latest metadata (after application has been closed for 15 minutes or more)
-	if(date_current_datetime() >= date_inc_minute(_CheckTime, 15))
-		DOWNLOAD_File = http_get_file(_Repo+"NETWORK.cfg", DirSave+"NETWORK.cfg");
-	else
+	// 15 minutes or more after application has been closed...
+	if(date_current_datetime() >= date_inc_minute(_CheckTime, 15)){
+	
+		// Reset window settings
+		window_set_position((display_get_width()-256)/2, (display_get_height()-256)/2);
+		window_set_size(256, 256);
+		
+		// Download latest metadata
+		DOWNLOAD_File = http_get_file(global.Repository+"/raw/master/NETWORK.cfg", DirSave+"NETWORK.cfg");
+		
+		// Clean previous cache
+		directory_destroy(DirSave+"cache");
+	}
+	else{
+		
+		// Restore window settings
+		window_set_position(_WinX, _WinY);
+		window_set_size(_WinW, _WinH);
+		
+		// Start program
 		event_user(1);
+	}
 }

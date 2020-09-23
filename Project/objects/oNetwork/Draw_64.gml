@@ -1,4 +1,6 @@
 /// @description Interface
+gpu_set_tex_filter(true);
+
 #region Presets
 
 // GUI
@@ -28,3 +30,5 @@ draw_sprite_stretched_ext(sBackground, 0, -24, -24, _W+24, _H+24, _cBGR, GUI_Alp
 GUI_Boot_Anim -= 6;
 draw_sprite_ext(sBoot, 0, _W/2, _H/2, 1, 1, 0, _cTXT,  GUI_Alpha);
 draw_sprite_ext(sBoot, 1, _W/2, _H/2, 1, 1, GUI_Boot_Anim, _cTXT, GUI_Alpha);
+
+gpu_set_tex_filter(false);

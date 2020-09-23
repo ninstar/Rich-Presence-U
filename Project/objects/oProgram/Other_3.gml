@@ -13,4 +13,8 @@ ini_write_real("RPC_GLOBAL", "WinY", window_get_y());
 ini_write_real("RPC_GLOBAL", "WinW", window_get_width());
 ini_write_real("RPC_GLOBAL", "WinH", window_get_height());
 ini_close();
-scr_UserConfig(true, true);
+sUserConfig(true, true);
+
+// Unload translations
+if(ds_exists(global.OutputMessage, ds_type_map))
+	ds_map_destroy(global.OutputMessage);

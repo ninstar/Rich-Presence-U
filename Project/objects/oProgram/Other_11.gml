@@ -3,7 +3,7 @@
 
 if(RPC_IsON){
 
-	// Shutdown case client ID has been changed
+	// Shutdown if the client ID has been changed
 	if(CURRENT_ClientID != PREVIOUS_ClientID){
 
 		if(!RPC_Down){
@@ -16,8 +16,7 @@ if(RPC_IsON){
 	}
 
 	// Turns it back on if client ID is valid
-	if(CURRENT_ClientID != "")
-	&&(CURRENT_ClientID != "0"){
+	if(CURRENT_ClientID != ""){
 
 		if(RPC_Down){
 			
@@ -27,7 +26,7 @@ if(RPC_IsON){
 	}
 	else{
 
-		show_message_async(global.DLG_ClientError);
+		show_message_async(global.OutputMessage[? "Error_Client"]);
 		exit;
 	}
 }
@@ -49,7 +48,7 @@ else{
 }
 
 // Title icon and version
-setLargeImageKey(string_add_zeros(global.RPC_TitleSelected, 3));
+setLargeImageKey(string_zeros(global.RPC_TitleSelected, 3));
 setLargeImageText("Rich Presence U - "+VersionString);
 
 // Service icon and friend code
@@ -57,7 +56,7 @@ var _FC_Icon = "";
 var _FC = "";
 if(global.RPC_FriendCode != ""){
 	
-	_FC = scr_GetFriendCode(global.RPC_Platform, global.RPC_FriendCode);
+	_FC = sGetFriendCode(global.RPC_Platform, global.RPC_FriendCode);
 	_FC_Icon = "fc";
 }
 setSmallImageKey(_FC_Icon);

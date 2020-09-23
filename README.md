@@ -1,11 +1,11 @@
 ![badge-size]  [![Patreon][badge-patreon]][link-patreon] [![Discord][badge-discord]][link-discord] [![Blog][badge-blog]][link-blog]  
 <img alt="Card" src="https://i.imgur.com/iodPtfQ.png" width="100%">
 
-This application allows you to display **Wii U**, **Nintendo Switch** and **Nintendo 3DS** games with a custom or predefined description on your *Discord* profile. There are over 400 titles across all three platforms.
+This GUI application allows you to display **Wii U**, **Nintendo Switch** and **Nintendo 3DS** games with a custom or predefined description on your *Discord* profile. There are over 400 titles across all three platforms.
 
 <img alt="Demonstration" src="https://i.imgur.com/XnlTO8v.gif" width="100%">
 
-> **Note:** This application does not use nor support any console modifications by default, it needs manual setup in order to display your games.
+> **Note:** Rich Presence U does not use nor support any console modifications by default, it needs manual setup in order to display your games.
 
 ## Content
 
@@ -26,7 +26,7 @@ This application allows you to display **Wii U**, **Nintendo Switch** and **Nint
 
 ### Customizing the predefined details
 
-You can change the content of predefined details (*Single Player, Multiplayer,* etc.) by editing the ``DETAILS.cfg``.
+You can change the content of predefined details (*Single Player, Multiplayer,* etc.) by editing the ``details.txt``.
 
 ### Client redirection
 
@@ -40,6 +40,13 @@ wiiu = "X"
 **X** is where the URL of the new repository goes, keep in mind that it must follow the same directory structure as the default one (which you can see [here](https://github.com/MarioSilvaGH/Ninty-Launcher/blob/master/Assets/WiiU), this is also the default URL) with files and folders following the same name.
 
 > **Note:** This example overrides the default client for the Wii U, if you want to use it again just remove the ``REDIRECT.cfg`` from the application directory.
+
+## Compiling
+
+In order to compile the graphical user interface you will need:
+• *GameMaker Studio 2 - Runtime v2.3.0.401* or newer.
+
+>  For information on how rich presence works and how to use its features, see the official [documentation](https://discord.com/developers/docs/rich-presence/how-to) provided by Discord.
 
 ## Credits
 

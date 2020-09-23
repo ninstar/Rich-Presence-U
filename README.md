@@ -13,7 +13,7 @@ This GUI application allows you to display **Wii U**, **Nintendo Switch** and **
 
 #### Rich Presence U 
 
-- [**⬇ DOWNLOAD**](https://github.com/MarioSilvaGH/Rich-Presence-U/releases/tag/0.6) - Version: ``0.6.1``
+- [**⬇ DOWNLOAD**](https://github.com/MarioSilvaGH/Rich-Presence-U/releases/tag/0.6) - Version: ``0.6.2``
 	- [x] Rich Presence U ``[Windows, 32/64-bit]``
 	- [x] [Changelog](https://github.com/MarioSilvaGH/Ninty-Launcher/blob/master/CHANGELOG.txt)
 

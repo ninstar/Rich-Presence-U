@@ -14,13 +14,13 @@ This GUI application allows you to display **Wii U**, **Nintendo Switch** and **
 #### Rich Presence U 
 
 - [**⬇ DOWNLOAD**](https://github.com/MarioSilvaGH/Rich-Presence-U/releases/tag/0.6) - Version: ``0.6.2``
-	- [x] Rich Presence U ``[Windows, 32/64-bit]``
+	- [x] Executable ``Windows, 32/64 bit``
 	- [x] [Changelog](https://github.com/MarioSilvaGH/Ninty-Launcher/blob/master/CHANGELOG.txt)
 
 
 ### Links
 
--   [**Source Code** (Master)](https://github.com/MarioSilvaGH/Rich-Presence-U/tree/master)
+-   [**Source Code** (Main Branch)](https://github.com/MarioSilvaGH/Rich-Presence-U/tree/master)
 
 ## Extras
 
@@ -44,6 +44,7 @@ wiiu = "X"
 ## Compiling
 
 In order to compile the graphical user interface you will need:
+
 • *GameMaker Studio 2 - Runtime v2.3.0.401* or newer.
 
 >  For information on how rich presence works and how to use its features, see the official [documentation](https://discord.com/developers/docs/rich-presence/how-to) provided by Discord.
@@ -54,7 +55,7 @@ In order to compile the graphical user interface you will need:
 * Mario Silva (Nin★)
 
 **RPC Wrapper**
-* Aouab
+* [Aouab](https://discord.gg/Kvt4av6)
 
 **Icons & Titles**
 * Mario Silva (Nin★)

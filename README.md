@@ -20,34 +20,8 @@ This GUI application allows you to display **Wii U**, **Nintendo Switch** and **
 
 ### Links
 
--   [**Source Code** (Main Branch)](https://github.com/MarioSilvaGH/Rich-Presence-U/tree/master)
-
-## Extras
-
-### Customizing the predefined details
-
-You can change the content of predefined details (*Single Player, Multiplayer,* etc.) by editing the ``details.txt``.
-
-### Client redirection
-
-If you have a repository with your own icons and you want to use them with Rich Presence U, you can create a new file named ``NETWORK.cfg`` with the following content:
-
-```ini
-[URLS]
-wiiu = "X"
-```
-
-**X** is where the URL of the new repository goes, keep in mind that it must follow the same directory structure as the default one (which you can see [here](https://github.com/MarioSilvaGH/Ninty-Launcher/blob/master/Assets/WiiU), this is also the default URL) with files and folders following the same name.
-
-> **Note:** This example overrides the default client for the Wii U, if you want to use it again just remove the ``REDIRECT.cfg`` from the application directory.
-
-## Compiling
-
-In order to compile the graphical user interface you will need:
-
-• *GameMaker Studio 2 - Runtime v2.3.0.401* or newer.
-
->  For information on how rich presence works and how to use its features, see the official [documentation](https://discord.com/developers/docs/rich-presence/how-to) provided by Discord.
+- [**Rich Presence U Manual** (Wiki)](https://github.com/MarioSilvaGH/Rich-Presence-U/wiki) - User guide, troubleshooting and instructions on how to compile the project.
+- [**Source Code** (Main Branch)](https://github.com/MarioSilvaGH/Rich-Presence-U/tree/master)
 
 ## Credits
 

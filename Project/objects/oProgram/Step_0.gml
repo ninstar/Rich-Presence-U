@@ -228,7 +228,7 @@ if(GUI_Sleep == 0){
 				case(eOption.Theme):		global.GUI_Theme = !global.GUI_Theme;				break;	// Theme
 				case(eOption.Update):		url_open(global.NET_Update_Download);				break;	// Update
 				case(eOption.Platform):		GUI_Platforms_Show = true;							break;	// Update
-				case(eOption.TitleIcon):	GUI_IconExpand_Show = true;			break;	// Title Icon
+				case(eOption.TitleIcon):	GUI_IconExpand_Show = true;							break;	// Title Icon
 				case(eOption.ElapsedTime):	global.RPC_ElapsedTime = !global.RPC_ElapsedTime;	break;	// Elapsed Time
 
 				// Title

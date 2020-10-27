@@ -1,13 +1,13 @@
 /// @description Start program
 
 // Mandatory update
-if(global.NET_Update_Version > Version)
-&&(global.NET_Update_Mandatory){
+if(Version < global.NET_UPDATE_Version)
+&&(Version < global.NET_UPDATE_Minimal){
 
 	var _GetUpdate = show_question(global.OutputMessage[? "Update_Mandatory"]);
 	
 	if(_GetUpdate == 1)
-		url_open(global.NET_Update_Download);
+		url_open(global.NET_UPDATE_Page);
 	
 	game_end();
 }

@@ -5,6 +5,7 @@ FreeDiscord();
 
 // Save user settings
 ini_open(DirSave+"USER.ini");
+ini_write_real("RPC_GLOBAL", "Version", Version);
 ini_write_real("RPC_GLOBAL", "PlatformID", global.RPC_Platform);
 ini_write_real("RPC_GLOBAL", "Theme", global.GUI_Theme);
 ini_write_real("RPC_GLOBAL", "Time", date_current_datetime());

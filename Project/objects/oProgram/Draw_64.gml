@@ -172,7 +172,7 @@ else
 	_Text = global.OutputMessage[? "Field_Details"];
 
 var _Update = "";
-if(global.NET_Update_Version > Version)
+if(Version < global.NET_UPDATE_Version)
 	_Update = "";
 
 // Platform
@@ -449,7 +449,7 @@ else{
 		// Icon
 		draw_sprite_stretched_ext(GUI_TitleIcon, 0, _W-((48+_Resize) + _CenterH), _Y+(2+_CenterV), 48+_Resize, 48+_Resize, $ffffff, GUI_IconExpand_Anim);
 		for(var _L = -1; _L < 2; ++_L)
-			draw_sprite_stretched_ext(GUI_TitleIcon, 0, (_W-((48+_Resize) + _CenterH)) + (_L*GUI_IconExpand_Anim), (_Y+(2+_CenterV)) + (_L*GUI_IconExpand_Anim), 48+_Resize, 48+_Resize, $ffffff, .55*(1-GUI_IconExpand_Anim));
+			draw_sprite_stretched_ext(GUI_TitleIcon, 0, (_W-((48+_Resize) + _CenterH)) + (_L*GUI_IconExpand_Anim), (_Y+(2+_CenterV)) + (_L*GUI_IconExpand_Anim), 48+_Resize, 48+_Resize, $ffffff, .75*(1-GUI_IconExpand_Anim));
 	}
 }
 draw_set_color(Color_Text);
@@ -484,19 +484,19 @@ if(GUI_About_Anim > 0)
 			_Hover = true;
 		}
 		
-		// Link
+		// Page
 		if(point_in_rectangle(_CursorX, _CursorY, _X, _H-29, _X+29, _H)){
 			
 			if(_Press)
-				url_open(global.NET_URL_About);
+				url_open(global.NET_URL_Page);
 			_Hover = true;
 		}
 		
-		// Repository
+		// Help
 		if(point_in_rectangle(_CursorX, _CursorY, _X + 36, _H-29, _X+29 + 36, _H)){
 	
 			if(_Press)
-				url_open(global.NET_URL_Repo);
+				url_open(global.NET_URL_Help);
 			_Hover = true;
 		}
 	

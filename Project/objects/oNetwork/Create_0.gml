@@ -10,6 +10,7 @@ window_set_min_height(256);
 
 // Load user settings
 ini_open(DirSave+"USER.ini");
+var _CompareVersion = ini_read_real("RPC_GLOBAL","Version", Version-1);
 global.RPC_Platform = ini_read_real("RPC_GLOBAL", "PlatformID", ePlatform.WiiU);
 global.GUI_Theme = ini_read_real("RPC_GLOBAL","Theme", 0);
 var _CheckTime = ini_read_real("RPC_GLOBAL","Time", 0);
@@ -33,7 +34,7 @@ if!(os_is_network_connected(true)){
 }
 
 // Close if components are missing...
-if(global.Repository == "")
+if(global.DatabaseURL == "")
 ||(!file_exists(DirApp+"discord-rpc.dll"))
 ||(!file_exists(DirApp+"wrapper.dll")){
 
@@ -50,15 +51,16 @@ if(_Checkup){
 	// Load previously downloaded metadata
 	sNetConfig(true);
 
-	// 15 minutes or more after application has been closed...
-	if(date_current_datetime() >= date_inc_minute(_CheckTime, 15)){
+	// If 12 hours or more have been passed after the application has been closed or it is a newer version...
+	if(date_current_datetime() >= date_inc_hour(_CheckTime, 12))
+	||(Version > _CompareVersion){
 	
 		// Reset window settings
 		window_set_position((display_get_width()-256)/2, (display_get_height()-256)/2);
 		window_set_size(256, 256);
 		
 		// Download latest metadata
-		DOWNLOAD_File = http_get_file(global.Repository+"/raw/master/NETWORK.cfg", DirSave+"NETWORK.cfg");
+		DOWNLOAD_File = http_get_file(global.DatabaseURL, DirSave+"NETWORK.cfg");
 		
 		// Clean previous cache
 		directory_destroy(DirSave+"cache");

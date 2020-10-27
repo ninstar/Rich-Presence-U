@@ -1,5 +1,5 @@
-#macro Version 62
-#macro VersionString "0.6.2"
+#macro Version 63
+#macro VersionString "0.6.3"
 #macro DirSave game_save_id
 #macro DirApp working_directory+"\\"
 
@@ -128,26 +128,17 @@ enum eField {
 #endregion
 #region Repository
 
-global.Repository = "";
-var _FileText = -1;
-var _Repo = DirApp+"meta.dat";
-
-if(file_exists(_Repo)){
+global.DatabaseURL = "";
+var _URL_Path = DirApp+"database.cfg";
+if(file_exists(_URL_Path)){
 	
-	_FileText = file_text_open_read(_Repo);
-	global.Repository = file_text_read_string(_FileText);
-	file_text_close(_FileText);
+	var _URL_File = file_text_open_read(_URL_Path);
+	global.DatabaseURL = file_text_read_string(_URL_File);
+	file_text_close(_URL_File);
 }
 
 #endregion
 #region Global Functions
-
-/// @param number
-/// @param digits
-function string_zeros(argument0, argument1){
-
-	return string_replace_all( string_format(argument0, argument1, 0), " ", "0")
-}
 
 /// @param local_override
 function sNetConfig(argument0){
@@ -155,31 +146,44 @@ function sNetConfig(argument0){
 	// Default
 	ini_open(DirSave+"NETWORK.cfg");
 
-	global.NET_URL_About = ini_read_string("URLS", "about", "url://");
-	global.NET_URL_Repo = ini_read_string("URLS", "repo", "url://");
-	global.NET_Update_Version = ini_read_real("UPDATE", "version", Version);
-	global.NET_Update_Mandatory = ini_read_real("UPDATE", "mandatory", 0);
-	global.NET_Update_Download = ini_read_string("UPDATE", "download", "url://");
-	global.NET_Redirect[ePlatform.WiiU] = ini_read_string("REDIRECT", "wiiu", "url://");
-	global.NET_Redirect[ePlatform.NintendoSwitch] = ini_read_string("REDIRECT", "switch", "url://");
-	global.NET_Redirect[ePlatform.Nintendo3DS] = ini_read_string("REDIRECT", "3ds", "url://");
+	// UPDATE
+	global.NET_UPDATE_Version = ini_read_real("UPDATE", "version", Version);
+	global.NET_UPDATE_Minimal = ini_read_real("UPDATE", "minimal", -1);
+	global.NET_UPDATE_Page = ini_read_string("UPDATE", "download", "https://");
+
+	// URL
+	global.NET_URL_Help = ini_read_string("URL", "help", "https://");
+	global.NET_URL_Page = ini_read_string("URL", "page", "https://");
+
+	// REDIRECT
+	global.NET_Redirect[ePlatform.WiiU] = ini_read_string("REDIRECT", "wiiu", "https://");
+	global.NET_Redirect[ePlatform.NintendoSwitch] = ini_read_string("REDIRECT", "switch", "https://");
+	global.NET_Redirect[ePlatform.Nintendo3DS] = ini_read_string("REDIRECT", "3ds", "https://");
 	
 	ini_close();
 
-	// Custom
+	// Override
 	if(argument0)
 	&&(file_exists(DirApp+"NETWORK.cfg")){
 	    
 		ini_open(DirApp+"NETWORK.cfg");
 	
-		if(ini_key_exists("REDIRECT", "wiiu"))		global.NET_Redirect[ePlatform.WiiU] = ini_read_string("REDIRECT", "wiiu", "url://");
-		if(ini_key_exists("REDIRECT", "switch"))	global.NET_Redirect[ePlatform.NintendoSwitch] = ini_read_string("REDIRECT", "switch", "url://");
-		if(ini_key_exists("REDIRECT", "3ds"))		global.NET_Redirect[ePlatform.Nintendo3DS] = ini_read_string("REDIRECT", "3ds", "url://");
+		// REDIRECT
+		if(ini_key_exists("REDIRECT", "wiiu"))		global.NET_Redirect[ePlatform.WiiU] = ini_read_string("REDIRECT", "wiiu", "https://");
+		if(ini_key_exists("REDIRECT", "switch"))	global.NET_Redirect[ePlatform.NintendoSwitch] = ini_read_string("REDIRECT", "switch", "https://");
+		if(ini_key_exists("REDIRECT", "3ds"))		global.NET_Redirect[ePlatform.Nintendo3DS] = ini_read_string("REDIRECT", "3ds", "https://");
 	
 		ini_close();
 	}
 }
 	
+/// @param number
+/// @param digits
+function string_zeros(argument0, argument1){
+
+	return string_replace_all( string_format(argument0, argument1, 0), " ", "0")
+}
+
 /// @param save
 /// @param allow_platform_change
 function sUserConfig(argument0, argument1){

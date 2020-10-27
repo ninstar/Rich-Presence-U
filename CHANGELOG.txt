@@ -1,3 +1,10 @@
+[0.6.3] ------------------------
+
+- Updated URL references
+- Added a shortcut for online manual
+- Better support for overrides
+- Adjusted the cooldown timer
+
 [0.6.2] ------------------------
 
 - Cut, copy and paste droplist (right click)

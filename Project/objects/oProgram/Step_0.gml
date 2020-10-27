@@ -110,7 +110,7 @@ if(point_in_circle(_CursorX, _CursorY, _X+33, _Y+9, 9))
 
 // Update
 if(point_in_circle(_CursorX, _CursorY, _X+52, _Y+9, 9))
-&&(global.NET_Update_Version > Version)
+&&(Version < global.NET_UPDATE_Version)
 	_Hover = eOption.Update;
 	
 // Platform
@@ -226,7 +226,7 @@ if(GUI_Sleep == 0){
 	
 				case(eOption.About):		GUI_About_Show = true;								break;	// About
 				case(eOption.Theme):		global.GUI_Theme = !global.GUI_Theme;				break;	// Theme
-				case(eOption.Update):		url_open(global.NET_Update_Download);				break;	// Update
+				case(eOption.Update):		url_open(global.NET_UPDATE_Page);				break;	// Update
 				case(eOption.Platform):		GUI_Platforms_Show = true;							break;	// Update
 				case(eOption.TitleIcon):	GUI_IconExpand_Show = true;							break;	// Title Icon
 				case(eOption.ElapsedTime):	global.RPC_ElapsedTime = !global.RPC_ElapsedTime;	break;	// Elapsed Time

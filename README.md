@@ -5,9 +5,10 @@ This GUI application allows you to display **Wii U**, **Nintendo Switch** and **
 
 <img alt="Demonstration" src="https://i.imgur.com/XnlTO8v.gif" width="100%">
 
-> **Note:** This application does not use nor support any console modifications by default, it needs manual setup in order to show your games.
-
-- If you have any icons for games that are not yet included, you can submit through [this form](https://forms.gle/SztU5GdQEgwx45GX8) or via [pull request](https://github.com/ninstar/Rich-Presence-U/pulls).
+> **Notes:** 
+> 1. This application does not use nor support any console modifications by default, it needs manual setup in order to show your games.
+> 2. Titles and icons are primarily based on *North America* releases, you can change this by creating your own [override](https://github.com/ninstar/Rich-Presence-U/wiki/English#Overrides).
+> 3. If you have any icons for games that are not yet included, you can submit through [this form](https://forms.gle/SztU5GdQEgwx45GX8) or via [pull request](https://github.com/ninstar/Rich-Presence-U/pulls).
 
 ## Content
 

@@ -1,30 +1,14 @@
-![badge-size]  [![Patreon][badge-patreon]][link-patreon] [![Discord][badge-discord]][link-discord] [![Blog][badge-blog]][link-blog]  
-<img alt="Card" src="https://i.imgur.com/iodPtfQ.png" width="100%">
+<img alt="Card" src="https://i.imgur.com/IrMJGcd.png" width="100%">
+
+### About
 
 This GUI application allows you to display **Wii U**, **Nintendo Switch** and **Nintendo 3DS** games with a custom or predefined description on your *Discord* profile. There are over 400 titles across all three platforms.
 
-<img alt="Demonstration" src="https://i.imgur.com/XnlTO8v.gif" width="100%">
+> This application does not use nor support any console modifications by default, it needs manual setup in order to show your games. Titles and icons are primarily based on *North America* releases by default, you can change this by creating your own [custom client](https://github.com/ninstar/Rich-Presence-U/wiki/English#Overrides). If you have any icons for games that have not been included yet, you can submit them through [this form](https://forms.gle/SztU5GdQEgwx45GX8) or via pull request. Documentation can be found on the **Wiki** tab.
 
-> **Notes:** 
-> 1. This application does not use nor support any console modifications by default, it needs manual setup in order to show your games.
-> 2. Titles and icons are primarily based on *North America* releases, you can change this by creating your own [override](https://github.com/ninstar/Rich-Presence-U/wiki/English#Overrides).
-> 3. If you have any icons for games that are not yet included, you can submit through [this form](https://forms.gle/SztU5GdQEgwx45GX8) or via [pull request](https://github.com/ninstar/Rich-Presence-U/pulls).
+### External links
 
-## Content
-
-### Releases
-
-#### Rich Presence U 
-
-- [**⬇ DOWNLOAD**](https://github.com/ninstar/Rich-Presence-U/releases/tag/0.6) - Version: ``0.6.3``
-	- [x] Executable ``Windows, 32/64 bit``
-	- [x] [Changelog](https://github.com/ninstar/Ninty-Launcher/blob/master/CHANGELOG.txt)
-
-
-### Links
-
-- [**Rich Presence U Manual** (Wiki)](https://github.com/ninstar/Rich-Presence-U/wiki) - User guide, troubleshooting and instructions on how to compile the project.
-- [**Source Code** (Main Branch)](https://github.com/ninstar/Rich-Presence-U/tree/master)
+[![Ko-fi][badge-itchio]][link-itchio] [![Discord][badge-discord]][link-discord] [![Patreon][badge-patreon]][link-patreon] [![Ko-fi][badge-kofi]][link-kofi]
 
 ## Credits
 
@@ -42,13 +26,14 @@ This GUI application allows you to display **Wii U**, **Nintendo Switch** and **
 
 ## License
 
-This project is licensed under the ***MIT License***, refer to ``LICENSE.md`` (alternatively this [link](https://github.com/ninstar/Rich-Presence-U/blob/master/LICENSE.md)) for more information.
+This project is licensed under the ***MIT License***.
 
-[badge-size]: https://img.shields.io/github/repo-size/ninstar/Rich-Presence-U?color=black&label=Size&logo=github&logoColor=white&style=flat-square
-[badge-patreon]: https://img.shields.io/badge/dynamic/json?query=data.attributes.patron_count&suffix=%20patrons&url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F2890526&label=Patreon&logo=patreon&logoColor=white&color=%23e85b46&style=flat-square
-[badge-discord]: https://img.shields.io/discord/574569573458771968?color=7289da&label=Discord&logo=discord&logoColor=white&style=flat-square
-[badge-blog]: https://img.shields.io/static/v1?color=E87700&label=Blog&logo=blogger&logoColor=white&message=Rich+Presence+U&style=flat-square
-
-[link-patreon]: https://www.patreon.com/ninstar
+[link-itchio]: https://ninstario.itch.io/rpc
 [link-discord]: https://invite.gg/ninstar
-[link-blog]: https://ninstars.blogspot.com/p/rich-presence-u.html
+[link-kofi]: https://ko-fi.com/ninstar
+[link-patreon]: https://www.patreon.com/ninstar
+
+[badge-itchio]:https://img.shields.io/static/v1?label=itch.io&logo=itch.io&labelColor=00192A&logoColor=white&message=Downloads,%20Releases&color=00d6ff&style=for-the-badge
+[badge-discord]: https://img.shields.io/discord/574569573458771968?color=5865F2&label=Discord&labelColor=00192A&logo=discord&logoColor=white&style=for-the-badge
+[badge-kofi]:https://img.shields.io/static/v1?label=Ko-fi&logo=kofi&labelColor=00192A&logoColor=white&message=Buy%20me%20a%20coffee&color=29ABE0&style=for-the-badge
+[badge-patreon]: https://img.shields.io/badge/dynamic/json?query=data.attributes.patron_count&suffix=%20patrons&url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F2890526&label=Patreon&labelColor=00192A&logo=patreon&logoColor=white&color=FF424D&style=for-the-badge

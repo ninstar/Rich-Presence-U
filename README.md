@@ -23,6 +23,7 @@ This GUI application allows you to display **Wii U**, **Nintendo Switch** and **
 * Majesty
 * Sneethan
 * Luxen
+* CodeBarre
 * issey
 
 ## License

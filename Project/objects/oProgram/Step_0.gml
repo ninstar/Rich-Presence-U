@@ -59,23 +59,26 @@ if(Standby > 0){
 	&&(!Download_BlockApp){
 	
 		// Shorcuts
-		for(_I = eBUTTON.Update; _I < eBUTTON.Settings+1; ++_I){
+		for(_I = eBUTTON.Restart; _I < eBUTTON.Settings+1; ++_I){
 	
 			if(point_in_rectangle(Cursor_X, Cursor_Y, Button[_I].X, 56, Button[_I].X+48, 104)){
 		
-				Tooltip_X = Button[_I].X - 16;
-				Tooltip_Y = 80;
-				Tooltip_Content = Button[_I].Tip;
-				Tooltip_Horizontal = true;
-				Tooltip_Display = true;
+				if(_I != eBUTTON.Restart){
+					
+					Tooltip_X = Button[_I].X - 16;
+					Tooltip_Y = 80;
+					Tooltip_Content = Button[_I].Tip;
+					Tooltip_Horizontal = true;
+					Tooltip_Display = true;
+				}
 
 				Hover = _I;
 				break;
 			}
 		}
 		
-		if(Hover == eBUTTON.Update)
-		&&(!AppUpdate){
+		if(Hover == eBUTTON.Update && !AppUpdate)
+		||(Hover == eBUTTON.Restart && State_Name != Lang[? "ERROR"]){
 			
 			Hover = eBUTTON.None;
 			Tooltip_Display = false;
@@ -541,6 +544,7 @@ if(Standby > 0){
 				case(eBUTTON.CustomName):	keyboard_string = Title.CustomName;	Type = eTYPE.CustomName;		break;
 				case(eBUTTON.Description):	keyboard_string = Title.Description;	Type = eTYPE.Description;	break;
 		
+				case(eBUTTON.Restart):	game_restart();	break;
 				case(eBUTTON.Update):	if(string_pos("://", AppUpdate_Link) > 0) url_open(AppUpdate_Link);		break;
 				case(eBUTTON.Settings):
 		
@@ -717,7 +721,7 @@ if(Standby > 0){
 	draw_sprite(gLYT_Avatar, 1, 16, 56);
 
 	if(!State_Connected)
-		draw_sprite(gLYT_Avatar, 2, 16, 56);
+		draw_sprite(gLYT_Avatar, 2 + (Hover == eBUTTON.Restart), 16, 56);
 
 	var _State = State_Status;
 	if(State_Connected){

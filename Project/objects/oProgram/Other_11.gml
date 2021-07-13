@@ -1,76 +1,38 @@
-/// @description Update status
-#region Check RPC
+/// @description Download list
+ini_open(game_save_id+"database.cfg");
 
-if(RPC_IsON){
+var _Titles_WIIU = ini_read_string("titles", "wiiu", "");
+var _Titles_NSWITCH = ini_read_string("titles", "nswitch", "");
+var _Titles_N3DS = ini_read_string("titles", "n3ds", "");
+var _Client_WIIU = ini_read_string("client", "wiiu", "");
+var _Client_NSWITCH = ini_read_string("client", "nswitch", "");
+var _Client_N3DS = ini_read_string("client", "n3ds", "");
 
-	// Shutdown if the client ID has been changed
-	if(CURRENT_ClientID != PREVIOUS_ClientID){
+ini_close();
 
-		if(!RPC_Down){
-			
-			FreeDiscord();
-			RPC_Down = true;
-		}
-		
-		PREVIOUS_ClientID = CURRENT_ClientID;
-	}
+var _L = -1;
+if(string_pos("://", _Titles_WIIU) > 0){	_L++;	Download_List[_L] = [_Titles_WIIU, game_save_id+"titles_wiiu.csv"];			}else	file_copy(_Titles_WIIU, game_save_id+"titles_wiiu.csv");
+if(string_pos("://", _Titles_NSWITCH) > 0){ _L++;	Download_List[_L] = [_Titles_NSWITCH, game_save_id+"titles_nswitch.csv"];	}else	file_copy(_Titles_NSWITCH, game_save_id+"titles_nswitch.csv");
+if(string_pos("://", _Titles_N3DS) > 0){	_L++;	Download_List[_L] = [_Titles_N3DS, game_save_id+"titles_n3ds.csv"];			}else	file_copy(_Titles_N3DS, game_save_id+"titles_n3ds.csv");
+if(string_pos("://", _Client_WIIU) > 0){	_L++;	Download_List[_L] = [_Client_WIIU, game_save_id+"client_wiiu.cfg"];			}else	file_copy(_Client_WIIU, game_save_id+"client_wiiu.cfg");
+if(string_pos("://", _Client_NSWITCH) > 0){ _L++;	Download_List[_L] = [_Client_NSWITCH, game_save_id+"client_nswitch.cfg"];	}else	file_copy(_Client_NSWITCH, game_save_id+"client_nswitch.cfg");
+if(string_pos("://", _Client_N3DS) > 0){	_L++;	Download_List[_L] = [_Client_N3DS, game_save_id+"client_n3ds.cfg"];			}else	file_copy(_Client_N3DS, game_save_id+"client_n3ds.cfg");
 
-	// Turns it back on if client ID is valid
-	if(CURRENT_ClientID != ""){
+if(_L > -1){
 
-		if(RPC_Down){
-			
-			InitDiscord(CURRENT_ClientID);
-			RPC_Down = false;
-		}
-	}
-	else{
-
-		show_message_async(global.OutputMessage[? "Error_Client"]);
-		exit;
-	}
-}
-else
-	exit;
-	
-#endregion
-
-// Use details as a custom title
-if(PLATFORM_Title[global.RPC_TitleSelected] == "%CUSTOM%"){
-
-	setDetails(global.RPC_DetailsString);
-	setState("");
+	Download_Index = 0;
+	var _DL = Download_List[Download_Index];
+	Download = http_get_file(_DL[0], _DL[1]);
 }
 else{
 	
-	setDetails(PLATFORM_Title[global.RPC_TitleSelected]);
-	setState(global.RPC_DetailsString);
+	Client_CurrentID = dClientID(Platform.Console, Title.Client);
+	Client_RunningID = Client_CurrentID;
+		
+	// Initializate RPC
+	if(Download_BlockApp)
+		np_initdiscord(Client_CurrentID, true, np_steam_app_id_empty);
+		
+	Download_BlockApp = false;
+	Download_Index = -1;
 }
-
-// Title icon and version
-setLargeImageKey(string_zeros(global.RPC_TitleSelected, 3));
-setLargeImageText("Rich Presence U - "+VersionString);
-
-// Service icon and friend code
-var _FC_Icon = "";
-var _FC = "";
-if(global.RPC_FriendCode != ""){
-	
-	_FC = sGetFriendCode(global.RPC_Platform, global.RPC_FriendCode);
-	_FC_Icon = "fc";
-}
-setSmallImageKey(_FC_Icon);
-setSmallImageText(_FC);
-
-// Generate new timestamp if necessary
-if(RPC_Timestamp_GetNew){
-	
-	RPC_Timestamp_Stored = Now();
-	RPC_Timestamp_GetNew = false;
-}
-
-// Elapsed time
-setStartTimestamp(RPC_Timestamp_Stored * global.RPC_ElapsedTime);
-
-// Submit Changes
-UpdatePresence();

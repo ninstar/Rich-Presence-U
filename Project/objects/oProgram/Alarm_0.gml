@@ -1,7 +1,4 @@
-/// @description Cursor animation
-if(GUI_TextBlink == "|")
-	GUI_TextBlink = " ";
-else
-	GUI_TextBlink = "|";
+np_update();
 
-alarm[0] = 15;
+if(Standby > 0)
+	alarm[0] = 60;

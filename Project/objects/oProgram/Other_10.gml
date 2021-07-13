@@ -1,71 +1,114 @@
-/// @description Load platform
-#region List
+/// @description Update status
+if(State_Connected){
 
-ini_open(DirSave + sGetPlatform(global.RPC_Platform)+".ini");
+	// Elapsed time
+	var _Timestamp = 0;
+	if(Details.ElapsedTime == true){
 
-// Clean arrays
-PLATFORM_ClientID = "";
-PLATFORM_Title = "";
-
-// Up to 10 clients, 149 titles each
-PLATFORM_TotalTitles = 0;
-var _Offset = 0;
-for(var _c = 0; _c < 9+1; _c++){
-
-	// Clients
-	PLATFORM_ClientID[_c] = ini_read_string("CLIENT_"+string(_c), "ID", "");
-
-	// Titles
-	for(var _t = _Offset; _t < _Offset + (148+1); _t++){
-	
-		// Stop loop if there is no title in the current slot
-		if(ini_read_string("CLIENT_"+string(_c), "T_"+string_zeros(_t,3), "") == "")
-			break;
-		else{
-		
-			// Add title to the list
-			PLATFORM_Title[_t] = ini_read_string("CLIENT_"+string(_c), "T_"+string_zeros(_t,3), "");
-			PLATFORM_TotalTitles++;
+		if(Client_UpdateTimestamp){
+			
+			Details.Timestamp = date_current_datetime();
+			Client_UpdateTimestamp = false;
 		}
+		
+		_Timestamp = Details.Timestamp;
+	}
+		
+	if(!Setting.DisplayStatus)
+		np_clearpresence();
+	else{
+		
+		// Elapsed time
+		np_setpresence_timestamps(_Timestamp, 0, false);
+
+		// About link
+		if(Details.About == true){
+	
+			var _Domain = Lang[? "ABOUT_INTERNET"];
+			var _Query = string_replace_all(Title.Name, " ", "%20");
+			if(Title.Name == "")
+			||(Title.CustomName != ""){
+			
+				_Query = "https://www.google.com/search?q="+string_replace_all(Title.CustomName, " ", "%20");
+				_Domain = "internet";
+			}
+			else{
+			
+				switch(Title.Region){
+		
+					case(eREGION.JP):
+			
+						// nintendo.co.jp
+						var _Shard = "";
+						switch(Platform.Console){
+		
+							case(ePLATFORM.WiiU):			_Shard = "wiiu";	break;
+							case(ePLATFORM.NintendoSwitch):	_Shard = "switch";	break;
+							case(ePLATFORM.Nintendo3DS):	_Shard = "3ds";		break;
+						}
+				
+						_Query = "https://www.nintendo.co.jp/search/?q="+string_replace_all(Title.Name, " ", "%20")+"&shard="+_Shard;
+						_Domain = Lang[? "ABOUT_TITLE"]+" nintendo.co.jp";
+						show_debug_message(_Query);
+				
+					break;
+					case(eREGION.EU):
+			
+						// nintendo.co.uk
+						_Query = "https://www.nintendo.co.uk/Search/Search-299117.html?q="+_Query;
+						_Domain = Lang[? "ABOUT_TITLE"]+" nintendo.co.uk";
+				
+					break;
+					default:
+				
+						// nintendo.com
+						_Query = "https://www.nintendo.com/search/#query="+_Query;
+						_Domain = Lang[? "ABOUT_TITLE"]+" nintendo.com";
+				
+					break;
+				}
+			}
+			np_setpresence_buttons(0, _Domain, _Query);
+		}
+		else
+			np_setpresence_buttons(0, "", "");
+
+		// Friend code
+		var _Tooltip = "";
+		var _Tooltip_Icon = "";
+		var _Description = Title.Description;
+		if(Details.FriendCode != ""){
+	
+			if(Title.Description == ""){
+			
+				_Description = dFormatFC(Platform.Console, Details.FriendCode);
+				if(Platform.Console == ePLATFORM.WiiU)
+					_Description = "NNID: "+_Description;
+			}
+			else{
+			
+				_Tooltip_Icon = "_tooltip";
+				_Tooltip = dFormatFC(Platform.Console, Details.FriendCode);
+				if(Platform.Console == ePLATFORM.WiiU)
+					_Tooltip = "NNID: "+_Tooltip;
+			}
+		}
+
+		// Custom name
+		var _Title = Title.Name;
+		if(Title.CustomName != "")
+			_Title = Title.CustomName;
+
+		// Icon
+		var _Icon = Title.Icon;
+		if(Title.Icon == "")
+			_Icon = "_default";
+	
+		// State
+		np_setpresence_more(_Tooltip, "Rich Presence U "+version_stg, false);	
+		np_setpresence(_Description, _Title, _Icon, _Tooltip_Icon);
 	}
 	
-	// Search for other 149 titles
-	_Offset = _t;
+	alarm[0] = 5;
+	State_Playing = true;
 }
-
-ini_close();
-
-#endregion
-
-// Close in case of failure
-if(PLATFORM_TotalTitles <= 0){
-	
-	show_message(global.OutputMessage[? "Error_Client"]);
-	game_end();
-	exit;
-}
-
-// Select a previously saved title (prevent it from exceeding the total)
-CURRENT_TitleString = PLATFORM_Title[clamp(global.RPC_TitleSelected, 0, PLATFORM_TotalTitles-1)];
-
-// Select client ID according to new title index
-PREVIOUS_ClientID = CURRENT_ClientID;
-CURRENT_ClientID = PLATFORM_ClientID[floor(global.RPC_TitleSelected / 149)];
-
-// Remove previous title icon
-if(sprite_exists(GUI_TitleIcon))
-	sprite_delete(GUI_TitleIcon);
-	
-// Check if there is already an icon for the new title in the cache
-var _CacheIcon = DirSave+ "cache\\" + sGetPlatform(global.RPC_Platform) + "\\" + string_zeros(global.RPC_TitleSelected, 3)+".png";
-if(file_exists(_CacheIcon))
-	GUI_TitleIcon = sprite_add(_CacheIcon, 1, false, true, 0, 0);
-else{
-	
-	// Download icon for new title
-	GUI_LoadingIcon_Show = true;
-	GUI_TitleIcon = sprite_add(global.NET_Redirect[global.RPC_Platform] + "/" + string_zeros(global.RPC_TitleSelected, 3)+".png", 1, false, true, 0, 0);
-}
-
-// Generate new timestamp
-RPC_Timestamp_GetNew = true;

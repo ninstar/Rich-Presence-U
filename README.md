@@ -4,27 +4,22 @@
 
 This GUI application allows you to display **Wii U**, **Nintendo Switch** and **Nintendo 3DS** games with a custom or predefined description on your *Discord* profile. There are over 400 titles across all three platforms.
 
-> This application does not use nor support any console modifications by default, it needs manual setup in order to show your games. Titles and icons are primarily based on *North America* releases by default, you can change this by creating your own [custom client](https://github.com/ninstar/Rich-Presence-U/wiki/English#Overrides). If you have any icons for games that have not been included yet, you can submit them through [this form](https://forms.gle/SztU5GdQEgwx45GX8) or via pull request. Documentation can be found on the **Wiki** tab.
+> Documentation can be found on the **Wiki** tab.
 
 ### External links
 
 [![Ko-fi][badge-itchio]][link-itchio] [![Discord][badge-discord]][link-discord] [![Patreon][badge-patreon]][link-patreon] [![Ko-fi][badge-kofi]][link-kofi]
 
+- **Title database** - [ninstar/Rich-Presence-U-DB](https://github.com/ninstar/Rich-Presence-U-DB)
+
 ## Credits
 
-**Design & Program**
+**Application, Code & Design**
 * Nin★ (NinStar)
 
-**RPC Wrapper**
-* [Aouab](https://discord.gg/Kvt4av6)
-
-**Icons & Titles**
-* Nin★ (NinStar)
-* Majesty
-* Sneethan
-* Luxen
-* CodeBarre
-* issey
+**Extensions**
+* [nkrapivindev](https://github.com/nkrapivin/NekoPresence) ``NekoPresence``
+* [YellowAfterlife](https://github.com/YAL-GameMaker/window_commands/) ``Windows Command Hook``
 
 ## License
 

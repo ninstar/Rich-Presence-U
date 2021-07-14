@@ -185,19 +185,6 @@ Section `${APP_NAME}`
 
 SectionEnd
 
-Section "Visual C++ Redistributable" SEC_VCREDIST
-SectionIn RO
-
-SetOutPath "$TEMP"
-File "${MAKENSIS}\vcredist_x86_2015.exe"
-DetailPrint "Running Visual Studio 2015 x86 Redistributable Setup..."
-ExecWait '"$TEMP\vcredist_x86_2015.exe" /quiet /norestart' $VCRedistSetupError
-DetailPrint "end VS2015 x86"
-Delete "$TEMP\vcredist_x86_2015.exe"
-
-SetOutPath "$INSTDIR"
-SectionEnd
-
 ; Optional section (can be disabled by the user)
 Section "Start Menu Shortcuts"
 

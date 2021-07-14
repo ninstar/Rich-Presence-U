@@ -3,7 +3,7 @@
 // Standby
 var _Draw = true;
 if(window_has_focus())
-	Standby = 900;
+	Standby = 600;
 else{
 	
 	Standby -= Standby > 0;
@@ -326,9 +326,9 @@ if(Standby > 0){
 							if(_Name_0 != ""){	Search_List_Name[_Found] = _Name_0;	Search_List_Region[_Found] = _Priority[0];	}	// Higher priority
 
 							Search_List_Client[_Found] = "";
-							if(_Client_2 != ""){	Search_List_Client[_Found] = _Client_2;	Search_List_Icon[_Found] = _Index+_Sufix[_Priority[2]]; }
-							if(_Client_1 != ""){	Search_List_Client[_Found] = _Client_1;	Search_List_Icon[_Found] = _Index+_Sufix[_Priority[1]]; }
-							if(_Client_0 != ""){	Search_List_Client[_Found] = _Client_0;	Search_List_Icon[_Found] = _Index+_Sufix[_Priority[0]]; }
+							if(_Client_2 != ""){	Search_List_Client[_Found] = _Client_2;	if(_Index != "") Search_List_Icon[_Found] = _Index+_Sufix[_Priority[2]]; else Search_List_Icon[_Found] = "_default"; }
+							if(_Client_1 != ""){	Search_List_Client[_Found] = _Client_1;	if(_Index != "") Search_List_Icon[_Found] = _Index+_Sufix[_Priority[1]]; else Search_List_Icon[_Found] = "_default"; }
+							if(_Client_0 != ""){	Search_List_Client[_Found] = _Client_0;	if(_Index != "") Search_List_Icon[_Found] = _Index+_Sufix[_Priority[0]]; else Search_List_Icon[_Found] = "_default"; }
 	
 							_Found++;
 						}

@@ -1,26 +1,22 @@
 /// @description Update status
 if(State_Connected){
-
-	// Elapsed time
-	var _Timestamp = 0;
-	if(Details.ElapsedTime == true){
-
-		if(Client_UpdateTimestamp){
-			
-			Details.Timestamp = date_current_datetime();
-			Client_UpdateTimestamp = false;
-		}
-		
-		_Timestamp = Details.Timestamp;
-	}
-		
+	
 	if(!Setting.DisplayStatus)
 		np_clearpresence();
 	else{
 		
-		// Elapsed time
-		np_setpresence_timestamps(_Timestamp, 0, false);
+		// Get new timestamp
+		if(!State_Playing)
+		||(Client_RunningID != Client_CurrentID)
+		||(!Setting.PreserveTime && (Client_StatusConsole != Platform.Console || Client_StatusName != Title.Name))
+			Details.Timestamp = date_current_datetime();
 
+		Client_StatusConsole = Platform.Console;
+		Client_StatusName = Title.Name;
+	
+		// Elapsed time
+		np_setpresence_timestamps(Details.Timestamp * Details.ElapsedTime, 0, false);
+	
 		// About link
 		if(Details.About == true){
 	
@@ -62,7 +58,7 @@ if(State_Connected){
 					default:
 				
 						// nintendo.com
-						_Query = "https://www.nintendo.com/search/#query="+dURLEncond(Title.Name);
+						_Query = "https://www.nintendo.com/search/#category=all&page=1&query="+dURLEncond(Title.Name);
 						_Domain = Lang[? "ABOUT_TITLE"]+" nintendo.com";
 				
 					break;
@@ -102,7 +98,7 @@ if(State_Connected){
 	
 		// Icon
 		var _Icon = Title.Icon;
-		if(Title.Icon == "")
+		if(_Icon == "")
 			_Icon = "_default";
 	
 		// State
@@ -115,8 +111,10 @@ if(State_Connected){
 
 		np_setpresence_more(_Tooltip, "Rich Presence U "+version_stg, false);	
 		np_setpresence(_Description, _Title, _Icon, _Tooltip_Icon);
+	
+		State_Playing = true;
+		Client_RunningID = Client_CurrentID;
 	}
 	
 	alarm[0] = 5;
-	State_Playing = true;
 }

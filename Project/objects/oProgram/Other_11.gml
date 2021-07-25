@@ -27,12 +27,14 @@ if(_L > -1){
 else{
 	
 	Client_CurrentID = dClientID(Platform.Console, Title.Client);
-	Client_RunningID = Client_CurrentID;
 		
 	// Initializate RPC
-	if(Download_BlockApp)
-		np_initdiscord(Client_CurrentID, true, np_steam_app_id_empty);
+	if(Download_BlockApp){
 		
+		np_initdiscord(Client_CurrentID, true, np_steam_app_id_empty);
+		Client_RunningID = Client_CurrentID;
+	}
+	
 	Download_BlockApp = false;
 	Download_Index = -1;
 }

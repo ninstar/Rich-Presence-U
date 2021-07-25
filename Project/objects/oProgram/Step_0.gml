@@ -10,7 +10,7 @@ else{
 	_Draw = Standby;
 }
 draw_enable_drawevent(_Draw);
-
+	
 // Program
 if(Standby > 0){
 
@@ -22,10 +22,10 @@ if(Standby > 0){
 	var _MOUSE_Release = mouse_check_button_released(mb_left) || mouse_check_button_released(mb_right);
 
 	// Cursor
-	if(display_mouse_get_x() > Setting.WindowX)
-	&&(display_mouse_get_y() > Setting.WindowY)
-	&&(display_mouse_get_x() < Setting.WindowX + WindowWH)
-	&&(display_mouse_get_y() < Setting.WindowY + WindowWH){
+	if(display_mouse_get_x() > window_get_x())
+	&&(display_mouse_get_y() > window_get_y())
+	&&(display_mouse_get_x() < window_get_x() + window_get_width())
+	&&(display_mouse_get_y() < window_get_y() + window_get_height()){
 		
 		Cursor_X = mouse_x;
 		Cursor_Y = mouse_y;
@@ -45,14 +45,17 @@ if(Standby > 0){
 	var _I;
 
 	// Window
-	for(_I = eBUTTON.Close; _I < eBUTTON.Suspend+1; ++_I){
-	
-		if(point_in_rectangle(Cursor_X, Cursor_Y, Button[_I].X, 0, Button[_I].X+56, 46)){
+	if(os_type == os_windows){
 		
-			Hover = _I;
-			break;
+		for(_I = eBUTTON.Close; _I < eBUTTON.Suspend+1; ++_I){
+	
+			if(point_in_rectangle(Cursor_X, Cursor_Y, Button[_I].X, 0, Button[_I].X+56, 46)){
+		
+				Hover = _I;
+				break;
+			}
 		}
-	}	
+	}
 
 	// Main
 	if(Type != eTYPE.TitleSearch)
@@ -137,14 +140,24 @@ if(Standby > 0){
 			
 				if(Page_Animation[ePAGE.Title] == 1)
 				&&(Search_Animation == 0)
-				&&(!Setting.DisplayStatus){
+				&&(!Setting.DisplayStatus
+				|| !State_Connected
+				|| !os_is_network_connected(false)){
 
 					Tooltip_X = 256;
 					Tooltip_Y = 416;
-					Tooltip_Content = Lang[? "UPDATE_INVISIBLE"];
+					
+					if(!State_Connected)
+					||(!os_is_network_connected(false))
+						Tooltip_Content = Lang[? "UPDATE_DISCONNECT"];
+					else
+						Tooltip_Content = Lang[? "UPDATE_INVISIBLE"];
+						
 					Tooltip_Horizontal = false;
 					Tooltip_Display = true;
 				}
+				
+				
 				Hover = eBUTTON.Apply;
 			}
 		}
@@ -208,8 +221,6 @@ if(Standby > 0){
 			
 				// Load
 				dUserData(false, false, true, true);
-			
-				Client_UpdateTimestamp = true;
 			
 				DropList_Hover = -1;
 				Type = eTYPE.None;
@@ -290,7 +301,8 @@ if(Standby > 0){
 				Search_List_Name = [];
 				Search_List_Region = [];
 			
-				if(Search_Title != ""){
+				if(Search_Title != "")
+				&&(ds_exists(Spreadsheet, ds_type_grid)){
 	
 					var _Priority = [];
 					switch(Platform.Region){
@@ -407,13 +419,11 @@ if(Standby > 0){
 					// Load
 					dUserData(false, false, false, true);
 			
-					Client_UpdateTimestamp = !Setting.PreserveTime;
-			
 					// Check if it is already in the history
 					var _InHistory = false;
 					for(var _H = 0; _H < array_length(History); ++_H){
 				
-						if(History[_H].Icon == Title.Icon){
+						if(History[_H].Name == Title.Name){
 						
 							_InHistory = true;
 							break;
@@ -510,11 +520,14 @@ if(Standby > 0){
 	// Button
 	if(_MOUSE_Release){
 
-		switch(Hover){
+		if(os_type == os_windows){
+			
+			switch(Hover){
 	
-			case(eBUTTON.Close):	game_end();		break;
-			case(eBUTTON.Expand):	Setting.WindowSize = !Setting.WindowSize;		break;
-			case(eBUTTON.Suspend):	window_command_run(window_command_minimize);	break;
+				case(eBUTTON.Close):	game_end();		break;
+				case(eBUTTON.Expand):	Setting.WindowSize = (Setting.WindowSize+1) % 3;	break;
+				case(eBUTTON.Suspend):	window_command_run(window_command_minimize);		break;
+			}
 		}
 		if(!Download_BlockApp){
 			
@@ -576,19 +589,22 @@ if(Standby > 0){
 						case(ePAGE.Details):	Page = ePAGE.Title;		break;
 						case(ePAGE.Title):
 
-							if(Client_RunningID != Client_CurrentID){
-	
-								Client_RunningID = Client_CurrentID;
-								np_clearpresence();
-								
-								// Forgive me for committing this sin
-								__np_shutdown();
-								
-								np_initdiscord(Client_RunningID, true, np_steam_app_id_empty);
-							}
-						
-							event_user(0);
+							if(State_Connected)
+							&&(os_is_network_connected(false)){
 					
+								if(Client_RunningID != Client_CurrentID){
+								
+									np_clearpresence();
+								
+									// Forgive me for committing this sin
+									__np_shutdown();
+								
+									np_initdiscord(Client_CurrentID, true, np_steam_app_id_empty);
+								}
+						
+								event_user(0);
+							}
+							
 						break;
 					}
 			
@@ -621,31 +637,34 @@ if(Standby > 0){
 	// Others
 	#region Move window
 
-	var _TargetWH = 256 + (256 * Setting.WindowSize);
-	if(WindowWH != _TargetWH){
+	if(os_type == os_windows){
 		
-		WindowWH = lerp(WindowWH, _TargetWH, .25);
-		window_set_size(round(WindowWH), round(WindowWH));
-	}	
+		var _TargetWH = 256 + (128 * Setting.WindowSize);
+		if(WindowWH != _TargetWH){
+		
+			WindowWH = lerp(WindowWH, _TargetWH, .25);
+			window_set_size(round(WindowWH), round(WindowWH));
+		}	
 	
-	if(point_in_rectangle(Cursor_X, Cursor_Y, 0, 0, 512, 46))
-	&&(_MOUSE_Press)
-	&&(Hover == eBUTTON.None){
+		if(point_in_rectangle(Cursor_X, Cursor_Y, 0, 0, 512, 46))
+		&&(_MOUSE_Press)
+		&&(Hover == eBUTTON.None){
 
-		Window_Move = true;
-		Window_PivotX = display_mouse_get_x() - window_get_x();
-		Window_PivotY = display_mouse_get_y() - window_get_y();
-	}
+			Window_Move = true;
+			Window_PivotX = display_mouse_get_x() - window_get_x();
+			Window_PivotY = display_mouse_get_y() - window_get_y();
+		}
 
-	if(Window_Move){
+		if(Window_Move){
 
-		Setting.WindowX = display_mouse_get_x()-Window_PivotX;
-		Setting.WindowY = display_mouse_get_y()-Window_PivotY;
+			Setting.WindowX = display_mouse_get_x()-Window_PivotX;
+			Setting.WindowY = display_mouse_get_y()-Window_PivotY;
 		
-		window_set_position(Setting.WindowX, Setting.WindowY);
+			window_set_position(Setting.WindowX, Setting.WindowY);
 		
-		if(_MOUSE_Hold == false)
-			Window_Move = false;
+			if(_MOUSE_Hold == false)
+				Window_Move = false;
+		}
 	}
 	
 	#endregion
@@ -708,10 +727,14 @@ if(Standby > 0){
 	
 	// Background
 	draw_sprite(gLYT_Body, 0, 0, 0);
-	draw_sprite(gBTN_Close, Hover == eBUTTON.Close, Button[eBUTTON.Close].X, 0);
-	draw_sprite(gBTN_Expand, Hover == eBUTTON.Expand, Button[eBUTTON.Expand].X, 0);
-	draw_sprite(gBTN_Suspend, Hover == eBUTTON.Suspend, Button[eBUTTON.Suspend].X, 0);
-
+	
+	if(os_type == os_windows){
+		
+		draw_sprite(gBTN_Close, Hover == eBUTTON.Close, Button[eBUTTON.Close].X, 0);
+		draw_sprite(gBTN_Expand, Hover == eBUTTON.Expand, Button[eBUTTON.Expand].X, 0);
+		draw_sprite(gBTN_Suspend, Hover == eBUTTON.Suspend, Button[eBUTTON.Suspend].X, 0);
+	}
+	
 	// User
 	if(sprite_exists(State_Avatar))
 		draw_sprite_stretched(State_Avatar, 0, 16, 56, 50, 50);
@@ -720,11 +743,18 @@ if(Standby > 0){
 	
 	draw_sprite(gLYT_Avatar, 1, 16, 56);
 
-	if(!State_Connected)
-		draw_sprite(gLYT_Avatar, 2 + (Hover == eBUTTON.Restart), 16, 56);
-
+	var _Network = os_is_network_connected(false);
 	var _State = State_Status;
-	if(State_Connected){
+	
+	if(!State_Connected)
+	||(!_Network){
+		
+		draw_sprite(gLYT_Avatar, 2 + (Hover == eBUTTON.Restart), 16, 56);
+		
+		if(!_Network)
+			_State = Lang[? "NETWORK_DOWN"];
+	}
+	else{
 	
 		if(State_Playing)
 			_State = _State+" - "+Lang[? "PLAYING"];

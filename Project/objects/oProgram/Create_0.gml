@@ -2,8 +2,8 @@
 #region Initilization
 
 // Macros
-#macro version_stg "0.7.0"
-#macro version_int 100
+#macro version_stg "0.7.1"
+#macro version_int 101
 #macro platform_total 3
 #macro included_files program_directory+"\\"
 
@@ -94,6 +94,7 @@ switch(os_get_language()){
 	Lang[? "CONNECTING"] = "Conectando";
 	Lang[? "CONNECTED"] = "Conectado";
 	Lang[? "DISCONNECTED"] = "Desconectado";
+	Lang[? "NETWORK_DOWN"] = "Verifique sua conexão com a rede";
 	Lang[? "RESTART_APP"] = "Reinicie o aplicativo";
 	Lang[? "INVISIBLE"] = "Invisível";
 	Lang[? "PLAYING"] = "Jogando";
@@ -110,10 +111,11 @@ switch(os_get_language()){
 	Lang[? "PRESERVE_TIP"] = "Não será reiniciado ao alterar títulos.";
 	Lang[? "REFRESH"] = "Atualizar base de dados";
 	Lang[? "REFRESH_TIP"] = "É atualizado automaticamente todos os dias.";
-	Lang[? "PAGE"] = "Página";
+	Lang[? "PAGE"] = "Página oficial";
 	Lang[? "NEXT"] = "Próximo";
 	Lang[? "UPDATE_STATUS"] = "Atualizar status";
 	Lang[? "UPDATE_INVISIBLE"] = "Seu status está invisível";
+	Lang[? "UPDATE_DISCONNECT"] = "Você está desconectado";
 
 	Lang[? "CONSOLE"] = "Console";
 	Lang[? "REGION"] = "Região de preferência";
@@ -159,6 +161,7 @@ switch(os_get_language()){
 	Lang[? "CONNECTING"] = "Connecting";
 	Lang[? "CONNECTED"] = "Connected";
 	Lang[? "DISCONNECTED"] = "Disconnected";
+	Lang[? "NETWORK_DOWN"] = "Check your internet connection";
 	Lang[? "RESTART_APP"] = "Restart the application";
 	Lang[? "INVISIBLE"] = "Invisible";
 	Lang[? "PLAYING"] = "Playing";
@@ -175,10 +178,11 @@ switch(os_get_language()){
 	Lang[? "PRESERVE_TIP"] = "It won't be reseted when changing titles.";
 	Lang[? "REFRESH"] = "Refresh database";
 	Lang[? "REFRESH_TIP"] = "It is automatically refreshed every day.";
-	Lang[? "PAGE"] = "Page";
+	Lang[? "PAGE"] = "Official page";
 	Lang[? "NEXT"] = "Next";
 	Lang[? "UPDATE_STATUS"] = "Update status";
 	Lang[? "UPDATE_INVISIBLE"] = "Your status is invisible";
+	Lang[? "UPDATE_DISCONNECT"] = "You are disconnnected";
 
 	Lang[? "CONSOLE"] = "Game console";
 	Lang[? "REGION"] = "Preferred region";
@@ -390,6 +394,8 @@ dUserData = function(save, settings, platform, title){
 	ini_open(game_save_id+"preferences.cfg");
 	if(save){
 		
+		ini_write_real("Application", "Version", version_int);
+		
 		if(settings){
 			
 			ini_write_real("Application", "WindowSize", Setting.WindowSize);
@@ -401,6 +407,7 @@ dUserData = function(save, settings, platform, title){
 			ini_write_real("Application", "Link", Details.About);
 			ini_write_real("Application", "ElapsedTime", Details.ElapsedTime);
 			ini_write_string("Application", "LastRefresh", string(current_year)+string(current_month)+string(current_day));
+			ini_write_real("Application", "Page", Page);
 		}
 		if(platform){
 			
@@ -427,15 +434,15 @@ dUserData = function(save, settings, platform, title){
 			var _Section = "Platform"+string(Platform.Console);
 			var _Key = string(md5_string_unicode(Title.Name));
 			
-			ini_write_string(_Section, "Ctl_"+_Key, Title.CustomName);
-			ini_write_string(_Section, "Dsc_"+_Key, Title.Description);
+			ini_write_string(_Section, _Key+"CNM", Title.CustomName);
+			ini_write_string(_Section, _Key+"DSC", Title.Description);
 		}
 	}
 	else{
 		
 		if(settings){
 			
-			Setting.WindowSize = ini_read_real("Application", "WindowSize", 0);
+			Setting.WindowSize = ini_read_real("Application", "WindowSize", 1);
 			Setting.WindowX = ini_read_real("Application", "WindowX", window_get_x());
 			Setting.WindowY = ini_read_real("Application", "WindowY", window_get_y());
 			Setting.DisplayStatus = ini_read_real("Application", "DisplayStatus", true);
@@ -444,6 +451,7 @@ dUserData = function(save, settings, platform, title){
 			Details.About = ini_read_real("Application", "Link", false);
 			Details.ElapsedTime = ini_read_real("Application", "ElapsedTime", true);
 			Setting.LastRefresh = ini_read_string("Application", "LastRefresh", "");
+			Page = ini_read_real("Application", "Page", ePAGE.Platform);
 		}
 		if(platform){
 			
@@ -455,13 +463,13 @@ dUserData = function(save, settings, platform, title){
 			
 			for(var _H = 0; _H < array_length(History); ++_H){
 			
-				History[_H].Icon = ini_read_string(_Section, "H"+string(_H)+"_Index", "_default");
+				History[_H].Icon = ini_read_string(_Section, "H"+string(_H)+"_Index", "");
 				History[_H].Client = ini_read_string(_Section, "H"+string(_H)+"_Client", "0");
 				History[_H].Name = ini_read_string(_Section, "H"+string(_H)+"_Name", "");
 				History[_H].Region = ini_read_real(_Section, "H"+string(_H)+"_Region", 0);
 			}
 
-			Title.Icon = ini_read_string(_Section, "Index", "_default");
+			Title.Icon = ini_read_string(_Section, "Index", "");
 			Title.Client = ini_read_string(_Section, "Client", "0");
 			Title.Name = ini_read_string(_Section, "Name", "");
 			Title.Region = ini_read_real(_Section, "Region", 0);
@@ -476,8 +484,8 @@ dUserData = function(save, settings, platform, title){
 			var _Section = "Platform"+string(Platform.Console);
 			var _Key = string(md5_string_unicode(Title.Name));
 			
-			Title.CustomName = ini_read_string(_Section, "Ctl_"+_Key, "");
-			Title.Description = ini_read_string(_Section, "Dsc_"+_Key, "");
+			Title.CustomName = ini_read_string(_Section, _Key+"CNM", "");
+			Title.Description = ini_read_string(_Section, _Key+"DSC", "");
 		}
 	}
 	ini_close();
@@ -696,7 +704,7 @@ AppUpdate_Mandatory = false;
 
 // User
 State_Avatar = noone;
-State_Name = "...";
+State_Name = "- - -";
 State_Status = Lang[? "CONNECTING"]+"...";
 State_Connected = false;
 State_GotProfileData = false;
@@ -818,24 +826,23 @@ Spreadsheet = -1;
 
 // Client
 Client_CurrentID = dClientID(Platform.Console, Title.Client);
-Client_RunningID = Client_CurrentID;
-Client_UpdateTimestamp = true;
+Client_RunningID = "";
+Client_StatusConsole = Platform.Console;
+Client_StatusName = Title.Name;
 	
 // Initializate RPC
-if(!Download_BlockApp)
+if(!Download_BlockApp){
+	
 	np_initdiscord(Client_CurrentID, true, np_steam_app_id_empty);
+	Client_RunningID = Client_CurrentID;
+}
 else
 	Boot_Animation = 1;
 	
 // Window
-if(Setting.WindowX > 0 && Setting.WindowY > 0)
-&&(Setting.WindowX < display_get_width() && Setting.WindowY < display_get_height())
-	window_set_position(Setting.WindowX, Setting.WindowY);
-
-if(Setting.WindowSize)
-	WindowWH = 512;
-else
-	WindowWH = 256;
-
-window_set_size(WindowWH, WindowWH);
+//if(Setting.WindowX > 0 && Setting.WindowY > 0)
+//&&(Setting.WindowX < display_get_width() && Setting.WindowY < display_get_height())
 WindowBuffer = surface_create(512, 512);
+WindowWH = 256 + (128 * Setting.WindowSize);
+window_set_position(Setting.WindowX, Setting.WindowY);
+window_set_size(WindowWH, WindowWH);

@@ -23,7 +23,7 @@ This GUI application allows you to display **Wii U**, **Nintendo Switch** and **
 
 **Extensions**
 * [nkrapivindev](https://github.com/nkrapivin/NekoPresence) ``NekoPresence``
-* [YellowAfterlife](https://github.com/YAL-GameMaker/window_commands/) ``Windows Command Hook``
+* [YellowAfterlife](https://github.com/YAL-GameMaker/window_commands/) ``Window Command Hook``
 
 ## License
 

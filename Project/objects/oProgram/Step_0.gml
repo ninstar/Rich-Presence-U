@@ -1,15 +1,12 @@
 /// @description Cycle
 
 // Standby
-var _Draw = true;
 if(window_has_focus())
-	Standby = 600;
-else{
-	
+	Standby = 900;
+else
 	Standby -= Standby > 0;
-	_Draw = Standby;
-}
-draw_enable_drawevent(_Draw);
+
+draw_enable_drawevent(Standby > 0);
 	
 // Program
 if(Standby > 0){

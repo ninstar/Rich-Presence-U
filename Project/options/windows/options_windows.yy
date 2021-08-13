@@ -1,7 +1,7 @@
 {
   "option_windows_display_name": "Rich Presence U",
   "option_windows_executable_name": "Rich Presence U.exe",
-  "option_windows_version": "0.7.1.0",
+  "option_windows_version": "0.7.2.0",
   "option_windows_company_info": "NinStar",
   "option_windows_product_info": "Rich Presence U",
   "option_windows_copyright_info": "",

@@ -7,5 +7,8 @@ if(ds_exists(Spreadsheet, ds_type_grid))
 if(surface_exists(WindowBuffer))
 	surface_free(WindowBuffer);
 
+var _Screens = window_get_visible_rects(0, 0, 0, 0);
+Setting.ScreenCount = array_length(_Screens) / 8;
+
 // Save
 dUserData(true, true, true, true);

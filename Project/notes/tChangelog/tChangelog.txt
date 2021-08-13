@@ -1,3 +1,8 @@
+[0.7.2]
+
+- Fixed wrong window position after disconnecting one or more external screens
+- Fixed standby interval
+
 [0.7.1]
 
 - More accurate NOA search query

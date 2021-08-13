@@ -25,11 +25,11 @@
 !endif
 
 !ifndef COPYRIGHT_TXT
-!define COPYRIGHT_TXT     "(c)Copyright 2013"
+!define COPYRIGHT_TXT     "(c)Copyright 2021"
 !endif
 
 !ifndef FILE_DESC
-!define FILE_DESC         "Created with GameMaker:Studio"
+!define FILE_DESC         "NinStar"
 !endif
 
 !ifndef LICENSE_NAME

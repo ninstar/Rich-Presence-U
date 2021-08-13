@@ -1,6 +1,6 @@
 {
   "option_linux_display_name": "Rich Presence U",
-  "option_linux_version": "0.7.1",
+  "option_linux_version": "0.7.2",
   "option_linux_maintainer_email": "ninstar@pm.me",
   "option_linux_homepage": "",
   "option_linux_short_desc": "",

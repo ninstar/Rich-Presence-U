@@ -2,8 +2,8 @@
 #region Initilization
 
 // Macros
-#macro version_stg "0.7.1"
-#macro version_int 101
+#macro version_stg "0.7.2"
+#macro version_int 102
 #macro platform_total 3
 #macro included_files program_directory+"\\"
 
@@ -401,6 +401,7 @@ dUserData = function(save, settings, platform, title){
 			ini_write_real("Application", "WindowSize", Setting.WindowSize);
 			ini_write_real("Application", "WindowX", window_get_x());
 			ini_write_real("Application", "WindowY", window_get_y());
+			ini_write_real("Application", "ScreenCount", Setting.ScreenCount);
 			ini_write_real("Application", "DisplayStatus", Setting.DisplayStatus);
 			ini_write_real("Application", "PreserveTime", Setting.PreserveTime);
 			ini_write_real("Application", "Console", Platform.Console);
@@ -445,6 +446,7 @@ dUserData = function(save, settings, platform, title){
 			Setting.WindowSize = ini_read_real("Application", "WindowSize", 1);
 			Setting.WindowX = ini_read_real("Application", "WindowX", window_get_x());
 			Setting.WindowY = ini_read_real("Application", "WindowY", window_get_y());
+			Setting.ScreenCount = ini_read_real("Application", "ScreenCount", 0);
 			Setting.DisplayStatus = ini_read_real("Application", "DisplayStatus", true);
 			Setting.PreserveTime = ini_read_real("Application", "PreserveTime", false);
 			Platform.Console = ini_read_real("Application", "Console", 0);
@@ -630,6 +632,7 @@ Setting = {
 	WindowSize : 0,
 	WindowX : window_get_x(),
 	WindowY : window_get_y(),
+	ScreenCount : 1,
 	DisplayStatus : true,
 	PreserveTime : false,
 	LastRefresh : string(current_year)+string(current_month)+string(current_day),
@@ -840,9 +843,11 @@ else
 	Boot_Animation = 1;
 	
 // Window
-//if(Setting.WindowX > 0 && Setting.WindowY > 0)
-//&&(Setting.WindowX < display_get_width() && Setting.WindowY < display_get_height())
 WindowBuffer = surface_create(512, 512);
 WindowWH = 256 + (128 * Setting.WindowSize);
-window_set_position(Setting.WindowX, Setting.WindowY);
+
+var _Screens = window_get_visible_rects(0, 0, 0, 0);
+if(Setting.ScreenCount == array_length(_Screens) / 8)
+	window_set_position(Setting.WindowX, Setting.WindowY);
+
 window_set_size(WindowWH, WindowWH);

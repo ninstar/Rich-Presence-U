@@ -1,4 +1,7 @@
 # Extensions
 Project/extensions/WindowCommandHook/
 Project/extensions/NekoPresence/
-Project/options/operagx/options_operagx.yy
+
+# Unsupported platforms
+Project/options/operagx
+Project/options/html5

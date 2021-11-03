@@ -80,14 +80,14 @@ if(State_Connected){
 			
 				_Description = dFormatFC(Platform.Console, Details.FriendCode);
 				if(Platform.Console == ePLATFORM.WiiU)
-					_Description = "NNID: "+_Description;
+					_Description = "NNID • "+_Description;
 			}
 			else{
 			
 				_Tooltip_Icon = "_tooltip";
 				_Tooltip = dFormatFC(Platform.Console, Details.FriendCode);
 				if(Platform.Console == ePLATFORM.WiiU)
-					_Tooltip = "NNID: "+_Tooltip;
+					_Tooltip = "NNID • "+_Tooltip;
 			}
 		}
 

@@ -1,9 +1,4 @@
-
-Project/extensions/WindowCommandHook/cmdhook.dll
-Project/extensions/NekoPresence/nekorpc.dll
-Project/extensions/WindowCommandHook/WindowCommandHook.yy
-Project/extensions/WindowCommandHook/window_command_hook.gml
-Project/extensions/NekoPresence/NekoPresence_x64.dll
-Project/extensions/NekoPresence/NekoPresence.yy
-Project/extensions/NekoPresence/NekoPresence.gml
-Project/extensions/NekoPresence/libnekopresence.so
+# Extensions
+Project/extensions/WindowCommandHook/
+Project/extensions/NekoPresence/
+Project/options/operagx/options_operagx.yy

@@ -2,8 +2,8 @@
 #region Initilization
 
 // Macros
-#macro version_stg "0.7.2"
-#macro version_int 102
+#macro version_stg "0.7.3"
+#macro version_int 103
 #macro platform_total 3
 #macro included_files program_directory+"\\"
 
@@ -846,6 +846,7 @@ else
 WindowBuffer = surface_create(512, 512);
 WindowWH = 256 + (128 * Setting.WindowSize);
 
+// Check screen count
 var _Screens = window_get_visible_rects(0, 0, 0, 0);
 if(Setting.ScreenCount == array_length(_Screens) / 8)
 	window_set_position(Setting.WindowX, Setting.WindowY);

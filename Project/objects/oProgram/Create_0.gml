@@ -401,14 +401,14 @@ dUserData = function(save, settings, platform, title){
 			ini_write_real("Application", "WindowSize", Setting.WindowSize);
 			ini_write_real("Application", "WindowX", window_get_x());
 			ini_write_real("Application", "WindowY", window_get_y());
-			ini_write_real("Application", "ScreenCount", Setting.ScreenCount);
+			ini_write_real("Application", "ScreenNumber", Setting.ScreenNumber);
 			ini_write_real("Application", "DisplayStatus", Setting.DisplayStatus);
 			ini_write_real("Application", "PreserveTime", Setting.PreserveTime);
 			ini_write_real("Application", "Console", Platform.Console);
 			ini_write_real("Application", "Link", Details.About);
 			ini_write_real("Application", "ElapsedTime", Details.ElapsedTime);
 			ini_write_string("Application", "LastRefresh", string(current_year)+string(current_month)+string(current_day));
-			ini_write_real("Application", "Page", Page);
+			ini_write_real("Application", "Support", Page);
 		}
 		if(platform){
 			
@@ -446,7 +446,7 @@ dUserData = function(save, settings, platform, title){
 			Setting.WindowSize = ini_read_real("Application", "WindowSize", 1);
 			Setting.WindowX = ini_read_real("Application", "WindowX", window_get_x());
 			Setting.WindowY = ini_read_real("Application", "WindowY", window_get_y());
-			Setting.ScreenCount = ini_read_real("Application", "ScreenCount", 0);
+			Setting.ScreenNumber = ini_read_real("Application", "ScreenNumber", 0);
 			Setting.DisplayStatus = ini_read_real("Application", "DisplayStatus", true);
 			Setting.PreserveTime = ini_read_real("Application", "PreserveTime", false);
 			Platform.Console = ini_read_real("Application", "Console", 0);
@@ -632,7 +632,7 @@ Setting = {
 	WindowSize : 0,
 	WindowX : window_get_x(),
 	WindowY : window_get_y(),
-	ScreenCount : 1,
+	ScreenNumber : 1,
 	DisplayStatus : true,
 	PreserveTime : false,
 	LastRefresh : string(current_year)+string(current_month)+string(current_day),
@@ -707,7 +707,7 @@ AppUpdate_Mandatory = false;
 
 // User
 State_Avatar = noone;
-State_Name = "- - -";
+State_Name = "";
 State_Status = Lang[? "CONNECTING"]+"...";
 State_Connected = false;
 State_GotProfileData = false;
@@ -848,7 +848,7 @@ WindowWH = 256 + (128 * Setting.WindowSize);
 
 // Check screen count
 var _Screens = window_get_visible_rects(0, 0, 0, 0);
-if(Setting.ScreenCount == array_length(_Screens) / 8)
+if(Setting.ScreenNumber == array_length(_Screens) / 8)
 	window_set_position(Setting.WindowX, Setting.WindowY);
 
 window_set_size(WindowWH, WindowWH);

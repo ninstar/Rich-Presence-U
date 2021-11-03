@@ -1,3 +1,8 @@
+[0.7.3]
+
+- Fixed a bug when closing the window while minimized
+- Changed Nintendo Network ID formating
+
 [0.7.2]
 
 - Fixed wrong window position after disconnecting one or more external screens

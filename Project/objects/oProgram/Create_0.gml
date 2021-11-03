@@ -399,8 +399,8 @@ dUserData = function(save, settings, platform, title){
 		if(settings){
 			
 			ini_write_real("Application", "WindowSize", Setting.WindowSize);
-			ini_write_real("Application", "WindowX", window_get_x());
-			ini_write_real("Application", "WindowY", window_get_y());
+			ini_write_real("Application", "WindowPosX", window_get_x());
+			ini_write_real("Application", "WindowPosY", window_get_y());
 			ini_write_real("Application", "ScreenNumber", Setting.ScreenNumber);
 			ini_write_real("Application", "DisplayStatus", Setting.DisplayStatus);
 			ini_write_real("Application", "PreserveTime", Setting.PreserveTime);
@@ -444,8 +444,8 @@ dUserData = function(save, settings, platform, title){
 		if(settings){
 			
 			Setting.WindowSize = ini_read_real("Application", "WindowSize", 1);
-			Setting.WindowX = ini_read_real("Application", "WindowX", window_get_x());
-			Setting.WindowY = ini_read_real("Application", "WindowY", window_get_y());
+			Setting.WindowX = ini_read_real("Application", "WindowPosX", window_get_x());
+			Setting.WindowY = ini_read_real("Application", "WindowPosY", window_get_y());
 			Setting.ScreenNumber = ini_read_real("Application", "ScreenNumber", 0);
 			Setting.DisplayStatus = ini_read_real("Application", "DisplayStatus", true);
 			Setting.PreserveTime = ini_read_real("Application", "PreserveTime", false);

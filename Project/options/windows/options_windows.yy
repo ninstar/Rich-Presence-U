@@ -4,7 +4,7 @@
   "option_windows_version": "0.7.3.0",
   "option_windows_company_info": "NinStar",
   "option_windows_product_info": "Rich Presence U",
-  "option_windows_copyright_info": "",
+  "option_windows_copyright_info": "NinStar",
   "option_windows_description_info": "Rich Presence U",
   "option_windows_display_cursor": true,
   "option_windows_icon": "icons/icon.ico",

@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://code/ui/common/buttons/toggle.tscn" type="PackedScene" id=1]
+[ext_resource path="res://code/ui/pages/details/scripts/icon.gd" type="Script" id=2]
+
+[node name="Icon" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+title = "Always display ID as an icon"
+description = "It ensure that your ID or Friend Code is always shown as a small icon next to the icon of the game you are playing. Even when you don’t have a description set."
+
+[node name="Title" parent="Button/Box" index="0"]
+text = "Always display ID as an icon"
+
+[node name="Hint" parent="." index="1"]
+margin_bottom = 69.0
+text = "It ensure that your ID or Friend Code is always shown as a small icon next to the icon of the game you are playing. Even when you don’t have a description set."
+
+[node name="Separator" parent="." index="2"]
+margin_top = 77.0
+margin_bottom = 109.0
+
+[connection signal="toggled" from="Button" to="." method="_on_Icon_toggled"]

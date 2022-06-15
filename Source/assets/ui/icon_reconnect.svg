@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="20"
+   height="20"
+   viewBox="0 0 20.000002 20"
+   version="1.1"
+   id="SVGRoot"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs1725" />
+  <metadata
+     id="metadata2103">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>NinStar</dc:title>
+          </cc:Agent>
+        </dc:creator>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     id="path3826"
+     style="stroke-width:0.974937;color:#000000;fill:#ffffff;-inkscape-stroke:none"
+     d="m 15.050781,2.53125 -1.015625,0.00586 0.01563,2.7460937 C 13.024267,4.3296753 11.734543,3.7780525 10.404297,3.6484375 9.0124192,3.5128173 7.5752488,3.8384526 6.34375,4.6523438 3.8807525,6.2801262 2.9147422,9.4239752 4.0507812,12.136719 c 1.1360392,2.712743 4.0547712,4.252643 6.9570308,3.68164 2.90226,-0.571001 5.007813,-3.103032 5.007813,-6.0410152 v -0.75 h -1.5 v 0.75 c 0,2.2238062 -1.580731,4.1343002 -3.796875,4.5703122 C 8.5026062,14.78367 6.2966098,13.614723 5.4355469,11.558594 4.5744839,9.5024647 5.2956997,7.1442514 7.171875,5.9042969 c 1.8198576,-1.2027346 4.2211,-1.0101106 5.818359,0.4414062 l -2.736328,0.015625 0.0059,1.015625 4.818359,-0.027344 z"
+     transform="matrix(1.0257073,0,0,1.0257073,-0.0484634,0.2286784)" />
+</svg>

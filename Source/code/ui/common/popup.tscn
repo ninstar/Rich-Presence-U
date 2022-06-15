@@ -1,0 +1,132 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/ui/fonts/notosansjp_regular.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/ui/fonts/lato_regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://code/ui/common/buttons/button.tscn" type="PackedScene" id=3]
+[ext_resource path="res://code/ui/common/popup.gd" type="Script" id=4]
+[ext_resource path="res://assets/ui/fonts/notosansjp_bold.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://assets/ui/fonts/lato_bold.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFont" id=2]
+size = 18
+use_filter = true
+font_data = ExtResource( 6 )
+fallback/0 = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=1]
+use_filter = true
+font_data = ExtResource( 2 )
+fallback/0 = ExtResource( 1 )
+
+[node name="Popup" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_mode = 2
+mouse_filter = 1
+color = Color( 0.0509804, 0.0509804, 0.0509804, 0.74902 )
+script = ExtResource( 4 )
+
+[node name="Panel" type="PanelContainer" parent="."]
+anchor_left = 0.35
+anchor_top = 0.5
+anchor_right = 0.65
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margin" type="MarginContainer" parent="Panel"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 327.0
+margin_bottom = 165.0
+rect_min_size = Vector2( 320, 0 )
+custom_constants/margin_right = 26
+custom_constants/margin_top = 20
+custom_constants/margin_left = 26
+custom_constants/margin_bottom = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Box" type="VBoxContainer" parent="Panel/Margin"]
+margin_left = 26.0
+margin_top = 20.0
+margin_right = 294.0
+margin_bottom = 138.0
+custom_constants/separation = 32
+
+[node name="Labels" type="VBoxContainer" parent="Panel/Margin/Box"]
+margin_right = 268.0
+margin_bottom = 58.0
+size_flags_vertical = 3
+custom_constants/separation = 16
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="Panel/Margin/Box/Labels"]
+margin_right = 38.0
+margin_bottom = 22.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 2 )
+text = "Title"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hint" type="Label" parent="Panel/Margin/Box/Labels"]
+self_modulate = Color( 1, 1, 1, 0.65098 )
+margin_top = 38.0
+margin_right = 268.0
+margin_bottom = 58.0
+custom_fonts/font = SubResource( 1 )
+text = "Description."
+autowrap = true
+
+[node name="Buttons" type="HBoxContainer" parent="Panel/Margin/Box"]
+margin_top = 90.0
+margin_right = 268.0
+margin_bottom = 118.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+custom_constants/separation = 12
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cancel" parent="Panel/Margin/Box/Buttons" instance=ExtResource( 3 )]
+margin_right = 128.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 128, 28 )
+focus_neighbour_left = NodePath("../Confirm")
+focus_neighbour_top = NodePath("../Confirm")
+focus_neighbour_right = NodePath("../Confirm")
+focus_neighbour_bottom = NodePath("../Confirm")
+focus_next = NodePath("../Confirm")
+focus_previous = NodePath("../Confirm")
+size_flags_horizontal = 8
+text = "Close"
+
+[node name="Confirm" parent="Panel/Margin/Box/Buttons" instance=ExtResource( 3 )]
+margin_left = 140.0
+margin_right = 268.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 128, 28 )
+focus_neighbour_left = NodePath("../Cancel")
+focus_neighbour_top = NodePath("../Cancel")
+focus_neighbour_right = NodePath("../Cancel")
+focus_neighbour_bottom = NodePath("../Cancel")
+focus_next = NodePath("../Cancel")
+focus_previous = NodePath("../Cancel")
+size_flags_horizontal = 8
+text = "OK"
+
+[node name="Tween" type="Tween" parent="."]
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="pressed" from="Panel/Margin/Box/Buttons/Cancel" to="." method="_on_Cancel_pressed"]
+[connection signal="pressed" from="Panel/Margin/Box/Buttons/Confirm" to="." method="_on_Confirm_pressed"]
+[connection signal="tween_all_completed" from="Tween" to="." method="_on_tween_all_completed"]
+[connection signal="tween_step" from="Tween" to="." method="_on_tween_step"]

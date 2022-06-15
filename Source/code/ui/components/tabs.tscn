@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/ui/tabs/wup_a.svg" type="Texture" id=1]
+[ext_resource path="res://assets/ui/tabs/wup_b.svg" type="Texture" id=2]
+[ext_resource path="res://assets/ui/tabs/wup_c.svg" type="Texture" id=3]
+[ext_resource path="res://code/ui/common/buttons/button.tscn" type="PackedScene" id=4]
+[ext_resource path="res://code/ui/components/scripts/tabs.gd" type="Script" id=5]
+
+[node name="Tabs" type="HBoxContainer"]
+anchor_right = 1.0
+size_flags_horizontal = 3
+custom_constants/separation = 10
+script = ExtResource( 5 )
+
+[node name="A" parent="." instance=ExtResource( 4 )]
+margin_right = 164.0
+margin_bottom = 28.0
+hint_tooltip = "Platforms"
+
+[node name="Icon" type="TextureRect" parent="A"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 28, 28 )
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 6
+
+[node name="Tween" type="Tween" parent="A/Icon"]
+
+[node name="B" parent="." instance=ExtResource( 4 )]
+margin_left = 174.0
+margin_right = 338.0
+margin_bottom = 28.0
+hint_tooltip = "Details"
+
+[node name="Icon" type="TextureRect" parent="B"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+
+[node name="Tween" type="Tween" parent="B/Icon"]
+
+[node name="C" parent="." instance=ExtResource( 4 )]
+margin_left = 348.0
+margin_right = 512.0
+margin_bottom = 28.0
+hint_tooltip = "Games"
+
+[node name="Icon" type="TextureRect" parent="C"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 6
+
+[node name="Tween" type="Tween" parent="C/Icon"]

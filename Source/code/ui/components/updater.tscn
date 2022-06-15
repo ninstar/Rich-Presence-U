@@ -1,0 +1,233 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://assets/ui/fonts/lato_bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/ui/fonts/notosansjp_bold.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/ui/themes/dark/monita_2.png" type="Texture" id=3]
+[ext_resource path="res://assets/ui/themes/dark/monita_1.png" type="Texture" id=4]
+[ext_resource path="res://assets/ui/themes/dark/monita_3.png" type="Texture" id=5]
+[ext_resource path="res://assets/ui/progress.png" type="Texture" id=6]
+[ext_resource path="res://assets/ui/themes/dark/background.png" type="Texture" id=7]
+[ext_resource path="res://assets/ui/themes/dark/monita_4.png" type="Texture" id=8]
+[ext_resource path="res://assets/ui/themes/dark/monita_room.png" type="Texture" id=9]
+[ext_resource path="res://assets/ui/themes/dark/monita_shadow.png" type="Texture" id=10]
+[ext_resource path="res://code/ui/components/scripts/updater.gd" type="Script" id=11]
+
+[sub_resource type="AnimatedTexture" id=21]
+frames = 4
+fps = 8.0
+frame_0/texture = ExtResource( 4 )
+frame_1/texture = ExtResource( 3 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 5 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 8 )
+frame_3/delay_sec = 0.0
+
+[sub_resource type="Animation" id=18]
+resource_name = "Default"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -2.5, 1.5 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Shadow:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.8, 1 ), Vector2( 1.15, 1 ) ]
+}
+
+[sub_resource type="Animation" id=17]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Shadow:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="DynamicFont" id=14]
+size = 12
+use_filter = true
+font_data = ExtResource( 1 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="Animation" id=19]
+resource_name = "Default"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:anchor_left")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -0.5, 1.5 ]
+}
+
+[sub_resource type="Animation" id=20]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:anchor_left")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -0.5 ]
+}
+
+[node name="Updater" type="TextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 7 )
+expand = true
+script = ExtResource( 11 )
+
+[node name="Margin" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 64
+custom_constants/margin_top = 64
+custom_constants/margin_left = 64
+custom_constants/margin_bottom = 64
+
+[node name="Box" type="VBoxContainer" parent="Margin"]
+margin_left = 64.0
+margin_top = 64.0
+margin_right = 448.0
+margin_bottom = 448.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 16
+alignment = 1
+
+[node name="Room" type="TextureRect" parent="Margin/Box"]
+self_modulate = Color( 1, 1, 1, 0.501961 )
+margin_top = 16.0
+margin_right = 384.0
+margin_bottom = 272.0
+rect_min_size = Vector2( 0, 256 )
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 6
+
+[node name="Monita" type="TextureRect" parent="Margin/Box/Room"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 48.0
+margin_top = 48.0
+margin_right = -48.0
+margin_bottom = -48.0
+rect_min_size = Vector2( 0, 128 )
+texture = SubResource( 21 )
+expand = true
+stretch_mode = 6
+
+[node name="Shadow" type="TextureRect" parent="Margin/Box/Room"]
+self_modulate = Color( 1, 1, 1, 0.501961 )
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 96, 32 )
+rect_pivot_offset = Vector2( 48, 0 )
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 6
+
+[node name="Motion" type="AnimationPlayer" parent="Margin/Box/Room"]
+root_node = NodePath("../Monita")
+autoplay = "Default"
+playback_speed = 0.1
+anims/Default = SubResource( 18 )
+anims/RESET = SubResource( 17 )
+
+[node name="Label" type="Label" parent="Margin/Box"]
+margin_top = 288.0
+margin_right = 384.0
+margin_bottom = 336.0
+rect_min_size = Vector2( 0, 48 )
+custom_fonts/font = SubResource( 14 )
+text = "Downloading files... It will just take a moment."
+align = 1
+valign = 1
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Progress" type="ProgressBar" parent="Margin/Box"]
+margin_top = 352.0
+margin_right = 384.0
+margin_bottom = 368.0
+rect_min_size = Vector2( 256, 16 )
+rect_clip_content = true
+size_flags_horizontal = 3
+max_value = 1.0
+value = 0.5
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mask" type="TextureRect" parent="Margin/Box/Progress"]
+modulate = Color( 1, 1, 1, 0.0980392 )
+anchor_left = -0.5
+anchor_top = -1.0
+anchor_right = 1.5
+anchor_bottom = 2.0
+texture = ExtResource( 6 )
+
+[node name="Animation" type="AnimationPlayer" parent="Margin/Box/Progress/Mask"]
+autoplay = "Default"
+playback_speed = 0.5
+anims/Default = SubResource( 19 )
+anims/RESET = SubResource( 20 )
+
+[node name="Tween" type="Tween" parent="Margin/Box/Progress"]
+
+[node name="Tween" type="Tween" parent="."]
+
+[connection signal="tween_all_completed" from="Tween" to="." method="_on_Tween_all_completed"]

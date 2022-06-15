@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/ui/fonts/notosansjp_bold.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/ui/fonts/lato_bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://code/ui/common/texts/title.tscn" type="PackedScene" id=3]
+[ext_resource path="res://code/ui/pages/games/scripts/rename.gd" type="Script" id=4]
+[ext_resource path="res://code/ui/common/texts/hint.tscn" type="PackedScene" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 14
+use_filter = true
+font_data = ExtResource( 2 )
+fallback/0 = ExtResource( 1 )
+
+[node name="Rename" type="VBoxContainer"]
+anchor_right = 1.0
+margin_bottom = 105.0
+custom_constants/separation = 16
+script = ExtResource( 4 )
+
+[node name="Title" parent="." instance=ExtResource( 3 )]
+anchor_right = 0.0
+margin_right = 512.0
+margin_bottom = 17.0
+custom_fonts/font = SubResource( 1 )
+text = "Rename game"
+
+[node name="Options" type="HBoxContainer" parent="."]
+margin_top = 33.0
+margin_right = 512.0
+margin_bottom = 57.0
+rect_pivot_offset = Vector2( -293, -320 )
+custom_constants/separation = 8
+
+[node name="Input" type="LineEdit" parent="Options"]
+margin_right = 475.0
+margin_bottom = 24.0
+hint_tooltip = "Custom title"
+size_flags_horizontal = 3
+max_length = 16
+clear_button_enabled = true
+
+[node name="List" type="OptionButton" parent="Options"]
+margin_left = 483.0
+margin_right = 512.0
+margin_bottom = 24.0
+hint_tooltip = "Game region"
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hint" parent="." instance=ExtResource( 5 )]
+anchor_right = 0.0
+margin_top = 73.0
+margin_right = 512.0
+margin_bottom = 90.0
+text = "Any text placed in this field will take priority over the specified region title."
+
+[node name="Separator" type="HSeparator" parent="."]
+margin_top = 106.0
+margin_right = 512.0
+margin_bottom = 138.0
+custom_constants/separation = 32
+
+[connection signal="text_changed" from="Options/Input" to="." method="_on_Input_text_changed"]
+[connection signal="item_selected" from="Options/List" to="." method="_on_List_item_selected"]

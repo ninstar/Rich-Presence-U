@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://code/ui/pages/platforms/region.tscn" type="PackedScene" id=1]
+[ext_resource path="res://code/ui/pages/platforms/database.tscn" type="PackedScene" id=2]
+[ext_resource path="res://code/ui/pages/platforms/system.tscn" type="PackedScene" id=3]
+
+[node name="Platforms" type="VBoxContainer"]
+anchor_right = 1.0
+margin_bottom = 366.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 16
+
+[node name="System" parent="." instance=ExtResource( 3 )]
+anchor_right = 0.0
+margin_right = 512.0
+
+[node name="Region" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+margin_top = 117.0
+margin_right = 512.0
+margin_bottom = 218.0
+
+[node name="Verified" parent="." instance=ExtResource( 2 )]
+anchor_right = 0.0
+margin_top = 234.0
+margin_right = 512.0
+margin_bottom = 366.0

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/ui/fonts/notosansjp_regular.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/ui/fonts/lato_regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 14
+use_filter = true
+font_data = ExtResource( 3 )
+fallback/0 = ExtResource( 2 )
+
+[node name="Hint" type="Label"]
+self_modulate = Color( 1, 1, 1, 0.501961 )
+anchor_right = 1.0
+custom_fonts/font = SubResource( 1 )
+text = "Text"
+autowrap = true

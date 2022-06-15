@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://code/ui/pages/settings/scripts/debug.gd" type="Script" id=1]
+[ext_resource path="res://code/ui/common/buttons/toggle.tscn" type="PackedScene" id=2]
+
+[node name="Debug" instance=ExtResource( 2 )]
+script = ExtResource( 1 )
+title = "Debug log"
+description = "Generates a log file for troubleshooting."
+
+[node name="Title" parent="Button/Box" index="0"]
+text = "Debug log"
+
+[node name="Hint" parent="." index="1"]
+text = "Generates a log file for troubleshooting."
+
+[connection signal="toggled" from="Button" to="." method="_on_Debug_toggled"]

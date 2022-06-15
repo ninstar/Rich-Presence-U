@@ -1,0 +1,254 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/ui/fonts/lato_regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/ui/fonts/notosansjp_regular.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://code/ui/dialogs/about.gd" type="Script" id=3]
+[ext_resource path="res://assets/ui/themes/dark/logo.svg" type="Texture" id=5]
+[ext_resource path="res://assets/ui/themes/dark/logo_dev.svg" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 14
+use_filter = true
+extra_spacing_top = -7
+extra_spacing_bottom = -6
+font_data = ExtResource( 1 )
+fallback/0 = ExtResource( 2 )
+
+[node name="About" type="TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 3 )
+
+[node name="Credits" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+size_flags_vertical = 3
+custom_constants/separation = 16
+
+[node name="Home" type="TextureButton" parent="Credits"]
+margin_left = 124.0
+margin_right = 380.0
+margin_bottom = 42.0
+grow_horizontal = 2
+rect_min_size = Vector2( 256, 42 )
+hint_tooltip = "Home page"
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource( 5 )
+expand = true
+stretch_mode = 5
+
+[node name="Info" type="HBoxContainer" parent="Credits"]
+margin_top = 58.0
+margin_right = 504.0
+margin_bottom = 94.0
+custom_constants/separation = 0
+alignment = 1
+
+[node name="L" type="VBoxContainer" parent="Credits/Info"]
+margin_left = 127.0
+margin_right = 264.0
+margin_bottom = 36.0
+custom_constants/separation = 8
+
+[node name="Version" type="HBoxContainer" parent="Credits/Info/L"]
+margin_right = 76.0
+margin_bottom = 14.0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="Text" type="Label" parent="Credits/Info/L/Version"]
+modulate = Color( 0.721569, 0.729412, 0.741176, 1 )
+margin_right = 48.0
+margin_bottom = 14.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Version"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Number" type="Label" parent="Credits/Info/L/Version"]
+margin_left = 52.0
+margin_right = 76.0
+margin_bottom = 14.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "N/A"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Link" type="HBoxContainer" parent="Credits/Info/L"]
+margin_top = 22.0
+margin_right = 137.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 8 )
+size_flags_horizontal = 4
+size_flags_vertical = 0
+alignment = 1
+
+[node name="Code" type="LinkButton" parent="Credits/Info/L/Link"]
+margin_right = 76.0
+margin_bottom = 8.0
+focus_mode = 2
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 1 )
+text = "Source code"
+underline = 1
+
+[node name="Separator" type="HSeparator" parent="Credits/Info/L/Link"]
+margin_left = 80.0
+margin_right = 83.0
+margin_bottom = 8.0
+
+[node name="Group" type="LinkButton" parent="Credits/Info/L/Link"]
+margin_left = 87.0
+margin_right = 137.0
+margin_bottom = 8.0
+focus_mode = 2
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 1 )
+text = "Discord"
+underline = 1
+
+[node name="Separator" type="VSeparator" parent="Credits/Info"]
+margin_left = 264.0
+margin_right = 296.0
+margin_bottom = 36.0
+rect_min_size = Vector2( 32, 0 )
+
+[node name="Contact" type="TextureButton" parent="Credits/Info"]
+margin_left = 296.0
+margin_right = 376.0
+margin_bottom = 36.0
+rect_min_size = Vector2( 80, 36 )
+hint_tooltip = "Learn more about NinStar"
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="Separator" type="HSeparator" parent="Credits"]
+margin_top = 110.0
+margin_right = 504.0
+margin_bottom = 114.0
+
+[node name="Credits" type="RichTextLabel" parent="Credits"]
+margin_top = 130.0
+margin_right = 504.0
+margin_bottom = 476.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+bbcode_text = "[center][b]Art, Code & Design[/b]
+
+NinStar
+
+[b]Translations[/b]
+
+Português: NinStar
+	
+[b]Database[/b]
+
+NinStar
+Majesty
+Sneethan
+Lakelimbo
+Luxen
+CodeBarre
+issey
+Peach774
+Sup3r-M4rio
+ShadowzI
+Schitzel9000
+[url=https://github.com/ninstar/Rich-Presence-U-DB#credits]...[/url]
+
+[b]Donors[/b] [color=#F46FF0]♥[/color]
+
+SimpleDimple
+KatNat
+
+[center][b]Third Party Software[/b]
+
+[url=https://github.com/discord/discord-rpc/]Discord RPC[/url]
+[url=https://github.com/Abdera7mane/Godot-UnixSocket]UnixSocket[/url]
+[url=https://github.com/godotengine]Godot Engine[/url]"
+tab_size = 8
+text = "Art, Code & Design
+
+NinStar
+
+Translations
+
+Português: NinStar
+	
+Database
+
+NinStar
+Majesty
+Sneethan
+Lakelimbo
+Luxen
+CodeBarre
+issey
+Peach774
+Sup3r-M4rio
+ShadowzI
+Schitzel9000
+...
+
+Donors ♥
+
+SimpleDimple
+KatNat
+
+Third Party Software
+
+Discord RPC
+UnixSocket
+Godot Engine"
+
+[node name="License" type="RichTextLabel" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 64.0
+margin_bottom = 28.0
+focus_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+bbcode_text = "[b]MIT License
+
+Copyright (c) 2019-2022 NinStar[/b]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+text = "MIT License
+
+Copyright (c) 2019-2022 NinStar
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+selection_enabled = true
+
+[connection signal="pressed" from="Credits/Home" to="." method="_on_Home_pressed"]
+[connection signal="pressed" from="Credits/Info/L/Link/Code" to="." method="_on_Code_pressed"]
+[connection signal="pressed" from="Credits/Info/L/Link/Group" to="." method="_on_Group_pressed"]
+[connection signal="pressed" from="Credits/Info/Contact" to="." method="_on_Contact_pressed"]
+[connection signal="meta_clicked" from="Credits/Credits" to="." method="_on_Credits_meta_clicked"]

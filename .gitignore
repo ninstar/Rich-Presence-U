@@ -1,8 +1,2 @@
-# Extensions
-Project/extensions/WindowCommandHook/
-Project/extensions/NekoPresence/
-
-# Unsupported platforms
-Project/options/operagx
-Project/options/html5
-Project/options/mac
+Source/.import/
+Source/export_presets.cfg

@@ -1,5 +1,6 @@
 [1.0.0]
-- Support for Linux and 32 bit Windows
+
+- Support for Linux, macOS and 32 bit Windows
 - Improved UI and user experience
 - Added adaptive tabs
 - Added Discord's dark and light themes

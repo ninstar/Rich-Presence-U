@@ -161,17 +161,17 @@ size_flags_vertical = 3
 custom_constants/separation = 0
 
 [node name="A" type="ScrollContainer" parent="Main/B/Menus/L/Pages"]
-margin_right = 510.0
+visible = false
+margin_right = 255.0
 margin_bottom = 336.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Box" parent="Main/B/Menus/L/Pages/A" instance=ExtResource( 15 )]
 anchor_right = 0.0
-margin_right = 498.0
+margin_right = 255.0
 
 [node name="B" type="ScrollContainer" parent="Main/B/Menus/L/Pages"]
-visible = false
 margin_right = 510.0
 margin_bottom = 336.0
 size_flags_horizontal = 3
@@ -179,7 +179,7 @@ size_flags_vertical = 3
 
 [node name="Box" parent="Main/B/Menus/L/Pages/B" instance=ExtResource( 14 )]
 anchor_right = 0.0
-margin_right = 510.0
+margin_right = 498.0
 margin_bottom = 524.0
 
 [node name="C" type="ScrollContainer" parent="Main/B/Menus/L/Pages"]

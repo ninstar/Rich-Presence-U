@@ -1,0 +1,180 @@
+[1.0.0]
+- Support for Linux and 32 bit Windows
+- Improved UI and user experience
+- Added adaptive tabs
+- Added Discord's dark and light themes
+- Added database information on the main page
+- Added adjustable database refresh (12 hours~1 week)
+- Added adjustable interface scale (50%~200%)
+- Added a menu for recently used descriptions (game specific) and games
+- Added a visibility toggle for NNID/FC
+- Added custom party size
+- Added option for auto connection on start
+- Added option for removing temporary data and reseting settings
+- Added option to always display NNID/FC as an icon
+- Added option to change region only for specific games
+- Added option to rename any game
+- Added an option for generating debug logs to help with troubleshooting
+- Accounts can now be switched while the app is running
+- Connections can be manually re-established if necessary
+- The activity status can now be modified while set to invisible
+- Descriptions are now automatically clamped to 128 characters (Discord's limit)
+- Moved the status visibility toggle from the settings menu to the right side of the status button
+- The "More about this game" button now uses Google by default
+- The window size is now adjustable to any size
+- New updates will now display the changelog within the app
+- New logo and icons
+
+[0.7.3]
+
+- Fixed a bug when closing the window while minimized
+- Changed Nintendo Network ID formating
+
+[0.7.2]
+
+- Fixed wrong window position after disconnecting one or more external screens
+- Fixed standby interval
+
+[0.7.1]
+
+- More accurate NOA search query
+- Last selected page is automatically restored upon booting
+- Additional window scales
+- Fixed timestamp glitch
+- Fixed database updater
+- Fixed softlock when moving the window to a different screen
+
+[0.7.0]
+
+- UI/UX Redesign
+- Title History
+- Support for European and Japanese releases
+- More accurate searching tool
+- Extended glyphs range
+- Dedicated custom title field
+- Option to refresh the database at any time
+- Option to preserve elapsed time
+- Option to show a quick search button
+- Automatic reconnection
+- Support for local overriders
+- Fixed 'paste' option (clipboard)
+- Improved overall performance
+
+[0.6.2]
+
+- Cut, copy and paste droplist (right click)
+- Icons can be expanded when selected
+- Autocleaner for cached icons
+- Fixed status not showing up at first launch
+- Fixed invisible window when restoring size
+- Fixed droplists
+- Fixed copy/paste formating
+
+[0.6.1]
+
+- Faster boot-up
+- Better colors
+- Replaced rectangles with roundrects
+
+[0.6.0]
+
+- Complete UI redesign and UX improvements (Dark theme, resizable window and more)
+- Better icon caching
+- Window position and size are restored upon startup
+- Support for additional predefined details
+- Built-in Spanish translation
+
+[0.5.4]
+
+- Revamped interface
+- Fixed and increased the support for multiple clients (up to 1480 titles)
+- Support for additional special characters
+- Support for translations
+
+[0.5.3]
+
+- Optimizations in GPU usage
+- Icons are cached when changing titles
+- Fixed cursor hovering two options when using drop menu to select a title
+- Fluent Design-inspired icon
+
+[0.5.2]
+
+- Rewritten source code
+- Details are saved individually for each title
+- Support for up to 4 clients per platform (596 titles)
+- Support for custom network redirection
+- Minor visual changes
+- New icon
+
+[0.5.1]
+
+- Changed the dynamic redirection to the application's repository for less access restrictions
+- Fixed timestamp preservation when changing platforms
+- Fixed fatal error when pressing ENTER in the title's search bar
+- Better background color for Switch and 3DS mode
+
+[0.5.0]
+
+- Support for Nintendo 3DS: 113 titles
+- Added 26 new Nintendo Switch titles
+- Higher quality icons for Wii U titles
+- Dynamic updater for game tiltes
+- Automatic notifications about new updates
+- Revamped UI
+- Updated title 123 (Wii U)
+- Updated title 029 (Switch)
+
+[0.4.3]
+
+- Added Switch title: 'Animal Crossing: New Horizons'
+- Added preset_details.ini: "Single player", "Multiplayer" and "Online" status can be changed through this file. Titles (Games) that have preset details will override this file
+- Changed some prefixes for titles with preset details 
+- Fixed title 062 (Wii U mode)
+- New icon for Windows 10
+- Minor visual changes
+
+[0.4.2]
+
+- Now you can pause the Rich Presence sate without closing the app
+- Switching between Wii U / Switch will no longer turn off the previous state until you update it
+- Minor aesthetic changes
+
+[0.4.1]
+
+- Changed "HOME Menu" to "Custom Title" (Wii U / Switch)
+- Typos in NES/SNES titles (Switch)
+- Changed text formatting
+- Increased character limit for custom details from 32 to 64
+- No character limit for game titles
+- Added info section
+
+[0.4.0]
+
+- Nintendo Switch mode
+- 90 Switch titles (thanks to Majesty for providing the thumbnails)
+- Separated settings for Wii U and Switch mode
+- 'titles.ini' moved to their respective subfolders
+
+[0.3.0]
+
+- Resampled Icons (client only)
+- Accurate titles, including special characters
+- 70+ new titles
+
+[0.2.1]
+
+- Client ID fix
+- Array length fix
+
+[0.2.0]
+
+- Elapsed time preservation, it will no longer reset when you change state, only if the current game is changed
+- Clipboard functions: CTRL + C, CTRL + V
+- 'Delete' key can remove custom status and NNID
+- Custom game titles and pre-set status (titles.ini)
+- Minor aesthetic changes
+
+[0.1.0]
+
+- Initial pre-release

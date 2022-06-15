@@ -177,11 +177,11 @@ Schitzel9000
 SimpleDimple
 KatNat
 
-[center][b]Third Party Software[/b]
+[center][b]Third Party Code[/b]
 
-[url=https://github.com/discord/discord-rpc/]Discord RPC[/url]
-[url=https://github.com/Abdera7mane/Godot-UnixSocket]UnixSocket[/url]
-[url=https://github.com/godotengine]Godot Engine[/url]"
+[url=https://github.com/discord/discord-rpc/]discord-rpc[/url]
+[url=https://github.com/godotengine]Godot Engine[/url]
+[url=https://github.com/Abdera7mane/Godot-UnixSocket]UnixSocket[/url]"
 tab_size = 8
 text = "Art, Code & Design
 
@@ -211,11 +211,11 @@ Donors ♥
 SimpleDimple
 KatNat
 
-Third Party Software
+Third Party Code
 
-Discord RPC
-UnixSocket
-Godot Engine"
+discord-rpc
+Godot Engine
+UnixSocket"
 
 [node name="License" type="RichTextLabel" parent="."]
 visible = false

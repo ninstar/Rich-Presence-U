@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://code/ui/common/popup.tscn" type="PackedScene" id=1]
+[ext_resource path="res://code/ui/dialogs/changelog.tscn" type="PackedScene" id=2]
+[ext_resource path="res://code/ui/dialogs/popups/new_version.gd" type="Script" id=3]
+
+[node name="NewVersion" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+title = "New version available"
+hint = "Would you like to be redirected to the download page?"
+button_cancel = "Maybe later..."
+button_confirm = "Sure!"
+
+[node name="Panel" parent="." index="0"]
+anchor_left = 0.25
+anchor_top = 0.1
+anchor_right = 0.75
+anchor_bottom = 0.9
+
+[node name="Margin" parent="Panel" index="0"]
+margin_bottom = 402.6
+
+[node name="Box" parent="Panel/Margin" index="0"]
+margin_bottom = 375.0
+
+[node name="Labels" parent="Panel/Margin/Box" index="0"]
+margin_bottom = 295.0
+
+[node name="Title" parent="Panel/Margin/Box/Labels" index="0"]
+margin_right = 176.0
+text = "New version available"
+
+[node name="Changelog" parent="Panel/Margin/Box/Labels" index="1" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 38.0
+margin_right = 268.0
+margin_bottom = 236.0
+size_flags_vertical = 3
+
+[node name="Hint" parent="Panel/Margin/Box/Labels" index="2"]
+margin_top = 252.0
+margin_bottom = 295.0
+text = "Would you like to be redirected to the download page?"
+
+[node name="Buttons" parent="Panel/Margin/Box" index="1"]
+margin_top = 327.0
+margin_bottom = 355.0
+
+[node name="Cancel" parent="Panel/Margin/Box/Buttons" index="0"]
+text = "Maybe later..."
+
+[node name="Confirm" parent="Panel/Margin/Box/Buttons" index="1"]
+text = "Sure!"
+button_color = 2

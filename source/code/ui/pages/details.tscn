@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://code/ui/pages/details/tag.tscn" type="PackedScene" id=1]
+[ext_resource path="res://code/ui/pages/details/elapsed.tscn" type="PackedScene" id=2]
+[ext_resource path="res://code/ui/pages/details/icon.tscn" type="PackedScene" id=3]
+[ext_resource path="res://code/ui/pages/details/preserve.tscn" type="PackedScene" id=5]
+[ext_resource path="res://code/ui/pages/details/search.tscn" type="PackedScene" id=6]
+
+[node name="Details" type="VBoxContainer"]
+anchor_right = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 16
+
+[node name="Tag" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+margin_right = 512.0
+
+[node name="Icon" parent="." instance=ExtResource( 3 )]
+anchor_right = 0.0
+margin_top = 125.0
+margin_right = 512.0
+margin_bottom = 234.0
+
+[node name="Elapsed" parent="." instance=ExtResource( 2 )]
+anchor_right = 0.0
+margin_top = 250.0
+margin_right = 512.0
+margin_bottom = 314.0
+
+[node name="Preserve" parent="." instance=ExtResource( 5 )]
+anchor_right = 0.0
+margin_top = 330.0
+margin_right = 512.0
+margin_bottom = 419.0
+
+[node name="Search" parent="." instance=ExtResource( 6 )]
+anchor_right = 0.0
+margin_top = 435.0
+margin_right = 512.0
+margin_bottom = 524.0

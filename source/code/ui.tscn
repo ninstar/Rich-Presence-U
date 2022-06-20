@@ -1,0 +1,246 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://code/ui/components/splash.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/ui/themes/dark/settings.svg" type="Texture" id=3]
+[ext_resource path="res://code/ui.gd" type="Script" id=4]
+[ext_resource path="res://code/ui/components/submit.tscn" type="PackedScene" id=5]
+[ext_resource path="res://code/ui/components/tabs.tscn" type="PackedScene" id=6]
+[ext_resource path="res://code/ui/components/status.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/ui/themes/dark/update.svg" type="Texture" id=9]
+[ext_resource path="res://code/ui/pages/games.tscn" type="PackedScene" id=10]
+[ext_resource path="res://code/ui/pages/settings.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/ui/themes/dark/about.svg" type="Texture" id=13]
+[ext_resource path="res://code/ui/pages/details.tscn" type="PackedScene" id=14]
+[ext_resource path="res://code/ui/pages/platforms.tscn" type="PackedScene" id=15]
+
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[sub_resource type="StyleBoxEmpty" id=9]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 16.0
+content_margin_bottom = 16.0
+
+[node name="UI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+
+[node name="Panel" type="PanelContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 96.0
+
+[node name="Main" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 0
+
+[node name="T" type="MarginContainer" parent="Main"]
+margin_right = 512.0
+margin_bottom = 56.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 16
+custom_constants/margin_top = 12
+custom_constants/margin_left = 16
+custom_constants/margin_bottom = 12
+
+[node name="Bar" type="HBoxContainer" parent="Main/T"]
+margin_left = 16.0
+margin_top = 12.0
+margin_right = 496.0
+margin_bottom = 44.0
+custom_constants/separation = 8
+
+[node name="Status" parent="Main/T/Bar" instance=ExtResource( 7 )]
+margin_right = 384.0
+size_flags_horizontal = 3
+
+[node name="Update" type="Button" parent="Main/T/Bar"]
+margin_left = 392.0
+margin_top = 4.0
+margin_right = 416.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 24, 24 )
+hint_tooltip = "Update app"
+mouse_default_cursor_shape = 2
+size_flags_vertical = 4
+custom_styles/normal = SubResource( 10 )
+
+[node name="Icon" type="TextureRect" parent="Main/T/Bar/Update"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 6
+
+[node name="About" type="Button" parent="Main/T/Bar"]
+margin_left = 424.0
+margin_top = 4.0
+margin_right = 448.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 24, 24 )
+hint_tooltip = "About"
+mouse_default_cursor_shape = 2
+size_flags_vertical = 4
+custom_styles/normal = SubResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon" type="TextureRect" parent="Main/T/Bar/About"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 13 )
+expand = true
+stretch_mode = 6
+
+[node name="Settings" type="Button" parent="Main/T/Bar"]
+margin_left = 456.0
+margin_top = 4.0
+margin_right = 480.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 24, 24 )
+hint_tooltip = "Settings"
+mouse_default_cursor_shape = 2
+size_flags_vertical = 4
+custom_styles/normal = SubResource( 10 )
+toggle_mode = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon" type="TextureRect" parent="Main/T/Bar/Settings"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 6
+
+[node name="B" type="Panel" parent="Main"]
+margin_top = 56.0
+margin_right = 512.0
+margin_bottom = 512.0
+size_flags_vertical = 3
+
+[node name="Menus" type="HBoxContainer" parent="Main/B"]
+anchor_right = 2.0
+anchor_bottom = 1.0
+
+[node name="L" type="VBoxContainer" parent="Main/B/Menus"]
+margin_right = 510.0
+margin_bottom = 456.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="T" type="MarginContainer" parent="Main/B/Menus/L"]
+margin_right = 510.0
+margin_bottom = 52.0
+custom_constants/margin_right = 24
+custom_constants/margin_top = 16
+custom_constants/margin_left = 24
+custom_constants/margin_bottom = 8
+
+[node name="Tabs" parent="Main/B/Menus/L/T" instance=ExtResource( 6 )]
+anchor_right = 0.0
+margin_left = 24.0
+margin_top = 16.0
+margin_right = 486.0
+margin_bottom = 44.0
+
+[node name="Pages" type="HBoxContainer" parent="Main/B/Menus/L"]
+show_behind_parent = true
+margin_top = 56.0
+margin_right = 510.0
+margin_bottom = 392.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 0
+
+[node name="A" type="ScrollContainer" parent="Main/B/Menus/L/Pages"]
+visible = false
+margin_right = 255.0
+margin_bottom = 336.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Box" parent="Main/B/Menus/L/Pages/A" instance=ExtResource( 15 )]
+anchor_right = 0.0
+margin_right = 255.0
+
+[node name="B" type="ScrollContainer" parent="Main/B/Menus/L/Pages"]
+margin_right = 510.0
+margin_bottom = 336.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Box" parent="Main/B/Menus/L/Pages/B" instance=ExtResource( 14 )]
+anchor_right = 0.0
+margin_right = 498.0
+margin_bottom = 524.0
+
+[node name="C" type="ScrollContainer" parent="Main/B/Menus/L/Pages"]
+visible = false
+margin_left = 385.0
+margin_right = 510.0
+margin_bottom = 336.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Box" parent="Main/B/Menus/L/Pages/C" instance=ExtResource( 10 )]
+anchor_right = 0.0
+margin_right = 236.0
+margin_bottom = 543.0
+
+[node name="Tween" type="Tween" parent="Main/B/Menus/L/Pages"]
+
+[node name="B" type="MarginContainer" parent="Main/B/Menus/L"]
+margin_top = 396.0
+margin_right = 510.0
+margin_bottom = 456.0
+custom_constants/margin_right = 16
+custom_constants/margin_top = 8
+custom_constants/margin_left = 24
+custom_constants/margin_bottom = 24
+
+[node name="Submit" parent="Main/B/Menus/L/B" instance=ExtResource( 5 )]
+anchor_right = 0.0
+margin_left = 24.0
+margin_top = 8.0
+margin_right = 494.0
+margin_bottom = 36.0
+
+[node name="R" type="ScrollContainer" parent="Main/B/Menus"]
+margin_left = 514.0
+margin_right = 1024.0
+margin_bottom = 456.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/bg = SubResource( 9 )
+
+[node name="Settings" parent="Main/B/Menus/R" instance=ExtResource( 11 )]
+margin_left = 24.0
+margin_top = 16.0
+margin_right = 474.0
+margin_bottom = 882.0
+
+[node name="Tween" type="Tween" parent="Main/B/Menus"]
+
+[node name="Dialogs" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+input_pass_on_modal_close_click = false
+
+[node name="Splash" parent="." instance=ExtResource( 2 )]
+visible = false
+
+[connection signal="pressed" from="Main/T/Bar/Update" to="." method="_on_Update_pressed"]
+[connection signal="pressed" from="Main/T/Bar/About" to="." method="_on_About_pressed"]
+[connection signal="toggled" from="Main/T/Bar/Settings" to="." method="_on_Settings_toggled"]
+[connection signal="tween_completed" from="Main/B/Menus/L/Pages/Tween" to="." method="_on_Pages_tween_completed"]
+[connection signal="tween_step" from="Main/B/Menus/L/Pages/Tween" to="." method="_on_Pages_tween_step"]
+[connection signal="tween_step" from="Main/B/Menus/Tween" to="." method="_on_Menus_tween_step"]

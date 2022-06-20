@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://code/ui/common/buttons/button.gd" type="Script" id=2]
+
+[node name="Button" type="Button"]
+margin_right = 12.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 28, 28 )
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+script = ExtResource( 2 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[connection signal="tween_step" from="Tween" to="." method="_on_tween_step"]

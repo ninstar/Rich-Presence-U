@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://code/ui/common/buttons/toggle.tscn" type="PackedScene" id=1]
+[ext_resource path="res://code/ui/pages/details/scripts/search.gd" type="Script" id=2]
+
+[node name="Search" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+title = "Search button on status"
+description = "Allows other people to quickly search for the game you are currently playing."
+
+[node name="Title" parent="Button/Box" index="0"]
+text = "Search button on status"
+
+[node name="Hint" parent="." index="1"]
+text = "Allows other people to quickly search for the game you are currently playing."
+
+[connection signal="toggled" from="Button" to="." method="_on_Search_toggled"]

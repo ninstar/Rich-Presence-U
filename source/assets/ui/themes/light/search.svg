@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="24"
+   height="24"
+   viewBox="0 0 24 24"
+   version="1.1"
+   id="SVGRoot"
+   sodipodi:docname="search.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview10"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     showgrid="false"
+     inkscape:current-layer="SVGRoot" />
+  <defs
+     id="defs1725" />
+  <g
+     id="layer1"
+     transform="translate(-77.699724,-31.38748)">
+    <g
+       id="g1061-9-4"
+       style="display:inline;stroke:#72767d;stroke-width:0.950827;stroke-opacity:1"
+       transform="matrix(1.0517157,0,0,1.0517157,-349.58129,-269.68765)">
+      <path
+         id="path1055-8-5"
+         style="color:#000000;fill:#72767d;stroke:none;stroke-width:1;stroke-dashoffset:9.6;-inkscape-stroke:none;paint-order:markers stroke fill"
+         d="M 5.7578125,0 C 2.5833664,0 0,2.5833664 0,5.7578125 c 0,3.1744461 2.5833664,5.7578125 5.7578125,5.7578125 1.4077309,0 2.6977247,-0.509263 3.6992187,-1.351563 L 13.292969,14 14,13.292969 10.164062,9.4570312 c 0.8423,-1.001494 1.351563,-2.2914878 1.351563,-3.6992187 C 11.515625,2.5833664 8.9322586,0 5.7578125,0 Z m 0,1 c 2.6340115,0 4.7597655,2.123801 4.7597655,4.7578125 0,2.6340115 -2.125754,4.7597655 -4.7597655,4.7597655 C 3.123801,10.517578 1,8.391824 1,5.7578125 1,3.123801 3.123801,1 5.7578125,1 Z"
+         transform="matrix(0.9508273,0,0,0.9508273,411.02459,291.02459)" />
+    </g>
+  </g>
+  <metadata
+     id="metadata2103">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>NinStar</dc:title>
+          </cc:Agent>
+        </dc:creator>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

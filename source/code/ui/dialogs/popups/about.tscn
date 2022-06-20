@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://code/ui/common/popup.tscn" type="PackedScene" id=1]
+[ext_resource path="res://code/ui/dialogs/about.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/ui/icon_link.svg" type="Texture" id=3]
+[ext_resource path="res://assets/ui/mask.png" type="Texture" id=4]
+[ext_resource path="res://code/ui/dialogs/popups/about.gd" type="Script" id=5]
+
+[node name="About" instance=ExtResource( 1 )]
+script = ExtResource( 5 )
+title = "About"
+hint = ""
+button_cancel = "Close"
+button_confirm = "Help"
+
+[node name="Panel" parent="." index="0"]
+anchor_left = 0.15
+anchor_top = 0.1
+anchor_right = 0.85
+anchor_bottom = 0.9
+rect_min_size = Vector2( 400, 0 )
+
+[node name="Margin" parent="Panel" index="0"]
+margin_right = 393.0
+margin_bottom = 402.6
+
+[node name="Box" parent="Panel/Margin" index="0"]
+margin_right = 360.0
+margin_bottom = 375.0
+
+[node name="Labels" parent="Panel/Margin/Box" index="0"]
+margin_right = 334.0
+margin_bottom = 295.0
+
+[node name="Title" parent="Panel/Margin/Box/Labels" index="0"]
+margin_right = 50.0
+text = "About"
+
+[node name="Hint" parent="Panel/Margin/Box/Labels" index="1"]
+visible = false
+margin_right = 354.0
+text = ""
+
+[node name="About" parent="Panel/Margin/Box/Labels" index="2" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 38.0
+margin_right = 334.0
+margin_bottom = 295.0
+
+[node name="Buttons" parent="Panel/Margin/Box" index="1"]
+margin_left = 66.0
+margin_top = 327.0
+margin_right = 334.0
+margin_bottom = 355.0
+
+[node name="Confirm" parent="Panel/Margin/Box/Buttons" index="1"]
+text = "Help"
+icon = ExtResource( 4 )
+button_color = 1
+
+[node name="Icon" type="TextureRect" parent="Panel/Margin/Box/Buttons/Confirm" index="1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 5

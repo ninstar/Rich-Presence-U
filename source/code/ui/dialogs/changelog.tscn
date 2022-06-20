@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://code/ui/dialogs/changelog.gd" type="Script" id=1]
+
+[node name="Changelog" type="TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+tab_align = 0
+script = ExtResource( 1 )
+
+[node name="Text" type="RichTextLabel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+tab_size = 8

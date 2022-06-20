@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://code/ui/common/buttons/toggle.tscn" type="PackedScene" id=1]
+[ext_resource path="res://code/ui/pages/details/scripts/preserve.gd" type="Script" id=2]
+
+[node name="Preserve" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+title = "Preserve elapsed time"
+description = "Your elapsed won’t be reseted when changing games."
+
+[node name="Title" parent="Button/Box" index="0"]
+text = "Preserve elapsed time"
+
+[node name="Hint" parent="." index="1"]
+text = "Your elapsed won't be rested when changing games."
+
+[connection signal="toggled" from="Button" to="." method="_on_Preserve_toggled"]

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="70"
+   height="24"
+   viewBox="0 0 70 24"
+   version="1.1"
+   id="SVGRoot"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs1725" />
+  <g
+     id="layer1"
+     transform="translate(-77.1393,-30.827056)">
+    <g
+       id="g1494-9-2"
+       transform="translate(-1164.8607,302.82706)">
+      <path
+         id="rect1682-4-83-3-7-4"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:9.6;stroke-opacity:1;paint-order:markers stroke fill"
+         d="M 35 4 C 30.568 4 27 7.568 27 12 C 27 16.432 30.568 20 35 20 C 39.432 20 43 16.432 43 12 C 43 7.568 39.432 4 35 4 z M 38 6 C 39.1843 6.36166 40.4848 7.10327 41 9 L 39 9 C 38.7878 8.73187 38.7679 8.56731 38 8 L 38 6 z M 35 8 C 37.216 8 39 9.784 39 12 C 39 14.216 37.216 16 35 16 C 32.784 16 31 14.216 31 12 C 31 9.784 32.784 8 35 8 z M 29 15 L 31 15 C 31.2122 15.26813 31.2321 15.43269 32 16 L 32 18 C 30.8157 17.63834 29.5152 16.89673 29 15 z "
+         transform="translate(1242,-272)" />
+      <rect
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:9.6;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect1682-4-83-3-3-8-5-3"
+         width="4"
+         height="4"
+         x="1275"
+         y="-262"
+         ry="16"
+         rx="16" />
+    </g>
+  </g>
+  <metadata
+     id="metadata2103">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>NinStar</dc:title>
+          </cc:Agent>
+        </dc:creator>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

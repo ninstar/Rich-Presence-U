@@ -1,27 +1,52 @@
-<img alt="Banner" src="https://i.imgur.com/iTQG6j1.png" width="100%">
+[<img src="https://i.imgur.com/HADoV2p.png" alt="Rich Presence U" width="100%">][home]
 
-This GUI application allows you to display **Wii U**, **Nintendo Switch** and **Nintendo 3DS** games on your *Discord* profile. There are over 500 titles across all three platforms.
+# Overview
 
-[![itchio][badge-itchio]][link-itchio] [![Repository][badge-repo]][link-repo]
+A simple application that allows you to create your own activity statuses for Wii U, Nintendo Switch and Nintendo 3DS games and display them on your Discord profile.
 
-> Documentation can be found in the **Wiki** tab.
+<img src="https://i.imgur.com/HR3QyAI.png" alt="Activity status" width="100%">
 
-## Credits
+## Features
 
-**Art, Code & Design**
-* NinStar
+- An ever-growing [collection of titles and icons][database] from multiple regions.
+- Various customization options.
+	- Game renaming and personalized descriptions.
+	- Nintendo Network ID and Friend Code sharing.
+	- Elapsed time, party size and more.
 
-**Third Party Code**
-* [**discord-rpc**](https://github.com/discord/discord-rpc)
-* [**Godot Engine**](https://github.com/YAL-GameMaker/window_commands/)
-* [**UnixSocket**](https://github.com/Abdera7mane/Godot-UnixSocket)
+<img src="https://i.imgur.com/g9yGpnY.png" alt="User interface" width="100%">
 
-## License
+> **Note:** Automatic activity setup is not supported at the momento, this is due to Nintendo not providing an open alternative for apps to communicate with their services.
 
-This project is licensed under the ***GNU GPLv3***.
+[<p align="center"><img src="https://static.itch.io/images/badge-color.svg?sanitize=true" alt="AVAILABLE ON itch.io" width="40%"></p>][download]
 
-[link-itchio]:https://ninstars.itch.io/rpc
-[link-repo]:https://github.com/ninstar/Rich-Presence-U-DB
+# Compile
 
-[badge-itchio]:https://img.shields.io/static/v1?label=Download&logo=itch.io&labelColor=2F363D&logoColor=white&message=Releases&color=FA5C5C&style=for-the-badge
-[badge-repo]:https://img.shields.io/static/v1?label=Repository&logo=GitHub&labelColor=2F363D&logoColor=white&message=Database&color=white&style=for-the-badge
+1. Clone the repository:
+```bash
+git clone https://github.com/ninstar/Rich-Presence-U.git
+```
+2. Get Godot binary [here][godot] (3.4.4 or later).
+3. Open ``/source/project.godot``.
+4. Set up a new preset for the platforms you want to export to by going to **Project ➜ Export ➜ Add**.
+5. Select **Export All** or use the command line: 
+ ```bash
+godot --export "Linux/X11" RichPresenceU
+godot --export "Mac OSX" RichPresenceU.dmg
+godot --export "Windows Desktop" RichPresenceU.exe
+```
+
+> You also have the option to compile [everything][compile] from source.
+
+# Credits
+
+- **Art, Code & Design** - NinStar
+- [**discord-rpc**](https://github.com/discord/discord-rpc) - Discord
+- [**Godot**](https://github.com/godotengine/godot) - Godot Engine 
+- [**UnixSocket**](https://github.com/Abdera7mane/Godot-UnixSocket) - Abdera7mane
+
+[home]: ninstars.blogspot.com/p/rpc.html
+[download]: https://ninstars.itch.io/rpc
+[database]: https://github.com/ninstar/Rich-Presence-U-DB
+[godot]: https://godotengine.org/download 
+[compile]: https://docs.godotengine.org/en/latest/development/compiling

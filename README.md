@@ -16,7 +16,7 @@ A simple application that allows you to create your own activity statuses for Wi
 
 <img src="https://i.imgur.com/g9yGpnY.png" alt="User interface" width="100%">
 
-> **Note:** Automatic activity setup is not supported at the momento, this is due to Nintendo not providing an open alternative for apps to communicate with their services.
+> **Note:** Automatic activity setup is not supported at the moment, this is due to Nintendo not providing an open alternative for apps to communicate with their services.
 
 [<p align="center"><img src="https://static.itch.io/images/badge-color.svg?sanitize=true" alt="AVAILABLE ON itch.io" width="40%"></p>][download]
 

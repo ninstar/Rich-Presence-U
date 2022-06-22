@@ -153,6 +153,7 @@ common/snap_controls_to_pixels=false
 
 [locale]
 
+test="en"
 translations=PoolStringArray( "res://locales/translations.en.translation", "res://locales/translations.pt.translation" )
 locale_filter=[ 0, [  ] ]
 

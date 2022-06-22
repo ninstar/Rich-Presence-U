@@ -15,7 +15,7 @@ signal dialog_added(path)
 signal history_changed()
 signal status_changed()
 
-const METADATA = "https://github.com/ninstar/Rich-Presence-U/raw/master/METADATA.cfg"
+const METADATA = "https://github.com/ninstar/Rich-Presence-U/raw/main/METADATA.cfg"
 const CONFIG = "user://settings.cfg"
 const VERSION = "1.0.0"
 const BUILD = 1000

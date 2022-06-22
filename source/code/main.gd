@@ -41,9 +41,10 @@ var metadata: Dictionary = {
 		
 		"home": "https://ninstars.blogspot.com/rpc",
 		"code": "https://github.com/ninstar/Rich-Presence-U",
-		"help": "https://github.com/ninstar/Rich-Presence-U/wiki",
-		"group": "https://invite.gg/ninstar",
 		"contact": "https://ninstar.carrd.co",
+		"group": "https://invite.gg/ninstar",
+		"help": "https://invite.gg/ninstar",
+		"help_pt": "",
 	},
 }
 var settings: Dictionary = {

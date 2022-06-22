@@ -153,69 +153,41 @@ bbcode_text = "[center][b]Art, Code & Design[/b]
 
 NinStar
 
-[b]Translations[/b]
+[center][b]Third Party Code[/b]
 
-Português: NinStar
-	
+[url=https://github.com/discord/discord-rpc/]discord-rpc[/url]
+[url=https://github.com/godotengine]Godot Engine[/url]
+[url=https://github.com/Abdera7mane/Godot-UnixSocket]UnixSocket[/url]
+
 [b]Database[/b]
-
-NinStar
-Majesty
-Sneethan
-Lakelimbo
-Luxen
-CodeBarre
-issey
-Peach774
-Sup3r-M4rio
-ShadowzI
-Schitzel9000
-[url=https://github.com/ninstar/Rich-Presence-U-DB#credits]...[/url]
+[url=https://github.com/ninstar/Rich-Presence-U-DB#credits]All contributors[/url]
 
 [b]Donors[/b] [color=#F46FF0]♥[/color]
 
 SimpleDimple
 KatNat
 
-[center][b]Third Party Code[/b]
-
-[url=https://github.com/discord/discord-rpc/]discord-rpc[/url]
-[url=https://github.com/godotengine]Godot Engine[/url]
-[url=https://github.com/Abdera7mane/Godot-UnixSocket]UnixSocket[/url]"
+"
 tab_size = 8
 text = "Art, Code & Design
 
 NinStar
 
-Translations
+Third Party Code
 
-Português: NinStar
-	
+discord-rpc
+Godot Engine
+UnixSocket
+
 Database
-
-NinStar
-Majesty
-Sneethan
-Lakelimbo
-Luxen
-CodeBarre
-issey
-Peach774
-Sup3r-M4rio
-ShadowzI
-Schitzel9000
-...
+All contributors
 
 Donors ♥
 
 SimpleDimple
 KatNat
 
-Third Party Code
-
-discord-rpc
-Godot Engine
-UnixSocket"
+"
 
 [node name="License" type="RichTextLabel" parent="."]
 visible = false

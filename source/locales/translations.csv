@@ -17,7 +17,7 @@ Recent;Recent;Recente
 Visibility;Visibility;Visibilidade
 About;About;Sobre
 Update app;Update app;Atualizar aplicativo
-Settings;Settings;Settings
+Settings;Settings;Configurações
 Platforms;Platforms;Plataformas
 Details;Details;Detalhes
 Games;Games;Jogos
@@ -50,6 +50,7 @@ Party size;Party size;Tamanho da sala
 of;of;de
 Rename game;Rename game;Renomear jogo
 Any text placed in this field will take priority over the specified region title.;Any text placed in this field will take priority over the specified region title.;Qualquer texto colocado neste campo terá prioridade sobre o título da região especificada.
+Custom title;Custom title;Título personalizado
 Game region;Game region;Regão do jogo
 Default;Default;Padrão
 Language;Language;Idioma

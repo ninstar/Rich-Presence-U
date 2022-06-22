@@ -1,4 +1,11 @@
 keys;en;pt
+Cut;Cut;Recortar
+Copy;Copy;Copiar
+Paste;Paste;Colar
+Select All;Select all;Selecionar tudo
+Clear;Clear;Limpar
+Undo;Undo;Desfazer
+Redo;Redo;Refazer
 Help;Help;Ajuda
 Credits;Credits;Créditos
 License;License;Licença

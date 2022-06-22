@@ -43,7 +43,6 @@ custom_constants/separation = 8
 [node name="Input" type="LineEdit" parent="Options"]
 margin_right = 476.0
 margin_bottom = 28.0
-hint_tooltip = "Text"
 size_flags_horizontal = 3
 max_length = 128
 clear_button_enabled = true

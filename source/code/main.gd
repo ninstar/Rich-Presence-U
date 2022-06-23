@@ -182,8 +182,6 @@ func _notification(what: int) -> void:
 # Methods
 func download_metadata() -> void:
 	
-	debug_log("Starting HTTP request... ("+METADATA+")")
-	
 	# Create directory for downloads
 	var _directory: = Directory.new()
 	var _error: int = _directory.open("user://")
@@ -742,7 +740,7 @@ func debug_export() -> void:
 		
 		# Header
 		_file.store_line("Rich Presence U - "+VERSION+" ("+str(BUILD)+")")
-		_file.store_line(OS.get_name()+", Process: "+str(OS.get_process_id()))
+		_file.store_line(OS.get_name()+", "+OS.get_locale()+", Process: "+str(OS.get_process_id()))
 		_file.store_line(str(_date))
 		_file.store_line("")
 		

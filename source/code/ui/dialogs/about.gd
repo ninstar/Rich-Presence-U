@@ -25,5 +25,8 @@ func _on_Code_pressed() -> void:
 func _on_Group_pressed() -> void:
 	OS.shell_open(Main.metadata["url"]["group"])
 
-func _on_Credits_meta_clicked(_meta) -> void:
-	OS.shell_open(str(_meta))
+func _on_Credits_meta_clicked(meta) -> void:
+	OS.shell_open(str(meta))
+
+func _on_License_meta_clicked(meta) -> void:
+	OS.shell_open(str(meta))

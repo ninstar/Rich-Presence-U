@@ -7,7 +7,7 @@ func confirmation_action() -> void:
 	
 	# Get current language
 	if _locale.empty():
-		_locale = OS.get_locale()
+		_locale = OS.get_locale_language()
 	
 	# Get link for current language
 	if Main.metadata["url"].has("help_"+_locale):

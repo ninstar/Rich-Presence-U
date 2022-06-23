@@ -155,7 +155,7 @@ common/snap_controls_to_pixels=false
 
 test="en"
 translations=PoolStringArray( "res://locales/translations.en.translation", "res://locales/translations.pt.translation" )
-locale_filter=[ 0, [  ] ]
+locale_filter=[ 1, [ "en", "pt" ] ]
 
 [physics]
 

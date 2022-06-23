@@ -44,7 +44,6 @@ var metadata: Dictionary = {
 		"contact": "https://ninstar.carrd.co",
 		"group": "https://invite.gg/ninstar",
 		"help": "https://invite.gg/ninstar",
-		"help_pt": "",
 	},
 }
 var settings: Dictionary = {
@@ -213,10 +212,12 @@ func import_metadata() -> void:
 	debug_log("Loading config /cache/metadata.cfg: "+str(_error))
 	if _error == OK:
 		
-		for i in _cfg.get_sections():
+		for s in _cfg.get_sections():
 			
-			for o in _cfg.get_section_keys(i):
-				metadata[i][o] = _cfg.get_value(i, o, metadata[i][o])
+			for k in _cfg.get_section_keys(s):
+				
+				if _cfg.has_section_key(s, k):
+					metadata[s][k] = _cfg.get_value(s, k)
 	
 	emit_signal("metadata_imported")
 func import_games() -> void:
@@ -766,8 +767,22 @@ func debug_log(message: String) -> void:
 # Signals
 func _on_Language_changed(new_lang: String) -> void:
 	
+	# Automatically get system language
 	if new_lang.empty():
-		new_lang = OS.get_locale()
+		new_lang = OS.get_locale_language()
+	
+	# Check if translation for selected language is available
+	var _has_translations: bool = false
+	for i in TranslationServer.get_loaded_locales():
+		
+		if i == new_lang:
+			
+			_has_translations = true
+			break
+	
+	# Use default language if necessary
+	if not _has_translations:
+		new_lang = "en"
 	
 	TranslationServer.set_locale(new_lang)
 func _on_Scaling_changed(new_scaling: float) -> void:

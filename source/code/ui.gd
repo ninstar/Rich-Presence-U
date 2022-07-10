@@ -106,6 +106,10 @@ func _on_Settings_toggled(button_pressed: bool) -> void:
 	# Toggle settings page
 	var _open: float = 1 if button_pressed == true else 0 
 	
+	# Make settings page visible first
+	if button_pressed:
+		node_settings.visible = true
+	
 	# Tween transition
 	node_menus.get_node("Tween").interpolate_property(self, "tween_menus", tween_menus,
 			_open, 0.6, Tween.TRANS_EXPO, Tween. EASE_IN_OUT)
@@ -122,6 +126,11 @@ func _on_Menus_tween_step(_object: Object, _key: NodePath, _elapsed: float, _val
 	# Move menus horizontally
 	node_menus.anchor_left = -tween_menus
 	node_menus.anchor_right = 2.0 - tween_menus
+
+func _on_Tween_tween_completed(_object: Object, _key: NodePath) -> void:
+	
+	# Toggle visibility of the settings page
+	node_settings.visible = bool(tween_menus)
 
 func _on_Pages_tween_step(_object: Object, _key: NodePath, _elapsed: float, _value: Object) -> void:
 	

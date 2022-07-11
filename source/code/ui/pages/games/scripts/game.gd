@@ -97,8 +97,8 @@ func update_history() -> void:
 			_title = _info["id"]
 		
 		# Shorten long titles
-		if _title.length() > 32:
-			_title = _title.substr(0, 32)+"…"
+		if _title.length() > 72:
+			_title = _title.substr(0, 72)+"…"
 		
 		# Add to list
 		_list.add_item(_title)

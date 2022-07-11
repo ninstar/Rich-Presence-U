@@ -37,7 +37,7 @@ margin_right = 475.0
 margin_bottom = 24.0
 hint_tooltip = "Custom title"
 size_flags_horizontal = 3
-max_length = 16
+max_length = 128
 clear_button_enabled = true
 
 [node name="List" type="OptionButton" parent="Options"]

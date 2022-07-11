@@ -109,9 +109,8 @@ onready var data_game: Dictionary = default_game.duplicate(true)
 onready var start_time: int = OS.get_unix_time()
 
 func _enter_tree() -> void:
-	
 	OS.set_window_title("Rich Presence U")
-	OS.min_window_size = Vector2.ONE * 512
+
 func _ready() -> void:
 	
 	# Connect signals
@@ -128,9 +127,9 @@ func _ready() -> void:
 			settings[i] = _cfg.get_value("Settings", i, settings[i])
 
 	# Setup window
+	OS.window_size = settings["window_size"]
 	OS.window_position = settings["window_position"]
-	#OS.window_size = settings["window_size"]
-	#OS.window_maximized = settings["window_maximized"]
+	OS.window_maximized = settings["window_maximized"]
 	
 	# Impoprt games
 	import_games()
@@ -165,9 +164,10 @@ func _notification(what: int) -> void:
 				debug_export()
 			
 			# Remember window setup
-			settings["window_position"] = OS.window_position
-			settings["window_size"] = OS.window_size
-			settings["window_maximized"] = OS.window_maximized
+			settings["window_maximized"] = OS.is_window_maximized()
+			if not OS.is_window_maximized() and not OS.is_window_minimized():
+				settings["window_position"] = OS.get_window_position()
+				settings["window_size"] = OS.get_window_size()
 			
 			# Save user data
 			user_data_game(true)
@@ -800,6 +800,11 @@ func _on_Language_changed(new_lang: String) -> void:
 	TranslationServer.set_locale(new_lang)
 func _on_Scaling_changed(new_scaling: float) -> void:
 	
+	# Minimal window size
+	var _minimal: float = new_scaling if new_scaling < 1.0 else 1.0
+	OS.min_window_size = Vector2.ONE * (512 * _minimal)
+	
+	# UI scale
 	get_tree().set_screen_stretch(SceneTree.STRETCH_MODE_DISABLED, 
 			SceneTree.STRETCH_ASPECT_IGNORE, Vector2.ONE * 512, new_scaling)
 func _on_Metadata_download_completed(result, response_code, _headers, _body) -> void:

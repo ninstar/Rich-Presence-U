@@ -14,6 +14,7 @@ func _ready() -> void:
 	
 	# Connect signals
 	get_node("/root").connect("size_changed", self, "_on_Window_resize")
+	Main.connect("scaling_changed", self, "_on_Scaling_changed")
 	Main.connect("theme_changed", self, "_on_Theme_changed")
 	Main.connect("dialog_added", self, "_on_Dialog_added")
 	Main.connect("metadata_imported", self, "_on_Metadata_imported")
@@ -24,6 +25,7 @@ func _ready() -> void:
 	# Update configurations on UI
 	Main.emit_signal("language_changed", Main.settings["language"])
 	Main.emit_signal("theme_changed", Main.settings["ui_theme"])
+	Main.emit_signal("scaling_changed", Main.settings["ui_scale"])
 	Main.emit_signal("system_changed")
 	Main.emit_signal("game_changed")
 	Main.emit_signal("games_imported")
@@ -34,7 +36,7 @@ func _ready() -> void:
 # Signals
 func _on_Window_resize() -> void:
 	
-	var _show_all = OS.get_real_window_size().x > 320 * 3
+	var _show_all = OS.get_real_window_size().x > (320 * Main.settings["ui_scale"]) * 3
 	
 	for i in ["A", "B", "C"]:
 		
@@ -49,6 +51,11 @@ func _on_Metadata_imported() -> void:
 	
 	# Show new version
 	node_bar.get_node("Update").visible = Main.metadata["bin"]["latest"] > Main.BUILD
+
+func _on_Scaling_changed(new_scaling: float) -> void:
+	
+	# Toggle pages
+	_on_Window_resize()
 
 func _on_Theme_changed(new_theme: String) -> void:
 	

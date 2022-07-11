@@ -88,11 +88,13 @@ func update_history() -> void:
 	
 	for i in Main.data_system["history"]:
 		
-		# Import information about game
+		# Import information about game and get title
 		var _info: Dictionary = Main.get_game_info(i)
-		
-		# Get display title for current region
-		var _title: String = Main.get_game_title(_info, Main.data_system["region"])
+		var _title: String = ""
+		if _info.size() > 1:
+			_title = Main.get_game_title(_info, Main.data_system["region"])
+		else:
+			_title = _info["id"]
 		
 		# Shorten long titles
 		if _title.length() > 32:

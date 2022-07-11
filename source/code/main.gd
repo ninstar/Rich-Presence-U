@@ -565,8 +565,16 @@ func activity_push() -> void:
 	
 	# Description
 	var _description: String = data_game["description"]
-	if not _description.empty() and _description.length() < 2:
-		_description = _description+" "
+	var _whitespaces_only: bool = true
+	for i in _description:
+		
+		# Clear description if it is only composed of whitespaces
+		if i != " ":
+			_whitespaces_only = false
+			break
+	
+	if _whitespaces_only:
+		_description = ""
 	
 	# Tag
 	var _tag: String = ""
@@ -604,6 +612,10 @@ func activity_push() -> void:
 	discord_rpc.large_image_key = _game_icon
 	discord_rpc.details = _title
 	discord_rpc.state = _description
+	
+	# Add minimal amount of characters
+	if not discord_rpc.state.empty() and discord_rpc.state.length() < 2:
+		discord_rpc.state = discord_rpc.state+" "
 	
 	if data_system["tag"] and not _tag.empty():
 		

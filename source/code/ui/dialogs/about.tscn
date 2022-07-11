@@ -155,12 +155,17 @@ NinStar
 [b]Database[/b]
 [url=https://github.com/ninstar/Rich-Presence-U-DB#credits]All contributors[/url]
 
-[center][b]Third Party Code[/b]
+[b]Third Party Code[/b]
 [url=https://github.com/discord/discord-rpc/]discord-rpc[/url]
 [url=https://github.com/godotengine]Godot Engine[/url]
 [url=https://github.com/Abdera7mane/Godot-UnixSocket]UnixSocket[/url]
 
-"
+[b]Donors[/b] [color=#F46FF0]♥[/color]
+Dr. Farinha
+kit
+SimpleDimple
+Sam Mayhew
+WonderAliceUwU"
 tab_size = 8
 text = "Art, Code & Design
 NinStar
@@ -173,7 +178,12 @@ discord-rpc
 Godot Engine
 UnixSocket
 
-"
+Donors ♥
+Dr. Farinha
+kit
+SimpleDimple
+Sam Mayhew
+WonderAliceUwU"
 
 [node name="License" type="RichTextLabel" parent="."]
 visible = false

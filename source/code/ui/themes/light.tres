@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=63 format=2]
+[gd_resource type="Theme" load_steps=64 format=2]
 
 [ext_resource path="res://assets/ui/themes/light/close_hover.svg" type="Texture" id=1]
 [ext_resource path="res://assets/ui/themes/light/check.svg" type="Texture" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://assets/ui/themes/light/visible.svg" type="Texture" id=14]
 [ext_resource path="res://assets/ui/themes/light/tick.svg" type="Texture" id=15]
 [ext_resource path="res://assets/ui/themes/light/spin.svg" type="Texture" id=16]
+[ext_resource path="res://assets/ui/themes/light/grabber_hover.svg" type="Texture" id=17]
 
 [sub_resource type="StyleBoxFlat" id=70]
 content_margin_left = 8.0
@@ -516,7 +517,7 @@ HScrollBar/styles/scroll_focus = SubResource( 36 )
 HSeparator/styles/separator = SubResource( 66 )
 HSlider/icons/grabber = ExtResource( 8 )
 HSlider/icons/grabber_disabled = ExtResource( 8 )
-HSlider/icons/grabber_highlight = ExtResource( 8 )
+HSlider/icons/grabber_highlight = ExtResource( 17 )
 HSlider/icons/tick = ExtResource( 15 )
 HSlider/styles/grabber_area = SubResource( 41 )
 HSlider/styles/grabber_area_highlight = SubResource( 41 )

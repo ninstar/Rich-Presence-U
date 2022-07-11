@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=63 format=2]
+[gd_resource type="Theme" load_steps=64 format=2]
 
 [ext_resource path="res://assets/ui/themes/dark/check.svg" type="Texture" id=1]
 [ext_resource path="res://assets/ui/fonts/lato_regular.ttf" type="DynamicFontData" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://assets/ui/themes/dark/close_hover.svg" type="Texture" id=14]
 [ext_resource path="res://assets/ui/themes/dark/close.svg" type="Texture" id=15]
 [ext_resource path="res://assets/ui/themes/dark/spin.svg" type="Texture" id=16]
+[ext_resource path="res://assets/ui/themes/dark/grabber_hover.svg" type="Texture" id=17]
 
 [sub_resource type="StyleBoxFlat" id=71]
 content_margin_left = 8.0
@@ -34,7 +35,7 @@ border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 2
-border_color = Color( 0.345098, 0.396078, 0.94902, 1 )
+border_color = Color( 1, 1, 1, 0.25098 )
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
@@ -62,7 +63,7 @@ border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 2
-border_color = Color( 0.345098, 0.396078, 0.94902, 1 )
+border_color = Color( 1, 1, 1, 0.25098 )
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
@@ -90,7 +91,7 @@ border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 2
-border_color = Color( 0.345098, 0.396078, 0.94902, 1 )
+border_color = Color( 1, 1, 1, 0.25098 )
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
@@ -194,7 +195,7 @@ border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 2
-border_color = Color( 0.345098, 0.396078, 0.94902, 1 )
+border_color = Color( 1, 1, 1, 0.25098 )
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
@@ -226,7 +227,7 @@ border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 2
-border_color = Color( 0.345098, 0.396078, 0.94902, 1 )
+border_color = Color( 1, 1, 1, 0.25098 )
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
@@ -246,7 +247,7 @@ border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 2
-border_color = Color( 0.345098, 0.396078, 0.94902, 1 )
+border_color = Color( 1, 1, 1, 0.25098 )
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
@@ -402,7 +403,7 @@ border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 2
-border_color = Color( 0.345098, 0.396078, 0.94902, 1 )
+border_color = Color( 1, 1, 1, 0.25098 )
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
@@ -515,7 +516,7 @@ HScrollBar/styles/scroll_focus = SubResource( 68 )
 HSeparator/styles/separator = SubResource( 37 )
 HSlider/icons/grabber = ExtResource( 9 )
 HSlider/icons/grabber_disabled = ExtResource( 9 )
-HSlider/icons/grabber_highlight = ExtResource( 9 )
+HSlider/icons/grabber_highlight = ExtResource( 17 )
 HSlider/icons/tick = ExtResource( 11 )
 HSlider/styles/grabber_area = SubResource( 41 )
 HSlider/styles/grabber_area_highlight = SubResource( 41 )

@@ -17,8 +17,8 @@ signal status_changed()
 
 const METADATA = "https://gist.github.com/ninstar/19c664a823d3a0312f47f5ac5e52a915/raw"
 const CONFIG = "user://settings.cfg"
-const VERSION = "1.0.1"
-const BUILD = 1001
+const VERSION = "1.0.2"
+const BUILD = 1002
 const CLIENT = 985449859299565649
 
 var logger: Array

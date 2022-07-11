@@ -15,7 +15,4 @@ func confirmation_action() -> void:
 		if not Main.metadata["url"]["help_"+_locale].empty():
 			_link = Main.metadata["url"]["help_"+_locale]
 	
-	if OS.has_feature("X11"):
-		_link = "xdg-open "+_link
-	
 	OS.shell_open(_link)

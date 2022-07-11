@@ -15,6 +15,8 @@ func _ready() -> void:
 	# Connect signals
 	connect("button_down", self, "_on_press")
 	connect("button_up", self, "_on_hover")
+	connect("focus_entered", self, "_on_hover")
+	connect("focus_exited", self, "_on_exited")
 	connect("mouse_entered", self, "_on_hover")
 	connect("mouse_exited", self, "_on_exited")
 	Main.connect("theme_changed", self, "_on_Theme_changed")

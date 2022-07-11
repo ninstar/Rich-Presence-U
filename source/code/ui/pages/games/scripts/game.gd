@@ -22,10 +22,8 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	
-	if event is InputEventKey:
-		
-		if event.scancode == KEY_ESCAPE:
-			close_results()
+	if event.is_action("ui_cancel"):
+		close_results()
 
 # Methods
 func close_results() -> void:

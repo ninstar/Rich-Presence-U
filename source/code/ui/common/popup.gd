@@ -42,7 +42,7 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	
 	# Close when clicking outside window
-	if not Engine.editor_hint and event is InputEventKey:
+	if not Engine.editor_hint:
 		
 		if event.is_action("ui_cancel"):
 			window_close()

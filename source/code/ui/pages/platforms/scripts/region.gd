@@ -15,8 +15,6 @@ func _ready() -> void:
 	node_list.set_item_metadata(0, "US")
 	node_list.set_item_metadata(1, "EU")
 	node_list.set_item_metadata(2, "JP")
-	
-
 
 # Signals
 func _on_System_changed() -> void:

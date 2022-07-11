@@ -316,6 +316,9 @@ func change_system(system_id: String) -> void:
 	# Update UI information
 	emit_signal("system_changed")
 	emit_signal("game_changed")
+	
+	# Check status changes
+	emit_signal("status_changed")
 func user_data_system(save: bool = false) -> void:
 	
 	var _path: String = "user://platforms/"+ settings["system"].to_lower() + ".json"

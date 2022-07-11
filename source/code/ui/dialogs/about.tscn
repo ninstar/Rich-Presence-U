@@ -53,8 +53,8 @@ custom_constants/separation = 0
 alignment = 1
 
 [node name="L" type="VBoxContainer" parent="Credits/Info"]
-margin_left = 127.0
-margin_right = 264.0
+margin_left = 132.0
+margin_right = 259.0
 margin_bottom = 36.0
 custom_constants/separation = 8
 
@@ -88,30 +88,30 @@ __meta__ = {
 
 [node name="Link" type="HBoxContainer" parent="Credits/Info/L"]
 margin_top = 22.0
-margin_right = 137.0
+margin_right = 127.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 0, 8 )
 size_flags_horizontal = 4
 size_flags_vertical = 0
 alignment = 1
 
-[node name="Code" type="LinkButton" parent="Credits/Info/L/Link"]
-margin_right = 76.0
+[node name="Changelog" type="LinkButton" parent="Credits/Info/L/Link"]
+margin_right = 66.0
 margin_bottom = 8.0
 focus_mode = 2
 size_flags_horizontal = 4
 custom_fonts/font = SubResource( 1 )
-text = "Source code"
+text = "Changelog"
 underline = 1
 
 [node name="Separator" type="HSeparator" parent="Credits/Info/L/Link"]
-margin_left = 80.0
-margin_right = 83.0
+margin_left = 70.0
+margin_right = 73.0
 margin_bottom = 8.0
 
 [node name="Group" type="LinkButton" parent="Credits/Info/L/Link"]
-margin_left = 87.0
-margin_right = 137.0
+margin_left = 77.0
+margin_right = 127.0
 margin_bottom = 8.0
 focus_mode = 2
 size_flags_horizontal = 4
@@ -120,14 +120,14 @@ text = "Discord"
 underline = 1
 
 [node name="Separator" type="VSeparator" parent="Credits/Info"]
-margin_left = 264.0
-margin_right = 296.0
+margin_left = 259.0
+margin_right = 291.0
 margin_bottom = 36.0
 rect_min_size = Vector2( 32, 0 )
 
 [node name="Contact" type="TextureButton" parent="Credits/Info"]
-margin_left = 296.0
-margin_right = 376.0
+margin_left = 291.0
+margin_right = 371.0
 margin_bottom = 36.0
 rect_min_size = Vector2( 80, 36 )
 hint_tooltip = "Learn more about NinStar"
@@ -160,6 +160,7 @@ NinStar
 [url=https://github.com/Abdera7mane/Godot-UnixSocket]UnixSocket[/url]
 
 [b]Database[/b]
+
 [url=https://github.com/ninstar/Rich-Presence-U-DB#credits]All contributors[/url]
 
 [b]Donors[/b] [color=#F46FF0]♥[/color]
@@ -180,6 +181,7 @@ Godot Engine
 UnixSocket
 
 Database
+
 All contributors
 
 Donors ♥
@@ -216,7 +218,7 @@ You should have received a copy of the GNU General Public License along with thi
 selection_enabled = true
 
 [connection signal="pressed" from="Credits/Home" to="." method="_on_Home_pressed"]
-[connection signal="pressed" from="Credits/Info/L/Link/Code" to="." method="_on_Code_pressed"]
+[connection signal="pressed" from="Credits/Info/L/Link/Changelog" to="." method="_on_Changelog_pressed"]
 [connection signal="pressed" from="Credits/Info/L/Link/Group" to="." method="_on_Group_pressed"]
 [connection signal="pressed" from="Credits/Info/Contact" to="." method="_on_Contact_pressed"]
 [connection signal="meta_clicked" from="Credits/Credits" to="." method="_on_Credits_meta_clicked"]

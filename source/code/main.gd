@@ -40,7 +40,6 @@ var metadata: Dictionary = {
 	"url": {
 		
 		"home": "https://ninstars.blogspot.com/rpc",
-		"code": "https://github.com/ninstar/Rich-Presence-U",
 		"contact": "https://ninstar.carrd.co",
 		"group": "https://invite.gg/ninstar",
 		"help": "https://invite.gg/ninstar",
@@ -766,10 +765,12 @@ func debug_export() -> void:
 		_file.close()
 	
 	# Make a copy to the executable directory
-	var _binary_path: String = OS.get_executable_path().get_base_dir()
-	var _dir: = Directory.new()
-	if _dir.open(_binary_path) == OK:
-		_dir.copy("user://debug.log", _binary_path+"/debug.log")
+	if not OS.has_feature("AppImage"):
+		
+		var _binary_path: String = OS.get_executable_path().get_base_dir()
+		var _dir: = Directory.new()
+		if _dir.open(_binary_path) == OK:
+			_dir.copy("user://debug.log", _binary_path+"/debug.log")
 func debug_log(message: String) -> void:
 	
 	var _t = OS.get_time()

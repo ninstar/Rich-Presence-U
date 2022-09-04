@@ -1,0 +1,105 @@
+keys;pt
+ABOUT_CLOSE;Fechar
+ABOUT_CONTACT;Saiba mais sobre NinStar
+ABOUT_CREDITS;Créditos
+ABOUT_HELP;Ajuda
+ABOUT_LICENSE;Licença
+ABOUT_PAGE;Página inicial
+ABOUT_TITLE;Sobre
+ABOUT_VERSION;Versão
+AUTOCONNECT_HINT;Quando iniciado, o aplicativo tentará automaticamente se conectar ao Discord.
+AUTOCONNECT_TITLE;Conexão automática ao iniciar
+CONNECTION_ERROR_CLOSE;Fechar
+CONNECTION_ERROR_HINT;Não foi possível estabelecer uma conexão com o Discord.\n\nVerifique sua conexão com a internet ou tente reiniciar o aplicativo, certifique-se de estar usando a versão desktop do Discord.
+CONNECTION_ERROR_TITLE;Erro de conexão
+DATA_HINT;Esteja ciente de que essas ações não podem ser desfeitas.
+DATA_TITLE;Dados
+DEBUG_HINT;Gera um arquivo de log para solução de problemas.
+DEBUG_TITLE;Registro de depuração
+DESCRIPTION_HINT;Um texto para ser mostrado abaixo do título do jogo.
+DESCRIPTION_HINT_RECENT;Descrições recentes
+DESCRIPTION_TITLE;Descrição
+ELAPSED_TIME_TITLE;Exibir tempo decorrido
+GAME_HINT_CUSTOM;Entrada personalizada. O texto digitado será usado como título no seu status.
+GAME_HINT_NONE;Você não selecionou um jogo. Apenas o nome do seu console será exibido.
+GAME_HINT_RECENT;Jogos recentes
+GAME_HINT_TYPE;Digite aqui para buscar por um jogo
+GAME_TITLE;Jogo
+INVISIBILE_STATUS_CLOSE;Certo
+INVISIBLE_STATUS_HINT;Seu status está invisível no momento.\n\nTorne-o visível novamente para que você possa ver suas alterações no Discord.\n\nEsteja ciente de que terá efeito imediato ao alterná-lo.
+INVISIBLE_STATUS_TITLE;Espera ai!
+LANGUAGE_AUTO;Automático
+LANGUAGE_TITLE;Idioma
+PARTY_HINT_VISIBILITY;Alternar visibilidade
+PARTY_OF;de
+PARTY_TITLE;Tamanho da sala
+PRESERVE_TIME_HINT;Seu tempo decorrido não será redefinido ao alternar jogos.
+PRESERVE_TIME_TITLE;Preservar tempo decorrido
+REFRESH_12H;A cada 12 horas
+REFRESH_DAILY;Todos os dias
+REFRESH_DISABLED;Nunca
+REFRESH_HINT;Esta ação será executada toda vez que você abrir o aplicativo de acordo com o intervalo de tempo definido.
+REFRESH_NOW;Checar agora
+REFRESH_TITLE;Checar por novos títulos
+REFRESH_WEEKLY;Toda semana
+REFRESHING_DONE;Pronto!
+REFRESHING_INIT;Preparando...\nVai levar apenas um momento.
+REFRESHING_STEP_1;Baixando arquivos...\nVai levar apenas um momento.
+REFRESHING_STEP_2;Baixando arquivos...\nQuase lá.
+REGION_EU;Europa
+REGION_JP;Japão
+REGION_TITLE;Região de preferência
+REGION_US;Américas
+RENAME_DEFAULT;Padrão
+RENAME_HINT;Qualquer texto colocado neste campo terá prioridade sobre o título da região especificada.
+RENAME_HINT_INPUT;Título personalizado
+RENAME_HINT_REGION;Regão do jogo
+RENAME_TITLE;Renomear jogo
+RESET_ALL_CANCEL;Deixa pra lá...
+RESET_ALL_CONFIRM;Sim. Redefina tudo
+RESET_ALL_HINT;Todas as configurações serão redefinidas para a padrão, incluindo suas configurações por jogo.\n\nTem certeza de que quer continuar com essa ação?\n\nO aplicativo será fechado depois disso.
+RESET_ALL_TITLE;Redefinir tudo
+RESET_CACHE_CANCEL;Deixa pra lá...
+RESET_CACHE_CONFIRM;Sim. Limpe cache
+RESET_CACHE_HINT;Arquivos baixados e temporários serão removidos. Nenhuma alteração será feita nas suas configurações.\n\nA base de dados será atualizada logo em seguida.
+RESET_CACHE_TITLE;Limpar cache
+SEARCH_BUTTON_HINT;Permite que outros possam pesquisar rapidamente pelo jogo que você está jogando no momento.
+SEARCH_BUTTON_TITLE;Botão de pesquisa no status
+SETTINGS_TITLE;Configurações
+STATUS_APPLIED;Nenhuma alteração pendente
+STATUS_APPLY;Aplicar status no Discord
+STATUS_CONNECT;Conectar ao Discord
+STATUS_VISIBLITY;Visibilidade do status
+SYSTEM_CTR;Nintendo 3DS
+SYSTEM_HAC;Nintendo Switch
+SYSTEM_TITLE;Sistema de jogos
+SYSTEM_WUP;Wii U
+TAB_DETAILS;Detalhes
+TAB_GAMES;Jogos
+TAB_PLATFORM;Plataformas
+TAG_HINT_VISIBILITY;Alternar visibilidade
+TAG_ICON_HINT;Garante que seu ID ou Friend Code seja sempre mostrado como um pequeno ícone ao lado do ícone do jogo que você está jogando. Mesmo quando você não tem uma descrição definida.
+TAG_ICON_TITLE;Sempre exibir o ID como um ícone
+TAG_TITLE_FCID;Código de amigo (FC)
+TAG_TITLE_NNID;ID da Nintendo Network
+THEME_DARK;Escuro
+THEME_LIGHT;Claro
+THEME_TITLE;Tema
+UI_SCALE_APPLY;Aplicar
+UI_SCALE_TITLE;Escala da interface
+UPDATE_CANCEL;Talvez depois...
+UPDATE_CONFIRM;Claro!
+UPDATE_PAGE;Gostaria de ser redirecionado para página de download?
+UPDATE_TITLE;Nova versão disponível
+USER_CONNECTED;Conectado
+USER_CONNECTING;Conectando...
+USER_DISCONNECTED;Desconectado
+VERIFIED_HINT;Jogos verificados exibirão um título e\num ícone de acordo com a região selecionada.
+VERIFIED_TITLE;Jogos verificados
+Cut;Recortar
+Copy;Copiar
+Paste;Colar
+Select All;Selecionar tudo
+Clear;Limpar
+Undo;Desfazer
+Redo;Refazer

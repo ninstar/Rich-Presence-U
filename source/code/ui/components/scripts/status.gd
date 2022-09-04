@@ -9,9 +9,12 @@ func _ready() -> void:
 	# Connect signals
 	Main.connect("discord_connected", self, "_on_Discord_connect")
 	Main.connect("discord_disconnected", self, "_on_Discord_disconnect")
+	Main.connect("discord_connecting", self, "_on_Discord_connecting")
 	
 	# Locale keys
 	node_status.set_text("USER_DISCONNECTED")
+	
+	node_avatar.modulate.a = 0.75
 
 # Sginals
 func _on_Discord_connect(user: Dictionary) -> void:
@@ -21,6 +24,7 @@ func _on_Discord_connect(user: Dictionary) -> void:
 		# Disconnected
 		node_avatar.modulate.a = 0.75
 		node_status.set_text("USER_DISCONNECTED")
+		$Picture/Loading/Animation.play("RESET")
 		
 	else:
 		
@@ -41,6 +45,14 @@ func _on_Discord_disconnect() -> void:
 	# Disconnected
 	node_avatar.modulate.a = 0.75
 	node_status.set_text("USER_DISCONNECTED")
+	$Picture/Loading/Animation.play("RESET")
+
+func _on_Discord_connecting() -> void:
+	
+	# Connecting
+	node_avatar.modulate.a = 1.0
+	node_status.set_text("USER_CONNECTING")
+	$Picture/Loading/Animation.play("Loop")
 
 func _on_HTTP_request_completed(_result: int, _response_code: int, _headers: PoolStringArray, body: PoolByteArray) -> void:
 	

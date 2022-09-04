@@ -12,7 +12,7 @@ func _ready() -> void:
 	
 	# Fill list
 	node_list.clear()
-	node_list.add_item("REGION_JP", 0)
+	node_list.add_item("REGION_US", 0)
 	node_list.add_item("REGION_EU", 1)
 	node_list.add_item("REGION_JP", 2)
 	node_list.set_item_metadata(0, "US")

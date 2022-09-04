@@ -510,13 +510,15 @@ func get_game_current_client() -> int:
 	return _result
 func discord_connect() -> void:
 	
-	discord_api.establish_connection(discord_client)
-	discord_connecting = true
-	debug_log("Establishing connection to Discord... (Autopush: "+str(discord_autopush)+")")
-	
 	# Alert other nodes about connection status
 	if not discord_autopush:
 		emit_signal("discord_connecting")
+	
+	debug_log("Establishing connection to Discord... (Autopush: "+str(discord_autopush)+")")
+	
+	discord_connecting = true
+	discord_api.establish_connection(discord_client)
+
 func activity_change() -> void:
 	
 	# Select new client
@@ -565,6 +567,7 @@ func activity_push() -> void:
 	
 	# Description
 	var _description: String = data_game["description"]
+	var _description_fixed: String = ""
 	var _whitespaces_only: bool = true
 	for i in _description:
 		
@@ -575,6 +578,12 @@ func activity_push() -> void:
 	
 	if _whitespaces_only:
 		_description = ""
+		
+	# Add minimum amount of characters
+	if not _description.empty() and _description.length() < 2:
+		_description_fixed = _description+"  "
+	else:
+		_description_fixed = _description
 	
 	# Tag
 	var _tag: String = ""
@@ -614,7 +623,7 @@ func activity_push() -> void:
 		discord_rpc.details = _title
 		
 		if not _description.empty():
-			discord_rpc.small_image_text = _description
+			discord_rpc.small_image_text = _description_fixed
 		else:
 			
 			if data_system["tag"] and not _tag.empty():
@@ -624,11 +633,7 @@ func activity_push() -> void:
 		discord_rpc.large_image_text = "Rich Presence U"
 		discord_rpc.large_image_key = _game_icon
 		discord_rpc.details = _title
-		discord_rpc.state = _description
-		
-		# Add minimum amount of characters
-		if not discord_rpc.state.empty() and discord_rpc.state.length() < 2:
-			discord_rpc.state = discord_rpc.state+" "
+		discord_rpc.state = _description_fixed
 		
 		if data_system["tag"] and not _tag.empty():
 			

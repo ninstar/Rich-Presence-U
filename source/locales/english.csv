@@ -10,7 +10,7 @@ ABOUT_VERSION;Version
 AUTOCONNECT_HINT;When launched, the application will automatically attempt to connect to Discord.
 AUTOCONNECT_TITLE;Auto connect on start
 CONNECTION_ERROR_CLOSE;Close
-CONNECTION_ERROR_HINT;Unable to establish a connection with Discord.\n\nCheck your internet connection or try to restart the app, make sure you are using the desktop version of Discord.
+CONNECTION_ERROR_HINT;Unable to establish a connection to Discord.\n\nCheck your internet connection or try to restart the app, make sure you are using the desktop version of Discord.
 CONNECTION_ERROR_TITLE;Connection error
 DATA_HINT;Be aware that these actions can’t be undone.
 DATA_TITLE;Data
@@ -30,6 +30,8 @@ INVISIBLE_STATUS_HINT;Your status is currently invisible.\n\nMake it visible aga
 INVISIBLE_STATUS_TITLE;Hold on!
 LANGUAGE_AUTO;Automatic
 LANGUAGE_TITLE;Language
+MINIMAL_STATUS_HINT;Makes the game icon smaller and only display the most relevant information set in your status.
+MINIMAL_STATUS_TITLE;Minimal status
 PARTY_HINT_VISIBILITY;Toggle visibility
 PARTY_OF;of
 PARTY_TITLE;Party size

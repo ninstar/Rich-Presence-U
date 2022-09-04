@@ -33,7 +33,7 @@ anchor_bottom = 1.0
 margin_left = -32.0
 margin_top = -32.0
 margin_right = 32.0
-margin_bottom = 96.0
+margin_bottom = 32.0
 
 [node name="Main" type="VBoxContainer" parent="."]
 anchor_right = 1.0
@@ -182,7 +182,7 @@ follow_focus = true
 [node name="Box" parent="Main/B/Menus/L/Pages/B" instance=ExtResource( 14 )]
 anchor_right = 0.0
 margin_right = 498.0
-margin_bottom = 524.0
+margin_bottom = 649.0
 
 [node name="C" type="ScrollContainer" parent="Main/B/Menus/L/Pages"]
 visible = false

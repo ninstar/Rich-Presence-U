@@ -1,5 +1,7 @@
 extends HBoxContainer
 
+var alert_status: bool = false
+
 onready var node_button: = get_node("Button")
 onready var node_toggle: = get_node("Toggle")
 
@@ -78,8 +80,10 @@ func _on_Button_pressed() -> void:
 		# Apply status
 		Main.activity_change()
 		
-		# Warn about invisible statuws
-		if not get_node("Toggle").pressed:
+		# Warn about invisible status
+		if not get_node("Toggle").pressed and not alert_status:
+			
+			alert_status = true
 			Main.emit_signal("dialog_added", "res://code/ui/dialogs/popups/visibility.tscn")
 		
 	else:

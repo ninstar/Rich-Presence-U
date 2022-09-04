@@ -6,7 +6,7 @@
 [node name="Disconnected" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 title = "Connection error"
-hint = "Unable to establish a connection with Discord. Check your internet connection or try to restart the app, make sure you are using the desktop version of Discord."
+hint = "Unable to establish a connection to Discord. Check your internet connection or try to restart the app, make sure you are using the desktop version of Discord."
 button_cancel = "Close"
 button_confirm = ""
 
@@ -25,7 +25,7 @@ text = "Connection error"
 
 [node name="Hint" parent="Panel/Margin/Box/Labels" index="1"]
 margin_bottom = 150.0
-text = "Unable to establish a connection with Discord. Check your internet connection or try to restart the app, make sure you are using the desktop version of Discord."
+text = "Unable to establish a connection to Discord. Check your internet connection or try to restart the app, make sure you are using the desktop version of Discord."
 
 [node name="Buttons" parent="Panel/Margin/Box" index="1"]
 margin_left = 140.0

@@ -68,6 +68,7 @@ var default_system: Dictionary = {
 	"region": "US",
 	"time_elapsed": true,
 	"time_preserve": false,
+	"minimal_status": false,
 	"extra_button": false,
 	"tag": true,
 	"tag_id": "",
@@ -607,36 +608,49 @@ func activity_push() -> void:
 	discord_rpc = RichPresence.new()
 	
 	# Apply information to activity
-	discord_rpc.large_image_text = "Rich Presence U"
-	discord_rpc.large_image_key = _game_icon
-	discord_rpc.details = _title
-	discord_rpc.state = _description
-	
-	# Add minimal amount of characters
-	if not discord_rpc.state.empty() and discord_rpc.state.length() < 2:
-		discord_rpc.state = discord_rpc.state+" "
-	
-	if data_system["tag"] and not _tag.empty():
+	if data_system["minimal_status"]:
 		
-		if data_system["tag_icon"] or not _description.empty():
-			discord_rpc.small_image_text = _tag
-			discord_rpc.small_image_key = "_tooltip"
+		discord_rpc.small_image_key = _game_icon
+		discord_rpc.details = _title
+		
+		if not _description.empty():
+			discord_rpc.small_image_text = _description
 		else:
-			discord_rpc.state = _tag
-	
-	if data_game["party"]:
+			
+			if data_system["tag"] and not _tag.empty():
+				discord_rpc.small_image_text = _tag
+	else:
 		
-		if discord_rpc.state == "":
-			discord_rpc.state = "  "
-		discord_rpc.party_max = int(data_game["party_max"])
-		discord_rpc.party_size = int(data_game["party_size"])
+		discord_rpc.large_image_text = "Rich Presence U"
+		discord_rpc.large_image_key = _game_icon
+		discord_rpc.details = _title
+		discord_rpc.state = _description
+		
+		# Add minimum amount of characters
+		if not discord_rpc.state.empty() and discord_rpc.state.length() < 2:
+			discord_rpc.state = discord_rpc.state+" "
+		
+		if data_system["tag"] and not _tag.empty():
+			
+			if data_system["tag_icon"] or not _description.empty():
+				discord_rpc.small_image_text = _tag
+				discord_rpc.small_image_key = "_tooltip"
+			else:
+				discord_rpc.state = _tag
+		
+		if data_game["party"]:
+			
+			if discord_rpc.state == "":
+				discord_rpc.state = "  "
+			discord_rpc.party_max = int(data_game["party_max"])
+			discord_rpc.party_size = int(data_game["party_size"])
+		
+		if data_system["time_elapsed"]:
+			discord_rpc.start_timestamp = timestamp
 	
 	if data_system["extra_button"]:
 		discord_rpc.first_button = RichPresenceButton.new("About this game",
 				"http://www.google.com/search?q="+_title.http_escape())
-	
-	if data_system["time_elapsed"]:
-		discord_rpc.start_timestamp = timestamp
 	
 	# Push new activity
 	if Main.settings["activity"]:

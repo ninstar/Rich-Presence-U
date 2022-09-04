@@ -10,9 +10,9 @@ func _ready() -> void:
 	
 	# Locale keys
 	$All/Name/Label.set_text("VERIFIED_TITLE")
-	$US/Name.set_text("VERIFIED_US")
-	$EU/Name.set_text("VERIFIED_EU")
-	$JP/Name.set_text("VERIFIED_JP")
+	$US/Name.set_text("REGION_US")
+	$EU/Name.set_text("REGION_EU")
+	$JP/Name.set_text("REGION_JP")
 	set_tooltip("VERIFIED_HINT")
 
 # Signals

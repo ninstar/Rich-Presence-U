@@ -31,9 +31,12 @@ func _ready() -> void:
 # Methods
 func color_change(new_color: Color) -> void:
 	
-	$Tween.interpolate_property(self, "color_current", color_current, new_color, 
-			0.2, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
-	$Tween.start()
+	var _tween: Tween = get_node("Tween")
+	if _tween != null:
+		
+		_tween.interpolate_property(self, "color_current", color_current, new_color, 
+				0.2, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
+		_tween.start()
 
 func  generate_styleboxes() -> void:
 	

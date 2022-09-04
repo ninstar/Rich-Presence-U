@@ -1,4 +1,4 @@
-extends Node
+extends VBoxContainer
 
 onready var node_input: = get_node("Options/Input")
 onready var node_list: = get_node("Options/List")
@@ -9,6 +9,11 @@ func _ready() -> void:
 	Main.connect("game_changed", self, "_on_Game_changed")
 	Main.connect("history_changed", self, "_on_History_changed")
 	node_list.get_popup().connect("id_pressed", self, "_on_History_selected")
+	
+	# Locale keys
+	$Title.set_text("DESCRIPTION_TITLE")
+	$Hint.set_text("DESCRIPTION_HINT")
+	$Options/List.set_tooltip("DESCRIPTION_HINT_RECENT")
 
 # Methods
 func update_history() -> void:

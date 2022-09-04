@@ -66,7 +66,6 @@ margin_top = 4.0
 margin_right = 416.0
 margin_bottom = 28.0
 rect_min_size = Vector2( 24, 24 )
-hint_tooltip = "Update app"
 mouse_default_cursor_shape = 2
 size_flags_vertical = 4
 custom_styles/normal = SubResource( 10 )
@@ -197,7 +196,7 @@ follow_focus = true
 [node name="Box" parent="Main/B/Menus/L/Pages/C" instance=ExtResource( 10 )]
 anchor_right = 0.0
 margin_right = 236.0
-margin_bottom = 543.0
+margin_bottom = 545.0
 
 [node name="Tween" type="Tween" parent="Main/B/Menus/L/Pages"]
 

@@ -4,6 +4,10 @@ func _ready() -> void:
 	
 	# Connect signals
 	Main.connect("system_changed", self, "_on_System_changed")
+	
+	# Locale keys
+	set_title("SEARCH_BUTTON_TITLE")
+	set_hint("SEARCH_BUTTON_HINT")
 
 # Signals
 func _on_System_changed() -> void:

@@ -1,13 +1,16 @@
-extends Node
+extends VBoxContainer
 
 onready var node_list: = get_node("List")
 
 func _ready() -> void:
 	
+	# Locale keys
+	$Title.set_text("THEME_TITLE")
+	
 	# Fill list
 	node_list.clear()
-	node_list.add_item("Dark", 0)
-	node_list.add_item("Light", 1)
+	node_list.add_item("THEME_DARK", 0)
+	node_list.add_item("THEME_LIGHT", 1)
 	node_list.set_item_metadata(0, "dark")
 	node_list.set_item_metadata(1, "light")
 	

@@ -30,7 +30,6 @@ fallback/0 = ExtResource( 2 )
 [node name="Database" type="VBoxContainer"]
 anchor_right = 1.0
 margin_bottom = 132.0
-hint_tooltip = "Verified games will display a title and icon according to the selected region."
 custom_constants/separation = 8
 script = ExtResource( 8 )
 

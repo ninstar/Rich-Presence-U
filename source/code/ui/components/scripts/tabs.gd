@@ -1,4 +1,4 @@
-extends Node
+extends HBoxContainer
 
 func _ready() -> void:
 	
@@ -6,6 +6,11 @@ func _ready() -> void:
 	Main.connect("system_changed", self, "_on_System_changed")
 	Main.connect("theme_changed", self, "_on_Theme_changed")
 	
+	# Locale keys
+	$A.set_tooltip("TAB_PLATFORM")
+	$B.set_tooltip("TAB_DETAILS")
+	$C.set_tooltip("TAB_GAMES")
+
 # Signals
 func _on_System_changed() -> void:
 	

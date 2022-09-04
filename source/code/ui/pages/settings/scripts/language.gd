@@ -1,12 +1,15 @@
-extends Node
+extends VBoxContainer
 
 onready var node_list: = get_node("List")
 
 func _ready() -> void:
 	
+	# Locale keys
+	$Title.set_text("LANGUAGE_TITLE")
+	
 	# Fill list
 	node_list.clear()
-	node_list.add_item("Automatic", 0)
+	node_list.add_item("LANGUAGE_AUTO", 0)
 	node_list.add_item("English", 1)
 	node_list.add_item("Português", 2)
 	node_list.set_item_metadata(0, "")

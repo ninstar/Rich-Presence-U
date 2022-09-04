@@ -8,6 +8,10 @@ func _ready() -> void:
 	
 	# Connect signals
 	Main.connect("system_changed", self, "_on_System_changed")
+	
+	# Locale keys
+	$Title.set_text("TAG_TITLE_NNID")
+	$Options/Toggle.set_tooltip("TAG_HINT_VISIBILITY")
 
 # Signals
 func _on_System_changed() -> void:
@@ -20,10 +24,10 @@ func _on_System_changed() -> void:
 	
 	# Change tag format
 	if Main.settings["system"] == "WUP":
-		$Title.text = "Nintendo Network ID"
+		$Title.set_text("TAG_TITLE_NNID")
 		node_nnid.text = Main.data_system["tag_id"]
 	else:
-		$Title.text = "Friend Code"
+		$Title.set_text("TAG_TITLE_FCID")
 		node_fc.get_node("A").text = Main.data_system["tag_fc"][0]
 		node_fc.get_node("B").text = Main.data_system["tag_fc"][1]
 		node_fc.get_node("C").text = Main.data_system["tag_fc"][2]

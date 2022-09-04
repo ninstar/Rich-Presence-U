@@ -1,9 +1,13 @@
-extends Node
+extends VBoxContainer
 
 onready var node_slider: = get_node("Value/Slider")
 onready var node_apply: = get_node("Apply")
 
 func _ready() -> void:
+	
+	# Locale keys
+	$Title.set_text("UI_SCALE_TITLE")
+	$Apply.set_text("UI_SCALE_APPLY")
 	
 	# Find previously set configurations
 	node_slider.value = Main.settings["ui_scale"]

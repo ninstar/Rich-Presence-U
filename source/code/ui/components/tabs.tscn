@@ -17,7 +17,6 @@ script = ExtResource( 5 )
 [node name="A" parent="." instance=ExtResource( 4 )]
 margin_right = 164.0
 margin_bottom = 28.0
-hint_tooltip = "Platforms"
 group = SubResource( 1 )
 
 [node name="Icon" type="TextureRect" parent="A"]
@@ -34,7 +33,6 @@ stretch_mode = 6
 margin_left = 174.0
 margin_right = 338.0
 margin_bottom = 28.0
-hint_tooltip = "Details"
 group = SubResource( 1 )
 
 [node name="Icon" type="TextureRect" parent="B"]
@@ -50,7 +48,6 @@ stretch_mode = 6
 margin_left = 348.0
 margin_right = 512.0
 margin_bottom = 28.0
-hint_tooltip = "Games"
 group = SubResource( 1 )
 
 [node name="Icon" type="TextureRect" parent="C"]

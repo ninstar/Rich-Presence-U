@@ -4,6 +4,9 @@ func _ready() -> void:
 	
 	# Connect signals
 	Main.connect("system_changed", self, "_on_System_changed")
+	
+	# Locale keys
+	set_title("ELAPSED_TIME_TITLE")
 
 # Signals
 func _on_System_changed() -> void:

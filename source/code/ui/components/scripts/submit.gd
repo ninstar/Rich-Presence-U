@@ -1,4 +1,4 @@
-extends Node
+extends HBoxContainer
 
 onready var node_button: = get_node("Button")
 onready var node_toggle: = get_node("Toggle")
@@ -9,6 +9,10 @@ func _ready() -> void:
 	Main.connect("status_changed", self, "_on_Status_changed")
 	Main.connect("discord_connected", self, "_on_Discord_connected")
 	Main.connect("discord_disconnected", self, "_on_Discord_disconnect")
+	
+	# Locale keys
+	node_button.set_text("STATUS_CONNECT")
+	$Toggle.set_tooltip("STATUS_VISIBLITY")
 	
 	# Update configurations on UI
 	get_node("Toggle").pressed = Main.settings["activity"]
@@ -25,9 +29,9 @@ func button_mode() -> void:
 		var _changed_status: int = Main.data_game.hash() + Main.data_system.hash()
 		node_button.disabled = Main.status_current == _changed_status
 		if node_button.disabled:
-			node_button.text = "No pending changes"
+			node_button.set_text("STATUS_APPLIED")
 		else:
-			node_button.text = "Apply status on Discord"
+			node_button.set_text("STATUS_APPLY")
 		node_button.button_color = node_button.ButtonColor.BURPLE
 		
 		# Enable toggle
@@ -39,7 +43,7 @@ func button_mode() -> void:
 		
 		# Enable button
 		node_button.disabled = false
-		node_button.text = "Connect to Discord"
+		node_button.set_text("STATUS_CONNECT")
 		node_button.button_color = node_button.ButtonColor.GREEN
 		
 		# Disable toggle

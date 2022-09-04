@@ -1,4 +1,4 @@
-extends Node
+extends HBoxContainer
 
 onready var node_avatar: = get_node("Picture")
 onready var node_name: = get_node("Text/Name")
@@ -9,6 +9,9 @@ func _ready() -> void:
 	# Connect signals
 	Main.connect("discord_connected", self, "_on_Discord_connect")
 	Main.connect("discord_disconnected", self, "_on_Discord_disconnect")
+	
+	# Locale keys
+	node_status.set_text("USER_DISCONNECTED")
 
 # Sginals
 func _on_Discord_connect(user: Dictionary) -> void:
@@ -17,7 +20,7 @@ func _on_Discord_connect(user: Dictionary) -> void:
 		
 		# Disconnected
 		node_avatar.modulate.a = 0.75
-		node_status.text = "Disconnected"
+		node_status.set_text("USER_DISCONNECTED")
 		
 	else:
 		
@@ -27,7 +30,7 @@ func _on_Discord_connect(user: Dictionary) -> void:
 		
 		# Connected
 		node_avatar.modulate.a = 1.0
-		node_status.text = "Connected"
+		node_status.set_text("USER_CONNECTED")
 		
 		# Download avatar
 		$HTTP.request("https://cdn.discordapp.com/avatars/"+user["id"]+"/"+user["avatar"]+".jpeg?size=128")
@@ -37,7 +40,7 @@ func _on_Discord_disconnect() -> void:
 	
 	# Disconnected
 	node_avatar.modulate.a = 0.75
-	node_status.text = "Disconnected"
+	node_status.set_text("USER_DISCONNECTED")
 
 func _on_HTTP_request_completed(_result: int, _response_code: int, _headers: PoolStringArray, body: PoolByteArray) -> void:
 	

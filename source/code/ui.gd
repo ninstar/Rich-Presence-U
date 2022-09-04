@@ -32,6 +32,11 @@ func _ready() -> void:
 	
 	# Toggle tabs
 	_on_Window_resize()
+	
+	# Locale keys
+	$Main/T/Bar/Update.set_tooltip("UPDATE_TITLE")
+	$Main/T/Bar/About.set_tooltip("ABOUT_TITLE")
+	$Main/T/Bar/Settings.set_tooltip("SETTINGS_TITLE")
 
 func _input(event: InputEvent) -> void:
 	

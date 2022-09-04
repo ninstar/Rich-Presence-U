@@ -1,4 +1,4 @@
-extends Node
+extends VBoxContainer
 
 onready var node_size: = get_node("Options/Size")
 onready var node_max: = get_node("Options/Max")
@@ -8,6 +8,11 @@ func _ready() -> void:
 	
 	# Connect signals
 	Main.connect("game_changed", self, "_on_Game_changed")
+	
+	# Locale keys
+	$Title.set_text("PARTY_TITLE")
+	$Options/Of.set_text("PARTY_OF")
+	$Options/Toggle.set_tooltip("PARTY_HINT_VISIBILITY")
 
 # Signals
 func _on_Game_changed() -> void:

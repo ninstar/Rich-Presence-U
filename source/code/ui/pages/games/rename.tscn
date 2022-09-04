@@ -28,14 +28,13 @@ text = "Rename game"
 [node name="Options" type="HBoxContainer" parent="."]
 margin_top = 33.0
 margin_right = 512.0
-margin_bottom = 57.0
+margin_bottom = 59.0
 rect_pivot_offset = Vector2( -293, -320 )
 custom_constants/separation = 8
 
 [node name="Input" type="LineEdit" parent="Options"]
 margin_right = 475.0
-margin_bottom = 24.0
-hint_tooltip = "Custom title"
+margin_bottom = 26.0
 size_flags_horizontal = 3
 max_length = 128
 clear_button_enabled = true
@@ -43,8 +42,7 @@ clear_button_enabled = true
 [node name="List" type="OptionButton" parent="Options"]
 margin_left = 483.0
 margin_right = 512.0
-margin_bottom = 24.0
-hint_tooltip = "Game region"
+margin_bottom = 26.0
 mouse_default_cursor_shape = 2
 __meta__ = {
 "_edit_use_anchors_": false
@@ -52,15 +50,15 @@ __meta__ = {
 
 [node name="Hint" parent="." instance=ExtResource( 5 )]
 anchor_right = 0.0
-margin_top = 73.0
+margin_top = 75.0
 margin_right = 512.0
-margin_bottom = 90.0
+margin_bottom = 92.0
 text = "Any text placed in this field will take priority over the specified region title."
 
 [node name="Separator" type="HSeparator" parent="."]
-margin_top = 106.0
+margin_top = 108.0
 margin_right = 512.0
-margin_bottom = 138.0
+margin_bottom = 140.0
 custom_constants/separation = 32
 
 [connection signal="text_changed" from="Options/Input" to="." method="_on_Input_text_changed"]

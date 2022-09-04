@@ -1,4 +1,4 @@
-extends Node
+extends VBoxContainer
 
 onready var node_list: = get_node("List")
 
@@ -7,11 +7,14 @@ func _ready() -> void:
 	# Connect signals
 	Main.connect("system_changed", self, "_on_System_changed")
 	
+	# Locale keys
+	$Title.set_text("REGION_TITLE")
+	
 	# Fill list
 	node_list.clear()
-	node_list.add_item("Americas", 0)
-	node_list.add_item("Europe", 1)
-	node_list.add_item("Japan", 2)
+	node_list.add_item("REGION_JP", 0)
+	node_list.add_item("REGION_EU", 1)
+	node_list.add_item("REGION_JP", 2)
 	node_list.set_item_metadata(0, "US")
 	node_list.set_item_metadata(1, "EU")
 	node_list.set_item_metadata(2, "JP")

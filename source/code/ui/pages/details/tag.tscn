@@ -111,7 +111,6 @@ max_length = 16
 margin_left = 484.0
 margin_right = 512.0
 margin_bottom = 28.0
-hint_tooltip = "Visibility"
 
 [node name="Separator" type="HSeparator" parent="."]
 margin_top = 77.0

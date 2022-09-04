@@ -18,7 +18,6 @@ text = "Apply status on Discord"
 margin_left = 484.0
 margin_right = 512.0
 margin_bottom = 28.0
-hint_tooltip = "Status visibility"
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Toggle" to="." method="_on_Toggle_pressed"]

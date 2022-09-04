@@ -1,4 +1,4 @@
-extends Node
+extends VBoxContainer
 
 var tween_value: float = 0
 
@@ -7,6 +7,13 @@ func _ready() -> void:
 	# Connect signals
 	Main.connect("games_imported", self, "_on_Games_imported")
 	Main.connect("theme_changed", self, "_on_Theme_changed")
+	
+	# Locale keys
+	$All/Name/Label.set_text("VERIFIED_TITLE")
+	$US/Name.set_text("VERIFIED_US")
+	$EU/Name.set_text("VERIFIED_EU")
+	$JP/Name.set_text("VERIFIED_JP")
+	set_tooltip("VERIFIED_HINT")
 
 # Signals
 func _on_Games_imported() -> void:

@@ -1,14 +1,17 @@
-extends Node
+extends VBoxContainer
 
 onready var node_list: = get_node("List")
 
 func _ready() -> void:
 	
+	# Locale keys
+	$Title.set_text("SYSTEM_TITLE")
+	
 	# Fill list
 	node_list.clear()
-	node_list.add_item("Wii U", 0)
-	node_list.add_item("Nintendo Switch", 1)
-	node_list.add_item("Nintendo 3DS", 2)
+	node_list.add_item("SYSTEM_WUP", 0)
+	node_list.add_item("SYSTEM_HAC", 1)
+	node_list.add_item("SYSTEM_CTR", 2)
 	node_list.set_item_metadata(0, "WUP")
 	node_list.set_item_metadata(1, "HAC")
 	node_list.set_item_metadata(2, "CTR")

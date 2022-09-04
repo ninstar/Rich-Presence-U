@@ -1,24 +1,30 @@
-extends CanvasItem
+extends VBoxContainer
 
 onready var node_input: = get_node("Options/Input")
 onready var node_list: = get_node("Options/List")
 
 func _ready() -> void:
 	
+	# Connect signals
+	Main.connect("game_changed", self, "_on_Game_changed")
+	Main.connect("system_region_changed", self, "_on_Region_changed")
+	
+	# Locale keys
+	$Title.set_text("RENAME_TITLE")
+	$Hint.set_text("RENAME_HINT")
+	$Options/Input.set_tooltip("RENAME_HINT_INPUT")
+	$Options/List.set_tooltip("RENAME_HINT_REGION")
+	
 	# Fill list
 	node_list.clear()
-	node_list.add_item("Default", 0)
-	node_list.add_item("Americas", 1)
-	node_list.add_item("Europe", 2)
-	node_list.add_item("Japan", 3)
+	node_list.add_item("RENAME_DEFAULT", 0)
+	node_list.add_item("REGION_US", 1)
+	node_list.add_item("REGION_EU", 2)
+	node_list.add_item("REGION_JP", 3)
 	node_list.set_item_metadata(0, "")
 	node_list.set_item_metadata(1, "US")
 	node_list.set_item_metadata(2, "EU")
 	node_list.set_item_metadata(3, "JP")
-	
-	# Connect signals
-	Main.connect("game_changed", self, "_on_Game_changed")
-	Main.connect("system_region_changed", self, "_on_Region_changed")
 
 # Methods
 func check_regions() -> void:

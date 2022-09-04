@@ -1,4 +1,4 @@
-extends Node
+extends VBoxContainer
 
 var hovering_results: bool = false
 
@@ -19,6 +19,12 @@ func _ready() -> void:
 	Main.connect("theme_changed", self, "_on_Theme_changed")
 	Main.connect("history_changed", self, "_on_History_changed")
 	node_list.get_popup().connect("id_pressed", self, "_on_History_selected")
+	
+	# Locale keys
+	$Title.set_text("GAME_TITLE")
+	$Options/Input.set_placeholder("GAME_HINT_TYPE")
+	$Hint.set_text("GAME_HINT_NONE")
+	$Options/List.set_tooltip("GAME_HINT_RECENT")
 
 func _input(event: InputEvent) -> void:
 	
@@ -62,7 +68,7 @@ func check_game(auto_set_title: bool) -> void:
 			
 			# Set icon
 			node_icon.texture = icon_custom
-			node_hint.text = "Custom entry. The text typed will be used as a title in your status."
+			node_hint.set_text("GAME_HINT_CUSTOM")
 			
 		else:
 			
@@ -73,7 +79,7 @@ func check_game(auto_set_title: bool) -> void:
 			
 			# Hint
 			node_icon.texture = icon_search
-			node_hint.text = "You have not selected a game. Only your console name will be displayed."
+			node_hint.set_text("GAME_HINT_NONE")
 	
 	# Toggle hint
 	node_hint.visible = not node_hint.text.empty()

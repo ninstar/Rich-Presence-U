@@ -30,7 +30,7 @@ func _ready() -> void:
 		Main.connect("metadata_imported", self, "queue_download_start")
 		
 		# Progress bar
-		node_label.text = "Preparing... It will just take a moment."
+		node_label.set_text("REFRESHING_INIT")
 		node_progress.value = 0
 	else:
 		queue_download_start()
@@ -68,7 +68,7 @@ func queue_download_start() -> void:
 	queue_download_next()
 	
 	# Progress bar
-	node_label.text = "Downloading files... It will just take a moment."
+	node_label.set_text("REFRESHING_STEP_1")
 	node_progress.value = 0
 	node_progress.max_value = queue.size()-1
 
@@ -92,12 +92,12 @@ func queue_download_next() -> void:
 		Main.debug_log("Starting HTTP request "+_queue+" ("+queue[queue_position]["url"]+"): "+str(_error))
 		
 		if ( float(queue_position) / queue.size() ) >= 0.70:
-			node_label.text = "Downloading files... Almost there."
+			node_label.set_text("REFRESHING_STEP_2")
 		
 	else:
 		
 		queue_position = -1
-		node_label.text = "Done!"
+		node_label.set_text("REFRESHING_DONE")
 		OS.request_attention()
 		
 		# Re-import games

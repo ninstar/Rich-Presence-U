@@ -3,12 +3,18 @@ extends ColorRect
 func _ready() -> void:
 	
 	# Connect signals
+	get_node("/root").connect("size_changed", self, "_on_Window_resize")
 	Main.connect("metadata_imported", self, "_on_Metadata_imported")
 	
 	# Splash
 	visible = true
 
 # Signals
+func _on_Window_resize() -> void:
+	
+	# Center logo
+	$Logo.rect_pivot_offset = Vector2(rect_size.x/2, rect_size.y)
+
 func _on_Metadata_imported() -> void:
 	
 	# Animation

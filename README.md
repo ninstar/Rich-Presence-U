@@ -20,6 +20,14 @@ A simple application that allows you to create your own activity statuses for Wi
 
 [<p align="center"><img src="https://static.itch.io/images/badge-color.svg?sanitize=true" alt="AVAILABLE ON itch.io" width="40%"></p>][download]
 
+# Translation
+
+If you are interested in contributing by translating the project into other languages, you can use the [english.csv][locale_template] as a template.
+
+> Cells are separated by commas ``,`` and delimited by double quotation marks ``"``. 
+
+- Other translations: [/source/locales][locales]
+
 # Compile
 
 1. [Download][zip] the repository or clone it via command line:
@@ -55,3 +63,5 @@ godot --export "Windows Desktop" RichPresenceU.exe
 [zip]: https://github.com/ninstar/Rich-Presence-U/archive/refs/heads/main.zip
 [godot]: https://godotengine.org/download 
 [compile]: https://docs.godotengine.org/en/latest/development/compiling
+[locales]: https://github.com/ninstar/Rich-Presence-U/tree/main/source/locales
+[locale_template]: https://github.com/ninstar/Rich-Presence-U/tree/main/source/locales/english.csv

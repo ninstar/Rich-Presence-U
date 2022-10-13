@@ -81,7 +81,7 @@ TAB_DETAILS,Detalhes
 TAB_GAMES,Jogos
 TAB_PLATFORM,Plataformas
 TAG_HINT_VISIBILITY,Alternar visibilidade
-TAG_ICON_HINT,Garante que seu ID ou Friend Code seja sempre mostrado como um pequeno ícone ao lado do ícone do jogo que você está jogando. Mesmo quando você não tem uma descrição definida.
+TAG_ICON_HINT,"Garante que seu ID ou Friend Code seja sempre mostrado como um pequeno ícone ao lado do ícone do jogo que você está jogando, mesmo quando quando não há uma descrição definida."
 TAG_ICON_TITLE,Sempre exibir o ID como um ícone
 TAG_TITLE_FCID,Código de amigo (FC)
 TAG_TITLE_NNID,ID da Nintendo Network

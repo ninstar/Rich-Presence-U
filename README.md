@@ -20,7 +20,7 @@ A simple application that allows you to create your own activity statuses for Wi
 
 [<p align="center"><img src="https://static.itch.io/images/badge-color.svg?sanitize=true" alt="AVAILABLE ON itch.io" width="40%"></p>][download]
 
-# Translation
+# Localize
 
 If you are interested in contributing by translating the project into other languages, you can use the [english.csv][locale_template] as a template.
 
@@ -35,7 +35,7 @@ If you are interested in contributing by translating the project into other lang
 git clone https://github.com/ninstar/Rich-Presence-U.git
 ```
 	
-2. Get Godot binary [here][godot] (Standard version, 3.5 or later).
+2. Get Godot binary [here][godot] (Standard version, 3.5.1 or later).
 3. Open ``/source/project.godot``.
 4. With the project open in Godot, go to **Editor ➜ Manage Export Templates** and select **Download and Install**.
 5. Set up a new preset for the platform you want to compile the code by going to **Project ➜ Export** and selecting **Add**.

@@ -120,8 +120,8 @@ run/delta_smoothing=false
 boot_splash/image="res://assets/ui/splash.png"
 boot_splash/bg_color=Color( 0.278431, 0.321569, 0.768627, 1 )
 config/icon="res://assets/app/icon.png"
-config/macos_native_icon="res://assets/app/icon_osx.icns"
-config/windows_native_icon="res://assets/app/icon_windows.ico"
+config/macos_native_icon="res://assets/app/icon.icns"
+config/windows_native_icon="res://assets/app/icon.ico"
 config/quit_on_go_back=false
 
 [audio]

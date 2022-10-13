@@ -160,10 +160,16 @@ NinStar
 
 [b]Donors[/b] [color=#F46FF0]♥[/color]
 Dr. Farinha
+Eve
+Fogu
+Han Finn
+HectiMario
 kit
+Lux
+Mus
 Platior
-SimpleDimple
 Sam Mayhew
+SimpleDimple
 WonderAliceUwU"
 tab_size = 8
 text = "Art, Code & Design
@@ -179,10 +185,16 @@ UnixSocket
 
 Donors ♥
 Dr. Farinha
+Eve
+Fogu
+Han Finn
+HectiMario
 kit
+Lux
+Mus
 Platior
-SimpleDimple
 Sam Mayhew
+SimpleDimple
 WonderAliceUwU"
 
 [node name="License" type="RichTextLabel" parent="."]

@@ -493,7 +493,7 @@ func get_game_current_client() -> int:
 			
 			# Get client for current region
 			if _info.has(_region.to_lower() + "_client"):
-				_result = games_client[ int(_region.to_lower() + "_client") ]
+				_result = games_client[ int( _info[ _region.to_lower() + "_client" ] ) ]
 			else:
 				
 				# Fallback to other regions

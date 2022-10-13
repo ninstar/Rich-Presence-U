@@ -654,7 +654,8 @@ func activity_push() -> void:
 			discord_rpc.start_timestamp = timestamp
 	
 	if data_system["extra_button"]:
-		discord_rpc.first_button = RichPresenceButton.new("About this game",
+		var _about: String = TranslationServer.translate("SEARCH_BUTTON_TEXT")
+		discord_rpc.first_button = RichPresenceButton.new(_about,
 				"http://www.google.com/search?q="+_title.http_escape())
 	
 	# Push new activity

@@ -7,7 +7,7 @@ ABOUT_LICENSE,Licença
 ABOUT_PAGE,Página inicial
 ABOUT_TITLE,Sobre
 ABOUT_VERSION,Versão
-AUTOCONNECT_HINT,"Quando iniciado, o aplicativo tentará automaticamente se conectar ao Discord."
+AUTOCONNECT_HINT,"Quando iniciado, o aplicativo tentará se conectar automaticamente ao Discord."
 AUTOCONNECT_TITLE,Conexão automática ao iniciar
 CONNECTION_ERROR_CLOSE,Fechar
 CONNECTION_ERROR_HINT,"Não foi possível estabelecer uma conexão com o Discord.\n\nVerifique sua conexão com a internet ou tente reiniciar o aplicativo, certifique-se de estar usando a versão desktop do Discord."
@@ -20,13 +20,13 @@ DESCRIPTION_HINT,Um texto para ser mostrado abaixo do título do jogo.
 DESCRIPTION_HINT_RECENT,Descrições recentes
 DESCRIPTION_TITLE,Descrição
 ELAPSED_TIME_TITLE,Exibir tempo decorrido
-GAME_HINT_CUSTOM,Entrada personalizada. O texto digitado será usado como título no seu status.
+GAME_HINT_CUSTOM,Entrada personalizada. O texto será usado como um título no seu status.
 GAME_HINT_NONE,Você não selecionou um jogo. Apenas o nome do seu console será exibido.
 GAME_HINT_RECENT,Jogos recentes
 GAME_HINT_TYPE,Digite aqui para buscar por um jogo
 GAME_TITLE,Jogo
 INVISIBILE_STATUS_CLOSE,Certo
-INVISIBLE_STATUS_HINT,Seu status está invisível no momento.\n\nTorne-o visível novamente para que você possa ver suas alterações no Discord.\n\nEsteja ciente de que terá efeito imediato ao alterná-lo.
+INVISIBLE_STATUS_HINT,Seu status está invisível no momento.\n\nTorne-o visível novamente para que você possa ver suas alterações no Discord.\n\nEsteja ciente de que essa ação terá efeito imediato ao alterná-lo.
 INVISIBLE_STATUS_TITLE,Espera ai!
 LANGUAGE_AUTO,Automático
 LANGUAGE_TITLE,Idioma
@@ -59,14 +59,15 @@ RENAME_HINT_REGION,Região do jogo
 RENAME_TITLE,Renomear jogo
 RESET_ALL_CANCEL,Deixa pra lá...
 RESET_ALL_CONFIRM,Sim. Redefina tudo
-RESET_ALL_HINT,"Todas as configurações serão redefinidas para a padrão, incluindo suas configurações por jogo.\n\nTem certeza de que quer continuar com essa ação?\n\nO aplicativo será fechado depois disso."
+RESET_ALL_HINT,"Todas as configurações serão redefinidas para a padrão, incluindo suas configurações definidas por jogo.\n\nTem certeza de que quer continuar com essa ação?\n\nO aplicativo será fechado depois disso."
 RESET_ALL_TITLE,Redefinir tudo
 RESET_CACHE_CANCEL,Deixa pra lá...
-RESET_CACHE_CONFIRM,Sim. Limpe cache
-RESET_CACHE_HINT,Arquivos baixados e temporários serão removidos. Nenhuma alteração será feita nas suas configurações.\n\nA base de dados será atualizada logo em seguida.
+RESET_CACHE_CONFIRM,Sim. Limpe o cache
+RESET_CACHE_HINT,Arquivos baixados e temporários serão removidos. Nenhuma alteração será feita em suas configurações.\n\nA base de dados será atualizada logo em seguida.
 RESET_CACHE_TITLE,Limpar cache
 SEARCH_BUTTON_HINT,Permite que outros possam pesquisar rapidamente pelo jogo que você está jogando no momento.
 SEARCH_BUTTON_TITLE,Botão de pesquisa no status
+SEARCH_BUTTON_TEXT,Saiba mais sobre esse jogo
 SETTINGS_TITLE,Configurações
 STATUS_APPLIED,Nenhuma alteração pendente
 STATUS_APPLY,Aplicar status no Discord

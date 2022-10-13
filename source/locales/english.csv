@@ -20,13 +20,13 @@ DESCRIPTION_HINT,A text to be displayed below the game title.
 DESCRIPTION_HINT_RECENT,Recent descriptions
 DESCRIPTION_TITLE,Description
 ELAPSED_TIME_TITLE,Display elapsed time
-GAME_HINT_CUSTOM,Custom entry. The text typed will be used as a title in your status.
+GAME_HINT_CUSTOM,Custom entry. The typed text will be used as a title in your status.
 GAME_HINT_NONE,You have not selected a game. Only your console name will be displayed.
 GAME_HINT_RECENT,Recent games
 GAME_HINT_TYPE,Type here to find a game
 GAME_TITLE,Game
 INVISIBILE_STATUS_CLOSE,Alright
-INVISIBLE_STATUS_HINT,Your status is currently invisible.\n\nMake it visible again so you can see your changes on Discord.\n\nBe aware that It will take immediate effect when toggling it.
+INVISIBLE_STATUS_HINT,Your status is currently invisible.\n\nMake it visible again so you can see your changes on Discord.\n\nBe aware that it will take immediate effect when toggling it.
 INVISIBLE_STATUS_TITLE,Hold on!
 LANGUAGE_AUTO,Automatic
 LANGUAGE_TITLE,Language
@@ -53,7 +53,7 @@ REGION_JP,Japan
 REGION_TITLE,Preferred region
 REGION_US,Americas
 RENAME_DEFAULT,Default
-RENAME_HINT,Any text placed in this field will take priority over the specified region title.
+RENAME_HINT,Any text typed in this field will take priority over the specified region title.
 RENAME_HINT_INPUT,Custom title
 RENAME_HINT_REGION,Game region
 RENAME_TITLE,Rename game
@@ -67,6 +67,7 @@ RESET_CACHE_HINT,Downloaded and temporary files will be removed. No changes will
 RESET_CACHE_TITLE,Clear cache
 SEARCH_BUTTON_HINT,Allows other people to quickly search for the game you are currently playing.
 SEARCH_BUTTON_TITLE,Search button on status
+SEARCH_BUTTON_TEXT,Learn more about this game
 SETTINGS_TITLE,Settings
 STATUS_APPLIED,No pending changes
 STATUS_APPLY,Apply status on Discord
@@ -80,7 +81,7 @@ TAB_DETAILS,Details
 TAB_GAMES,Games
 TAB_PLATFORM,Platforms
 TAG_HINT_VISIBILITY,Toggle visibility
-TAG_ICON_HINT,It ensures that your ID or Friend Code is always shown as a small icon next to the icon of the game you are playing. Even when you don’t have a description set.
+TAG_ICON_HINT,Ensures that your ID or Friend Code is always shown as a small icon next to the icon of the game you are playing. Even if you don’t have a description set.
 TAG_ICON_TITLE,Always display ID as an icon
 TAG_TITLE_FCID,Friend Code
 TAG_TITLE_NNID,Nintendo Network ID

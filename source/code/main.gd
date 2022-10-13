@@ -57,6 +57,7 @@ var settings: Dictionary = {
 	"window_size": OS.window_size,
 	"window_position": OS.window_position,
 	"window_maximized": OS.window_maximized,
+	"screen_count": OS.get_screen_count(),
 	"ui_scale": 1.0,
 	"ui_theme": "dark",
 	"ui_tab": "A",
@@ -127,9 +128,11 @@ func _ready() -> void:
 			settings[i] = _cfg.get_value("Settings", i, settings[i])
 
 	# Setup window
-	OS.window_size = settings["window_size"]
-	OS.window_position = settings["window_position"]
-	OS.window_maximized = settings["window_maximized"]
+	if OS.get_screen_count() == settings["screen_count"]:
+		
+		OS.window_size = settings["window_size"]
+		OS.window_position = settings["window_position"]
+		OS.window_maximized = settings["window_maximized"]
 	
 	# Impoprt games
 	import_games()
@@ -168,6 +171,7 @@ func _notification(what: int) -> void:
 			if not OS.is_window_maximized() and not OS.is_window_minimized():
 				settings["window_position"] = OS.get_window_position()
 				settings["window_size"] = OS.get_window_size()
+				settings["screen_count"] = OS.get_screen_count()
 			
 			# Save user data
 			user_data_game(true)

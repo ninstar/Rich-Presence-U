@@ -148,6 +148,10 @@ convert_text_resources_to_binary_on_export=true
 
 enabled=PoolStringArray(  )
 
+[filesystem]
+
+import/fbx/use_fbx=false
+
 [gui]
 
 common/snap_controls_to_pixels=false
@@ -224,7 +228,7 @@ quality/shading/force_vertex_shading.mobile=false
 quality/shading/force_lambert_over_burley.mobile=false
 quality/shading/force_blinn_over_ggx.mobile=false
 quality/depth_prepass/enable=false
-quality/filters/anisotropic_filter_level=2
+quality/filters/anisotropic_filter_level=1
 quality/skinning/software_skinning_fallback=false
 gles2/compatibility/disable_half_float=true
 portals/gameplay/use_signals=false
@@ -238,5 +242,4 @@ cpu_lightmapper/quality/high_quality_ray_count=0
 cpu_lightmapper/quality/ultra_quality_ray_count=0
 quality/reflections/atlas_size=0
 quality/reflections/atlas_subdiv=0
-quality/filters/msaa=1
 quality/depth/hdr=false

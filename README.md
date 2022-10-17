@@ -39,9 +39,10 @@ git clone https://github.com/ninstar/Rich-Presence-U.git
 3. Open ``/source/project.godot``.
 4. With the project open in Godot, go to **Editor ➜ Manage Export Templates** and select **Download and Install**.
 5. Set up a new preset for the platform you want to compile the code by going to **Project ➜ Export** and selecting **Add**.
-	- Set an export path and optionally fill in the details in the application section.
+	- Set an export path and optionally fill in the details in the options tab: icon, description, name, version.
+		- You must specify an identifier when exporting to macOS, the default one is ``com.ninstar.rpc``.
 	- Go to the script tab and set the export mode to ``Compiled Bytecode``.
-6. Select **Export All** or use the command line depending on the platform you made the preset for: 
+6. Select **Export All ➜ Release** or use the command line depending on the platform you made the preset for: 
  ```bash
 godot --export "Linux/X11" RichPresenceU
 godot --export "Mac OSX" RichPresenceU.dmg

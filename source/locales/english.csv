@@ -92,7 +92,7 @@ UI_SCALE_APPLY,Apply
 UI_SCALE_TITLE,Interface scale
 UPDATE_CANCEL,Maybe later...
 UPDATE_CONFIRM,Sure!
-UPDATE_PAGE,Would you like to be redirected to the download page?
+UPDATE_HINT,Would you like to be redirected to the download page?
 UPDATE_TITLE,New version available
 USER_CONNECTED,Connected
 USER_CONNECTING,Connecting...
@@ -102,7 +102,7 @@ VERIFIED_TITLE,Verified games
 Cut,Cut
 Copy,Copy
 Paste,Paste
-Select All,Select all
+Select all,Select all
 Clear,Clear
 Undo,Undo
 Redo,Redo

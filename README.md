@@ -18,7 +18,7 @@ A simple application that allows you to create your own activity statuses for Wi
 
 > **Note:** Automatic activity setup is not supported at the moment, this is due to Nintendo not providing an open alternative for apps to communicate with their services.
 
-[<p align="center"><img src="https://static.itch.io/images/badge-color.svg?sanitize=true" alt="AVAILABLE ON itch.io" width="40%"></p>][download]
+<p align="center"><a href="https://ninstars.itch.io/rpc"><img src="https://static.itch.io/images/badge-color.svg?sanitize=true" alt="AVAILABLE ON itch.io" width="40%"></a></p>
 
 # Localize
 
@@ -59,7 +59,6 @@ godot --export "Windows Desktop" RichPresenceU.exe
 - [**UnixSocket**](https://github.com/Abdera7mane/Godot-UnixSocket) - Abdera7mane
 
 [home]: ninstars.blogspot.com/p/rpc.html
-[download]: https://ninstars.itch.io/rpc
 [database]: https://github.com/ninstar/Rich-Presence-U-DB
 [zip]: https://github.com/ninstar/Rich-Presence-U/archive/refs/heads/main.zip
 [godot]: https://godotengine.org/download 

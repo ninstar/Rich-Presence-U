@@ -1,6 +1,6 @@
 extends Button
 
-enum ButtonColor {DEFAULT, BURPLE, GREEN, RED}
+enum ButtonColor {DEFAULT, BLURPLE, GREEN, RED}
 
 var color_normal: = [Color("3e4249"), Color("5865f2"), Color("3ba55d"), Color("ed4245")]
 var color_hover: = [Color("2f3136"), Color("4752c4"), Color("2d7d46"), Color("c03537")]

@@ -1,0 +1,104 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://code/ui/common/popup.tscn" type="PackedScene" id=1]
+[ext_resource path="res://code/ui/dialogs/popups/timer.gd" type="Script" id=2]
+[ext_resource path="res://assets/ui/fonts/lato_regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/ui/fonts/notosansjp_regular.otf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+use_filter = true
+font_data = ExtResource( 3 )
+fallback/0 = ExtResource( 4 )
+
+[node name="Timer" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+title = "Status duration"
+hint = "Your status will be automatically hidden after the timer expires."
+button_confirm = "Done!"
+
+[node name="Margin" parent="Panel" index="0"]
+margin_bottom = 228.0
+
+[node name="Box" parent="Panel/Margin" index="0"]
+margin_bottom = 201.0
+
+[node name="Labels" parent="Panel/Margin/Box" index="0"]
+margin_bottom = 121.0
+
+[node name="Title" parent="Panel/Margin/Box/Labels" index="0"]
+margin_right = 122.0
+text = "Status duration"
+
+[node name="Hint" parent="Panel/Margin/Box/Labels" index="1"]
+margin_bottom = 81.0
+text = "Your status will be automatically hidden after the timer expires."
+
+[node name="Box" type="HBoxContainer" parent="Panel/Margin/Box/Labels" index="2"]
+margin_top = 97.0
+margin_right = 268.0
+margin_bottom = 121.0
+alignment = 1
+
+[node name="H" type="SpinBox" parent="Panel/Margin/Box/Labels/Box" index="0"]
+margin_left = 11.0
+margin_right = 85.0
+margin_bottom = 24.0
+hint_tooltip = "Hours"
+min_value = -1.0
+max_value = 24.0
+align = 1
+
+[node name="Separator1" type="Label" parent="Panel/Margin/Box/Labels/Box" index="1"]
+self_modulate = Color( 1, 1, 1, 0.65098 )
+margin_left = 89.0
+margin_top = 2.0
+margin_right = 93.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 1 )
+text = ":"
+align = 1
+valign = 1
+
+[node name="M" type="SpinBox" parent="Panel/Margin/Box/Labels/Box" index="2"]
+margin_left = 97.0
+margin_right = 171.0
+margin_bottom = 24.0
+hint_tooltip = "Minutes"
+min_value = -1.0
+max_value = 60.0
+align = 1
+
+[node name="Separator2" type="Label" parent="Panel/Margin/Box/Labels/Box" index="3"]
+self_modulate = Color( 1, 1, 1, 0.65098 )
+margin_left = 175.0
+margin_top = 2.0
+margin_right = 179.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 1 )
+text = ":"
+align = 1
+valign = 1
+
+[node name="S" type="SpinBox" parent="Panel/Margin/Box/Labels/Box" index="4"]
+margin_left = 183.0
+margin_right = 257.0
+margin_bottom = 24.0
+hint_tooltip = "Seconds"
+min_value = -1.0
+max_value = 60.0
+align = 1
+
+[node name="Buttons" parent="Panel/Margin/Box" index="1"]
+margin_top = 153.0
+margin_bottom = 181.0
+
+[node name="Cancel" parent="Panel/Margin/Box/Buttons" index="0"]
+text = "Cancel"
+
+[node name="Confirm" parent="Panel/Margin/Box/Buttons" index="1"]
+text = "Done!"
+button_color = 1
+
+[connection signal="value_changed" from="Panel/Margin/Box/Labels/Box/H" to="." method="_on_H_value_changed"]
+[connection signal="value_changed" from="Panel/Margin/Box/Labels/Box/M" to="." method="_on_M_value_changed"]
+[connection signal="value_changed" from="Panel/Margin/Box/Labels/Box/S" to="." method="_on_S_value_changed"]

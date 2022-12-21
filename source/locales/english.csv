@@ -10,7 +10,7 @@ ABOUT_VERSION,Version
 AUTOCONNECT_HINT,"When launched, the application will automatically attempt to connect to Discord."
 AUTOCONNECT_TITLE,Auto connect on start
 CONNECTION_ERROR_CLOSE,Close
-CONNECTION_ERROR_HINT,"Unable to establish a connection to Discord.\n\nCheck your internet connection or try to restart the app, make sure you are using the desktop version of Discord."
+CONNECTION_ERROR_HINT,"Unable to establish a connection to Discord.\n\nCheck your internet connection or restart the app, make sure you are using the desktop version of Discord."
 CONNECTION_ERROR_TITLE,Connection error
 DATA_HINT,Be aware that these actions can’t be undone.
 DATA_TITLE,Data
@@ -26,7 +26,7 @@ GAME_HINT_RECENT,Recent games
 GAME_HINT_TYPE,Type here to find a game
 GAME_TITLE,Game
 INVISIBILE_STATUS_CLOSE,Alright
-INVISIBLE_STATUS_HINT,Your status is currently invisible.\n\nMake it visible again so you can see your changes on Discord.\n\nBe aware that it will take immediate effect when toggling it.
+INVISIBLE_STATUS_HINT,Your status is currently invisible.\n\nMake it visible again to see your changes on Discord.\n\nBe aware that it will be visible immediately after toggled.
 INVISIBLE_STATUS_TITLE,Hold on!
 LANGUAGE_AUTO,Automatic
 LANGUAGE_TITLE,Language
@@ -57,6 +57,13 @@ RENAME_HINT,Any text typed in this field will take priority over the specified r
 RENAME_HINT_INPUT,Custom title
 RENAME_HINT_REGION,Game region
 RENAME_TITLE,Rename game
+TIMER_TITLE,Status duration
+TIMER_HINT,Your status will be automatically hidden after the timer expires.
+TIMER_CANCEL,Cancel
+TIMER_CONFIRM,Done!
+TIMER_HOURS,Hours
+TIMER_MINUTES,Minutes
+TIMER_SECONDS,Seconds
 RESET_ALL_CANCEL,Never mind...
 RESET_ALL_CONFIRM,Yes. Reset everything
 RESET_ALL_HINT,"All configurations will be reseted to default, including your per-game settings.\n\nAre you sure you want to proceed with this action?\n\nThe app will be closed after this."
@@ -97,19 +104,12 @@ UPDATE_TITLE,New version available
 USER_CONNECTED,Connected
 USER_CONNECTING,Connecting...
 USER_DISCONNECTED,Disconnected
-VERIFIED_HINT,Verified games will display a title and\nicon according to the selected region.
+VERIFIED_HINT,Verified games will display a title and\nicon depending on the selected region.
 VERIFIED_TITLE,Verified games
 Cut,Cut
 Copy,Copy
 Paste,Paste
-Select all,Select all
+Select All,Select all
 Clear,Clear
 Undo,Undo
 Redo,Redo
-TIMER_TITLE,Status duration
-TIMER_HINT,Your status will be automatically hidden after the timer expires.
-TIMER_CANCEL,Cancel
-TIMER_CONFIRM,Done!
-TIMER_HOURS,Hours
-TIMER_MINUTES,Minutes
-TIMER_SECONDS,Seconds

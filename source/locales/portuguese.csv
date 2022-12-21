@@ -10,7 +10,7 @@ ABOUT_VERSION,Versão
 AUTOCONNECT_HINT,"Quando iniciado, o aplicativo tentará se conectar automaticamente ao Discord."
 AUTOCONNECT_TITLE,Conexão automática ao iniciar
 CONNECTION_ERROR_CLOSE,Fechar
-CONNECTION_ERROR_HINT,"Não foi possível estabelecer uma conexão com o Discord.\n\nVerifique sua conexão com a internet ou tente reiniciar o aplicativo, certifique-se de estar usando a versão desktop do Discord."
+CONNECTION_ERROR_HINT,"Não foi possível estabelecer uma conexão com o Discord.\n\nVerifique sua conexão com a internet ou reinicie o aplicativo, certifique-se de estar usando a versão desktop do Discord."
 CONNECTION_ERROR_TITLE,Erro de conexão
 DATA_HINT,Esteja ciente de que essas ações não podem ser desfeitas.
 DATA_TITLE,Dados
@@ -26,7 +26,7 @@ GAME_HINT_RECENT,Jogos recentes
 GAME_HINT_TYPE,Digite aqui para buscar por um jogo
 GAME_TITLE,Jogo
 INVISIBILE_STATUS_CLOSE,Certo
-INVISIBLE_STATUS_HINT,Seu status está invisível no momento.\n\nTorne-o visível novamente para que você possa ver suas alterações no Discord.\n\nEsteja ciente de que essa ação terá efeito imediato ao alterná-lo.
+INVISIBLE_STATUS_HINT,Seu status está invisível no momento.\n\nTorne-o visível novamente para que você possa ver suas alterações no Discord.\n\nEsteja ciente de que ficará visível imediatamente depois de alternado.
 INVISIBLE_STATUS_TITLE,Espera ai!
 LANGUAGE_AUTO,Automático
 LANGUAGE_TITLE,Idioma
@@ -57,6 +57,13 @@ RENAME_HINT,Qualquer texto colocado neste campo terá prioridade sobre o título
 RENAME_HINT_INPUT,Título personalizado
 RENAME_HINT_REGION,Região do jogo
 RENAME_TITLE,Renomear jogo
+TIMER_TITLE,Duração do status
+TIMER_HINT,Seu status será ocultado automaticamente depois que o cronômetro expirar.
+TIMER_CANCEL,Cancelar
+TIMER_CONFIRM,Pronto!
+TIMER_HOURS,Horas
+TIMER_MINUTES,Minutes
+TIMER_SECONDS,Segundos
 RESET_ALL_CANCEL,Deixa pra lá...
 RESET_ALL_CONFIRM,Sim. Redefina tudo
 RESET_ALL_HINT,"Todas as configurações serão redefinidas para a padrão, incluindo suas configurações definidas por jogo.\n\nTem certeza de que quer continuar com essa ação?\n\nO aplicativo será fechado depois disso."
@@ -81,7 +88,7 @@ TAB_DETAILS,Detalhes
 TAB_GAMES,Jogos
 TAB_PLATFORM,Plataformas
 TAG_HINT_VISIBILITY,Alternar visibilidade
-TAG_ICON_HINT,"Garante que seu ID ou Friend Code seja sempre mostrado como um pequeno ícone ao lado do ícone do jogo que você está jogando, mesmo quando quando não há uma descrição definida."
+TAG_ICON_HINT,"Garante que seu ID ou Friend Code seja sempre mostrado como um pequeno ícone ao lado do ícone do jogo que você está jogando, mesmo quando não há uma descrição definida."
 TAG_ICON_TITLE,Sempre exibir o ID como um ícone
 TAG_TITLE_FCID,Código de amigo (FC)
 TAG_TITLE_NNID,ID da Nintendo Network
@@ -92,7 +99,7 @@ UI_SCALE_APPLY,Aplicar
 UI_SCALE_TITLE,Escala da interface
 UPDATE_CANCEL,Talvez depois...
 UPDATE_CONFIRM,Claro!
-UPDATE_HINT,Gostaria de ser redirecionado para página de download?
+UPDATE_HINT,Gostaria de ser redirecionado para a página de download?
 UPDATE_TITLE,Nova versão disponível
 USER_CONNECTED,Conectado
 USER_CONNECTING,Conectando...
@@ -102,7 +109,7 @@ VERIFIED_TITLE,Jogos verificados
 Cut,Recortar
 Copy,Copiar
 Paste,Colar
-Select all,Selecionar tudo
+Select All,Selecionar tudo
 Clear,Limpar
 Undo,Desfazer
 Redo,Refazer

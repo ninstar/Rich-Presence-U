@@ -5,6 +5,7 @@ var alert_status: bool = false
 onready var node_button: = get_node("Button")
 onready var node_toggle: = get_node("Toggle")
 onready var node_timer: = get_node("Timer")
+onready var node_timer_icon: = get_node("Timer/Icon")
 
 func _ready() -> void:
 	
@@ -71,11 +72,13 @@ func display_time(value) -> void:
 		
 		node_timer.text = _time
 		node_timer.rect_min_size.x = 112.0
+		node_timer_icon.stretch_mode = 5
 		
 	else:
 		
 		node_timer.text = ""
 		node_timer.rect_min_size.x = node_timer.rect_min_size.y
+		node_timer_icon.stretch_mode = 6
 
 # Signals
 func _on_Discord_connected(_user: Dictionary) -> void:
@@ -145,4 +148,4 @@ func _on_Tics_timeout() -> void:
 func _on_Theme_changed(new_theme: String) -> void:
 	
 	# Change theme
-	node_timer.get_node("Icon").texture = load("res://assets/ui/themes/"+new_theme+"/timer.svg")
+	node_timer_icon.texture = load("res://assets/ui/themes/"+new_theme+"/timer.svg")

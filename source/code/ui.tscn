@@ -181,7 +181,7 @@ follow_focus = true
 
 [node name="Box" parent="Main/B/Menus/L/Pages/B" instance=ExtResource( 14 )]
 anchor_right = 0.0
-margin_right = 498.0
+margin_right = 94.0
 margin_bottom = 649.0
 
 [node name="C" type="ScrollContainer" parent="Main/B/Menus/L/Pages"]
@@ -229,7 +229,7 @@ follow_focus = true
 visible = false
 margin_left = 24.0
 margin_top = 16.0
-margin_right = 474.0
+margin_right = 251.0
 margin_bottom = 882.0
 
 [node name="Tween" type="Tween" parent="Main/B/Menus"]

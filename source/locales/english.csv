@@ -106,3 +106,10 @@ Select all,Select all
 Clear,Clear
 Undo,Undo
 Redo,Redo
+TIMER_TITLE,Status duration
+TIMER_HINT,Your status will be automatically hidden after the timer expires.
+TIMER_CANCEL,Cancel
+TIMER_CONFIRM,Done!
+TIMER_HOURS,Hours
+TIMER_MINUTES,Minutes
+TIMER_SECONDS,Seconds

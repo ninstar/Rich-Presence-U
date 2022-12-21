@@ -14,11 +14,13 @@ signal theme_changed(new_theme)
 signal dialog_added(path)
 signal history_changed()
 signal status_changed()
+signal timer_changed(new_time)
+signal timer_ended()
 
 const METADATA = "https://gist.github.com/ninstar/19c664a823d3a0312f47f5ac5e52a915/raw"
 const CONFIG = "user://settings.cfg"
-const VERSION = "1.1.1"
-const BUILD = 1110
+const VERSION = "1.1.2"
+const BUILD = 1120
 const CLIENT = 985449859299565649
 
 var logger: Array
@@ -54,6 +56,7 @@ var settings: Dictionary = {
 	"auto_connect": false,
 	"debug_log": true,
 	"activity": true,
+	"timer": 0,
 	"window_size": OS.window_size,
 	"window_position": OS.window_position,
 	"window_maximized": OS.window_maximized,
@@ -104,6 +107,8 @@ var discord_autopush: bool = false
 var discord_user: Dictionary
 var status_current: int = 0
 var clearing_data: bool = false
+var status_timer: Timer
+var status_running: bool = false
 
 onready var data_system: Dictionary = default_system.duplicate(true)
 onready var data_game: Dictionary = default_game.duplicate(true)
@@ -143,6 +148,11 @@ func _ready() -> void:
 	
 	# Download metadata
 	download_metadata()
+	
+	# Status timer
+	status_timer = Timer.new()
+	status_timer.connect("timeout", self, "_on_Timer_timeout")
+	add_child(status_timer)
 	
 	# Discord API
 	discord_api = DiscordRPC.new()
@@ -300,7 +310,6 @@ func import_games() -> void:
 	# Alert other nodes
 	emit_signal("games_imported")
 func change_system(system_id: String) -> void:
-	
 	debug_log("Changing systems ("+settings["system"]+" -> "+system_id+")")
 	
 	# Save current game and system
@@ -522,6 +531,20 @@ func discord_connect() -> void:
 	
 	discord_connecting = true
 	discord_api.establish_connection(discord_client)
+func set_timer() -> void:
+	
+	if status_running:
+		
+		if Main.settings["timer"] > 0:
+			status_timer.start(settings["timer"])
+		else:
+			status_timer.stop()
+		
+		emit_signal("timer_changed", status_timer.time_left)
+		
+	else:
+		
+		emit_signal("timer_changed", settings["timer"])
 
 func activity_change() -> void:
 	
@@ -568,6 +591,10 @@ func activity_push() -> void:
 			_title = get_game_title(_info, _region)
 	else:
 		_title = data_system["game"]
+		
+	# Add minimum amount of characters
+	if not _title.empty() and _title.length() < 2:
+		_title = _title+"  "
 	
 	# Description
 	var _description: String = data_game["description"]
@@ -668,6 +695,14 @@ func activity_push() -> void:
 		debug_log("Pushing Discord activity: "+str(discord_rpc))
 	
 	emit_signal("status_changed")
+	
+	# Set the status as running
+	if not status_running:
+		
+		status_running = true
+		
+		# Start timer for the first time
+		set_timer()
 	
 	var _entry: int = 0
 	
@@ -832,6 +867,11 @@ func _on_Scaling_changed(new_scaling: float) -> void:
 	# UI scale
 	get_tree().set_screen_stretch(SceneTree.STRETCH_MODE_DISABLED, 
 			SceneTree.STRETCH_ASPECT_IGNORE, Vector2.ONE * 512, new_scaling)
+func _on_Timer_timeout() -> void:
+	status_timer.stop()
+	emit_signal("timer_ended")
+	emit_signal("timer_changed", 0)
+	OS.request_attention()
 func _on_Metadata_download_completed(result, response_code, _headers, _body) -> void:
 	
 	debug_log("HTTP request completed: "+str(result)+" ("+str(response_code)+")")

@@ -32,11 +32,13 @@ func _ready() -> void:
 func color_change(new_color: Color) -> void:
 	
 	var _tween: Tween = get_node("Tween")
-	if _tween != null:
+	if is_instance_valid(_tween):
 		
-		_tween.interpolate_property(self, "color_current", color_current, new_color, 
-				0.2, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
-		_tween.start()
+		if _tween.is_inside_tree():
+		
+			_tween.interpolate_property(self, "color_current", color_current, new_color, 
+					0.2, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
+			_tween.start()
 
 func  generate_styleboxes() -> void:
 	

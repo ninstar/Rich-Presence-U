@@ -199,8 +199,8 @@ ui_down={
 [locale]
 
 test="en"
-translations=PoolStringArray( "res://locales/english.en.translation", "res://locales/portuguese.pt.translation", "res://locales/spanish.es.translation" )
-locale_filter=[ 1, [ "en", "es", "pt" ] ]
+translations=PoolStringArray( "res://locales/english.en.translation", "res://locales/portuguese.pt.translation", "res://locales/spanish.es.translation", "res://locales/hungarian.hu.translation" )
+locale_filter=[ 1, [ "en", "es", "hu", "pt" ] ]
 
 [physics]
 

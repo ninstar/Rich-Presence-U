@@ -1,0 +1,16 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+
+[deps]
+
+files=[ "res://locales/hungarian.hu.translation" ]
+
+source_file="res://locales/hungarian.csv"
+dest_files=[ "res://locales/hungarian.hu.translation" ]
+
+[params]
+
+compress=false
+delimiter=0

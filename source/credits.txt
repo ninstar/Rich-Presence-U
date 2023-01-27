@@ -6,4 +6,5 @@ NinStar
 
 [b]Translations[/b]
 Português: NinStar
-Español: JhoanLsuper[/center]
+Español: JhoanLsuper
+Magyar: Feeniheelo[/center]

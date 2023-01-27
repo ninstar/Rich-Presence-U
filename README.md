@@ -58,6 +58,7 @@ godot --export "Windows Desktop" RichPresenceU.exe
 - **Translations**
 	- **Português** - NinStar
 	- **Español** - JhoanLsuper
+	- **Magyar** - Feeniheelo
 
 # Third-party code
 

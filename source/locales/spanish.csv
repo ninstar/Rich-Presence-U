@@ -106,3 +106,10 @@ USER_CONNECTING,Conectando...
 USER_DISCONNECTED,Desconectado
 VERIFIED_HINT,Los juegos verificados mostrarán un título y\nUn icono dependiendo de la región seleccionada.
 VERIFIED_TITLE,Juegos verificados
+Cut,Cortar
+Copy,Copiar
+Paste,Pegar
+Select All,Seleccionar Todo
+Clear,Limpiar
+Undo,Deshacer
+Redo,Rehacer

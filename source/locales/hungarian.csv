@@ -106,3 +106,10 @@ USER_CONNECTING,Csatlakozás..
 USER_DISCONNECTED,Lecsatlakoztatva
 VERIFIED_HINT,"A megerősített játékok mutatnak egy címet,\nés ikont a megadott régióhoz."
 VERIFIED_TITLE,Megerősített Játékok
+Cut,Kivágás
+Copy,Másolás
+Paste,Beillesztés
+Select All,Összes Kijelölése
+Clear,Töröl
+Undo,Visszavonás
+Redo,Újra

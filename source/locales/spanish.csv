@@ -1,0 +1,108 @@
+keys,es
+ABOUT_CLOSE,Cerrar
+ABOUT_CONTACT,Saber más sobre Ninstar
+ABOUT_CREDITS,Créditos
+ABOUT_HELP,Ayuda
+ABOUT_LICENSE,Licencia
+ABOUT_PAGE,Inicio
+ABOUT_TITLE,Acerca de
+ABOUT_VERSION,Versión
+AUTOCONNECT_HINT,"Cuando se ejecute, La aplicación intentara automáticamente conectarse a Discord."
+AUTOCONNECT_TITLE,Conectar Automáticamente al iniciar
+CONNECTION_ERROR_CLOSE,Cerrar
+CONNECTION_ERROR_HINT,"No se pudo establecer una conexión con Discord.\n\nRevisa tu conexión a internet o reinicia la aplicación, Asegurate de que estés usando el Discord de escritorio."
+CONNECTION_ERROR_TITLE,Error de conexión
+DATA_HINT,Tenga en cuenta que estas acciones no se pueden hacer.
+DATA_TITLE,Datos
+DEBUG_HINT,Genera un archivo de registro para la resolución de problemas.
+DEBUG_TITLE,Registro de depuración
+DESCRIPTION_HINT,Un texto que se mostrará debajo del título del juego.
+DESCRIPTION_HINT_RECENT,Descripciones recientes
+DESCRIPTION_TITLE,Descripcion
+ELAPSED_TIME_TITLE,Mostrar el tiempo transcurrido
+GAME_HINT_CUSTOM,Entrada personalizada. El texto escrito se utilizará como título en su estado.
+GAME_HINT_NONE,No has seleccionado un juego. Solo se mostrará el nombre de la consola.
+GAME_HINT_RECENT,Juegos Recientes
+GAME_HINT_TYPE,Escriba aqui para encontrar un juego
+GAME_TITLE,Juego
+INVISIBILE_STATUS_CLOSE,Bien
+INVISIBLE_STATUS_HINT,Su estado es actualmente invisible.\n\nHazlo visible de nuevo para ver tus cambios en Discord.\n\nTenga en cuenta que será visible inmediatamente después de alternar.
+INVISIBLE_STATUS_TITLE,¡Espera!
+LANGUAGE_AUTO,Automático
+LANGUAGE_TITLE,Idioma
+MINIMAL_STATUS_HINT,Hace que el ícono del juego sea más pequeño y solo muestra la información más relevante establecida en su estado.
+MINIMAL_STATUS_TITLE,Estado mínimo
+PARTY_HINT_VISIBILITY,Alternar visibilidad
+PARTY_OF,de
+PARTY_TITLE,Tamaño de sala
+PRESERVE_TIME_HINT,Tu tiempo transcurrido va a reiniciarse al cambiar de juego.
+PRESERVE_TIME_TITLE,Conservar el tiempo transcurrido
+REFRESH_12H,Cada 12 horas
+REFRESH_DAILY,Cada día
+REFRESH_DISABLED,Nunca
+REFRESH_HINT,Esta acción se realizará cada vez que abra la aplicación de acuerdo con el intervalo de tiempo establecido.
+REFRESH_NOW,Revisar ahora
+REFRESH_TITLE,Revisar nuevos títulos
+REFRESH_WEEKLY,Cada semana 
+REFRESHING_DONE,Hecho!
+REFRESHING_INIT,Preparando...\nSolo tomará un momento.
+REFRESHING_STEP_1,Descargando archivos...\nSolo tomará un momento.
+REFRESHING_STEP_2,Descargando archivos...\nYa casi.
+REGION_EU,Europa
+REGION_JP,Japon
+REGION_TITLE,Región preferida
+REGION_US,America
+RENAME_DEFAULT,Por defecto
+RENAME_HINT,Cualquier texto escrito en este campo tendrá prioridad sobre el título de la región especificada.
+RENAME_HINT_INPUT,Título Personalizado
+RENAME_HINT_REGION,Región del juego
+RENAME_TITLE,Renombrar juego
+TIMER_TITLE,Duración del estado
+TIMER_HINT,Su estado se ocultará automáticamente después de que acabe el temporizador.
+TIMER_CANCEL,Cancelar
+TIMER_CONFIRM,Hecho!
+TIMER_HOURS,Horas
+TIMER_MINUTES,Minutos
+TIMER_SECONDS,Segundos
+RESET_ALL_CANCEL,No importa...
+RESET_ALL_CONFIRM,Sí. Restablecer todo
+RESET_ALL_HINT,"Todas las configuraciones se restablecerán a los valores predeterminados, incluida la configuración por juego.\n\nEstás seguro de que quieres proceder con esta acción?\n\nLa aplicación se cerrará después de esto."
+RESET_ALL_TITLE,Restablecer todos los datos
+RESET_CACHE_CANCEL,No importa...
+RESET_CACHE_CONFIRM,Si. Limpiar cache
+RESET_CACHE_HINT,Los archivos descargados y temporales serán eliminados. No se realizarán cambios en su configuración.\n\nLa base de datos se actualizará inmediatamente después de finalizar esta acción.
+RESET_CACHE_TITLE,Limpiar cache
+SEARCH_BUTTON_HINT,Permite que otras personas busquen rápidamente el juego que estás jugando actualmente.
+SEARCH_BUTTON_TITLE,Botón de búsqueda en el estado
+SEARCH_BUTTON_TEXT,Saber más sobre este juego
+SETTINGS_TITLE,Ajustes
+STATUS_APPLIED,Sin cambios pendientes
+STATUS_APPLY,Aplicar estado en Discord
+STATUS_CONNECT,Conectarse a discord
+STATUS_VISIBLITY,Visibilidad de estado
+SYSTEM_CTR,Nintendo 3DS
+SYSTEM_HAC,Nintendo Switch
+SYSTEM_TITLE,Sistema de juego
+SYSTEM_WUP,Wii U
+TAB_DETAILS,Detalles
+TAB_GAMES,Juegos
+TAB_PLATFORM,Plataformas
+TAG_HINT_VISIBILITY,Alternar visibilidad
+TAG_ICON_HINT,"Asegurate que su ID o código de amigo siempre se muestre como un pequeño ícono junto al ícono del juego que está jugando, incluso cuando no hay una descripción establecida."
+TAG_ICON_TITLE,Mostrar siempre el ID como un icono
+TAG_TITLE_FCID,Código de amigo
+TAG_TITLE_NNID,ID de Nintendo Network 
+THEME_DARK,Oscuro
+THEME_LIGHT,Claro
+THEME_TITLE,Tema
+UI_SCALE_APPLY,Aplicar
+UI_SCALE_TITLE,Escala de interfaz
+UPDATE_CANCEL,Talvez después...
+UPDATE_CONFIRM,De acuerdo!
+UPDATE_HINT,¿Le gustaría ser redirigido a la página de descarga?
+UPDATE_TITLE,Nueva versión disponible
+USER_CONNECTED,Conectado
+USER_CONNECTING,Conectando...
+USER_DISCONNECTED,Desconectado
+VERIFIED_HINT,Los juegos verificados mostrarán un título y\nUn icono dependiendo de la región seleccionada.
+VERIFIED_TITLE,Juegos verificados

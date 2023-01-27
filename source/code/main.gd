@@ -19,8 +19,8 @@ signal timer_ended()
 
 const METADATA = "https://gist.github.com/ninstar/19c664a823d3a0312f47f5ac5e52a915/raw"
 const CONFIG = "user://settings.cfg"
-const VERSION = "1.1.2"
-const BUILD = 1120
+const VERSION = "1.1.3"
+const BUILD = 1130
 const CLIENT = 985449859299565649
 
 var logger: Array
@@ -537,14 +537,16 @@ func set_timer() -> void:
 		
 		if Main.settings["timer"] > 0:
 			status_timer.start(settings["timer"])
+			debug_log("[status_timer] Started")
 		else:
 			status_timer.stop()
+			debug_log("[status_timer] Stopped")
 		
 		emit_signal("timer_changed", status_timer.time_left)
-		
+		debug_log("[status_timer] Time left: "+str(status_timer.time_left))
 	else:
-		
 		emit_signal("timer_changed", settings["timer"])
+		debug_log("[status_timer] Changed to "+str(settings["timer"]))
 
 func activity_change() -> void:
 	
@@ -702,7 +704,9 @@ func activity_push() -> void:
 		status_running = true
 		
 		# Start timer for the first time
+		debug_log("[status_timer] Initializing...")
 		set_timer()
+		
 	
 	var _entry: int = 0
 	
@@ -868,10 +872,12 @@ func _on_Scaling_changed(new_scaling: float) -> void:
 	get_tree().set_screen_stretch(SceneTree.STRETCH_MODE_DISABLED, 
 			SceneTree.STRETCH_ASPECT_IGNORE, Vector2.ONE * 512, new_scaling)
 func _on_Timer_timeout() -> void:
+	debug_log("[status_timer] Timeout")
 	status_timer.stop()
 	emit_signal("timer_ended")
 	emit_signal("timer_changed", 0)
 	OS.request_attention()
+	
 func _on_Metadata_download_completed(result, response_code, _headers, _body) -> void:
 	
 	debug_log("HTTP request completed: "+str(result)+" ("+str(response_code)+")")

@@ -147,55 +147,7 @@ margin_bottom = 476.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 bbcode_enabled = true
-bbcode_text = "[center][b]Art, Code & Design[/b]
-NinStar
-
-[b]Database[/b]
-[url=https://github.com/ninstar/Rich-Presence-U-DB#credits]All contributors[/url]
-
-[b]Third Party Code[/b]
-[url=https://github.com/discord/discord-rpc/]discord-rpc[/url]
-[url=https://github.com/godotengine]Godot Engine[/url]
-[url=https://github.com/Abdera7mane/Godot-UnixSocket]UnixSocket[/url]
-
-[b]Donors[/b] [color=#F46FF0]♥[/color]
-Dr. Farinha
-Eve
-Fogu
-Han Finn
-HectiMario
-kit
-Lux
-Mus
-Platior
-Sam Mayhew
-SimpleDimple
-WonderAliceUwU"
 tab_size = 8
-text = "Art, Code & Design
-NinStar
-
-Database
-All contributors
-
-Third Party Code
-discord-rpc
-Godot Engine
-UnixSocket
-
-Donors ♥
-Dr. Farinha
-Eve
-Fogu
-Han Finn
-HectiMario
-kit
-Lux
-Mus
-Platior
-Sam Mayhew
-SimpleDimple
-WonderAliceUwU"
 
 [node name="License" type="RichTextLabel" parent="."]
 visible = false
@@ -207,20 +159,6 @@ margin_bottom = 28.0
 focus_mode = 2
 size_flags_vertical = 3
 bbcode_enabled = true
-bbcode_text = "[b]Copyright © 2022 NinStar[/b]
-
-This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or  (at your option) any later version.
-
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along with this program. If not, see [url=https://www.gnu.org/licenses/]https://www.gnu.org/licenses/[/url]."
-text = "Copyright © 2022 NinStar
-
-This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or  (at your option) any later version.
-
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/."
 selection_enabled = true
 
 [connection signal="pressed" from="Credits/Home" to="." method="_on_Home_pressed"]

@@ -18,6 +18,18 @@ func _ready() -> void:
 	# Change assets according to theme
 	get_node("Credits/Home").texture_normal = load("res://assets/ui/themes/"+Main.settings["ui_theme"]+"/logo.svg")
 	get_node("Credits/Info/Contact").texture_normal = load("res://assets/ui/themes/"+Main.settings["ui_theme"]+"/logo_dev.svg")
+	
+	var _file: = File.new()
+	
+	# Credits text
+	_file.open("res://credits.txt", File.READ)
+	$Credits/Credits.bbcode_text = _file.get_as_text()
+	_file.close()
+	
+	# License text
+	_file.open("res://license.txt", File.READ)
+	$License.bbcode_text = _file.get_as_text()
+	_file.close()
 
 # Signals
 func _on_Home_pressed() -> void:

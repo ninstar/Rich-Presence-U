@@ -62,7 +62,7 @@ TIMER_HINT,Seu status será ocultado automaticamente depois que o cronômetro ex
 TIMER_CANCEL,Cancelar
 TIMER_CONFIRM,Pronto!
 TIMER_HOURS,Horas
-TIMER_MINUTES,Minutes
+TIMER_MINUTES,Minutos
 TIMER_SECONDS,Segundos
 RESET_ALL_CANCEL,Deixa pra lá...
 RESET_ALL_CONFIRM,Sim. Redefina tudo

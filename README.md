@@ -54,9 +54,16 @@ godot --export "Windows Desktop" RichPresenceU.exe
 # Credits
 
 - **Art, Code & Design** - NinStar
+- **Database** - [All contributors](https://github.com/ninstar/Rich-Presence-U-DB#credits)
+- **Translations**
+	- **Português** - NinStar
+	- **Español** - JhoanLsuper
+
+# Third-party code
+
 - [**discord-rpc**](https://github.com/discord/discord-rpc) - Discord
 - [**Godot**](https://github.com/godotengine/godot) - Godot Engine 
-- [**UnixSocket**](https://github.com/Abdera7mane/Godot-UnixSocket) - Abdera7mane
+- [**Godot-UnixSocket**](https://github.com/Abdera7mane/Godot-UnixSocket) - Abdera7mane
 
 [home]: ninstars.blogspot.com/p/rpc.html
 [database]: https://github.com/ninstar/Rich-Presence-U-DB
@@ -65,4 +72,3 @@ godot --export "Windows Desktop" RichPresenceU.exe
 [compile]: https://docs.godotengine.org/en/latest/development/compiling
 [locales]: https://github.com/ninstar/Rich-Presence-U/tree/main/source/locales
 [locale_template]: https://github.com/ninstar/Rich-Presence-U/tree/main/source/locales/english.csv
-

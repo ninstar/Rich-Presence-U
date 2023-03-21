@@ -65,9 +65,9 @@ TIMER_HOURS,Uren
 TIMER_MINUTES,Minuten
 TIMER_SECONDS,Seconden
 RESET_ALL_CANCEL,Laat maar...
-RESET_ALL_CONFIRM,Yes. Reset everything
-RESET_ALL_HINT,"All configurations will be reseted to default, including your per-game settings.\n\nAre you sure you want to proceed with this action?\n\nThe app will be closed after this."
-RESET_ALL_TITLE,Reset all data
+RESET_ALL_CONFIRM, Ja. Alles resetten
+RESET_ALL_HINT,"Alle configuraties zullen worden gereset naar de standaardwaarden, inclusief je instellingen per game.\n\nWeet je zeker dat je wilt doorgaan met dee actie?\n\nDe app zal hierna worden afgesloten."
+RESET_ALL_TITLE,Reset alle data
 RESET_CACHE_CANCEL,Laat maar...
 RESET_CACHE_CONFIRM,Ja. Cache legen
 RESET_CACHE_HINT,Gedownloade en tijdelijke bestanden zullen worden verwijderd. Er worden geen wijzigingen aangebracht aan je instellingen.\n\nDe database zal geüpdatet worden na het voltooien van deze actie.

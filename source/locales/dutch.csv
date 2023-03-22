@@ -1,0 +1,115 @@
+keys,nl
+ABOUT_CLOSE,Sluiten
+ABOUT_CONTACT,Leer meer over NinStar
+ABOUT_CREDITS,Credits
+ABOUT_HELP,Help
+ABOUT_LICENSE,Licentie
+ABOUT_PAGE,Homepagina
+ABOUT_TITLE,Over
+ABOUT_VERSION,Versie
+AUTOCONNECT_HINT,Wanneer de applicatie is opgestart zal het zich automatisch proberen te verbinden met Discord.
+AUTOCONNECT_TITLE,Automatisch verbinden bij starten
+CONNECTION_ERROR_CLOSE,Sluiten
+CONNECTION_ERROR_HINT,"Kan geen verbinding maken met Discord.\n\nCheck je internetverbinding of start de app opnieuw op, zorg ervoor dat je de desktopversie van Discord gebruikt."
+CONNECTION_ERROR_TITLE,Connectie error
+DATA_HINT,Let op dat deze acties niet ongedaan kunnen worden.
+DATA_TITLE,Data
+DEBUG_HINT,Genereert een logbestand voor het oplossen van problemen.
+DEBUG_TITLE,Debuglog
+DESCRIPTION_HINT,Een tekst die wordt weergegeven onder de titel van het spel.
+DESCRIPTION_HINT_RECENT,Recente beschrijvingen
+DESCRIPTION_TITLE,Beschrijving
+ELAPSED_TIME_TITLE,Verstreken tijd weergeven
+GAME_HINT_CUSTOM,Aangepaste invoer. De getypte tekst zal worden gebruikt als een titel in je status.
+GAME_HINT_NONE,Je hebt geen game geselecteerd. Alleen je consolenaam zal worden weergegeven.
+GAME_HINT_RECENT,Recente games
+GAME_HINT_TYPE,Typ hier om een game te vinden
+GAME_TITLE,Game
+INVISIBILE_STATUS_CLOSE,Oké
+INVISIBLE_STATUS_HINT,Je status is momenteel onzichtbaar.\n\nMaak het zichtbaar om je veranderingen te zien op Discord.\n\nLet op dat het onmiddelijk zichtbaar wordt na het omschakelen.
+INVISIBLE_STATUS_TITLE,Hé!
+LANGUAGE_AUTO,Automatisch
+LANGUAGE_TITLE,Taal
+MINIMAL_STATUS_HINT,Maak het gameicoon kleiner en laat alleen de meest relevante informatie zien in je status.
+MINIMAL_STATUS_TITLE,Minimale status
+PARTY_HINT_VISIBILITY,Zichtbaarheid omschakelen
+PARTY_OF,van
+PARTY_TITLE,Partygrootte
+PRESERVE_TIME_HINT,Je verstreken tijd zal niet worden gereset wanneer je van game veranderd.
+PRESERVE_TIME_TITLE,Behoud verstreken tijd
+REFRESH_12H,Elke 12 uur
+REFRESH_DAILY,Elke dag
+REFRESH_DISABLED,Nooit
+REFRESH_HINT,"Deze actie zal elke keer als je de app opstart uitgevoerd worden, volgens de ingestelde tijdsinterval."
+REFRESH_NOW,Check nu
+REFRESH_TITLE,Check voor nieuwe titels
+REFRESH_WEEKLY,Elke week
+REFRESHING_DONE,Klaar!
+REFRESHING_INIT,Voorbereiden...\nHet zal niet lang duren.
+REFRESHING_STEP_1,Bestanden downloaden...\nHet zal niet lang duren.
+REFRESHING_STEP_2,Bestanden downloaden...\nBijna klaar.
+REGION_EU,Europa
+REGION_JP,Japan
+REGION_TITLE,Regio van voorkeur
+REGION_US,Amerika
+RENAME_DEFAULT,Standaard
+RENAME_HINT,Tekst wat in dit veld is ingetypt zal prioriteit nemen over de aangegeven regiotitel.
+RENAME_HINT_INPUT,Aangepaste titel
+RENAME_HINT_REGION,Gameregio
+RENAME_TITLE,Game hernoemen
+TIMER_TITLE,Statusduur
+TIMER_HINT,Je status zal automatisch verborgen worden nadat de timer verloopt.
+TIMER_CANCEL,Annuleren
+TIMER_CONFIRM,Klaar!
+TIMER_HOURS,Uren
+TIMER_MINUTES,Minuten
+TIMER_SECONDS,Seconden
+RESET_ALL_CANCEL,Laat maar...
+RESET_ALL_CONFIRM, Ja. Alles resetten
+RESET_ALL_HINT,"Alle configuraties zullen worden gereset naar de standaardwaarden, inclusief je instellingen per game.\n\nWeet je zeker dat je wilt doorgaan met dee actie?\n\nDe app zal hierna worden afgesloten."
+RESET_ALL_TITLE,Reset alle data
+RESET_CACHE_CANCEL,Laat maar...
+RESET_CACHE_CONFIRM,Ja. Cache legen
+RESET_CACHE_HINT,Gedownloade en tijdelijke bestanden zullen worden verwijderd. Er worden geen wijzigingen aangebracht aan je instellingen.\n\nDe database zal geüpdatet worden na het voltooien van deze actie.
+RESET_CACHE_TITLE,Cache legen
+SEARCH_BUTTON_HINT,Laat andere mensen snel de game zoeken die je momenteel aan het spelen bent.
+SEARCH_BUTTON_TITLE,Zoekknop op status
+SEARCH_BUTTON_TEXT,Leer meer over deze game
+SETTINGS_TITLE,Instellingen
+STATUS_APPLIED,Geen lopende wijzigingen
+STATUS_APPLY,Status toepassen op Discord
+STATUS_CONNECT,Verbinden met Discord
+STATUS_VISIBLITY,Status zichtbaarheid
+SYSTEM_CTR,Nintendo 3DS
+SYSTEM_HAC,Nintendo Switch
+SYSTEM_TITLE,Gamesysteem
+SYSTEM_WUP,Wii U
+TAB_DETAILS,Details
+TAB_GAMES,Games
+TAB_PLATFORM,Platforms
+TAG_HINT_VISIBILITY,Zichtbaarheid omschakelen
+TAG_ICON_HINT,"Zorgt ervoor dat je ID of Vriendcode altijd weergegeven wordt als een klein icoontje naast het icoon van de game die je aan het spelen bent, zelfs als er geen beschrijving ingesteld is."
+TAG_ICON_TITLE,Altijd ID als een icoon wergeven
+TAG_TITLE_FCID,Vriendcode
+TAG_TITLE_NNID,Nintendo Network ID
+THEME_DARK,Donker
+THEME_LIGHT,Licht
+THEME_TITLE,Thema
+UI_SCALE_APPLY,Toepassen
+UI_SCALE_TITLE,Interfacegrootte
+UPDATE_CANCEL,Misschien later...
+UPDATE_CONFIRM,Oké!
+UPDATE_HINT,Wil je omgeleid worden naar de downloadpagina?
+UPDATE_TITLE,Nieuwe versie beschikbaar
+USER_CONNECTED,Verbonden
+USER_CONNECTING,Verbinden...
+USER_DISCONNECTED,Verbinding verbroken
+VERIFIED_HINT,Geverifieerde games zullen een titel en icoon\nweergeven afhankelijk van de geselecteerde regio.
+VERIFIED_TITLE,Geverifieerde games
+Cut,Knippen
+Copy,Kopiëren
+Paste,Plakken
+Select All,Alles Selecteren
+Clear,Wissen
+Undo,Ongedaan Maken
+Redo,Opnieuw Uitvoeren

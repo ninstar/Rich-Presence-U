@@ -1,0 +1,16 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+
+[deps]
+
+files=[ "res://locales/dutch.nl.translation" ]
+
+source_file="res://locales/dutch.csv"
+dest_files=[ "res://locales/dutch.nl.translation" ]
+
+[params]
+
+compress=false
+delimiter=0

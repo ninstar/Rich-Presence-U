@@ -5,6 +5,7 @@ NinStar
 [url=https://github.com/ninstar/Rich-Presence-U-DB#credits]All contributors[/url]
 
 [b]Translations[/b]
-Português: NinStar
 Español: JhoanLsuper
-Magyar: Feeniheelo[/center]
+Magyar: Feeniheelo
+Nederlands: Thomanski
+Português: NinStar[/center]

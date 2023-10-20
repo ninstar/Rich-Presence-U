@@ -49,7 +49,7 @@ var metadata: Dictionary = {
 }
 var settings: Dictionary = {
 	
-	"system": "WUP",
+	"system": "HAC",
 	"language": "",
 	"refresh": 604800,
 	"refresh_last": 0,

@@ -51,7 +51,7 @@ var settings: Dictionary = {
 	
 	"system": "WUP",
 	"language": "",
-	"refresh": 86400,
+	"refresh": 604800,
 	"refresh_last": 0,
 	"auto_connect": false,
 	"debug_log": true,

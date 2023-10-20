@@ -722,7 +722,7 @@ func activity_push() -> void:
 		data_system["history"].append(data_system["game"])
 		
 		# Remove last entry
-		if data_system["history"].size() > 5:
+		if data_system["history"].size() > 8:
 			data_system["history"].pop_front()
 	
 	# Description history
@@ -737,7 +737,7 @@ func activity_push() -> void:
 		data_game["history"].append(_description)
 		
 		# Remove last entry
-		if data_game["history"].size() > 5:
+		if data_game["history"].size() > 8:
 			data_game["history"].pop_front()
 	
 	emit_signal("history_changed")
@@ -829,7 +829,6 @@ func debug_export() -> void:
 	
 	# Make a copy to the executable directory
 	if not OS.has_feature("AppImage"):
-		
 		var _binary_path: String = OS.get_executable_path().get_base_dir()
 		var _dir: = Directory.new()
 		if _dir.open(_binary_path) == OK:

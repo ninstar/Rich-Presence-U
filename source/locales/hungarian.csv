@@ -28,6 +28,8 @@ GAME_TITLE,Játék
 INVISIBILE_STATUS_CLOSE,Kész
 INVISIBLE_STATUS_HINT,"A státuszod jelenleg láthatatlan.\n\nVálts át elérhető, elfoglalt, vagy tétlen állapotba, hogy lásd a változásokat.\n\nTartsd észben hogy a változások azonnal láthatóak lesznek."
 INVISIBLE_STATUS_TITLE,Várjunk csak!
+KEEPON_TITLE,Keep screen on
+KEEPON_HINT,Prevents the screensaver from taking over while your status is visible. Useful if you want to keep the application always active without having to change your system settings.
 LANGUAGE_AUTO,Automatikus
 LANGUAGE_TITLE,Nyelv
 MINIMAL_STATUS_HINT,"Zsugorít a játék ikonján, és csak a legfontosabb információkat mutatja (amik revelánsak)."

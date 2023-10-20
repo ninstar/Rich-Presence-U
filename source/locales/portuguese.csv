@@ -28,6 +28,8 @@ GAME_TITLE,Jogo
 INVISIBILE_STATUS_CLOSE,Certo
 INVISIBLE_STATUS_HINT,Seu status está invisível no momento.\n\nTorne-o visível novamente para que você possa ver suas alterações no Discord.\n\nEsteja ciente de que ficará visível imediatamente depois de alternado.
 INVISIBLE_STATUS_TITLE,Espera ai!
+KEEPON_TITLE,Manter tela ligada
+KEEPON_HINT,Impede que o protetor de tela assuma o controle enquanto seu status estiver visível. Útil se você deseja manter o aplicativo sempre ativo sem precisar alterar as configurações do sistema.
 LANGUAGE_AUTO,Automático
 LANGUAGE_TITLE,Idioma
 MINIMAL_STATUS_HINT,Reduz o tamanho do ícone do jogo e exibe apenas as informações mais relevantes definidas no seu status.

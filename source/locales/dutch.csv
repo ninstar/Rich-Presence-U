@@ -28,6 +28,8 @@ GAME_TITLE,Game
 INVISIBILE_STATUS_CLOSE,Oké
 INVISIBLE_STATUS_HINT,Je status is momenteel onzichtbaar.\n\nMaak het zichtbaar om je veranderingen te zien op Discord.\n\nLet op dat het onmiddelijk zichtbaar wordt na het omschakelen.
 INVISIBLE_STATUS_TITLE,Hé!
+KEEPON_TITLE,Keep screen on
+KEEPON_HINT,Prevents the screensaver from taking over while your status is visible. Useful if you want to keep the application always active without having to change your system settings.
 LANGUAGE_AUTO,Automatisch
 LANGUAGE_TITLE,Taal
 MINIMAL_STATUS_HINT,Maak het gameicoon kleiner en laat alleen de meest relevante informatie zien in je status.

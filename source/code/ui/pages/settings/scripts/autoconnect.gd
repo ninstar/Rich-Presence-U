@@ -10,5 +10,5 @@ func _ready() -> void:
 	set_check(Main.settings["auto_connect"])
 
 # Signals
-func _on_Debug_toggled(button_pressed: bool) -> void:
+func _on_AutoConnect_toggled(button_pressed: bool) -> void:
 	Main.settings["auto_connect"] = button_pressed

@@ -54,6 +54,7 @@ var settings: Dictionary = {
 	"refresh": 604800,
 	"refresh_last": 0,
 	"auto_connect": false,
+	"keep_on": true,
 	"debug_log": true,
 	"activity": true,
 	"timer": 0,
@@ -695,6 +696,9 @@ func activity_push() -> void:
 	if Main.settings["activity"]:
 		discord_api.get_module("RichPresence").update_presence(discord_rpc)
 		debug_log("Pushing Discord activity: "+str(discord_rpc))
+
+	# Enable/disable screensaver
+	OS.keep_screen_on = settings["keep_on"]
 	
 	emit_signal("status_changed")
 	
@@ -747,9 +751,11 @@ func activity_toggle() -> void:
 	if Main.settings["activity"]:
 		discord_api.get_module("RichPresence").update_presence(discord_rpc)
 		debug_log("Toggling Discord activity: "+str(discord_rpc))
+		OS.keep_screen_on = Main.settings["keep_on"]
 	else:
 		discord_api.get_module("RichPresence").update_presence(-1)
 		debug_log("Toggling Discord activity: -1")
+		OS.keep_screen_on = false
 func clear_data(temporary_data_only: bool) -> void:
 	
 	if temporary_data_only:
@@ -876,7 +882,7 @@ func _on_Timer_timeout() -> void:
 	emit_signal("timer_ended")
 	emit_signal("timer_changed", 0)
 	OS.request_attention()
-	
+	OS.keep_screen_on = false
 func _on_Metadata_download_completed(result, response_code, _headers, _body) -> void:
 	
 	debug_log("HTTP request completed: "+str(result)+" ("+str(response_code)+")")
@@ -923,3 +929,4 @@ func _on_Discord_disconnected() -> void:
 		emit_signal("discord_disconnected")
 		emit_signal("dialog_added", "res://code/ui/dialogs/popups/connection.tscn")
 		OS.request_attention()
+		OS.keep_screen_on = false

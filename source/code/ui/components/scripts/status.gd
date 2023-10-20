@@ -29,7 +29,7 @@ func _on_Discord_connect(user: Dictionary) -> void:
 	else:
 		
 		# Display username
-		node_name.text = user["username"]
+		node_name.text = user["global_name"]
 		node_name.visible = true
 		
 		# Connected

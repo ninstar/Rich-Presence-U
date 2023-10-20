@@ -5,6 +5,7 @@ func _ready() -> void:
 	# Connect signals
 	get_node("/root").connect("size_changed", self, "_on_Window_resize")
 	Main.connect("metadata_imported", self, "_on_Metadata_imported")
+	Main.connect("theme_changed", self, "_on_Theme_changed")
 	
 	# Splash
 	visible = true
@@ -16,7 +17,6 @@ func _on_Window_resize() -> void:
 	$Logo.rect_pivot_offset = Vector2(rect_size.x/2, rect_size.y)
 
 func _on_Metadata_imported() -> void:
-	
 	# Animation
 	var _rng = RandomNumberGenerator.new()
 	_rng.randomize()
@@ -55,3 +55,8 @@ func _on_Tween_tween_started(_object: Object, _key: NodePath) -> void:
 		OS.get_unix_time()-Main.settings["refresh_last"] > Main.settings["refresh"]
 	):
 		Main.emit_signal("dialog_added", "res://code/ui/components/updater.tscn")
+
+func _on_Theme_changed(new_theme: String) -> void:
+	# Match background and logo color
+	color = Color("f2f3f5") if new_theme == "light" else Color("2b2d31")
+	$Logo.modulate = Color("25262a") if new_theme == "light" else Color("ffffff")

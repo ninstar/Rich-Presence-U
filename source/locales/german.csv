@@ -1,0 +1,115 @@
+keys,de
+ABOUT_CLOSE,Schließen
+ABOUT_CONTACT,Erfahre mehr über NinStar
+ABOUT_CREDITS,Credits
+ABOUT_HELP,Hilfe
+ABOUT_LICENSE,Lizenz
+ABOUT_PAGE,Startseite
+ABOUT_TITLE,Über
+ABOUT_VERSION,Version
+AUTOCONNECT_HINT,"Wenn die Anwendung gestartet wird, versucht sie automatisch, eine Verbindung zu Discord herzustellen."
+AUTOCONNECT_TITLE,Automatische Verbindung beim Start
+CONNECTION_ERROR_CLOSE,Schließen
+CONNECTION_ERROR_HINT,"Es kann keine Verbindung zu Discord hergestellt werden.\n\nÜberprüfe deine Internetverbindung oder starte die App neu. Stelle sicher, dass du die Desktop-Version von Discord verwendest."
+CONNECTION_ERROR_TITLE,Verbindungsfehler
+DATA_HINT,"Sei dir bewusst, dass diese Aktionen nicht rückgängig gemacht werden können."
+DATA_TITLE,Daten
+DEBUG_HINT,Erzeugt eine Log-Datei für die Fehlersuche.
+DEBUG_TITLE,Debug-Log
+DESCRIPTION_HINT,"Ein Text, der unterhalb des Spieltitels angezeigt wird."
+DESCRIPTION_HINT_RECENT,Vorherige Beschreibungen
+DESCRIPTION_TITLE,Beschreibung
+ELAPSED_TIME_TITLE,Verstrichene Zeit anzeigen
+GAME_HINT_CUSTOM,Benutzerdefinierter Eintrag. Der eingegebene Text wird als Titel in deinem Status verwendet.
+GAME_HINT_NONE,Du hast kein Spiel ausgewählt. Es wird nur der Name deiner Konsole angezeigt.
+GAME_HINT_RECENT,Vorherige Spiele
+GAME_HINT_TYPE,"Tippe hier, um ein Spiel zu finden"
+GAME_TITLE,Spiel
+INVISIBLE_STATUS_CLOSE,Alles klar
+INVISIBLE_STATUS_HINT,"Dein Status ist zurzeit unsichtbar.\n\nMach ihn wieder sichtbar, um deine Änderungen auf Discord zu sehen.\n\nBeachte, dass er sofort nach dem Umschalten sichtbar ist."
+INVISIBLE_STATUS_TITLE,Moment mal!
+LANGUAGE_AUTO,Automatisch
+LANGUAGE_TITLE,Sprache
+MINIMAL_STATUS_HINT,"Verkleinert das Spielsymbol und zeigt nur die wichtigsten Informationen an, die in deinem Status eingestellt sind."
+MINIMAL_STATUS_TITLE,Minimaler Status
+PARTY_HINT_VISIBILITY,Sichtbarkeit umschalten
+PARTY_OF,von
+PARTY_TITLE,Gruppengröße
+PRESERVE_TIME_HINT,Die verstrichene Zeit wird bei einem Spielwechsel nicht zurückgesetzt.
+PRESERVE_TIME_TITLE,Verstrichene Zeit speichern
+REFRESH_12H,Alle 12 Stunden
+REFRESH_DAILY,Täglich
+REFRESH_DISABLED,Niemals
+REFRESH_HINT,"Diese Aktion wird jedes Mal ausgeführt, wenn du die App entsprechend dem eingestellten Zeitintervall öffnest."
+REFRESH_NOW,Jetzt überprüfen
+REFRESH_TITLE,Überprüfung auf neue Titel
+REFRESH_WEEKLY,Wöchentlich
+REFRESHING_DONE,Erledigt!
+REFRESHING_INIT,Vorbereitung läuft...\nEs wird nur einen Moment dauern.
+REFRESHING_STEP_1,Lade Dateien herunter...\nEs wird nur einen Moment dauern.
+REFRESHING_STEP_2,Lade Dateien herunter...\nFast fertig.
+REGION_EU,Europa
+REGION_JP,Japan
+REGION_TITLE,Bevorzugte Region
+REGION_US,Amerika
+RENAME_DEFAULT,Standard
+RENAME_HINT,Jeder hier eingetippte Text hat Vorrang vor dem vorgegebenen Regionstitel.
+RENAME_HINT_INPUT,Benutzerdefinierter Titel
+RENAME_HINT_REGION,Region des Spiels
+RENAME_TITLE,Spiel-Umbenennung
+TIMER_TITLE,Status-Dauer
+TIMER_HINT,Dein Status wird nach Ablauf des Timers automatisch ausgeblendet.
+TIMER_CANCEL,Abbrechen
+TIMER_CONFIRM,Erledigt!
+TIMER_HOURS,Stunden
+TIMER_MINUTES,Minuten
+TIMER_SECONDS,Sekunden
+RESET_ALL_CANCEL,Vergiss es...
+RESET_ALL_CONFIRM,"Ja, alles zurücksetzen!"
+RESET_ALL_HINT,"Alle Konfigurationen werden auf die Standardeinstellungen zurückgesetzt, einschließlich der spielspezifischen Einstellungen.\n\nBist du sicher, dass du mit dieser Aktion fortfahren möchtest?\n\nDie App wird hiernach geschlossen."
+RESET_ALL_TITLE,Alle Daten zurücksetzen
+RESET_CACHE_CANCEL,Vergiss es...
+RESET_CACHE_CONFIRM,"Ja, Cache leeren!"
+RESET_CACHE_HINT,Heruntergeladene und temporäre Dateien werden entfernt. Es werden keine Änderungen an deinen Einstellungen vorgenommen.\n\nDie Datenbank wird direkt nach Abschluss dieser Aktion aktualisiert.
+RESET_CACHE_TITLE,Cache leeren
+SEARCH_BUTTON_HINT,"Ermöglicht es anderen Personen, schnell nach dem Spiel zu suchen, das du gerade spielst."
+SEARCH_BUTTON_TITLE,Suchen-Schaltfläche im Status
+SEARCH_BUTTON_TEXT,Erfahre mehr über dieses Spiel
+SETTINGS_TITLE,Einstellungen
+STATUS_APPLIED,Keine offenen Änderungen
+STATUS_APPLY,Status auf Discord anwenden
+STATUS_CONNECT,Mit Discord verbinden
+STATUS_VISIBLITY,Status-Sichtbarkeit
+SYSTEM_CTR,Nintendo 3DS
+SYSTEM_HAC,Nintendo Switch
+SYSTEM_TITLE,Konsolen-System
+SYSTEM_WUP,Wii U
+TAB_DETAILS,Details
+TAB_GAMES,Spiele
+TAB_PLATFORM,Plattformen
+TAG_HINT_VISIBILITY,Sichtbarkeit umschalten
+TAG_ICON_HINT,"Stellt sicher, dass deine ID oder dein Freundescode immer als kleines Icon neben dem Symbol des Spiels, das du spielst, angezeigt wird - auch wenn keine Beschreibung eingestellt ist."
+TAG_ICON_TITLE,ID immer als Icon anzeigen
+TAG_TITLE_FCID,Freundescode
+TAG_TITLE_NNID,Nintendo Network ID
+THEME_DARK,Dunkel
+THEME_LIGHT,Hell
+THEME_TITLE,Theme
+UI_SCALE_APPLY,Anwenden
+UI_SCALE_TITLE,Skalierung der Benutzeroberfläche
+UPDATE_CANCEL,Vielleicht später...
+UPDATE_CONFIRM,Sicher!
+UPDATE_HINT,Möchtest du zur Download-Seite weitergeleitet werden?
+UPDATE_TITLE,Neue Version verfügbar
+USER_CONNECTED,Verbunden
+USER_CONNECTING,Verbinde...
+USER_DISCONNECTED,Verbindung getrennt
+VERIFIED_HINT,Bei verifizierten Spielen werden je nach\nausgewählter Region ein Titel und Symbol angezeigt.
+VERIFIED_TITLE,Verifizierte Spiele
+Cut,Ausschneiden
+Copy,Kopieren
+Paste,Einfügen
+Select All,Alles auswählen
+Clear,Löschen
+Undo,Rückgängig
+Redo,Wiederherstellen

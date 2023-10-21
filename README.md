@@ -35,7 +35,6 @@ If you are interested in contributing by translating the project into other lang
 ```bash
 git clone https://github.com/ninstar/Rich-Presence-U.git
 ```
-	
 2. Get Godot binary [here][godot] (3.5.3 or later LTS version).
 3. Open Godot, click **Import ➜ Browse**, navigate to ``/source/project.godot``, open the file and click **Import & Edit**.
 4. With the project open, go to **Editor ➜ Manage Export Templates** and click **Download and Install**.

@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://code/ui/pages/settings/scripts/keep_on.gd" type="Script" id=1]
+[ext_resource path="res://code/ui/common/buttons/toggle.tscn" type="PackedScene" id=2]
+
+[node name="KeepOn" instance=ExtResource( 2 )]
+script = ExtResource( 1 )
+title = "Keep screen on"
+description = "Prevents the screensaver from taking over while your status is visible. Useful if you want to keep the application always active without having to change your system settings."
+
+[node name="Title" parent="Button/Box" index="0"]
+text = "Keep screen on"
+
+[node name="Hint" parent="." index="1"]
+margin_bottom = 89.0
+text = "Prevents the screensaver from taking over while your status is visible. Useful if you want to keep the application always active without having to change your system settings."
+
+[node name="Separator" parent="." index="2"]
+margin_top = 97.0
+margin_bottom = 129.0
+
+[connection signal="toggled" from="Button" to="." method="_on_KeepOn_toggled"]

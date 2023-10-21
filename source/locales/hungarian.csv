@@ -1,0 +1,117 @@
+keys,hu
+ABOUT_CLOSE,Bezárás
+ABOUT_CONTACT,Tudj meg többet NinStar-ról
+ABOUT_CREDITS,Készítők
+ABOUT_HELP,Segítség
+ABOUT_LICENSE,Licensz
+ABOUT_PAGE,Honlap
+ABOUT_TITLE,A Szoftverről
+ABOUT_VERSION,Verzió
+AUTOCONNECT_HINT,"Amikor elindításra kerül a szoftver, az automatikusan megpróbál csatlakozni a Discordhoz."
+AUTOCONNECT_TITLE,Automatikus csatlakozás
+CONNECTION_ERROR_CLOSE,Bezárás
+CONNECTION_ERROR_HINT,"Nem lehetséges csatlakozni a Discordhoz.\n\nEllenőrizd az internetkapcsolatod. Fontos, hogy a Discord asztali változatát használd!"
+CONNECTION_ERROR_TITLE,Csatlakozási hiba.
+DATA_HINT,Ez a tevékenység nem fordítható vissza.
+DATA_TITLE,Adat
+DEBUG_HINT,Készít egy naplófájlt hibakereséshez
+DEBUG_TITLE,Debugnapló
+DESCRIPTION_HINT,Egy szöveg amely a játék címe alatt jelenik meg.
+DESCRIPTION_HINT_RECENT,Legutóbbi leírások
+DESCRIPTION_TITLE,Leírás
+ELAPSED_TIME_TITLE,Eltelt idő mutatása
+GAME_HINT_CUSTOM,"Egyedi szöveg. Amit beírsz, az lesz a játék címe"
+GAME_HINT_NONE,Nem választottál játékot. Csak a konzolneved lesz mutatva.
+GAME_HINT_RECENT,Legutóbbi játékok
+GAME_HINT_TYPE,Kattints játékok kereséséhez
+GAME_TITLE,Játék
+INVISIBILE_STATUS_CLOSE,Kész
+INVISIBLE_STATUS_HINT,"A státuszod jelenleg láthatatlan.\n\nVálts át elérhető, elfoglalt, vagy tétlen állapotba, hogy lásd a változásokat.\n\nTartsd észben hogy a változások azonnal láthatóak lesznek."
+INVISIBLE_STATUS_TITLE,Várjunk csak!
+KEEPON_TITLE,Keep screen on
+KEEPON_HINT,Prevents the screensaver from taking over while your status is visible. Useful if you want to keep the application always active without having to change your system settings.
+LANGUAGE_AUTO,Automatikus
+LANGUAGE_TITLE,Nyelv
+MINIMAL_STATUS_HINT,"Zsugorít a játék ikonján, és csak a legfontosabb információkat mutatja (amik revelánsak)."
+MINIMAL_STATUS_TITLE,Minimális Státusz
+PARTY_HINT_VISIBILITY,Láthatóság Változtatása
+PARTY_OF,of
+PARTY_TITLE,Partiméret
+PRESERVE_TIME_HINT,"Az eltelt időd nem lesz újrakezdve, mikor játékot váltasz."
+PRESERVE_TIME_TITLE,Eltelt idő megtartása
+REFRESH_12H,Minden 12 órában
+REFRESH_DAILY,Minden nap
+REFRESH_DISABLED,Soha
+REFRESH_HINT,"Ez a tevékenység mindig megtörténik mikor megnyitod a szoftvert, de csak a megadott időszakokban amit megadtál."
+REFRESH_NOW,Új címek azonnali keresése
+REFRESH_TITLE,Új címek keresése
+REFRESH_WEEKLY,Minden héten
+REFRESHING_DONE,Kész!
+REFRESHING_INIT,Előkészítés...\nEz csak pár pillanat lesz…
+REFRESHING_STEP_1,Fájlok letöltése...\nEz pár percet vehet igénybe…
+REFRESHING_STEP_2,Fájlok letöltése...\nMindjárt kész…
+REGION_EU,Európa
+REGION_JP,Japán
+REGION_TITLE,Elvárt régió
+REGION_US,Amerika
+RENAME_DEFAULT,Alapértelmezett
+RENAME_HINT,"Bármilyen szöveg ami itt van, nagyobb prioritást kap a megadott régiónál."
+RENAME_HINT_INPUT,Egyéni cím
+RENAME_HINT_REGION,Játékrégió
+RENAME_TITLE,Játék átnevezése
+TIMER_TITLE,Státusz Időtartam
+TIMER_HINT,A státuszod automatikusan el lesz rejtve miután az idő lejár.
+TIMER_CANCEL,Mégse
+TIMER_CONFIRM,Kész!
+TIMER_HOURS,Óra
+TIMER_MINUTES,Perc
+TIMER_SECONDS,Másodperc
+RESET_ALL_CANCEL,Mégse
+RESET_ALL_CONFIRM,Törlés
+RESET_ALL_HINT,"Minden konfiguráció alapértelmezésre kerül, még a játékaid beállításai is. Biztos vagy benne?\n\nA szoftver a tevékenység után automatikusan leáll."
+RESET_ALL_TITLE,Minden adat törlése
+RESET_CACHE_CANCEL,Mégse
+RESET_CACHE_CONFIRM,Törlés
+RESET_CACHE_HINT,Az ideiglenes és letöltött fájlok törölve lesznek. Beállításaid nem módosulnak.\n\nAz adatbázis a tevékenység után automatikusan frissítve lesz.
+RESET_CACHE_TITLE,Gyorsítótár törlése
+SEARCH_BUTTON_HINT,Engedélyzi más embereknek hogy gyorsan rákeressenek a játékra amivel játszol.
+SEARCH_BUTTON_TITLE,Keresőgomb a státuszban
+SEARCH_BUTTON_TEXT,Tudj meg többet erről a játékról
+SETTINGS_TITLE,Beállítások
+STATUS_APPLIED,Nincs várakozáson lévő változás
+STATUS_APPLY,Státusz alkalmazása
+STATUS_CONNECT,Csatlakozás a Discordhoz
+STATUS_VISIBLITY,Státusz Láthatóság
+SYSTEM_CTR,Nintendo 3DS
+SYSTEM_HAC,Nintendo Switch
+SYSTEM_TITLE,Játékrendszer
+SYSTEM_WUP,Wii U
+TAB_DETAILS,Tudnivalók
+TAB_GAMES,Játékok
+TAB_PLATFORM,Platformok
+TAG_HINT_VISIBILITY,Láthatóság kapcsolása
+TAG_ICON_HINT,"A barátkódod vagy azonsítód egy kis ikonként lesz mutatva a játék mellett amivel játszol, még ha nincs is beállítva leírás."
+TAG_ICON_TITLE,Mutassa az ID-t ikonként
+TAG_TITLE_FCID,Barátkód
+TAG_TITLE_NNID,Nintendo Network ID
+THEME_DARK,Sötét
+THEME_LIGHT,Világos
+THEME_TITLE,Téma
+UI_SCALE_APPLY,Elfogad
+UI_SCALE_TITLE,Interfész felbontás
+UPDATE_CANCEL,Talán később
+UPDATE_CONFIRM,Oksi!
+UPDATE_HINT,Szeretnéd hogy a letöltési oldalra küldjünk?
+UPDATE_TITLE,Új verzió érhető el
+USER_CONNECTED,Csatlakozva
+USER_CONNECTING,Csatlakozás..
+USER_DISCONNECTED,Lecsatlakoztatva
+VERIFIED_HINT,"A megerősített játékok mutatnak egy címet,\nés ikont a megadott régióhoz."
+VERIFIED_TITLE,Megerősített Játékok
+Cut,Kivágás
+Copy,Másolás
+Paste,Beillesztés
+Select All,Összes Kijelölése
+Clear,Töröl
+Undo,Visszavonás
+Redo,Újra

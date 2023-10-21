@@ -9,9 +9,9 @@ title = "Auto connect on start"
 description = "When launched, the application will automatically attempt to connect to Discord."
 
 [node name="Title" parent="Button/Box" index="0"]
-text = "Debug log"
+text = "Auto connect on start"
 
 [node name="Hint" parent="." index="1"]
-text = "Generates a log file for troubleshooting."
+text = "When launched, the application will automatically attempt to connect to Discord."
 
-[connection signal="toggled" from="Button" to="." method="_on_Debug_toggled"]
+[connection signal="toggled" from="Button" to="." method="_on_AutoConnect_toggled"]

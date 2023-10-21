@@ -35,8 +35,7 @@ If you are interested in contributing by translating the project into other lang
 ```bash
 git clone https://github.com/ninstar/Rich-Presence-U.git
 ```
-	
-2. Get Godot binary [here][godot] (3.5.1 or later LTS version).
+2. Get Godot binary [here][godot] (3.5.3 or later LTS version).
 3. Open Godot, click **Import ➜ Browse**, navigate to ``/source/project.godot``, open the file and click **Import & Edit**.
 4. With the project open, go to **Editor ➜ Manage Export Templates** and click **Download and Install**.
 5. After the installation is done, go to **Project ➜ Export**, click **Add** and select **Linux/X11**, **Mac OSX** or **Windows Desktop**.
@@ -59,8 +58,11 @@ godot --export "Windows Desktop" RichPresenceU.exe
 - **Art, Code & Design** - NinStar
 - **Database** - [All contributors](https://github.com/ninstar/Rich-Presence-U-DB#credits)
 - **Translations**
-	- **Português** - NinStar
+	- **Deutsch** - DeeKay-Deluxe
 	- **Español** - JhoanLsuper
+	- **Magyar** - Feeniheelo
+	- **Nederlands** - Thomanski
+	- **Português** - NinStar
 
 # Third-party code
 

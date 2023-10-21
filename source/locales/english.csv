@@ -28,6 +28,8 @@ GAME_TITLE,Game
 INVISIBILE_STATUS_CLOSE,Alright
 INVISIBLE_STATUS_HINT,Your status is currently invisible.\n\nMake it visible again to see your changes on Discord.\n\nBe aware that it will be visible immediately after toggled.
 INVISIBLE_STATUS_TITLE,Hold on!
+KEEPON_TITLE,Keep screen on
+KEEPON_HINT,Prevents the screensaver from taking over while your status is visible. Useful if you want to keep the application always active without having to change your system settings.
 LANGUAGE_AUTO,Automatic
 LANGUAGE_TITLE,Language
 MINIMAL_STATUS_HINT,Makes the game icon smaller and only display the most relevant information set in your status.
@@ -106,3 +108,10 @@ USER_CONNECTING,Connecting...
 USER_DISCONNECTED,Disconnected
 VERIFIED_HINT,Verified games will display a title and\nicon depending on the selected region.
 VERIFIED_TITLE,Verified games
+Cut,Cut
+Copy,Copy
+Paste,Paste
+Select All,Select All
+Clear,Clear
+Undo,Undo
+Redo,Redo

@@ -47,7 +47,6 @@ func button_mode() -> void:
 		node_toggle.disabled = false
 		node_toggle.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 		_icon.modulate.a = 1.0
-		
 	else:
 		
 		# Enable button
@@ -133,7 +132,6 @@ func _on_Button_pressed() -> void:
 			
 			alert_status = true
 			Main.emit_signal("dialog_added", "res://code/ui/dialogs/popups/visibility.tscn")
-		
 	else:
 		
 		# Connect to Discord

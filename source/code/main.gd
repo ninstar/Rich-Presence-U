@@ -536,8 +536,12 @@ func set_timer() -> void:
 	
 	if status_running:
 		
-		if Main.settings["timer"] > 0:
-			status_timer.start(settings["timer"])
+		if settings["timer"] > 0:
+			if status_timer.paused:
+				status_timer.start(settings["timer"]-1)
+				status_timer.paused = true
+			else:
+				status_timer.start(settings["timer"])
 			debug_log("[status_timer] Started")
 		else:
 			status_timer.stop()
@@ -548,6 +552,8 @@ func set_timer() -> void:
 	else:
 		emit_signal("timer_changed", settings["timer"])
 		debug_log("[status_timer] Changed to "+str(settings["timer"]))
+func update_screensaver() -> void:
+	OS.keep_screen_on = settings["keep_on"] and settings["activity"] and discord_connected and status_running
 
 func activity_change() -> void:
 	
@@ -697,10 +703,8 @@ func activity_push() -> void:
 		discord_api.get_module("RichPresence").update_presence(discord_rpc)
 		debug_log("Pushing Discord activity: "+str(discord_rpc))
 
-	# Enable/disable screensaver
-	OS.keep_screen_on = settings["keep_on"]
-	
 	emit_signal("status_changed")
+	Main.update_screensaver()
 	
 	# Set the status as running
 	if not status_running:
@@ -710,6 +714,10 @@ func activity_push() -> void:
 		# Start timer for the first time
 		debug_log("[status_timer] Initializing...")
 		set_timer()
+	else:
+		# Resume timer
+		if status_timer.paused:
+			status_timer.paused = false
 		
 	
 	var _entry: int = 0
@@ -751,11 +759,10 @@ func activity_toggle() -> void:
 	if Main.settings["activity"]:
 		discord_api.get_module("RichPresence").update_presence(discord_rpc)
 		debug_log("Toggling Discord activity: "+str(discord_rpc))
-		OS.keep_screen_on = Main.settings["keep_on"]
 	else:
 		discord_api.get_module("RichPresence").update_presence(-1)
 		debug_log("Toggling Discord activity: -1")
-		OS.keep_screen_on = false
+	Main.update_screensaver()
 func clear_data(temporary_data_only: bool) -> void:
 	
 	if temporary_data_only:
@@ -882,7 +889,7 @@ func _on_Timer_timeout() -> void:
 	emit_signal("timer_ended")
 	emit_signal("timer_changed", 0)
 	OS.request_attention()
-	OS.keep_screen_on = false
+	Main.update_screensaver()
 func _on_Metadata_download_completed(result, response_code, _headers, _body) -> void:
 	
 	debug_log("HTTP request completed: "+str(result)+" ("+str(response_code)+")")
@@ -924,9 +931,14 @@ func _on_Discord_disconnected() -> void:
 	discord_connected = false
 	discord_connecting = false
 	
+	# Pause timer
+	if status_running and not status_timer.paused:
+		status_timer.paused = true
+	
 	# Alert other nodes about connection status
 	if not discord_autopush:
 		emit_signal("discord_disconnected")
 		emit_signal("dialog_added", "res://code/ui/dialogs/popups/connection.tscn")
 		OS.request_attention()
-		OS.keep_screen_on = false
+	
+	Main.update_screensaver()

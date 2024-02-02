@@ -4,7 +4,7 @@
 
 A simple application that allows you to create your own activity statuses for Wii U, Nintendo Switch and Nintendo 3DS games and display them on your Discord profile.
 
-<img src="./.github/activity_status.svg" alt="Activity status" width="100%">
+<img src="./.github/activity_status.png" alt="Activity status" width="100%">
 
 ## Features
 
@@ -14,7 +14,7 @@ A simple application that allows you to create your own activity statuses for Wi
 	- Nintendo Network ID and Friend Code sharing.
 	- Elapsed time, party size and more.
 
-<img src="./.github/user_interface.svg" alt="User interface" width="100%">
+<img src="./.github/user_interface.png" alt="User interface" width="100%">
 
 > **Note**  
 > Automatic activity setup is not supported at the moment.

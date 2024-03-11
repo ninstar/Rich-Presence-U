@@ -47,6 +47,7 @@ git clone https://github.com/ninstar/Rich-Presence-U.git
 	- Set the **export mode** to **Compiled Bytecode** in the **script tab**.
 	- Set an **export path** and optionally fill in the name, icon and other details for the app in the **options tab**.
 		- Icons for the supported platforms can be found in ``/source/assets/app``.
+			- For **Windows Desktop**, you will also need [rcedit][rcedit] in order to use a custom executable icon.
 		- These configurations are saved in ``/source/export_presets.cfg`` for any eventual reuse.
 6. Click **Export All ➜ Release** or use the command line depending on the platform you made the preset for: 
  ```bash
@@ -81,3 +82,4 @@ godot --export "Windows Desktop" RichPresenceU.exe
 [compile]: https://docs.godotengine.org/en/latest/development/compiling
 [locales]: https://github.com/ninstar/Rich-Presence-U/tree/main/source/locales
 [locale_template]: https://github.com/ninstar/Rich-Presence-U/tree/main/source/locales/english.csv
+[rcedit]: https://github.com/electron/rcedit/releases

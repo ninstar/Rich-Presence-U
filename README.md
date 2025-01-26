@@ -79,7 +79,7 @@ godot --export "Windows Desktop" RichPresenceU.exe
 [database]: https://github.com/ninstar/Rich-Presence-U-DB
 [zip]: https://github.com/ninstar/Rich-Presence-U/archive/refs/heads/main.zip
 [godot]: https://godotengine.org/download/archive/3.5.3-stable/
-[compile]: https://docs.godotengine.org/en/latest/development/compiling
+[compile]: https://docs.godotengine.org/en/3.5/development/compiling
 [locales]: https://github.com/ninstar/Rich-Presence-U/tree/main/source/locales
 [locale_template]: https://github.com/ninstar/Rich-Presence-U/tree/main/source/locales/english.csv
 [rcedit]: https://github.com/electron/rcedit/releases

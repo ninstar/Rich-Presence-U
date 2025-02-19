@@ -793,7 +793,7 @@ func debug_export() -> void:
 		_file.close()
 	
 	# Make a copy to the executable directory
-	if not OS.has_feature("AppImage"):
+	if not OS.has_feature("AppImage") and not OS.has_feature("editor"):
 		var _binary_path: String = OS.get_executable_path().get_base_dir()
 		var _dir: = Directory.new()
 		if _dir.open(_binary_path) == OK:

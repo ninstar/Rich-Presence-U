@@ -51,16 +51,11 @@ func queue_download_start() -> void:
 		Main.debug_log("Making recursive directory /cache/titles: "+str(_error))
 	
 	# Fill download queue
-	queue.append({
-			
-			"url": Main.metadata["dlc"]["titles"]+"clients.cfg",
-			"path": "user://cache/clients.cfg"
-		})
 	for i in ["WUP", "HAC", "CTR"]:
 		
 		queue.append({
 				
-				"url": Main.metadata["dlc"]["titles"]+"titles/"+i.to_lower()+".csv",
+				"url": Main.metadata["dlc"][i.to_lower()+"_titles"],
 				"path": "user://cache/titles/"+i.to_lower()+".csv"
 			})
 	

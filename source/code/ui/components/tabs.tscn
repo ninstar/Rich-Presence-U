@@ -27,34 +27,32 @@ texture = ExtResource( 1 )
 expand = true
 stretch_mode = 6
 
-[node name="Tween" type="Tween" parent="A/Icon"]
-
 [node name="B" parent="." instance=ExtResource( 4 )]
 margin_left = 174.0
 margin_right = 338.0
 margin_bottom = 28.0
 group = SubResource( 1 )
+text = "Details"
 
 [node name="Icon" type="TextureRect" parent="B"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 2 )
 expand = true
 stretch_mode = 6
 
-[node name="Tween" type="Tween" parent="B/Icon"]
-
 [node name="C" parent="." instance=ExtResource( 4 )]
 margin_left = 348.0
 margin_right = 512.0
 margin_bottom = 28.0
 group = SubResource( 1 )
+text = "Games"
 
 [node name="Icon" type="TextureRect" parent="C"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 3 )
 expand = true
 stretch_mode = 6
-
-[node name="Tween" type="Tween" parent="C/Icon"]

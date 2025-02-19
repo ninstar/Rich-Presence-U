@@ -39,7 +39,7 @@ If you are interested in contributing by translating the project into other lang
 ```bash
 git clone https://github.com/ninstar/Rich-Presence-U.git
 ```
-2. Get Godot ``3.5.3-stable (Standard)`` [here][godot].
+2. Get Godot ``3.6-stable (Standard)`` [here][godot].
 3. Open Godot, click **Import ➜ Browse**, navigate to ``/source/project.godot``, open the file and click **Import & Edit**.
 4. With the project open, go to **Editor ➜ Manage Export Templates** and click **Download and Install**.
 5. After the installation is done, go to **Project ➜ Export**, click **Add** and select **Linux/X11**, **Mac OSX** or **Windows Desktop**.
@@ -78,8 +78,8 @@ godot --export "Windows Desktop" RichPresenceU.exe
 [home]: https://ninstars.blogspot.com/p/rpc.html
 [database]: https://github.com/ninstar/Rich-Presence-U-DB
 [zip]: https://github.com/ninstar/Rich-Presence-U/archive/refs/heads/main.zip
-[godot]: https://godotengine.org/download/archive/3.5.3-stable/
-[compile]: https://docs.godotengine.org/en/3.5/development/compiling
+[godot]: https://godotengine.org/download/archive/3.6-stable/
+[compile]: https://docs.godotengine.org/en/3.6/development/compiling
 [locales]: https://github.com/ninstar/Rich-Presence-U/tree/main/source/locales
 [locale_template]: https://github.com/ninstar/Rich-Presence-U/tree/main/source/locales/english.csv
 [rcedit]: https://github.com/electron/rcedit/releases

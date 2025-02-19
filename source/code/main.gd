@@ -19,8 +19,8 @@ signal timer_ended()
 
 const METADATA = "https://gist.github.com/ninstar/19c664a823d3a0312f47f5ac5e52a915/raw"
 const CONFIG = "user://settings.cfg"
-const VERSION = "1.2.3"
-const BUILD = 1230
+const VERSION = "1.3.0"
+const BUILD = 1300
 const CLIENT = 985449859299565649
 
 var logger: Array
@@ -37,7 +37,15 @@ var metadata: Dictionary = {
 	},
 	"dlc": {
 		
-		"titles": "https://github.com/ninstar/Rich-Presence-U-DB/raw/main/",
+		"wup_client": "1259966953573847130",
+		"wup_titles": "https://github.com/ninstar/Rich-Presence-U-DB/raw/main/titles/wup.csv",
+		"wup_assets": "https://github.com/ninstar/Rich-Presence-U-DB/raw/main/titles/wup/",
+		"hac_client": "1259967215323840564",
+		"hac_titles": "https://github.com/ninstar/Rich-Presence-U-DB/raw/main/titles/hac.csv",
+		"hac_assets": "https://github.com/ninstar/Rich-Presence-U-DB/raw/main/titles/hac/",
+		"ctr_client": "1259967368000569394",
+		"ctr_titles": "https://github.com/ninstar/Rich-Presence-U-DB/raw/main/titles/ctr.csv",
+		"ctr_assets": "https://github.com/ninstar/Rich-Presence-U-DB/raw/main/titles/ctr/",
 	},
 	"url": {
 		
@@ -71,10 +79,8 @@ var default_system: Dictionary = {
 	"game": "",
 	"history": [],
 	"region": "US",
-	"time_elapsed": true,
 	"time_preserve": false,
 	"minimal_status": false,
-	"extra_button": false,
 	"tag": true,
 	"tag_id": "",
 	"tag_fc": ["", "", ""],
@@ -97,7 +103,6 @@ var previous_system: String = ""
 var game_verified: bool = false
 var games_total: Dictionary
 var games_title: Array
-var games_client: Array
 var discord_api: DiscordRPC
 var discord_rpc: RichPresence
 var discord_client: int = CLIENT
@@ -238,27 +243,12 @@ func import_games() -> void:
 	var _error: int
 	
 	# Clear array
-	games_client.clear()
 	games_title.clear()
 	games_total.clear()
 	
 	# Reset total of games per region
 	for i in ["US", "EU", "JP"]:
 		games_total[i] = 0
-	
-	# Import clients
-	var _cfg: = ConfigFile.new()
-	_error = _cfg.load("user://cache/clients.cfg")
-	debug_log("Loading config /cache/clients.cfg: "+str(_error))
-	if _error == OK:
-		
-		# Get total amount of clients
-		var _total: int = _cfg.get_section_keys(settings["system"]).size()
-		if _total != null and _total > 0:
-			
-			# Append client ID
-			for l in _total:
-				games_client.append( _cfg.get_value(settings["system"], "id_"+String(l), -1) )
 	
 	# Import titles
 	var _path: String = settings["system"].to_lower()
@@ -465,12 +455,12 @@ func get_game_current_icon() -> String:
 		_region = data_system["region"]
 	
 	# Find icon
-	var _result: String = "_default"
+	var _result: String = ""
 	if _info.size() > 0:
 		
 		# Get icon for current region
 		if _info.has(_region.to_lower() + "_client"):
-			_result = _info["id"]+"_"+_region.to_lower()
+			_result = _info["id"]+"."+_region.to_lower()
 		else:
 			
 			# Fallback to other regions
@@ -481,47 +471,15 @@ func get_game_current_icon() -> String:
 				
 				# From right to left (US <- EU <- JP)
 				if _info.has(_r) and _info.get(_r) != "":
-					_result = _info["id"]+"_"+e.to_lower()
+					_result = _info["id"]+"."+e.to_lower()
 					break
 	
-	return _result
-func get_game_current_client() -> int:
+	if not _result.empty() and _result != "default":
+		return metadata["dlc"][settings["system"].to_lower()+"_assets"] + "/" + _result + ".jpg"
+	else:
+		return "default"
 	
-	# Import information about selected game
-	var _info: Dictionary = get_game_info(data_system["game"])
-	
-	# Find selected region
-	var _region: String = data_game["region"]
-	if data_game["region"].empty():
-		_region = data_system["region"]
-	
-	# Find client
-	var _result: int = CLIENT
-	if games_client.size() > 0:
-		
-		# Choose first client by default
-		_result = games_client[0]
-		
-		# Find client for the current region of the selected game
-		if _info.size() > 0:
-			
-			# Get client for current region
-			if _info.has(_region.to_lower() + "_client"):
-				_result = games_client[ int( _info[ _region.to_lower() + "_client" ] ) ]
-			else:
-				
-				# Fallback to other regions
-				for e in ["US", "EU", "JP"]:
-					
-					# Key for this region
-					var _r: String = e.to_lower() + "_client"
-					
-					# From right to left (US <- EU <- JP)
-					if _info.has(_r) and _info.get(_r) != "":
-						_result = games_client[ int(_info.get(_r, 0)) ]
-						break
-	
-	return _result
+
 func discord_connect() -> void:
 	
 	# Alert other nodes about connection status
@@ -536,8 +494,12 @@ func set_timer() -> void:
 	
 	if status_running:
 		
-		if Main.settings["timer"] > 0:
-			status_timer.start(settings["timer"])
+		if settings["timer"] > 0:
+			if status_timer.paused:
+				status_timer.start(settings["timer"]-1)
+				status_timer.paused = true
+			else:
+				status_timer.start(settings["timer"])
 			debug_log("[status_timer] Started")
 		else:
 			status_timer.stop()
@@ -548,11 +510,12 @@ func set_timer() -> void:
 	else:
 		emit_signal("timer_changed", settings["timer"])
 		debug_log("[status_timer] Changed to "+str(settings["timer"]))
+func update_screensaver() -> void:
+	OS.keep_screen_on = settings["keep_on"] and settings["activity"] and discord_connected and status_running
 
 func activity_change() -> void:
-	
 	# Select new client
-	var new_client: int = get_game_current_client()
+	var new_client := int(metadata["dlc"][settings["system"].to_lower()+"_client"])
 	if discord_client != new_client:
 		
 		# Change client
@@ -650,6 +613,8 @@ func activity_push() -> void:
 	# Make a new activity
 	discord_rpc = RichPresence.new()
 	
+	discord_rpc.start_timestamp = timestamp
+	
 	# Apply information to activity
 	if data_system["minimal_status"]:
 		
@@ -673,7 +638,7 @@ func activity_push() -> void:
 			
 			if data_system["tag_icon"] or not _description.empty():
 				discord_rpc.small_image_text = _tag
-				discord_rpc.small_image_key = "_tooltip"
+				discord_rpc.small_image_key = "id"
 			else:
 				discord_rpc.state = _tag
 		
@@ -683,24 +648,15 @@ func activity_push() -> void:
 				discord_rpc.state = "  "
 			discord_rpc.party_max = int(data_game["party_max"])
 			discord_rpc.party_size = int(data_game["party_size"])
-		
-		if data_system["time_elapsed"]:
-			discord_rpc.start_timestamp = timestamp
 	
-	if data_system["extra_button"]:
-		var _about: String = TranslationServer.translate("SEARCH_BUTTON_TEXT")
-		discord_rpc.first_button = RichPresenceButton.new(_about,
-				"http://www.google.com/search?q="+_title.http_escape())
 	
 	# Push new activity
-	if Main.settings["activity"]:
+	if settings["activity"]:
 		discord_api.get_module("RichPresence").update_presence(discord_rpc)
 		debug_log("Pushing Discord activity: "+str(discord_rpc))
 
-	# Enable/disable screensaver
-	OS.keep_screen_on = settings["keep_on"]
-	
 	emit_signal("status_changed")
+	update_screensaver()
 	
 	# Set the status as running
 	if not status_running:
@@ -710,6 +666,10 @@ func activity_push() -> void:
 		# Start timer for the first time
 		debug_log("[status_timer] Initializing...")
 		set_timer()
+	else:
+		# Resume timer
+		if status_timer.paused:
+			status_timer.paused = false
 		
 	
 	var _entry: int = 0
@@ -748,14 +708,13 @@ func activity_push() -> void:
 func activity_toggle() -> void:
 	
 	# Push new activity
-	if Main.settings["activity"]:
+	if settings["activity"]:
 		discord_api.get_module("RichPresence").update_presence(discord_rpc)
 		debug_log("Toggling Discord activity: "+str(discord_rpc))
-		OS.keep_screen_on = Main.settings["keep_on"]
 	else:
 		discord_api.get_module("RichPresence").update_presence(-1)
 		debug_log("Toggling Discord activity: -1")
-		OS.keep_screen_on = false
+	update_screensaver()
 func clear_data(temporary_data_only: bool) -> void:
 	
 	if temporary_data_only:
@@ -834,7 +793,7 @@ func debug_export() -> void:
 		_file.close()
 	
 	# Make a copy to the executable directory
-	if not OS.has_feature("AppImage"):
+	if not OS.has_feature("AppImage") and not OS.has_feature("editor"):
 		var _binary_path: String = OS.get_executable_path().get_base_dir()
 		var _dir: = Directory.new()
 		if _dir.open(_binary_path) == OK:
@@ -882,7 +841,7 @@ func _on_Timer_timeout() -> void:
 	emit_signal("timer_ended")
 	emit_signal("timer_changed", 0)
 	OS.request_attention()
-	OS.keep_screen_on = false
+	update_screensaver()
 func _on_Metadata_download_completed(result, response_code, _headers, _body) -> void:
 	
 	debug_log("HTTP request completed: "+str(result)+" ("+str(response_code)+")")
@@ -924,9 +883,14 @@ func _on_Discord_disconnected() -> void:
 	discord_connected = false
 	discord_connecting = false
 	
+	# Pause timer
+	if status_running and not status_timer.paused:
+		status_timer.paused = true
+	
 	# Alert other nodes about connection status
 	if not discord_autopush:
 		emit_signal("discord_disconnected")
 		emit_signal("dialog_added", "res://code/ui/dialogs/popups/connection.tscn")
 		OS.request_attention()
-		OS.keep_screen_on = false
+	
+	update_screensaver()

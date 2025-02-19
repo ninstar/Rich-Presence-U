@@ -28,8 +28,8 @@ GAME_TITLE,Spiel
 INVISIBLE_STATUS_CLOSE,Alles klar
 INVISIBLE_STATUS_HINT,"Dein Status ist zurzeit unsichtbar.\n\nMach ihn wieder sichtbar, um deine Änderungen auf Discord zu sehen.\n\nBeachte, dass er sofort nach dem Umschalten sichtbar ist."
 INVISIBLE_STATUS_TITLE,Moment mal!
-KEEPON_TITLE,Keep screen on
-KEEPON_HINT,Prevents the screensaver from taking over while your status is visible. Useful if you want to keep the application always active without having to change your system settings.
+KEEPON_TITLE,Bildschirm anlassen
+KEEPON_HINT,"Verhindert, dass der Bildschirmschoner aktiviert wird, während dein Status sichtbar ist. Nützlich, wenn du die App immer aktiv halten willst, ohne deine Systemeinstellungen ändern zu müssen."
 LANGUAGE_AUTO,Automatisch
 LANGUAGE_TITLE,Sprache
 MINIMAL_STATUS_HINT,"Verkleinert das Spielsymbol und zeigt nur die wichtigsten Informationen an, die in deinem Status eingestellt sind."

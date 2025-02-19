@@ -12,7 +12,4 @@ func _ready() -> void:
 # Signals
 func _on_KeepOn_toggled(button_pressed: bool) -> void:
 	Main.settings["keep_on"] = button_pressed
-	if button_pressed:
-		OS.keep_screen_on = Main.discord_connected and Main.settings["activity"]
-	else:
-		OS.keep_screen_on = false
+	Main.update_screensaver()

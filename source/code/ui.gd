@@ -57,14 +57,12 @@ func _on_Window_resize() -> void:
 	
 	var _show_all = OS.get_real_window_size().x > (320 * Main.settings["ui_scale"]) * 3
 	
+	node_tabs.get_parent().visible = not _show_all
+	
 	for i in ["A", "B", "C"]:
 		
 		# Show one or all pages
 		node_pages.get_node(i).visible = ( _show_all or Main.settings["ui_tab"] == i)
-		
-		# Togge tabs
-		node_tabs.get_node(i).disabled = _show_all
-		node_tabs.get_node(i).flat = _show_all
 
 func _on_Metadata_imported() -> void:
 	

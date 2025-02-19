@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=64 format=2]
+[gd_resource type="Theme" load_steps=65 format=2]
 
 [ext_resource path="res://assets/ui/themes/dark/check.svg" type="Texture" id=1]
 [ext_resource path="res://assets/ui/fonts/lato_regular.ttf" type="DynamicFontData" id=2]
@@ -300,23 +300,13 @@ fallback/0 = ExtResource( 6 )
 
 [sub_resource type="StyleBoxFlat" id=34]
 bg_color = Color( 0.278431, 0.321569, 0.768627, 1 )
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-expand_margin_left = 6.0
-expand_margin_right = 6.0
 
 [sub_resource type="StyleBoxFlat" id=3]
-content_margin_left = 10.0
-content_margin_right = 10.0
-content_margin_top = 5.0
-content_margin_bottom = 5.0
+content_margin_left = 4.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 2.0
 bg_color = Color( 0.0941176, 0.0980392, 0.109804, 1 )
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
 shadow_color = Color( 0, 0, 0, 0.196078 )
 shadow_size = 8
 shadow_offset = Vector2( 0, 6 )
@@ -351,6 +341,12 @@ font_data = ExtResource( 2 )
 fallback/0 = ExtResource( 3 )
 
 [sub_resource type="StyleBoxEmpty" id=70]
+
+[sub_resource type="StyleBoxEmpty" id=73]
+content_margin_left = 4.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
 
 [sub_resource type="StyleBoxFlat" id=51]
 content_margin_left = 24.0
@@ -569,7 +565,8 @@ RichTextLabel/colors/selection_color = Color( 0.0470588, 0.396078, 0.819608, 1 )
 RichTextLabel/fonts/bold_font = SubResource( 44 )
 RichTextLabel/fonts/normal_font = SubResource( 45 )
 RichTextLabel/styles/focus = SubResource( 70 )
-ScrollContainer/styles/bg = SubResource( 51 )
+ScrollContainer/styles/bg = SubResource( 73 )
+ScrollContainerMain/styles/bg = SubResource( 51 )
 SpinBox/icons/updown = ExtResource( 16 )
 TabContainer/colors/font_color_bg = Color( 0.941176, 0.941176, 0.941176, 1 )
 TabContainer/colors/font_color_fg = Color( 0.941176, 0.941176, 0.941176, 1 )

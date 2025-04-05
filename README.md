@@ -16,19 +16,18 @@ A simple application that allows you to create your own activity statuses for Wi
 
 <img src="./.github/user_interface.png" alt="User interface" width="100%">
 
-> **Note**  
-> Automatic activity setup is not supported at the moment.
-
-> For Nintendo Switch games, [nxapi](https://github.com/samuelthomas2774/nxapi) is an alternative that provides automatic activity setup. I'm not willing to add anything similar to it due to the nature of the implementation.
+> [!Note]
+> Automatic activity setup is NOT supported at the moment. Partial or full support may be added in a future major release, implementation will vary from platform to platform.
 
 
-<p align="center">You can support my work by purchasing this application via itch.io ♥</p>
+<p align="center">You can support my work by purchasing this application:</p>
 <p align="center"><a href="https://ninstars.itch.io/rpc"><img src="https://static.itch.io/images/badge-color.svg?sanitize=true" alt="AVAILABLE ON itch.io" width="40%"></a></p>
 
 # Localize
 
 If you are interested in contributing by translating the project into other languages, you can use the [english.csv][locale_template] as a template.
 
+> [!Important]
 > Cells are separated by commas ``,`` and delimited by double quotation marks ``"``. 
 
 - Other translations: [/source/locales][locales]

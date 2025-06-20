@@ -20,7 +20,8 @@ func _on_System_changed() -> void:
 	node_toggle.pressed = Main.data_system["tag"]
 	node_nnid.visible = ( Main.settings["system"] == "WUP" )
 	node_fc.visible = ( Main.settings["system"] != "WUP" )
-	node_fc.get_node("Prefix").visible = ( Main.settings["system"] == "HAC" )
+	node_fc.get_node("Prefix").visible = ( Main.settings["system"] == "HAC"
+			or Main.settings["system"] == "BEE" )
 	
 	# Change tag format
 	if Main.settings["system"] == "WUP":

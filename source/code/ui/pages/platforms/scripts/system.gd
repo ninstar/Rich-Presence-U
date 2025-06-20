@@ -12,9 +12,11 @@ func _ready() -> void:
 	node_list.add_item("SYSTEM_WUP", 0)
 	node_list.add_item("SYSTEM_HAC", 1)
 	node_list.add_item("SYSTEM_CTR", 2)
+	node_list.add_item("SYSTEM_BEE", 4)
 	node_list.set_item_metadata(0, "WUP")
 	node_list.set_item_metadata(1, "HAC")
 	node_list.set_item_metadata(2, "CTR")
+	node_list.set_item_metadata(3, "BEE")
 	
 	# Find previously selected option
 	for i in node_list.get_item_count():

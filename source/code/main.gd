@@ -596,7 +596,7 @@ func activity_push() -> void:
 		if (data_system["tag_fc"][0]+data_system["tag_fc"][1]+data_system["tag_fc"][2]).length() >= 12:
 			
 			var _fc: String = data_system["tag_fc"][0]+"-"+data_system["tag_fc"][1]+"-"+data_system["tag_fc"][2]
-			if settings["system"] == "HAC":
+			if settings["system"] == "HAC" or settings["system"] == "BEE":
 				_tag = "SW-"+_fc
 			else:
 				_tag = "FC: "+_fc

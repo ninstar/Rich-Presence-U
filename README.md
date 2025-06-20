@@ -19,9 +19,8 @@ A simple application that allows you to create your own activity statuses for Wi
 > [!Note]
 > Automatic activity setup is NOT supported at the moment. Partial or full support may be added in a future major release, implementation will vary from platform to platform.
 
-
 <p align="center">You can support my work by purchasing this application:</p>
-<p align="center"><a href="https://ninstars.itch.io/rpc"><img src="https://static.itch.io/images/badge-color.svg?sanitize=true" alt="AVAILABLE ON itch.io" width="40%"></a></p>
+<p align="center"><a href="https://ninstars.itch.io/rpc"><img src="https://static.itch.io/images/badge-color.svg?sanitize=true" alt="Available on itch.io" width="240"></a></p>
 
 # Localize
 

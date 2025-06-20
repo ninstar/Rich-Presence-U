@@ -1,5 +1,5 @@
 [center][b]Art, Code & Design[/b]
-NinStar
+Ny'hrarr (NinStar)
 
 [b]Database[/b]
 [url=https://github.com/ninstar/Rich-Presence-U-DB#credits]All contributors[/url]
@@ -9,4 +9,4 @@ Deutsch: DeeKay-Deluxe
 Español: JhoanLsuper
 Magyar: Feeniheelo
 Nederlands: Thomanski
-Português: NinStar[/center]
+Português: Ny'hrarr (NinStar)[/center]

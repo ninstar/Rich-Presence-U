@@ -1,3 +1,4 @@
 *.translation
 source/.import/
 source/export_presets.cfg
+source/export/

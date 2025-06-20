@@ -82,10 +82,11 @@ STATUS_APPLIED,Nincs várakozáson lévő változás
 STATUS_APPLY,Státusz alkalmazása
 STATUS_CONNECT,Csatlakozás a Discordhoz
 STATUS_VISIBLITY,Státusz Láthatóság
-SYSTEM_CTR,Nintendo 3DS
-SYSTEM_HAC,Nintendo Switch
 SYSTEM_TITLE,Játékrendszer
 SYSTEM_WUP,Wii U
+SYSTEM_HAC,Nintendo Switch
+SYSTEM_CTR,Nintendo 3DS
+SYSTEM_BEE,Nintendo Switch 2
 TAB_DETAILS,Tudnivalók
 TAB_GAMES,Játékok
 TAB_PLATFORM,Platformok

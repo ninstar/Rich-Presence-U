@@ -51,7 +51,7 @@ func queue_download_start() -> void:
 		Main.debug_log("Making recursive directory /cache/titles: "+str(_error))
 	
 	# Fill download queue
-	for i in ["WUP", "HAC", "CTR"]:
+	for i in ["WUP", "HAC", "CTR", "BEE"]:
 		
 		queue.append({
 				

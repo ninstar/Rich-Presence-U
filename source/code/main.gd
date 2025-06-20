@@ -19,8 +19,8 @@ signal timer_ended()
 
 const METADATA = "https://gist.github.com/ninstar/19c664a823d3a0312f47f5ac5e52a915/raw"
 const CONFIG = "user://settings.cfg"
-const VERSION = "1.3.0"
-const BUILD = 1300
+const VERSION = "1.4.0"
+const BUILD = 1400
 const CLIENT = 985449859299565649
 
 var logger: Array
@@ -46,13 +46,16 @@ var metadata: Dictionary = {
 		"ctr_client": "1259967368000569394",
 		"ctr_titles": "https://github.com/ninstar/Rich-Presence-U-DB/raw/main/titles/ctr.csv",
 		"ctr_assets": "https://github.com/ninstar/Rich-Presence-U-DB/raw/main/titles/ctr/",
+		"bee_client": "1385689410502263016",
+		"bee_titles": "https://github.com/ninstar/Rich-Presence-U-DB/raw/main/titles/bee.csv",
+		"bee_assets": "https://github.com/ninstar/Rich-Presence-U-DB/raw/main/titles/bee/",
 	},
 	"url": {
 		
 		"home": "https://ninstars.blogspot.com/rpc",
 		"contact": "https://ninstar.carrd.co",
-		"group": "https://invite.gg/ninstar",
-		"help": "https://invite.gg/ninstar",
+		"group": "https://discord.gg/N9bMDEcrX4",
+		"help": "https://discord.gg/N9bMDEcrX4",
 	},
 }
 var settings: Dictionary = {

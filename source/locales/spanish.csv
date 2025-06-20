@@ -82,10 +82,11 @@ STATUS_APPLIED,Sin cambios pendientes
 STATUS_APPLY,Aplicar estado en Discord
 STATUS_CONNECT,Conectarse a discord
 STATUS_VISIBLITY,Visibilidad de estado
-SYSTEM_CTR,Nintendo 3DS
-SYSTEM_HAC,Nintendo Switch
 SYSTEM_TITLE,Sistema de juego
 SYSTEM_WUP,Wii U
+SYSTEM_HAC,Nintendo Switch
+SYSTEM_CTR,Nintendo 3DS
+SYSTEM_BEE,Nintendo Switch 2
 TAB_DETAILS,Detalles
 TAB_GAMES,Juegos
 TAB_PLATFORM,Plataformas

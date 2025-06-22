@@ -19,8 +19,8 @@ signal timer_ended()
 
 const METADATA = "https://gist.github.com/ninstar/19c664a823d3a0312f47f5ac5e52a915/raw"
 const CONFIG = "user://settings.cfg"
-const VERSION = "1.4.0"
-const BUILD = 1400
+const VERSION = "1.5.0"
+const BUILD = 1500
 const CLIENT = 985449859299565649
 
 var logger: Array

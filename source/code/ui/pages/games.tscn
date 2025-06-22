@@ -15,22 +15,23 @@ size_flags_vertical = 3
 [node name="Game" parent="." instance=ExtResource( 4 )]
 anchor_right = 0.0
 margin_right = 512.0
+margin_bottom = 142.0
 rect_pivot_offset = Vector2( 0, 0 )
 
 [node name="Description" parent="." instance=ExtResource( 1 )]
 anchor_right = 0.0
-margin_top = 148.0
+margin_top = 146.0
 margin_right = 512.0
-margin_bottom = 292.0
+margin_bottom = 288.0
 
 [node name="Party" parent="." instance=ExtResource( 2 )]
 anchor_right = 0.0
-margin_top = 296.0
+margin_top = 292.0
 margin_right = 512.0
-margin_bottom = 405.0
+margin_bottom = 401.0
 
 [node name="Rename" parent="." instance=ExtResource( 3 )]
 anchor_right = 0.0
-margin_top = 409.0
+margin_top = 405.0
 margin_right = 512.0
-margin_bottom = 547.0
+margin_bottom = 545.0

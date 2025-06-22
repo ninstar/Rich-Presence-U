@@ -1,10 +1,11 @@
 extends VBoxContainer
 
 var hovering_results: bool = false
+var bee_indicator: Texture = null
 
 onready var node_input: = get_node("Options/Input")
 onready var node_list: = get_node("Options/List")
-onready var node_results: = get_node("Results")
+onready var node_results: = get_node("Options/Input/Results")
 onready var node_hint: = get_node("Hint")
 onready var node_icon: = get_node("Options/Input/Icon")
 onready var icon_verified: Texture = node_icon.texture
@@ -22,9 +23,18 @@ func _ready() -> void:
 	
 	# Locale keys
 	$Title.set_text("GAME_TITLE")
-	$Options/Input.set_placeholder("GAME_HINT_TYPE")
-	$Hint.set_text("GAME_HINT_NONE")
-	$Options/List.set_tooltip("GAME_HINT_RECENT")
+	node_input.set_placeholder("GAME_HINT_TYPE")
+	node_hint.set_text("GAME_HINT_NONE")
+	node_list.set_tooltip("GAME_HINT_RECENT")
+	
+	node_results.get_parent().remove_child(node_results)
+	get_tree().current_scene.call_deferred("add_child", node_results)
+	
+	set_process(false)
+
+func _process(_delta) -> void:
+	node_results.set_global_position(node_input.get_global_rect().position)
+	node_results.rect_position.y += node_input.rect_size.y
 
 func _input(event: InputEvent) -> void:
 	
@@ -37,6 +47,9 @@ func close_results() -> void:
 	# Close search results
 	node_results.clear()
 	node_results.visible = false
+	
+	if is_processing():
+		set_process(false)
 
 func check_game(auto_set_title: bool) -> void:
 	
@@ -105,7 +118,8 @@ func update_history() -> void:
 			_title = _title.substr(0, 72)+"…"
 		
 		# Add to list
-		_list.add_item(_title)
+		_list.add_icon_item(bee_indicator if Main.settings["system"] == "BEE"
+				and not _info["id"].begins_with("hac::") else null, _title)
 		_list.set_item_metadata(_list.get_item_count()-1, i)
 	
 	# Toggle button
@@ -135,6 +149,9 @@ func _on_Theme_changed(new_theme: String) -> void:
 	icon_verified = load("res://assets/ui/themes/"+new_theme+"/game_verified.svg")
 	icon_custom = load("res://assets/ui/themes/"+new_theme+"/game_custom.svg")
 	icon_search = load("res://assets/ui/themes/"+new_theme+"/search.svg")
+	bee_indicator = load("res://assets/ui/themes/"+new_theme+"/bee_indicator.svg")
+	
+	update_history()
 
 func _on_History_changed() -> void:
 	update_history()
@@ -206,10 +223,20 @@ func _on_Input_text_changed(new_text: String) -> void:
 				if _region_title.find(_typed_title, 0) > -1:
 					
 					# Add option to results and remember game ID
-					node_results.add_item(_title)
+					node_results.add_item(_title, bee_indicator if Main.settings["system"] == "BEE"
+							and not _info["id"].begins_with("hac::") else null)
 					node_results.set_item_metadata(node_results.get_item_count()-1, _info.get("id", ""))
 					
 					break
+	
+	node_results.sort_items_by_text()
+	node_results.get_v_scroll().value = 0.0
+	node_results.rect_size.x = node_input.rect_size.x
+	node_results.rect_min_size.y = 36.0 * float(min(node_results.get_item_count(), 7)) + 8.0
+	node_results.set_deferred("rect_size", Vector2(node_results.rect_size.x, node_results.rect_min_size.y))
+	
+	if not is_processing():
+		set_process(true)
 	
 	# Toggle list
 	node_results.visible = node_results.get_item_count() > 0
@@ -286,6 +313,10 @@ func _on_Results_item_activated(index: int) -> void:
 	close_results()
 	
 	Main.emit_signal("status_changed")
+
+func _on_Results_focus_entered():
+	node_results.select(0)
+	node_results.ensure_current_is_visible()
 
 func _on_Results_focus_exited() -> void:
 	close_results()

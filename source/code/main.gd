@@ -487,8 +487,8 @@ func get_game_current_icon() -> String:
 	
 	if not _result.empty() and _result != "default":
 		var _real_id: String = _result.trim_prefix("hac::") if settings["system"] == "BEE" else _result
-		var _real_system: String = "hac" if settings["system"] == "BEE" and _result.begins_with("hac::")  else settings["system"].to_lower()
-		return metadata["dlc"][_real_system+"_assets"] + "/" + _real_id + ".jpg"
+		var _real_system: String = "hac" if settings["system"] == "BEE" and _result.begins_with("hac::") else settings["system"].to_lower()
+		return metadata["dlc"][_real_system+"_assets"] + _real_id + ".jpg"
 	else:
 		return "default"
 func discord_connect() -> void:

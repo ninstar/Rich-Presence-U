@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=65 format=2]
+[gd_resource type="Theme" load_steps=68 format=2]
 
 [ext_resource path="res://assets/ui/themes/dark/check.svg" type="Texture" id=1]
 [ext_resource path="res://assets/ui/fonts/lato_regular.ttf" type="DynamicFontData" id=2]
@@ -173,15 +173,25 @@ corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
-shadow_color = Color( 0, 0, 0, 0.313726 )
+shadow_color = Color( 0, 0, 0, 0.0627451 )
 shadow_size = 6
+
+[sub_resource type="StyleBoxEmpty" id=74]
+
+[sub_resource type="StyleBoxEmpty" id=75]
+
+[sub_resource type="StyleBoxEmpty" id=76]
 
 [sub_resource type="StyleBoxEmpty" id=30]
 
 [sub_resource type="StyleBoxFlat" id=29]
-bg_color = Color( 0.12549, 0.133333, 0.145098, 1 )
-expand_margin_left = 16.0
-expand_margin_right = 16.0
+bg_color = Color( 0.278431, 0.321569, 0.768627, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 4.0
+expand_margin_right = 4.0
 
 [sub_resource type="DynamicFont" id=63]
 size = 14
@@ -300,6 +310,10 @@ fallback/0 = ExtResource( 6 )
 
 [sub_resource type="StyleBoxFlat" id=34]
 bg_color = Color( 0.278431, 0.321569, 0.768627, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
 [sub_resource type="StyleBoxFlat" id=3]
 content_margin_left = 4.0
@@ -307,6 +321,10 @@ content_margin_right = 4.0
 content_margin_top = 4.0
 content_margin_bottom = 2.0
 bg_color = Color( 0.0941176, 0.0980392, 0.109804, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 shadow_color = Color( 0, 0, 0, 0.196078 )
 shadow_size = 8
 shadow_offset = Vector2( 0, 6 )
@@ -518,9 +536,13 @@ HSlider/styles/grabber_area = SubResource( 41 )
 HSlider/styles/grabber_area_highlight = SubResource( 41 )
 HSlider/styles/slider = SubResource( 42 )
 ItemList/colors/font_color = Color( 0.862745, 0.866667, 0.870588, 1 )
+ItemList/colors/font_color_selected = Color( 1, 1, 1, 1 )
 ItemList/colors/guide_color = Color( 0, 0, 0, 0 )
 ItemList/constants/vseparation = 6
 ItemList/styles/bg = SubResource( 27 )
+ItemList/styles/bg_focus = SubResource( 74 )
+ItemList/styles/cursor = SubResource( 75 )
+ItemList/styles/cursor_unfocused = SubResource( 76 )
 ItemList/styles/selected = SubResource( 30 )
 ItemList/styles/selected_focus = SubResource( 29 )
 Label/colors/font_color = Color( 1, 1, 1, 1 )

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hac_c.svg-385f148b2a1f5cbcef3587dfeecb82a4.stex"
+path="res://.import/wup.svg-5ba09edaab015c04ed865ec71329bce3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/tabs/hac_c.svg"
-dest_files=[ "res://.import/hac_c.svg-385f148b2a1f5cbcef3587dfeecb82a4.stex" ]
+source_file="res://assets/ui/platforms/wup.svg"
+dest_files=[ "res://.import/wup.svg-5ba09edaab015c04ed865ec71329bce3.stex" ]
 
 [params]
 

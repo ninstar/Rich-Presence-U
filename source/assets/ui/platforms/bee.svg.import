@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ctr_c.svg-8fc797bb3dcbad641bb889b36129bbce.stex"
+path="res://.import/bee.svg-f9413b9b339f7e7f6b83791745f8d36f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/tabs/ctr_c.svg"
-dest_files=[ "res://.import/ctr_c.svg-8fc797bb3dcbad641bb889b36129bbce.stex" ]
+source_file="res://assets/ui/platforms/bee.svg"
+dest_files=[ "res://.import/bee.svg-f9413b9b339f7e7f6b83791745f8d36f.stex" ]
 
 [params]
 
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=2.0

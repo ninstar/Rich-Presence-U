@@ -254,52 +254,60 @@ func import_games() -> void:
 		games_total[i] = 0
 	
 	# Import titles
-	var _path: String = settings["system"].to_lower()
-	var _csv: = File.new()
-	_error = _csv.open("user://cache/titles/"+_path+".csv", _csv.READ)
-	debug_log("Reading file /cache/titles/"+_path+".csv: "+str(_error))
-	if _error == OK:
+	var _paths: Array = [settings["system"].to_lower()]
+	if settings["system"] == "BEE":
+		_paths.append("hac")
+	
+	var _id_prefix: String = ""
+	for _path in _paths:
+		var _csv: = File.new()
+		_error = _csv.open("user://cache/titles/"+_path+".csv", _csv.READ)
+		debug_log("Reading file /cache/titles/"+_path+".csv: "+str(_error))
+		if _error == OK:
+			
+			# Read lines
+			var _index: int = 0
+			while not _csv.eof_reached():
+				
+				
+				# Read delimiters
+				var _line: PoolStringArray = _csv.get_csv_line(",")
+				if _index > 0 and _line.size() >= 7:
+					
+					# Read all data to this game
+					var _game: Dictionary = {
+						
+						"id": _id_prefix+_line[0],
+						"us_client": _line[1],
+						"eu_client": _line[2],
+						"jp_client": _line[3],
+						"us_title": _line[4],
+						"eu_title": _line[5],
+						"jp_title": _line[6],
+					}
+					
+					# Remove empty keys
+					for i in _game.keys():
+						
+						if _game.has(i) and _game.get(i) == "":
+							_game.erase(i) 
+					
+					# Add to total of games per region
+					for i in ["US", "EU", "JP"]:
+						
+						if _game.has( i.to_lower() + "_title" ):
+							games_total[i] += 1
+					
+					# Append information
+					games_title.append(_game)
+				
+				# Next line
+				_index += 1
+			
+			_csv.close()
 		
-		# Read lines
-		var _index: int = 0
-		while not _csv.eof_reached():
-			
-			
-			# Read delimiters
-			var _line: PoolStringArray = _csv.get_csv_line(",")
-			if _index > 0 and _line.size() >= 7:
-				
-				# Read all data to this game
-				var _game: Dictionary = {
-					
-					"id": _line[0],
-					"us_client": _line[1],
-					"eu_client": _line[2],
-					"jp_client": _line[3],
-					"us_title": _line[4],
-					"eu_title": _line[5],
-					"jp_title": _line[6],
-				}
-				
-				# Remove empty keys
-				for i in _game.keys():
-					
-					if _game.has(i) and _game.get(i) == "":
-						_game.erase(i) 
-				
-				# Add to total of games per region
-				for i in ["US", "EU", "JP"]:
-					
-					if _game.has( i.to_lower() + "_title" ):
-						games_total[i] += 1
-				
-				# Append information
-				games_title.append(_game)
-			
-			# Next line
-			_index += 1
-		
-		_csv.close()
+		if settings["system"] == "BEE" and _id_prefix.empty():
+			_id_prefix = "hac::"
 	
 	# Alert other nodes
 	emit_signal("games_imported")
@@ -478,11 +486,11 @@ func get_game_current_icon() -> String:
 					break
 	
 	if not _result.empty() and _result != "default":
-		return metadata["dlc"][settings["system"].to_lower()+"_assets"] + "/" + _result + ".jpg"
+		var _real_id: String = _result.trim_prefix("hac::") if settings["system"] == "BEE" else _result
+		var _real_system: String = "hac" if settings["system"] == "BEE" and _result.begins_with("hac::")  else settings["system"].to_lower()
+		return metadata["dlc"][_real_system+"_assets"] + "/" + _real_id + ".jpg"
 	else:
 		return "default"
-	
-
 func discord_connect() -> void:
 	
 	# Alert other nodes about connection status

@@ -65,20 +65,22 @@ texture = ExtResource( 1 )
 expand = true
 stretch_mode = 6
 
+[node name="Results" type="ItemList" parent="Options/Input"]
+process_priority = 256
+visible = false
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_neighbour_bottom = NodePath(".")
+size_flags_horizontal = 3
+size_flags_vertical = 3
+items = [ "Placeholder", null, false ]
+
 [node name="List" parent="Options" instance=ExtResource( 9 )]
 margin_left = 484.0
 margin_right = 512.0
 margin_bottom = 28.0
-
-[node name="Results" type="ItemList" parent="."]
-visible = false
-margin_top = 79.0
-margin_right = 512.0
-margin_bottom = 466.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-items = [ "Item 0", null, false, "Item 1", null, false, "Item 2", null, false, "Item 3", null, false, "Item 4", null, false, "Item 5", null, false, "Item 6", null, false, "Item 7", null, false, "Item 8", null, false, "Item 9", null, false, "Item 10", null, false, "Item 11", null, false, "Item 12", null, false, "Item 13", null, false, "Item 14", null, false, "Item 15", null, false, "Item 16", null, false, "Item 17", null, false, "Item 18", null, false, "Item 19", null, false, "Item 20", null, false ]
-auto_height = true
+size_flags_vertical = 0
 
 [node name="Hint" parent="." instance=ExtResource( 2 )]
 anchor_right = 0.0
@@ -97,7 +99,8 @@ custom_constants/separation = 32
 [connection signal="focus_exited" from="Options/Input" to="." method="_on_Input_focus_exited"]
 [connection signal="text_changed" from="Options/Input" to="." method="_on_Input_text_changed"]
 [connection signal="text_entered" from="Options/Input" to="." method="_on_Input_text_entered"]
-[connection signal="focus_exited" from="Results" to="." method="_on_Results_focus_exited"]
-[connection signal="item_activated" from="Results" to="." method="_on_Results_item_activated"]
-[connection signal="mouse_entered" from="Results" to="." method="_on_Results_mouse_entered"]
-[connection signal="mouse_exited" from="Results" to="." method="_on_Results_mouse_exited"]
+[connection signal="focus_entered" from="Options/Input/Results" to="." method="_on_Results_focus_entered"]
+[connection signal="focus_exited" from="Options/Input/Results" to="." method="_on_Results_focus_exited"]
+[connection signal="item_activated" from="Options/Input/Results" to="." method="_on_Results_item_activated"]
+[connection signal="mouse_entered" from="Options/Input/Results" to="." method="_on_Results_mouse_entered"]
+[connection signal="mouse_exited" from="Options/Input/Results" to="." method="_on_Results_mouse_exited"]

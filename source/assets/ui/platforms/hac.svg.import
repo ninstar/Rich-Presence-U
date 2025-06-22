@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bee_c.svg-8dd9cfb7311c62878f3384d6d61ea4f8.stex"
+path="res://.import/hac.svg-557933e0d58bdab3edf97a4202c2119c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/tabs/bee_c.svg"
-dest_files=[ "res://.import/bee_c.svg-8dd9cfb7311c62878f3384d6d61ea4f8.stex" ]
+source_file="res://assets/ui/platforms/hac.svg"
+dest_files=[ "res://.import/hac.svg-557933e0d58bdab3edf97a4202c2119c.stex" ]
 
 [params]
 
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
-svg/scale=1.0
+detect_3d=false
+svg/scale=2.0

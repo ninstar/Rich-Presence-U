@@ -58,14 +58,14 @@ godot --export "Windows Desktop" RichPresenceU.exe
 
 # Credits
 
-- **Art, Code & Design** - NinStar
+- **Art, Code & Design** - Ny'hrarr (NinStar)
 - **Database** - [All contributors](https://github.com/ninstar/Rich-Presence-U-DB#credits)
 - **Translations**
 	- **Deutsch** - DeeKay-Deluxe
 	- **Español** - JhoanLsuper
 	- **Magyar** - Feeniheelo
 	- **Nederlands** - Thomanski
-	- **Português** - NinStar
+	- **Português** - Ny'hrarr (NinStar)
 
 # Third-party code
 

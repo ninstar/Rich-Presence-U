@@ -12,7 +12,7 @@ func _ready() -> void:
 
 # Signals
 func _on_System_changed() -> void:
-	$A/Icon.texture = load("res://assets/ui/tabs/"+Main.settings["system"].to_lower()+"_a.svg")
+	$A/Icon.texture = load("res://assets/ui/platforms/"+Main.settings["system"].to_lower()+".svg")
 
 func _on_Theme_changed(new_theme: String) -> void:
 	

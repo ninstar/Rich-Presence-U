@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bee_a.svg-7ff56e2b03cc50343baad77c5ee24017.stex"
+path="res://.import/bee_indicator.svg-a103ea16fc0b3f1a5058f09ac7ddc080.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/tabs/bee_a.svg"
-dest_files=[ "res://.import/bee_a.svg-7ff56e2b03cc50343baad77c5ee24017.stex" ]
+source_file="res://assets/ui/themes/light/bee_indicator.svg"
+dest_files=[ "res://.import/bee_indicator.svg-a103ea16fc0b3f1a5058f09ac7ddc080.stex" ]
 
 [params]
 

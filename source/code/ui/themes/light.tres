@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=65 format=2]
+[gd_resource type="Theme" load_steps=68 format=2]
 
 [ext_resource path="res://assets/ui/themes/light/close_hover.svg" type="Texture" id=1]
 [ext_resource path="res://assets/ui/themes/light/check.svg" type="Texture" id=2]
@@ -163,25 +163,35 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[sub_resource type="StyleBoxFlat" id=27]
+[sub_resource type="StyleBoxFlat" id=74]
 content_margin_left = 10.0
 content_margin_right = 10.0
 content_margin_top = 10.0
 content_margin_bottom = 5.0
-bg_color = Color( 0.0941176, 0.0980392, 0.109804, 1 )
+bg_color = Color( 0.956863, 0.956863, 0.956863, 1 )
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
-shadow_color = Color( 0, 0, 0, 0.313726 )
+shadow_color = Color( 0, 0, 0, 0.0627451 )
 shadow_size = 6
+
+[sub_resource type="StyleBoxEmpty" id=76]
+
+[sub_resource type="StyleBoxEmpty" id=77]
+
+[sub_resource type="StyleBoxEmpty" id=78]
 
 [sub_resource type="StyleBoxEmpty" id=30]
 
-[sub_resource type="StyleBoxFlat" id=29]
-bg_color = Color( 0.12549, 0.133333, 0.145098, 1 )
-expand_margin_left = 16.0
-expand_margin_right = 16.0
+[sub_resource type="StyleBoxFlat" id=75]
+bg_color = Color( 0.278431, 0.321569, 0.768627, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 4.0
+expand_margin_right = 4.0
 
 [sub_resource type="DynamicFont" id=63]
 size = 14
@@ -300,6 +310,10 @@ fallback/0 = ExtResource( 4 )
 
 [sub_resource type="StyleBoxFlat" id=34]
 bg_color = Color( 0.278431, 0.321569, 0.768627, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
 [sub_resource type="StyleBoxFlat" id=3]
 content_margin_left = 4.0
@@ -522,12 +536,16 @@ HSlider/icons/tick = ExtResource( 15 )
 HSlider/styles/grabber_area = SubResource( 41 )
 HSlider/styles/grabber_area_highlight = SubResource( 41 )
 HSlider/styles/slider = SubResource( 42 )
-ItemList/colors/font_color = Color( 0.862745, 0.866667, 0.870588, 1 )
+ItemList/colors/font_color = Color( 0.180392, 0.180392, 0.180392, 1 )
+ItemList/colors/font_color_selected = Color( 1, 1, 1, 1 )
 ItemList/colors/guide_color = Color( 0, 0, 0, 0 )
 ItemList/constants/vseparation = 6
-ItemList/styles/bg = SubResource( 27 )
+ItemList/styles/bg = SubResource( 74 )
+ItemList/styles/bg_focus = SubResource( 76 )
+ItemList/styles/cursor = SubResource( 77 )
+ItemList/styles/cursor_unfocused = SubResource( 78 )
 ItemList/styles/selected = SubResource( 30 )
-ItemList/styles/selected_focus = SubResource( 29 )
+ItemList/styles/selected_focus = SubResource( 75 )
 Label/colors/font_color = Color( 0, 0, 0, 1 )
 Label/fonts/font = SubResource( 63 )
 LineEdit/colors/clear_button_color = Color( 0.180392, 0.2, 0.219608, 1 )
@@ -558,6 +576,7 @@ OptionButton/styles/pressed = SubResource( 17 )
 Panel/styles/panel = SubResource( 64 )
 PanelContainer/styles/panel = SubResource( 71 )
 PopupMenu/colors/font_color = Color( 0.415686, 0.431373, 0.454902, 1 )
+PopupMenu/colors/font_color_disabled = Color( 0.4, 0.4, 0.4, 0.25098 )
 PopupMenu/constants/vseparation = 12
 PopupMenu/fonts/font = SubResource( 46 )
 PopupMenu/icons/radio_checked = ExtResource( 2 )

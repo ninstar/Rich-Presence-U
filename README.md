@@ -37,26 +37,26 @@ If you are interested in contributing by translating the project into other lang
 ```bash
 git clone https://github.com/ninstar/Rich-Presence-U.git
 ```
+> Paths starting with a `/` in this guide are relative to where you extracted the .zip or cloned the repository.
 2. Get Godot ``3.6-stable (Standard)`` [here][godot].
 3. Open Godot, click **Import ➜ Browse**, navigate to ``/source/project.godot``, select the file and click **Import & Edit**.
 4. With the project open, access **Editor ➜ Manage Export Templates** and click **Download and Install**.
-	- If you are having trouble with the **Download and Install** option, you can [download this .tpz file][templates] and install it using the **Install from File** option.
-6. After the installation is done, close the **Export Template Manager** window and access **Project ➜ Export**.
-7. Click **Add** and select the platform you want to export to (compatible platforms are **Linux/X11**, **Mac OSX** and **Windows Desktop**), then set an **Export Path**.
-	- In the **Options** tab, add ``com.ninstar.rpc`` to the **Identifier** field if you have selected **Mac OSX**.
+> If you are having trouble with the **Download and Install** option, you can [download this .tpz file][templates] and install it using the **Install from File** option.
+5. After the installation is done, close the **Export Template Manager** window and access **Project ➜ Export**.
+6. Click **Add** and select the platform you want to export to (compatible platforms are **Linux/X11**, **Mac OSX** and **Windows Desktop**), then set an **Export Path**.
+	- In the **Options** tab, add ``com.ninstar.rpc`` to the **Identifier** field if you selected **Mac OSX**.
 	- Optionally fill in the name, icon and other details for the app.
- 	- Icons for all supported platforms can be located at ``/source/assets/app``. **rcedit** is required in order to export .exe files with custom icons, follow these instructions to install it:
+ 	- Icons for all supported platforms can be found at ``/source/assets/app``. **rcedit** is required in order to export .exe files with custom icons, follow these instructions to install it:
 		1. [Download rcedit-x64.exe][rcedit].
 	   	2. Access **Editor ➜ Editor Settings ➜ General** and scroll down to **Export ➜ Windows**.
 	   	3. Change **rcedit** to point to the path where ``rcedit-x64.exe`` is located. 
-	- These configurations are saved at ``/source/export_presets.cfg`` for any eventual reuse.
-8. Click **Export All ➜ Release** or use the command line depending on the platform you've made the preset for: 
+> These configurations are saved at ``/source/export_presets.cfg`` for any eventual reuse.
+7. Click **Export All ➜ Release** or use the command line depending on the platform you've made the preset for: 
  ```bash
 godot --export "Linux/X11" RichPresenceU
 godot --export "Mac OSX" RichPresenceU.dmg
 godot --export "Windows Desktop" RichPresenceU.exe
 ```
-
 > You also have the option to compile [everything][compile] from source.
 
 # Credits

@@ -6,12 +6,12 @@
 [node name="Preserve" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 title = "Preserve elapsed time"
-description = "Your elapsed time will not be reset when changing games."
+description = "Your elapsed won’t be reseted when changing games."
 
 [node name="Title" parent="Button/Box" index="0"]
 text = "Preserve elapsed time"
 
 [node name="Hint" parent="." index="1"]
-text = "Your elapsed time will not be reset when changing games."
+text = "Your elapsed won't be rested when changing games."
 
 [connection signal="toggled" from="Button" to="." method="_on_Preserve_toggled"]

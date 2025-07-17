@@ -37,7 +37,7 @@ MINIMAL_STATUS_TITLE,Minimal status
 PARTY_HINT_VISIBILITY,Toggle visibility
 PARTY_OF,of
 PARTY_TITLE,Party size
-PRESERVE_TIME_HINT,Your elapsed won’t be reseted when changing games.
+PRESERVE_TIME_HINT,Your elapsed time will not be reset when changing games.
 PRESERVE_TIME_TITLE,Preserve elapsed time
 REFRESH_12H,Every 12 hours
 REFRESH_DAILY,Every day

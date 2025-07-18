@@ -31,29 +31,32 @@ If you are interested in contributing by translating the project into other lang
 
 - Other translations: [/source/locales][locales]
 
-# Compile
+# Install
 
 1. [Download][zip] the repository or clone it via command line:
 ```bash
 git clone https://github.com/ninstar/Rich-Presence-U.git
 ```
+> Paths starting with a `/` in this guide are relative to where you extracted the .zip or cloned the repository.
 2. Get Godot ``3.6-stable (Standard)`` [here][godot].
-3. Open Godot, click **Import ➜ Browse**, navigate to ``/source/project.godot``, open the file and click **Import & Edit**.
-4. With the project open, go to **Editor ➜ Manage Export Templates** and click **Download and Install**.
-5. After the installation is done, go to **Project ➜ Export**, click **Add** and select **Linux/X11**, **Mac OSX** or **Windows Desktop**.
-	- Add ``com.ninstar.rpc`` to the **identifier** field if you selected **Mac OSX**.
-	- Set the **export mode** to **Compiled Bytecode** in the **script tab**.
-	- Set an **export path** and optionally fill in the name, icon and other details for the app in the **options tab**.
-		- Icons for the supported platforms can be found in ``/source/assets/app``.
-			- For **Windows Desktop**, you will also need [rcedit][rcedit] in order to use a custom executable icon.
-		- These configurations are saved in ``/source/export_presets.cfg`` for any eventual reuse.
-6. Click **Export All ➜ Release** or use the command line depending on the platform you made the preset for: 
+3. Open Godot, click **Import ➜ Browse**, navigate to ``/source/project.godot``, select the file and click **Import & Edit**.
+4. With the project open, access **Editor ➜ Manage Export Templates** and click **Download and Install**.
+> If you are having trouble with the **Download and Install** option, you can [download this .tpz file][templates] and install it using the **Install from File** option.
+5. After the installation is done, close the **Export Template Manager** window and access **Project ➜ Export**.
+6. Click **Add** and select the platform you want to export to (compatible platforms are **Linux/X11**, **Mac OSX** and **Windows Desktop**), then set an **Export Path**.
+	- In the **Options** tab, add ``com.ninstar.rpc`` to the **Identifier** field if you selected **Mac OSX**.
+	- Optionally fill in the name, icon and other details for the app.
+ 	- Icons for all supported platforms can be found at ``/source/assets/app``. **rcedit** is required in order to export .exe files with custom icons, follow these instructions to install it:
+		1. [Download rcedit-x64.exe][rcedit].
+	   	2. Access **Editor ➜ Editor Settings ➜ General** and scroll down to **Export ➜ Windows**.
+	   	3. Change **rcedit** to point to the path where ``rcedit-x64.exe`` is located. 
+> These configurations are saved at ``/source/export_presets.cfg`` for any eventual reuse.
+7. Click **Export All ➜ Release** or use the command line depending on the platform you've made the preset for: 
  ```bash
 godot --export "Linux/X11" RichPresenceU
 godot --export "Mac OSX" RichPresenceU.dmg
 godot --export "Windows Desktop" RichPresenceU.exe
 ```
-
 > You also have the option to compile [everything][compile] from source.
 
 # Credits
@@ -77,7 +80,8 @@ godot --export "Windows Desktop" RichPresenceU.exe
 [database]: https://github.com/ninstar/Rich-Presence-U-DB
 [zip]: https://github.com/ninstar/Rich-Presence-U/archive/refs/heads/main.zip
 [godot]: https://godotengine.org/download/archive/3.6-stable/
+[templates]: https://github.com/godotengine/godot/releases/download/3.6-stable/Godot_v3.6-stable_export_templates.tpz
 [compile]: https://docs.godotengine.org/en/3.6/development/compiling
 [locales]: https://github.com/ninstar/Rich-Presence-U/tree/main/source/locales
 [locale_template]: https://github.com/ninstar/Rich-Presence-U/tree/main/source/locales/english.csv
-[rcedit]: https://github.com/electron/rcedit/releases
+[rcedit]: https://github.com/electron/rcedit/releases/download/v2.0.0/rcedit-x64.exe

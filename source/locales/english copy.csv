@@ -1,0 +1,118 @@
+keys,fr
+ABOUT_CLOSE,Fermer
+ABOUT_CONTACT,En savoir plus sur NinStar
+ABOUT_CREDITS,Crédits
+ABOUT_HELP,Aide
+ABOUT_LICENSE,License
+ABOUT_PAGE,Menu principal
+ABOUT_TITLE,à propos de
+ABOUT_VERSION,Version
+AUTOCONNECT_HINT,"quand l'application est lancée, va automatiquement essayer de se connecter à l'appli Discord."
+AUTOCONNECT_TITLE,Auto-connexion lors du démarrage
+CONNECTION_ERROR_CLOSE,Fermer
+CONNECTION_ERROR_HINT,"Impossible d'établir une connexion à l'appli Discord.\n\nVérifie ta connexion ou redémarre l'appli Discord pour PC, ne fonnctionnera pas si tu es sur la version web de Discord."
+CONNECTION_ERROR_TITLE,Erreur de connexion
+DATA_HINT,Prends conscience que ces actions ne peuvent pas être annulés.
+DATA_TITLE,Data
+DEBUG_HINT,Generates a log file for troubleshooting.
+DEBUG_TITLE,Debug log
+DESCRIPTION_HINT,A text to be displayed below the game title.
+DESCRIPTION_HINT_RECENT,Recent descriptions
+DESCRIPTION_TITLE,Description
+ELAPSED_TIME_TITLE,Display elapsed time
+GAME_HINT_CUSTOM,Custom entry. The typed text will be used as a title in your status.
+GAME_HINT_NONE,You have not selected a game. Only your console name will be displayed.
+GAME_HINT_RECENT,Recent games
+GAME_HINT_TYPE,Type here to find a game
+GAME_TITLE,Game
+INVISIBILE_STATUS_CLOSE,Alright
+INVISIBLE_STATUS_HINT,Your status is currently invisible.\n\nMake it visible again to see your changes on Discord.\n\nBe aware that it will be visible immediately after toggled.
+INVISIBLE_STATUS_TITLE,Hold on!
+KEEPON_TITLE,Keep screen on
+KEEPON_HINT,Prevents the screensaver from taking over while your status is visible. Useful if you want to keep the application always active without having to change your system settings.
+LANGUAGE_AUTO,Automatic
+LANGUAGE_TITLE,Language
+MINIMAL_STATUS_HINT,Makes the game icon smaller and only display the most relevant information set in your status.
+MINIMAL_STATUS_TITLE,Minimal status
+PARTY_HINT_VISIBILITY,Toggle visibility
+PARTY_OF,of
+PARTY_TITLE,Party size
+PRESERVE_TIME_HINT,Your elapsed won’t be reseted when changing games.
+PRESERVE_TIME_TITLE,Preserve elapsed time
+REFRESH_12H,Every 12 hours
+REFRESH_DAILY,Every day
+REFRESH_DISABLED,Never
+REFRESH_HINT,This action will be performed every time you open the app accordingly to the set time interval.
+REFRESH_NOW,Check now
+REFRESH_TITLE,Check for new titles
+REFRESH_WEEKLY,Every week
+REFRESHING_DONE,Done!
+REFRESHING_INIT,Preparing...\nIt will just take a moment.
+REFRESHING_STEP_1,Downloading files...\nIt will just take a moment.
+REFRESHING_STEP_2,Downloading files...\nAlmost there.
+REGION_EU,Europe
+REGION_JP,Japan
+REGION_TITLE,Preferred region
+REGION_US,Americas
+RENAME_DEFAULT,Default
+RENAME_HINT,Any text typed in this field will take priority over the specified region title.
+RENAME_HINT_INPUT,Custom title
+RENAME_HINT_REGION,Game region
+RENAME_TITLE,Rename game
+TIMER_TITLE,Status duration
+TIMER_HINT,Your status will be automatically hidden after the timer expires.
+TIMER_CANCEL,Cancel
+TIMER_CONFIRM,Done!
+TIMER_HOURS,Hours
+TIMER_MINUTES,Minutes
+TIMER_SECONDS,Seconds
+RESET_ALL_CANCEL,Never mind...
+RESET_ALL_CONFIRM,Yes. Reset everything
+RESET_ALL_HINT,"All configurations will be reseted to default, including your per-game settings.\n\nAre you sure you want to proceed with this action?\n\nThe app will be closed after this."
+RESET_ALL_TITLE,Reset all data
+RESET_CACHE_CANCEL,Never mind...
+RESET_CACHE_CONFIRM,Yes. Clear cache
+RESET_CACHE_HINT,Downloaded and temporary files will be removed. No changes will be made to your settings.\n\nThe database will be updated right after finishing this action.
+RESET_CACHE_TITLE,Clear cache
+SEARCH_BUTTON_HINT,Allows other people to quickly search for the game you are currently playing.
+SEARCH_BUTTON_TITLE,Search button on status
+SEARCH_BUTTON_TEXT,Learn more about this game
+SETTINGS_TITLE,Settings
+STATUS_APPLIED,No pending changes
+STATUS_APPLY,Apply status on Discord
+STATUS_CONNECT,Connect to Discord
+STATUS_VISIBLITY,Status visibility
+SYSTEM_TITLE,Game system
+SYSTEM_WUP,Wii U
+SYSTEM_HAC,Nintendo Switch
+SYSTEM_CTR,Nintendo 3DS
+SYSTEM_BEE,Nintendo Switch 2
+TAB_DETAILS,Details
+TAB_GAMES,Games
+TAB_PLATFORM,Platforms
+TAG_HINT_VISIBILITY,Toggle visibility
+TAG_ICON_HINT,"Ensures that your ID or Friend Code is always shown as a small icon next to the icon of the game you are playing, even when there is no description set."
+TAG_ICON_TITLE,Always display ID as an icon
+TAG_TITLE_FCID,Friend Code
+TAG_TITLE_NNID,Nintendo Network ID
+THEME_DARK,Dark
+THEME_LIGHT,Light
+THEME_TITLE,Theme
+UI_SCALE_APPLY,Apply
+UI_SCALE_TITLE,Interface scale
+UPDATE_CANCEL,Maybe later...
+UPDATE_CONFIRM,Sure!
+UPDATE_HINT,Would you like to be redirected to the download page?
+UPDATE_TITLE,New version available
+USER_CONNECTED,Connected
+USER_CONNECTING,Connecting...
+USER_DISCONNECTED,Disconnected
+VERIFIED_HINT,Verified games will display a title and\nicon depending on the selected region.
+VERIFIED_TITLE,Verified games
+Cut,Cut
+Copy,Copy
+Paste,Paste
+Select All,Select All
+Clear,Clear
+Undo,Undo
+Redo,Redo

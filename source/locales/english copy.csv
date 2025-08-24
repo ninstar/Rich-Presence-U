@@ -16,10 +16,10 @@ DATA_HINT,Prends conscience que ces actions ne peuvent pas être annulés.
 DATA_TITLE,Données
 DEBUG_HINT,Génére un fichier log pour résoudre un problème.
 DEBUG_TITLE,Générer un log
-DESCRIPTION_HINT,A text to be displayed below the game title.
-DESCRIPTION_HINT_RECENT,Recent descriptions
+DESCRIPTION_HINT,Un texte affiché comme description sur ton statut.
+DESCRIPTION_HINT_RECENT,description récentes
 DESCRIPTION_TITLE,Description
-ELAPSED_TIME_TITLE,Display elapsed time
+ELAPSED_TIME_TITLE,Afficher le temps écoulé 
 GAME_HINT_CUSTOM,Custom entry. The typed text will be used as a title in your status.
 GAME_HINT_NONE,You have not selected a game. Only your console name will be displayed.
 GAME_HINT_RECENT,Recent games

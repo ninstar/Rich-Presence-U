@@ -13,9 +13,9 @@ CONNECTION_ERROR_CLOSE,Fermer
 CONNECTION_ERROR_HINT,"Impossible d'établir une connexion à l'appli Discord.\n\nVérifie ta connexion ou redémarre l'appli Discord pour PC, ne fonnctionnera pas si tu es sur la version web de Discord."
 CONNECTION_ERROR_TITLE,Erreur de connexion
 DATA_HINT,Prends conscience que ces actions ne peuvent pas être annulés.
-DATA_TITLE,Data
-DEBUG_HINT,Generates a log file for troubleshooting.
-DEBUG_TITLE,Debug log
+DATA_TITLE,Données
+DEBUG_HINT,Génére un fichier log pour résoudre un problème.
+DEBUG_TITLE,Générer un log
 DESCRIPTION_HINT,A text to be displayed below the game title.
 DESCRIPTION_HINT_RECENT,Recent descriptions
 DESCRIPTION_TITLE,Description

@@ -80,7 +80,7 @@ SEARCH_BUTTON_TEXT,Learn more about this game
 SETTINGS_TITLE,Settings
 STATUS_APPLIED,No pending changes
 STATUS_APPLY,Apply status on Discord
-STATUS_CONNECT,Connect to Discord
+STATUS_CONNECT,Se connecter à l'appli Discord
 STATUS_VISIBLITY,Status visibility
 SYSTEM_TITLE,Game system
 SYSTEM_WUP,Wii U
@@ -109,10 +109,10 @@ USER_CONNECTING,Connecting...
 USER_DISCONNECTED,Disconnected
 VERIFIED_HINT,Verified games will display a title and\nicon depending on the selected region.
 VERIFIED_TITLE,Verified games
-Cut,Cut
-Copy,Copy
-Paste,Paste
-Select All,Select All
-Clear,Clear
-Undo,Undo
-Redo,Redo
+Cut,Couper
+Copy,Copier
+Paste,Coller
+Select All,Tout sélectionner
+Clear,Effacer
+Undo,Annuler
+Redo,Rétablir

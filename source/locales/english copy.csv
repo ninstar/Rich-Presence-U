@@ -20,58 +20,58 @@ DESCRIPTION_HINT,Un texte affiché comme description sur ton statut.
 DESCRIPTION_HINT_RECENT,description récentes
 DESCRIPTION_TITLE,Description
 ELAPSED_TIME_TITLE,Afficher le temps écoulé 
-GAME_HINT_CUSTOM,Custom entry. The typed text will be used as a title in your status.
-GAME_HINT_NONE,You have not selected a game. Only your console name will be displayed.
-GAME_HINT_RECENT,Recent games
-GAME_HINT_TYPE,Type here to find a game
-GAME_TITLE,Game
+GAME_HINT_CUSTOM,Le texte entré ici sera utilisé comme titre dans ton statut
+GAME_HINT_NONE,"Tu n'a pas séléctionné(e) de jeu. Seuelement le nom de ta console sera affiché."
+GAME_HINT_RECENT,Jeux récents
+GAME_HINT_TYPE,écrit ici pour rechercher un jeu
+GAME_TITLE,Jeu
 INVISIBILE_STATUS_CLOSE,Alright
 INVISIBLE_STATUS_HINT,Your status is currently invisible.\n\nMake it visible again to see your changes on Discord.\n\nBe aware that it will be visible immediately after toggled.
 INVISIBLE_STATUS_TITLE,Hold on!
-KEEPON_TITLE,Keep screen on
+KEEPON_TITLE,Garder l'écran actif
 KEEPON_HINT,Prevents the screensaver from taking over while your status is visible. Useful if you want to keep the application always active without having to change your system settings.
-LANGUAGE_AUTO,Automatic
+LANGUAGE_AUTO,Automatique
 LANGUAGE_TITLE,Language
 MINIMAL_STATUS_HINT,Makes the game icon smaller and only display the most relevant information set in your status.
-MINIMAL_STATUS_TITLE,Minimal status
+MINIMAL_STATUS_TITLE,Statut minimal
 PARTY_HINT_VISIBILITY,Toggle visibility
 PARTY_OF,of
 PARTY_TITLE,Party size
 PRESERVE_TIME_HINT,Your elapsed won’t be reseted when changing games.
 PRESERVE_TIME_TITLE,Preserve elapsed time
 REFRESH_12H,Every 12 hours
-REFRESH_DAILY,Every day
-REFRESH_DISABLED,Never
+REFRESH_DAILY,Tout les jours
+REFRESH_DISABLED,Jamais
 REFRESH_HINT,This action will be performed every time you open the app accordingly to the set time interval.
-REFRESH_NOW,Check now
+REFRESH_NOW,Vérifier maintenant
 REFRESH_TITLE,Check for new titles
-REFRESH_WEEKLY,Every week
-REFRESHING_DONE,Done!
-REFRESHING_INIT,Preparing...\nIt will just take a moment.
-REFRESHING_STEP_1,Downloading files...\nIt will just take a moment.
-REFRESHING_STEP_2,Downloading files...\nAlmost there.
+REFRESH_WEEKLY,Toutes les semaines
+REFRESHING_DONE,Terminé !
+REFRESHING_INIT,Préparation..\nça va prendre un moment..
+REFRESHING_STEP_1,Téléchargement..\nça va prendre quelques instants..
+REFRESHING_STEP_2,Téléchargement des fichiers\ntoujours en cours..
 REGION_EU,Europe
-REGION_JP,Japan
-REGION_TITLE,Preferred region
-REGION_US,Americas
-RENAME_DEFAULT,Default
-RENAME_HINT,Any text typed in this field will take priority over the specified region title.
+REGION_JP,Japon
+REGION_TITLE,région préférée
+REGION_US,Amerique
+RENAME_DEFAULT,Défaut
+RENAME_HINT,N'importe quel texte écrit ici va prendre la priorité par rapport à la région préférée.
 RENAME_HINT_INPUT,Custom title
 RENAME_HINT_REGION,Game region
-RENAME_TITLE,Rename game
-TIMER_TITLE,Status duration
-TIMER_HINT,Your status will be automatically hidden after the timer expires.
-TIMER_CANCEL,Cancel
-TIMER_CONFIRM,Done!
-TIMER_HOURS,Hours
+RENAME_TITLE,Renommer le jeu
+TIMER_TITLE,durée du statut
+TIMER_HINT,Ton statut va être caché après la fin du timer.
+TIMER_CANCEL,Annuler
+TIMER_CONFIRM,Terminé !
+TIMER_HOURS,Heures
 TIMER_MINUTES,Minutes
-TIMER_SECONDS,Seconds
-RESET_ALL_CANCEL,Never mind...
-RESET_ALL_CONFIRM,Yes. Reset everything
+TIMER_SECONDS,Secondes
+RESET_ALL_CANCEL,Au final non..
+RESET_ALL_CONFIRM,Oui. Rénitialise tout
 RESET_ALL_HINT,"All configurations will be reseted to default, including your per-game settings.\n\nAre you sure you want to proceed with this action?\n\nThe app will be closed after this."
 RESET_ALL_TITLE,Reset all data
 RESET_CACHE_CANCEL,Never mind...
-RESET_CACHE_CONFIRM,Yes. Clear cache
+RESET_CACHE_CONFIRM,Oui.
 RESET_CACHE_HINT,Downloaded and temporary files will be removed. No changes will be made to your settings.\n\nThe database will be updated right after finishing this action.
 RESET_CACHE_TITLE,Clear cache
 SEARCH_BUTTON_HINT,Allows other people to quickly search for the game you are currently playing.

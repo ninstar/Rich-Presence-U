@@ -10,20 +10,29 @@ func _ready() -> void:
 	# Fill list
 	node_list.clear()
 	node_list.add_item("LANGUAGE_AUTO", 0)
-	node_list.add_item("Deutsch", 1)
-	node_list.add_item("English", 2)
-	node_list.add_item("Español", 3)
-	node_list.add_item("Magyar", 4)
-	node_list.add_item("Nederlands", 5)
-	node_list.add_item("Português", 6)
 	node_list.set_item_metadata(0, "")
-	node_list.set_item_metadata(1, "de")
-	node_list.set_item_metadata(2, "en")
-	node_list.set_item_metadata(3, "es")
-	node_list.set_item_metadata(4, "hu")
-	node_list.set_item_metadata(5, "nl")
-	node_list.set_item_metadata(6, "pt")
 	
+	var translated_names: Dictionary = {
+		"de": "Deutsch",
+		"en": "English",
+		"es": "Español",
+		"fr": "Français",
+		"hu": "Magyar",
+		"nl": "Nederlands",
+		"pt": "Português",
+	}
+	
+	var loaded_locales: Array = TranslationServer.get_loaded_locales()
+	loaded_locales.sort()
+	for locale in loaded_locales:
+		var index: int = node_list.get_item_count()
+		var locale_name: String = TranslationServer.get_locale_name(locale)
+		if translated_names.has(locale):
+			locale_name = translated_names[locale]
+		
+		node_list.add_item(locale_name, index)
+		node_list.set_item_metadata(index, locale)
+
 	# Find previously selected option
 	for i in node_list.get_item_count():
 		

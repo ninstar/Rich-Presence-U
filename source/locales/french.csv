@@ -1,0 +1,118 @@
+keys,fr
+ABOUT_CLOSE,Fermer
+ABOUT_CONTACT,En savoir plus sur NinStar
+ABOUT_CREDITS,Crédits
+ABOUT_HELP,Aide
+ABOUT_LICENSE,License
+ABOUT_PAGE,Page d'acceuil
+ABOUT_TITLE,À propos
+ABOUT_VERSION,Version
+AUTOCONNECT_HINT,"Une fois lancé, l'application se connectera automatiquement à Discord."
+AUTOCONNECT_TITLE,Se connecter automatiquement au démarrage
+CONNECTION_ERROR_CLOSE,Fermer
+CONNECTION_ERROR_HINT,Impossible d'établir une connexion à Discord.\n\nVérifiez votre connexion Internet ou redémarrez l'application. Assurez-vous d'utiliser la version de bureau de Discord.
+CONNECTION_ERROR_TITLE,Erreur de connection
+DATA_HINT,Attention! Ces actions sont irréversibles.
+DATA_TITLE,Data
+DEBUG_HINT,Générer un fichier .log
+DEBUG_TITLE,Journal de débogage
+DESCRIPTION_HINT,Texte prêt à être affiché en dessous du titre de jeu
+DESCRIPTION_HINT_RECENT,Descriptions récentes
+DESCRIPTION_TITLE,Description
+ELAPSED_TIME_TITLE,Afficher le temps écoulé
+GAME_HINT_CUSTOM,Texte personnalisé. Le texte saisi sera utilisé comme titre dans votre statut.
+GAME_HINT_NONE,Vous n'avez pas sélectionné de jeu. Seul le nom de votre console sera affiché.
+GAME_HINT_RECENT,Jeux récents
+GAME_HINT_TYPE,Tapez-ici pour trouver un jeu
+GAME_TITLE,Jeu
+INVISIBILE_STATUS_CLOSE,Bien
+INVISIBLE_STATUS_HINT,Votre statut est actuellement invisible.\n\nRendez-le visible pour voir vos modifications sur Discord.\n\nNotez qu'il sera visible immédiatement après avoir été activé.
+INVISIBLE_STATUS_TITLE,Attendez !
+KEEPON_TITLE,Laisser l'écran allumé
+KEEPON_HINT,Empêche l'économiseur d'écran de prendre le dessus lorsque votre statut est visible. Utile si vous souhaitez que l'application reste toujours active sans modifier les paramètres système.
+LANGUAGE_AUTO,Automatique
+LANGUAGE_TITLE,Langue
+MINIMAL_STATUS_HINT,Rend l'icône du jeu plus petite et n'affiche que les informations les plus pertinentes définies dans votre statut.
+MINIMAL_STATUS_TITLE,Statut minimum
+PARTY_HINT_VISIBILITY,Basculer la visibilité
+PARTY_OF,sur
+PARTY_TITLE,Nombre de joueurs
+PRESERVE_TIME_HINT,Votre temps écoulé ne sera pas réinitialisé lorsque vous changerez de jeu.
+PRESERVE_TIME_TITLE,Garder le temps écoulé
+REFRESH_12H,Toutes les 12 heures
+REFRESH_DAILY,Chaque jour
+REFRESH_DISABLED,Jamais
+REFRESH_HINT,"Cette action sera effectuée à chaque ouverture de l'application, selon l'intervalle de temps défini."
+REFRESH_NOW,Vérifier maintenant
+REFRESH_TITLE,Vérifier les nouveaux jeux
+REFRESH_WEEKLY,Chaque semaine
+REFRESHING_DONE,Fait !
+REFRESHING_INIT,Préparation en cours...\nCela ne prendra qu'un instant.
+REFRESHING_STEP_1,Téléchargement des fichiers...\nCela ne prendra qu'un instant.
+REFRESHING_STEP_2,Téléchargement des fichiers...\nPresque terminé.
+REGION_EU,Europe
+REGION_JP,Japon
+REGION_TITLE,Région préférée
+REGION_US,Amérique
+RENAME_DEFAULT,Par défaut
+RENAME_HINT,Tout texte écrit dans ce champ prendra le dessus sur le titre de la région spécifiée
+RENAME_HINT_INPUT,Texte personnalisé
+RENAME_HINT_REGION,Région de jeu
+RENAME_TITLE,Renommer le jeu
+TIMER_TITLE,Durée du statut
+TIMER_HINT,Votre statut sera automatiquement masqué une fois le délai écoulé.
+TIMER_CANCEL,Annuler
+TIMER_CONFIRM,Fait !
+TIMER_HOURS,Heures
+TIMER_MINUTES,Minutes
+TIMER_SECONDS,Secondes
+RESET_ALL_CANCEL,Plus tard...
+RESET_ALL_CONFIRM,"Oui, Tout réinitialiser."
+RESET_ALL_HINT,"Toutes les configurations seront réinitialisées par défaut, y compris vos paramètres par jeu.\n\nÊtes-vous sûr de vouloir poursuivre cette action ?\n\nL'application sera fermée ensuite."
+RESET_ALL_TITLE,Réinitialiser toutes les données
+RESET_CACHE_CANCEL,Non !
+RESET_CACHE_CONFIRM,"Oui, Vider le cache"
+RESET_CACHE_HINT,Les fichiers téléchargés et temporaires seront supprimés. Vos paramètres resteront inchangés.\n\nLa base de données sera immédiatement mise à jour après cette action.
+RESET_CACHE_TITLE,Vider le cache
+SEARCH_BUTTON_HINT,Permet aux autres personnes de rechercher rapidement le jeu auquel vous jouez actuellement.
+SEARCH_BUTTON_TITLE,Search button on status
+SEARCH_BUTTON_TEXT,En savoir plus sur ce jeu
+SETTINGS_TITLE,Paramètres
+STATUS_APPLIED,Aucune modification attendue
+STATUS_APPLY,Appliquer le statut sur Discord
+STATUS_CONNECT,Se connecter à Discord
+STATUS_VISIBLITY,Visibilité du statut
+SYSTEM_TITLE,Sytème de jeu
+SYSTEM_WUP,Wii U
+SYSTEM_HAC,Nintendo Switch
+SYSTEM_CTR,Nintendo 3DS
+SYSTEM_BEE,Nintendo Switch 2
+TAB_DETAILS,Détails
+TAB_GAMES,Jeux
+TAB_PLATFORM,Plateformes
+TAG_HINT_VISIBILITY,Basculer la visibilité
+TAG_ICON_HINT,"Garantit que votre ID ou code Ami soit toujours affiché sous forme d'une petite icône à côté de l'icône du jeu auquel vous jouez, même lorsqu'aucune description n'est définie."
+TAG_ICON_TITLE,Toujours afficher l'ID comme une icône
+TAG_TITLE_FCID,Code Ami
+TAG_TITLE_NNID,ID Nintendo Network
+THEME_DARK,Sombre
+THEME_LIGHT,Clair
+THEME_TITLE,Thème
+UI_SCALE_APPLY,Appliquer
+UI_SCALE_TITLE,Taille de l'interface
+UPDATE_CANCEL,Peut-être plus tard...
+UPDATE_CONFIRM,Je suis sûr !
+UPDATE_HINT,Voulez-vous être redirigé vers la page de téléchargement ?
+UPDATE_TITLE,Nouvelle version disponible
+USER_CONNECTED,Connecté
+USER_CONNECTING,Connection en cours...
+USER_DISCONNECTED,Déconnecté
+VERIFIED_HINT,Les jeux vérifiés afficheront un titre et une icône en fonction de la région sélectionnée.
+VERIFIED_TITLE,Jeux vérifiés
+Cut,Couper
+Copy,Copier
+Paste,Coller
+Select All,Tout selectionner
+Clear,Supprimer
+Undo,Annuler
+Redo,Rétablir

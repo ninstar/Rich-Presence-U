@@ -199,7 +199,7 @@ ui_down={
 [locale]
 
 test="en"
-translations=PoolStringArray( "res://locales/german.de.translation", "res://locales/english.en.translation", "res://locales/portuguese.pt.translation", "res://locales/spanish.es.translation", "res://locales/hungarian.hu.translation", "res://locales/dutch.nl.translation" )
+translations=PoolStringArray( "res://locales/german.de.translation", "res://locales/english.en.translation", "res://locales/portuguese.pt.translation", "res://locales/spanish.es.translation", "res://locales/hungarian.hu.translation", "res://locales/dutch.nl.translation", "res://locales/french.fr.translation" )
 locale_filter=[ 1, [ "de", "en", "es", "hu", "nl", "pt" ] ]
 
 [mono]

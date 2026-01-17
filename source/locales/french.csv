@@ -70,7 +70,7 @@ RESET_ALL_CANCEL,"En faite, j'ai changé(e) d'avis.."
 RESET_ALL_CONFIRM,"Oui, Tout réinitialiser."
 RESET_ALL_HINT,"Toutes les configurations seront réinitialisées par défaut, y compris vos paramètres par jeu.\n\nÊtes-vous sûr de vouloir poursuivre cette action ?\n\nL'application sera fermée ensuite."
 RESET_ALL_TITLE,Réinitialiser toutes les données
-RESET_CACHE_CANCEL,En faite, j'ai changé(e) d'avis..
+RESET_CACHE_CANCEL,"En faite, j'ai changé(e) d'avis.."
 RESET_CACHE_CONFIRM,"Oui, Vider le cache"
 RESET_CACHE_HINT,Les fichiers téléchargés et temporaires seront supprimés. Vos paramètres resteront inchangés.\n\nLa base de données sera immédiatement mise à jour après cette action.
 RESET_CACHE_TITLE,Vider le cache

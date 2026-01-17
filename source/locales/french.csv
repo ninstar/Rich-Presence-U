@@ -10,7 +10,7 @@ ABOUT_VERSION,Version
 AUTOCONNECT_HINT,"Une fois lancé, l'application se connectera automatiquement à Discord."
 AUTOCONNECT_TITLE,Se connecter automatiquement au démarrage
 CONNECTION_ERROR_CLOSE,Fermer
-CONNECTION_ERROR_HINT,Impossible de se connecter à l'appli Discord.\n\nVérifie ta connexion internet ou redémarre l'appli. Assure-toi d'utiliser la version de bureau de Discord. (Être sur l'appli web de Discord ne fonctionne pas ! Sauf si extension tier, ex: Vencord)
+CONNECTION_ERROR_HINT,"Impossible de se connecter à l'appli Discord.\n\nVérifie ta connexion internet ou redémarre l'appli. Assure-toi d'utiliser la version de bureau de Discord. (Être sur l'appli web de Discord ne fonctionne pas ! Sauf si extension tier, ex: Vencord)"
 CONNECTION_ERROR_TITLE,Erreur lors de la connexion
 DATA_HINT,Soit conscient(e) que ces actions ne peuvents pas être annulés.
 DATA_TITLE,Donnée

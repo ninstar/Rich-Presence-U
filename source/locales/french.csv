@@ -21,7 +21,7 @@ DESCRIPTION_HINT_RECENT,Descriptions récentes
 DESCRIPTION_TITLE,Description
 ELAPSED_TIME_TITLE,Afficher le temps passé
 GAME_HINT_CUSTOM,Entrée personnalisé. Le texte entré ici sera utilisé comme titre dans ton statut.
-GAME_HINT_NONE,Tu n'as pas séléctionné(e) de jeu, seul le nom de ta console sera affiché.
+GAME_HINT_NONE,"Tu n'as pas séléctionné(e) de jeu, seul le nom de ta console sera affiché."
 GAME_HINT_RECENT,Jeux récents
 GAME_HINT_TYPE,Écris ici pour trouver un jeu
 GAME_TITLE,Jeu

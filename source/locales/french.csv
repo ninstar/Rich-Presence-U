@@ -66,7 +66,7 @@ TIMER_CONFIRM,Terminé !
 TIMER_HOURS,Heures
 TIMER_MINUTES,Minutes
 TIMER_SECONDS,Secondes
-RESET_ALL_CANCEL,En faite, j'ai changé(e) d'avis..
+RESET_ALL_CANCEL,"En faite, j'ai changé(e) d'avis.."
 RESET_ALL_CONFIRM,"Oui, Tout réinitialiser."
 RESET_ALL_HINT,"Toutes les configurations seront réinitialisées par défaut, y compris vos paramètres par jeu.\n\nÊtes-vous sûr de vouloir poursuivre cette action ?\n\nL'application sera fermée ensuite."
 RESET_ALL_TITLE,Réinitialiser toutes les données

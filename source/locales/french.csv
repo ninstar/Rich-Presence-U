@@ -48,7 +48,7 @@ REFRESH_TITLE,Vérifier de nouveaux titres
 REFRESH_WEEKLY,Chaque semaine
 REFRESHING_DONE,Terminé !
 REFRESHING_INIT,Préparation en cours...\nÇa ne devrait pas prendre longtemps.
-REFRESHING_STEP_1,Téléchargement des fichiers...\nÇa ne devrait pas prendre longtemps, promis.
+REFRESHING_STEP_1,"Téléchargement des fichiers...\nÇa ne devrait pas prendre longtemps, promis."
 REFRESHING_STEP_2,Téléchargement des fichiers...\nToujours en cours..
 REGION_EU,Europe
 REGION_JP,Japon

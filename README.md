@@ -1,4 +1,4 @@
-[<img src="./.github/banner.svg" alt="Rich Presence U" width="100%">][home]
+<img src="./.github/banner.svg" alt="Rich Presence U" width="100%">
 
 # Overview
 
@@ -9,7 +9,7 @@ A simple application that allows you to create your own activity statuses for Wi
 ## Features
 
 - An ever-growing [collection of titles and icons][database] from multiple regions.
-- Various customization options.
+- Various customization options:
 	- Game renaming and personalized descriptions.
 	- Nintendo Network ID and Friend Code sharing.
 	- Elapsed time, party size and more.
@@ -77,7 +77,6 @@ godot --export "Windows Desktop" RichPresenceU.exe
 - [**Godot**](https://github.com/godotengine/godot) - Godot Engine 
 - [**Godot-UnixSocket**](https://github.com/Abdera7mane/Godot-UnixSocket) - Abdera7mane
 
-[home]: https://ninstars.blogspot.com/p/rpc.html
 [database]: https://github.com/ninstar/Rich-Presence-U-DB
 [zip]: https://github.com/ninstar/Rich-Presence-U/archive/refs/heads/main.zip
 [godot]: https://godotengine.org/download/archive/3.6-stable/

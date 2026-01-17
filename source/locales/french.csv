@@ -7,44 +7,44 @@ ABOUT_LICENSE,License
 ABOUT_PAGE,Menu principal
 ABOUT_TITLE,à propos de
 ABOUT_VERSION,Version
-AUTOCONNECT_HINT,"quand l'application est lancée, va automatiquement essayer de se connecter à l'appli Discord."
+AUTOCONNECT_HINT,"quand l'application est lancée, elle va automatiquement essayer de se connecter à l'appli Discord."
 AUTOCONNECT_TITLE,Auto-connexion lors du démarrage
 CONNECTION_ERROR_CLOSE,Fermer
-CONNECTION_ERROR_HINT,"Impossible d'établir une connexion à l'appli Discord.\n\nVérifie ta connexion ou redémarre l'appli Discord pour PC, ne fonnctionnera pas si tu es sur la version web de Discord."
+CONNECTION_ERROR_HINT,"Impossible d'établir une connexion à l'appli Discord.\n\nVérifie ta connexion ou redémarre l'appli Discord (Ne fonctionne pas sur l'appli web !)"
 CONNECTION_ERROR_TITLE,Erreur de connexion
 DATA_HINT,Prends conscience que ces actions ne peuvent pas être annulés.
 DATA_TITLE,Données
-DEBUG_HINT,Génére un fichier log pour résoudre un problème.
+DEBUG_HINT,Génére un fichier log pour aider lors de la résolution de problèmes.
 DEBUG_TITLE,Générer un log
 DESCRIPTION_HINT,Un texte affiché comme description sur ton statut.
 DESCRIPTION_HINT_RECENT,description récentes
 DESCRIPTION_TITLE,Description
 ELAPSED_TIME_TITLE,Afficher le temps écoulé 
-GAME_HINT_CUSTOM,Le texte entré ici sera utilisé comme titre dans ton statut
-GAME_HINT_NONE,"Tu n'a pas séléctionné(e) de jeu. Seuelement le nom de ta console sera affiché."
+GAME_HINT_CUSTOM,Le texte entré ici sera utilisé comme titre dans ton statut.
+GAME_HINT_NONE,Tu n'a pas séléctionné(e) de jeu. Seuelement le nom de ta console sera affiché.
 GAME_HINT_RECENT,Jeux récents
 GAME_HINT_TYPE,écrit ici pour rechercher un jeu
 GAME_TITLE,Jeu
-INVISIBILE_STATUS_CLOSE,Alright
-INVISIBLE_STATUS_HINT,Your status is currently invisible.\n\nMake it visible again to see your changes on Discord.\n\nBe aware that it will be visible immediately after toggled.
-INVISIBLE_STATUS_TITLE,Hold on!
+INVISIBILE_STATUS_CLOSE,Très bien
+INVISIBLE_STATUS_HINT,Ton statut est invisible\n\n met toi en Ne pas déranger, actif ou inactif pour voir tes changements sur l'appli Discord.\n\nPrends conscience qu'il sera immédiatement visible quand actif.
+INVISIBLE_STATUS_TITLE,Attends !
 KEEPON_TITLE,Garder l'écran actif
-KEEPON_HINT,Prevents the screensaver from taking over while your status is visible. Useful if you want to keep the application always active without having to change your system settings.
+KEEPON_HINT,Evite que l'écran de veille prends le dessus quand ton statut est visible. (Très utile si tu veux garder l'appli toujours ouverte sans avoir besoin que tu change tes paramètres de ton système !)
 LANGUAGE_AUTO,Automatique
-LANGUAGE_TITLE,Language
-MINIMAL_STATUS_HINT,Makes the game icon smaller and only display the most relevant information set in your status.
+LANGUAGE_TITLE,Langage
+MINIMAL_STATUS_HINT,Faire en sorte que le jeu utilise une icône plus petite et afficher seulement les informations utiles dans ton statut.
 MINIMAL_STATUS_TITLE,Statut minimal
-PARTY_HINT_VISIBILITY,Toggle visibility
-PARTY_OF,de
-PARTY_TITLE,Party size
-PRESERVE_TIME_HINT,Your elapsed won’t be reseted when changing games.
-PRESERVE_TIME_TITLE,Preserve elapsed time
-REFRESH_12H,Every 12 hours
+PARTY_HINT_VISIBILITY,Modifier la visibilité
+PARTY_OF,Partie de
+PARTY_TITLE,Grandeur de la partie
+PRESERVE_TIME_HINT,Ton temps passé ne sera pas reset quand tu change de jeu.
+PRESERVE_TIME_TITLE,Temps passé préservé
+REFRESH_12H,Tout les 12h
 REFRESH_DAILY,Tout les jours
 REFRESH_DISABLED,Jamais
-REFRESH_HINT,This action will be performed every time you open the app accordingly to the set time interval.
+REFRESH_HINT,Cette action va être exécutée à chaque fois que t'ouvre l'appli en fonction de l'interval du chronomètre.
 REFRESH_NOW,Vérifier maintenant
-REFRESH_TITLE,Check for new titles
+REFRESH_TITLE,Vérifier de nouveaux titres
 REFRESH_WEEKLY,Toutes les semaines
 REFRESHING_DONE,Terminé !
 REFRESHING_INIT,Préparation..\nça va prendre un moment..
@@ -56,7 +56,7 @@ REGION_TITLE,région préférée
 REGION_US,Amerique
 RENAME_DEFAULT,Défaut
 RENAME_HINT,N'importe quel texte écrit ici va prendre la priorité par rapport à la région préférée.
-RENAME_HINT_INPUT,Custom title
+RENAME_HINT_INPUT,Titre personnalisé
 RENAME_HINT_REGION,Game region
 RENAME_TITLE,Renommer le jeu
 TIMER_TITLE,durée du statut
@@ -66,49 +66,49 @@ TIMER_CONFIRM,Terminé !
 TIMER_HOURS,Heures
 TIMER_MINUTES,Minutes
 TIMER_SECONDS,Secondes
-RESET_ALL_CANCEL,Au final non..
+RESET_ALL_CANCEL,J'ai changé(e) d'avis..
 RESET_ALL_CONFIRM,Oui. Rénitialise tout
-RESET_ALL_HINT,"All configurations will be reseted to default, including your per-game settings.\n\nAre you sure you want to proceed with this action?\n\nThe app will be closed after this."
-RESET_ALL_TITLE,Reset all data
+RESET_ALL_HINT,"Toutes les configurations vont être remises par défaut, paramètres pour chaques jeux y compris.\n\nT'es sûr(e) de VRAIMENT faire cette action ?\n\nUne fois l'action terminée, l'appli se fermera."
+RESET_ALL_TITLE,Supprimer toutes les données
 RESET_CACHE_CANCEL,Never mind...
 RESET_CACHE_CONFIRM,Oui.
-RESET_CACHE_HINT,Downloaded and temporary files will be removed. No changes will be made to your settings.\n\nThe database will be updated right after finishing this action.
-RESET_CACHE_TITLE,Clear cache
-SEARCH_BUTTON_HINT,Allows other people to quickly search for the game you are currently playing.
-SEARCH_BUTTON_TITLE,Search button on status
-SEARCH_BUTTON_TEXT,Learn more about this game
+RESET_CACHE_HINT,Les Téléchargement et les fichiers temporaires seronts éffacés. Aucun changements ne sera fait à tes paramètres.\n\nLa base de données sera mise à jour juste après la fin de cette action.
+RESET_CACHE_TITLE,Effacer le cache
+SEARCH_BUTTON_HINT,Permets aux autres personnes que rechercher rapidement le jeu que tu est en train de jouer.
+SEARCH_BUTTON_TITLE,Bouton de recherche sur le statut
+SEARCH_BUTTON_TEXT,A propos de ce jeu
 SETTINGS_TITLE,Paramètres
-STATUS_APPLIED,No pending changes
-STATUS_APPLY,Apply status on Discord
+STATUS_APPLIED,Aucun changements en attente
+STATUS_APPLY,Appliquer le statut !
 STATUS_CONNECT,Se connecter à l'appli Discord
-STATUS_VISIBLITY,Status visibility
-SYSTEM_TITLE,Game system
+STATUS_VISIBLITY,visibilité du statut
+SYSTEM_TITLE,Console
 SYSTEM_WUP,Wii U
 SYSTEM_HAC,Nintendo Switch
 SYSTEM_CTR,Nintendo 3DS
 SYSTEM_BEE,Nintendo Switch 2
 TAB_DETAILS,Details
-TAB_GAMES,Games
+TAB_GAMES,Jeux
 TAB_PLATFORM,Platformes
-TAG_HINT_VISIBILITY,Toggle visibility
-TAG_ICON_HINT,"Ensures that your ID or Friend Code is always shown as a small icon next to the icon of the game you are playing, even when there is no description set."
+TAG_HINT_VISIBILITY,Modifier la visibilité
+TAG_ICON_HINT,"Assure-toi que ton ID ou ton code ami est toujours affiché comme une petite icône juste à coté de l'image du jeu que tu est en train de jouer, même si aucune description est mise."
 TAG_ICON_TITLE,Toujours afficher l'ID comme icône
-TAG_TITLE_FCID,Friend Code
-TAG_TITLE_NNID,Nintendo Network ID
-THEME_DARK,Obscure
+TAG_TITLE_FCID,Code ami
+TAG_TITLE_NNID,ID du Nintendo Network
 THEME_LIGHT,Clair
-THEME_TITLE,Theme
+THEME_DARK,Obscur
+THEME_TITLE,Thème
 UI_SCALE_APPLY,Appliquer
 UI_SCALE_TITLE,Interface scale
-UPDATE_CANCEL,Maybe later...
+UPDATE_CANCEL,Peut-être plus tard..
 UPDATE_CONFIRM,Oui
-UPDATE_HINT,Veux-tu télécharger la dernière version maintenant ?
-UPDATE_TITLE,Nouvelle MàJ disponible
-USER_CONNECTED,Connecté(e)
-USER_CONNECTING,Connecting...
+UPDATE_HINT,Tu veux télécharger la dernière version maintenant ?
+UPDATE_TITLE,Nouvelle Mise à jour disponible !
+USER_CONNECTED,Connecté(e) !
+USER_CONNECTING,Connexion..
 USER_DISCONNECTED,Déconnecté(e)
-VERIFIED_HINT,Verified games will display a title and\nicon depending on the selected region.
-VERIFIED_TITLE,Verified games
+VERIFIED_HINT,Les jeux vérifiés vont afficher un titre et \n une icône en fonction de la région séléctionnée.
+VERIFIED_TITLE,Jeux vérifiés
 Cut,Couper
 Copy,Copier
 Paste,Coller

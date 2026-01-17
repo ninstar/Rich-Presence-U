@@ -2,7 +2,7 @@
 
 # Overview
 
-A simple application that allows you to create your own activity statuses for Wii U, Nintendo Switch and Nintendo 3DS games and display them on your Discord profile.
+A simple application that allows you to create your own activity statuses for Nintendo 3DS, Wii U and Nintendo Switch (2) and display them on your Discord profile.
 
 <img src="./.github/activity_status.png" alt="Activity status" width="100%">
 
@@ -66,7 +66,7 @@ godot --export "Windows Desktop" RichPresenceU.exe
 - **Translations**
 	- **Deutsch** - DeeKay-Deluxe
 	- **Español** - JhoanLsuper
-	- **Français** - ProdtML
+	- **French** - ProdtML, Celestial04_
 	- **Magyar** - Feeniheelo
 	- **Nederlands** - Thomanski
 	- **Português** - Ny'hrarr (NinStar)

@@ -1,112 +1,112 @@
 keys,fr
 ABOUT_CLOSE,Fermer
-ABOUT_CONTACT,En savoir plus sur NinStar
+ABOUT_CONTACT,À propos de NinStar
 ABOUT_CREDITS,Crédits
 ABOUT_HELP,Aide
 ABOUT_LICENSE,License
-ABOUT_PAGE,Page d'acceuil
-ABOUT_TITLE,À propos
+ABOUT_PAGE,Page d'accueil
+ABOUT_TITLE,À propos de
 ABOUT_VERSION,Version
 AUTOCONNECT_HINT,"Une fois lancé, l'application se connectera automatiquement à Discord."
 AUTOCONNECT_TITLE,Se connecter automatiquement au démarrage
 CONNECTION_ERROR_CLOSE,Fermer
-CONNECTION_ERROR_HINT,Impossible d'établir une connexion à Discord.\n\nVérifiez votre connexion Internet ou redémarrez l'application. Assurez-vous d'utiliser la version de bureau de Discord.
-CONNECTION_ERROR_TITLE,Erreur de connection
-DATA_HINT,Attention! Ces actions sont irréversibles.
-DATA_TITLE,Data
-DEBUG_HINT,Générer un fichier .log
-DEBUG_TITLE,Journal de débogage
-DESCRIPTION_HINT,Texte prêt à être affiché en dessous du titre de jeu
+CONNECTION_ERROR_HINT,Impossible de se connecter à l'appli Discord.\n\nVérifie ta connexion internet ou redémarre l'appli. Assure-toi d'utiliser la version de bureau de Discord. (Être sur l'appli web de Discord ne fonctionne pas ! Sauf si extension tier, ex: Vencord)
+CONNECTION_ERROR_TITLE,Erreur lors de la connexion
+DATA_HINT,Soit conscient(e) que ces actions ne peuvents pas être annulés.
+DATA_TITLE,Donnée
+DEBUG_HINT,Générer un fichier log pour la résolution de problèmes.
+DEBUG_TITLE,Journal de debug
+DESCRIPTION_HINT,Un texte à afficher en dessous du nom du jeu.
 DESCRIPTION_HINT_RECENT,Descriptions récentes
 DESCRIPTION_TITLE,Description
-ELAPSED_TIME_TITLE,Afficher le temps écoulé
-GAME_HINT_CUSTOM,Texte personnalisé. Le texte saisi sera utilisé comme titre dans votre statut.
-GAME_HINT_NONE,Vous n'avez pas sélectionné de jeu. Seul le nom de votre console sera affiché.
+ELAPSED_TIME_TITLE,Afficher le temps passé
+GAME_HINT_CUSTOM,Entrée personnalisé. Le texte entré ici sera utilisé comme titre dans ton statut.
+GAME_HINT_NONE,Tu n'as pas séléctionné(e) de jeu, seul le nom de ta console sera affiché.
 GAME_HINT_RECENT,Jeux récents
-GAME_HINT_TYPE,Tapez-ici pour trouver un jeu
+GAME_HINT_TYPE,Écris ici pour trouver un jeu
 GAME_TITLE,Jeu
-INVISIBILE_STATUS_CLOSE,Bien
-INVISIBLE_STATUS_HINT,Votre statut est actuellement invisible.\n\nRendez-le visible pour voir vos modifications sur Discord.\n\nNotez qu'il sera visible immédiatement après avoir été activé.
-INVISIBLE_STATUS_TITLE,Attendez !
-KEEPON_TITLE,Laisser l'écran allumé
-KEEPON_HINT,Empêche l'économiseur d'écran de prendre le dessus lorsque votre statut est visible. Utile si vous souhaitez que l'application reste toujours active sans modifier les paramètres système.
+INVISIBILE_STATUS_CLOSE,Très bien
+INVISIBLE_STATUS_HINT,Ton statut est actuellement invisible.\n\nRends le visible pour le voir sur Discord.\n\nSoit conscient(e) qu'il sera visible immédiatement après avoir changé la visibilité du statut !
+INVISIBLE_STATUS_TITLE,Attends !
+KEEPON_TITLE,Garder l'écran allumé
+KEEPON_HINT,Empêche l'économiseur d'écran de prendre le dessus lorsque ton statut est visible. Très utile si tu souhaite que l'application reste toujours active sans être obligé de modifier les paramètres de ton système.
 LANGUAGE_AUTO,Automatique
-LANGUAGE_TITLE,Langue
-MINIMAL_STATUS_HINT,Rend l'icône du jeu plus petite et n'affiche que les informations les plus pertinentes définies dans votre statut.
-MINIMAL_STATUS_TITLE,Statut minimum
-PARTY_HINT_VISIBILITY,Basculer la visibilité
+LANGUAGE_TITLE,Langage
+MINIMAL_STATUS_HINT,Rend l'icône du jeu plus petite et n'affiche seulement les informations utiles dans ton statut.
+MINIMAL_STATUS_TITLE,Statut minimal
+PARTY_HINT_VISIBILITY,Changer la visibilité
 PARTY_OF,sur
-PARTY_TITLE,Nombre de joueurs
-PRESERVE_TIME_HINT,Votre temps écoulé ne sera pas réinitialisé lorsque vous changerez de jeu.
-PRESERVE_TIME_TITLE,Garder le temps écoulé
+PARTY_TITLE,Grandeur de la partie
+PRESERVE_TIME_HINT,Ton temps passé ne sera pas remis à zéro si tu change de jeu.
+PRESERVE_TIME_TITLE,Préserver le temps passé
 REFRESH_12H,Toutes les 12 heures
 REFRESH_DAILY,Chaque jour
 REFRESH_DISABLED,Jamais
-REFRESH_HINT,"Cette action sera effectuée à chaque ouverture de l'application, selon l'intervalle de temps défini."
+REFRESH_HINT,"Cette action sera effectuée à chaque fois que t'ouvrira l'application, selon l'intervalle de temps défini."
 REFRESH_NOW,Vérifier maintenant
-REFRESH_TITLE,Vérifier les nouveaux jeux
+REFRESH_TITLE,Vérifier de nouveaux titres
 REFRESH_WEEKLY,Chaque semaine
-REFRESHING_DONE,Fait !
-REFRESHING_INIT,Préparation en cours...\nCela ne prendra qu'un instant.
-REFRESHING_STEP_1,Téléchargement des fichiers...\nCela ne prendra qu'un instant.
-REFRESHING_STEP_2,Téléchargement des fichiers...\nPresque terminé.
+REFRESHING_DONE,Terminé !
+REFRESHING_INIT,Préparation en cours...\nÇa ne devrait pas prendre longtemps.
+REFRESHING_STEP_1,Téléchargement des fichiers...\nÇa ne devrait pas prendre longtemps, promis.
+REFRESHING_STEP_2,Téléchargement des fichiers...\nToujours en cours..
 REGION_EU,Europe
 REGION_JP,Japon
 REGION_TITLE,Région préférée
 REGION_US,Amérique
 RENAME_DEFAULT,Par défaut
-RENAME_HINT,Tout texte écrit dans ce champ prendra le dessus sur le titre de la région spécifiée
-RENAME_HINT_INPUT,Texte personnalisé
+RENAME_HINT,N'importe quel texte écrit sur ce champ prendra le dessus sur la région spécifiée
+RENAME_HINT_INPUT,Titre personnalisé
 RENAME_HINT_REGION,Région de jeu
 RENAME_TITLE,Renommer le jeu
 TIMER_TITLE,Durée du statut
-TIMER_HINT,Votre statut sera automatiquement masqué une fois le délai écoulé.
+TIMER_HINT,Ton statut sera automatiquement caché après que le compte à rebour soit terminé.
 TIMER_CANCEL,Annuler
-TIMER_CONFIRM,Fait !
+TIMER_CONFIRM,Terminé !
 TIMER_HOURS,Heures
 TIMER_MINUTES,Minutes
 TIMER_SECONDS,Secondes
-RESET_ALL_CANCEL,Plus tard...
+RESET_ALL_CANCEL,En faite, j'ai changé(e) d'avis..
 RESET_ALL_CONFIRM,"Oui, Tout réinitialiser."
 RESET_ALL_HINT,"Toutes les configurations seront réinitialisées par défaut, y compris vos paramètres par jeu.\n\nÊtes-vous sûr de vouloir poursuivre cette action ?\n\nL'application sera fermée ensuite."
 RESET_ALL_TITLE,Réinitialiser toutes les données
-RESET_CACHE_CANCEL,Non !
+RESET_CACHE_CANCEL,En faite, j'ai changé(e) d'avis..
 RESET_CACHE_CONFIRM,"Oui, Vider le cache"
 RESET_CACHE_HINT,Les fichiers téléchargés et temporaires seront supprimés. Vos paramètres resteront inchangés.\n\nLa base de données sera immédiatement mise à jour après cette action.
 RESET_CACHE_TITLE,Vider le cache
-SEARCH_BUTTON_HINT,Permet aux autres personnes de rechercher rapidement le jeu auquel vous jouez actuellement.
-SEARCH_BUTTON_TITLE,Search button on status
+SEARCH_BUTTON_HINT,Permet aux autres personnes de rechercher rapidement le jeu auquel tu est en train de jouer.
+SEARCH_BUTTON_TITLE,Bouton de recherche sur le statut
 SEARCH_BUTTON_TEXT,En savoir plus sur ce jeu
 SETTINGS_TITLE,Paramètres
-STATUS_APPLIED,Aucune modification attendue
+STATUS_APPLIED,Aucun changement en attente
 STATUS_APPLY,Appliquer le statut sur Discord
 STATUS_CONNECT,Se connecter à Discord
 STATUS_VISIBLITY,Visibilité du statut
-SYSTEM_TITLE,Sytème de jeu
+SYSTEM_TITLE,Console
+SYSTEM_CTR,Nintendo 3DS
 SYSTEM_WUP,Wii U
 SYSTEM_HAC,Nintendo Switch
-SYSTEM_CTR,Nintendo 3DS
 SYSTEM_BEE,Nintendo Switch 2
 TAB_DETAILS,Détails
 TAB_GAMES,Jeux
 TAB_PLATFORM,Plateformes
 TAG_HINT_VISIBILITY,Basculer la visibilité
-TAG_ICON_HINT,"Garantit que votre ID ou code Ami soit toujours affiché sous forme d'une petite icône à côté de l'icône du jeu auquel vous jouez, même lorsqu'aucune description n'est définie."
+TAG_ICON_HINT,"Fait en sorte que ton ID ou code ami soit toujours affiché comme petite icône juste à coté de l'icône du jeu auquel tu est actuellement en train de jouer, même si tu n'as description de définie."
 TAG_ICON_TITLE,Toujours afficher l'ID comme une icône
-TAG_TITLE_FCID,Code Ami
+TAG_TITLE_FCID,Code ami
 TAG_TITLE_NNID,ID Nintendo Network
-THEME_DARK,Sombre
 THEME_LIGHT,Clair
+THEME_DARK,Obscur
 THEME_TITLE,Thème
 UI_SCALE_APPLY,Appliquer
 UI_SCALE_TITLE,Taille de l'interface
-UPDATE_CANCEL,Peut-être plus tard...
-UPDATE_CONFIRM,Je suis sûr !
-UPDATE_HINT,Voulez-vous être redirigé vers la page de téléchargement ?
-UPDATE_TITLE,Nouvelle version disponible
-USER_CONNECTED,Connecté
-USER_CONNECTING,Connection en cours...
-USER_DISCONNECTED,Déconnecté
+UPDATE_CANCEL,Peut-être plus tard..
+UPDATE_CONFIRM,Bien sûr !
+UPDATE_HINT,Tu veux être redirigé vers la page de téléchargement ?
+UPDATE_TITLE,Nouvelle version disponible !
+USER_CONNECTED,Connecté(e) !
+USER_CONNECTING,Connexion en cours..
+USER_DISCONNECTED,Déconnecté(e)
 VERIFIED_HINT,Les jeux vérifiés afficheront un titre et une icône en fonction de la région sélectionnée.
 VERIFIED_TITLE,Jeux vérifiés
 Cut,Couper

@@ -2,7 +2,7 @@
 
 # Overview
 
-A simple application that allows you to create your own activity statuses for Nintendo 3DS, Wii U and Nintendo Switch (2) and display them on your Discord profile.
+A simple application that allows you to create your own activity statuses for Wii U, Nintendo Switch and Nintendo 3DS games and display them on your Discord profile.
 
 <img src="./.github/activity_status.png" alt="Activity status" width="100%">
 
@@ -38,7 +38,7 @@ If you are interested in contributing by translating the project into other lang
 git clone https://github.com/ninstar/Rich-Presence-U.git
 ```
 > Paths starting with a `/` in this guide are relative to where you extracted the .zip or cloned the repository.
-2. Get Godot ``3.6-stable (Standard)`` [here][godot].
+2. Get Godot ``3.6.2-stable (Standard)`` [here][godot].
 3. Open Godot, click **Import ➜ Browse**, navigate to ``/source/project.godot``, select the file and click **Import & Edit**.
 4. With the project open, access **Editor ➜ Manage Export Templates** and click **Download and Install**.
 > If you are having trouble with the **Download and Install** option, you can [download this .tpz file][templates] and install it using the **Install from File** option.
@@ -79,7 +79,7 @@ godot --export "Windows Desktop" RichPresenceU.exe
 
 [database]: https://github.com/ninstar/Rich-Presence-U-DB
 [zip]: https://github.com/ninstar/Rich-Presence-U/archive/refs/heads/main.zip
-[godot]: https://godotengine.org/download/archive/3.6-stable/
+[godot]: https://godotengine.org/download/archive/3.6.2-stable/
 [templates]: https://github.com/godotengine/godot/releases/download/3.6-stable/Godot_v3.6-stable_export_templates.tpz
 [compile]: https://docs.godotengine.org/en/3.6/development/compiling
 [locales]: https://github.com/ninstar/Rich-Presence-U/tree/main/source/locales

@@ -52,8 +52,8 @@ custom_constants/separation = 0
 alignment = 1
 
 [node name="L" type="VBoxContainer" parent="Credits/Info"]
-margin_left = 132.0
-margin_right = 259.0
+margin_left = 158.0
+margin_right = 234.0
 margin_bottom = 36.0
 custom_constants/separation = 8
 
@@ -85,48 +85,25 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Link" type="HBoxContainer" parent="Credits/Info/L"]
+[node name="Changelog" type="LinkButton" parent="Credits/Info/L"]
 margin_top = 22.0
-margin_right = 127.0
-margin_bottom = 30.0
-rect_min_size = Vector2( 0, 8 )
-size_flags_horizontal = 4
-size_flags_vertical = 0
-alignment = 1
-
-[node name="Changelog" type="LinkButton" parent="Credits/Info/L/Link"]
 margin_right = 66.0
-margin_bottom = 8.0
+margin_bottom = 26.0
 focus_mode = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 0
 custom_fonts/font = SubResource( 1 )
 text = "Changelog"
 underline = 1
 
-[node name="Separator" type="HSeparator" parent="Credits/Info/L/Link"]
-margin_left = 70.0
-margin_right = 73.0
-margin_bottom = 8.0
-
-[node name="Group" type="LinkButton" parent="Credits/Info/L/Link"]
-margin_left = 77.0
-margin_right = 127.0
-margin_bottom = 8.0
-focus_mode = 2
-size_flags_horizontal = 4
-custom_fonts/font = SubResource( 1 )
-text = "Discord"
-underline = 1
-
 [node name="Separator" type="VSeparator" parent="Credits/Info"]
-margin_left = 259.0
-margin_right = 291.0
+margin_left = 234.0
+margin_right = 266.0
 margin_bottom = 36.0
 rect_min_size = Vector2( 32, 0 )
 
 [node name="Contact" type="TextureButton" parent="Credits/Info"]
-margin_left = 291.0
-margin_right = 371.0
+margin_left = 266.0
+margin_right = 346.0
 margin_bottom = 36.0
 rect_min_size = Vector2( 80, 36 )
 mouse_default_cursor_shape = 2
@@ -162,8 +139,7 @@ bbcode_enabled = true
 selection_enabled = true
 
 [connection signal="pressed" from="Credits/Home" to="." method="_on_Home_pressed"]
-[connection signal="pressed" from="Credits/Info/L/Link/Changelog" to="." method="_on_Changelog_pressed"]
-[connection signal="pressed" from="Credits/Info/L/Link/Group" to="." method="_on_Group_pressed"]
+[connection signal="pressed" from="Credits/Info/L/Changelog" to="." method="_on_Changelog_pressed"]
 [connection signal="pressed" from="Credits/Info/Contact" to="." method="_on_Contact_pressed"]
 [connection signal="meta_clicked" from="Credits/Credits" to="." method="_on_Credits_meta_clicked"]
 [connection signal="meta_clicked" from="License" to="." method="_on_License_meta_clicked"]

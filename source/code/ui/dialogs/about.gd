@@ -43,9 +43,6 @@ func _on_Changelog_pressed() -> void:
 	var _binary_path: String = OS.get_executable_path().get_base_dir()
 	OS.shell_open(_binary_path+"/Changelog.pdf")
 
-func _on_Group_pressed() -> void:
-	OS.shell_open(Main.metadata["url"]["group"])
-
 func _on_Credits_meta_clicked(meta) -> void:
 	OS.shell_open(str(meta))
 
